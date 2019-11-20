@@ -34,13 +34,13 @@ Head Tag Bottom:
 ```
 <script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
 <script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>');</script>
-<link href="//clubessential.s3.amazonaws.com/sites/FED_2020_Essential_Sites/css/style.css" rel="stylesheet" type="text/css">
+<link href="//clubessential.s3.amazonaws.com/sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
 Body Tag Bottom:
 ```
 <script src="//clubessential.s3.amazonaws.com/js/overridePhotoAlbum.min.js"></script>
 <script src="//clubessential.s3.amazonaws.com/js/responsiveAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/sites/FED_2020_Essential_Sites/js/globalScripts.js"></script>
+<script src="//clubessential.s3.amazonaws.com/sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ## SASS Setup
