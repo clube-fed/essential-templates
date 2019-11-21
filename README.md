@@ -7,17 +7,18 @@ Create display theme and select it from the Display Theme dropdown in admin cons
 ### Mobile Web tab
 Append in `<head>` above scripts:
 ```
-needs info
+[FAVICON HTML HERE]
+[FONT LINK HERE]
+<link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
+<link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
+<link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
+<script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>
+<link href="//clubessential.s3.amazonaws.com/sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
-
-Append directly above `</head>`:
-```
-needs info
-```
-
 Append directly above `</body>`:
 ```
-needs info
+<script src="//clubessential.s3.amazonaws.com/sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ### Other tab
@@ -25,7 +26,7 @@ needs info
 
 Head Tag Top:
 ```
-<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,400i,500,600,700|Spectral+SC:400,500,700&display=swap" rel="stylesheet">
+[FONT LINK HERE]
 <link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
