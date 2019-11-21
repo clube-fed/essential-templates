@@ -1,5 +1,5 @@
 # essential-templates-2020
-Master repository for the new 2020 Essential Templates.
+Master repository for the new 2020 Essential Templates. See [repository wiki](https://github.com/clube-fed/essential-templates-2020/wiki) for examples and details on specific components.
 
 ## Admin console setup
 ### Display Theme
