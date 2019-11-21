@@ -3,7 +3,7 @@ Master repository for the new 2020 Essential Templates.
 
 ## Admin console setup
 ### Display Theme
-Create display theme and select it from the Display Theme dropdown in admin console like normal. This will essentially only be used for displaying heading styles accurately within the axis editor, since we don't have the ability to insert anything different into its head tag. This is purpose of the `ClientSpecificTheme.scss` file.
+Create a display theme and select it from the Display Theme dropdown in admin console like normal. This will essentially only be used for displaying heading styles accurately within the Editor, since we don't have the ability to insert anything different into its head tag. This is purpose of the `ClientSpecificTheme.scss` file in the downloaded package.
 ### Mobile Web tab
 Append in `<head>` above scripts:
 ```
