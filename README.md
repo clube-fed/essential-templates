@@ -18,6 +18,8 @@ Append in `<head>` above scripts:
 ```
 Append directly above `</body>`:
 ```
+<script src="//clubessential.s3.amazonaws.com/js/overridePhotoAlbum.min.js"></script>
+<script src="//clubessential.s3.amazonaws.com/js/responsiveAlbum.min.js"></script>
 <script src="//clubessential.s3.amazonaws.com/sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
