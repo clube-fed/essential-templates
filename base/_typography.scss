@@ -1,0 +1,95 @@
+h1, %h1 {
+    font-family: $base-font-serif;
+    color: $color-primary;
+    font-size: $h1-size;
+    font-weight: 400;    
+    line-height: 1;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    .content .mpContent & {
+        margin-bottom: 0.8em;
+    }
+}
+
+h2, %h2 {
+    font-family: $base-font-sans-serif;
+    color: $color-primary;
+    font-size: $h2-size;
+    font-weight: 300;    
+    line-height: 1.27;
+    margin-bottom: 1.3em;
+    letter-spacing: 0;
+    text-transform: none;
+    .content .mpContent & {
+        margin-bottom: 1em;
+    }
+}
+
+h3, %h3 {
+    font-family: $base-font-sans-serif;
+    color: #444444;
+    font-size: $h3-size;
+    font-weight: 500;    
+    line-height: 1.4583333333;
+    margin-bottom: 3px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+h4, %h4 {
+    font-family: $base-font-sans-serif;
+    color: $color-primary;
+    font-size: $h4-size;
+    font-weight: 600;    
+    line-height: 1.62;
+    margin-bottom: 0.6em;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+h5, %h5 {
+    font-family: $base-font-sans-serif;
+    color: #444444;
+    font-size: $h5-size;
+    font-weight: 500;    
+    line-height: 1.375;
+    margin-bottom: 0.6em;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+h6, %h6 {
+    font-family: $base-font-sans-serif;
+    color: #555555;
+    font-size: $h6-size;
+    font-weight: 500;    
+    line-height: 1.1;
+    margin-bottom: 0.6em;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    color: $base-font-color;
+    letter-spacing: $base-font-letter-spacing;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    .mpContent &, .reference_guide & {
+        margin: 0 0 #{$base-line-height}em;
+    }
+    .mpContent h1 + & {
+        margin-top: 2rem;
+    }
+}
+
+.mpContent {
+    h1,h2,h3,h4,h5,h6,p {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

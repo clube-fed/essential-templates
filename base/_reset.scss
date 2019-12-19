@@ -1,0 +1,59 @@
+html {
+    font-size: $root-font-size;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $base-font-size;
+    color: $base-font-color;
+    font-weight: $base-font-weight;
+    font-family: $base-font-family;
+    -moz-osx-font-smoothing: grayscale;
+    &.page {
+        background-color: $white;
+        background-repeat: repeat;
+        //line-height: $base-line-height;
+        @include font-smoothing;
+    }
+}
+
+.mpContent, .reference-guide {
+    ol, ul {
+        line-height: $base-line-height;
+    }
+}
+
+.clickToEditDiv {
+    font-size: 0;
+}
+
+a {
+    color: $base-font-color;
+    &:hover,&:focus {
+        color: $base-font-color;
+    }
+}
+
+a:focus, button:focus, input:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: Highlight;
+    @media (-webkit-min-device-pixel-ratio:0) {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+    }
+}
+
+body.dynamicpageedit {
+    table {
+        border-collapse: separate;
+    }    
+}
+
+// BEGIN IE SPECIFIC
+html._Telerik_IE9, html._Telerik_IE9 body {
+    width: 100% !important;
+    height: 100% !important;
+}
