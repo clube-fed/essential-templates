@@ -1,0 +1,113 @@
+// VARIABLES
+$pub-home-banner-width-value: 1600; // omit unit from value
+$pub-home-banner-height-value: 750; // omit unit from value
+$album-stack-overlay-caption-max-brkpt: 767px;
+
+// BANNER v4
+.banner.opt4 {
+    max-height: #{$pub-home-banner-height-value}px;
+    background-color: $color-darkest;
+    position: relative;
+    //overflow: hidden;
+    z-index: 1;
+    font-size: 0;
+    .emptyBannerAlbum & {        
+        @media (min-width:$desktop-nav-min-brkpt) {
+            padding-top: $navbar-height;
+        }
+    }
+    > table {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        z-index: 98;
+        .sitewrap.emptyBannerAlbum & {
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+    }
+    [id^=photoPlugin] {
+        width: 100%!important;
+        height: auto!important;
+        padding-bottom: calc((#{$pub-home-banner-height-value}/#{$pub-home-banner-width-value})*100%);
+        min-height: 125px;
+    }
+    .banner-image {
+        background-size: cover;
+        background-position: 50% 50%;
+        position: relative;
+        font-size: 0;
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba($black,0.2);
+            @media (max-width:$album-stack-overlay-caption-max-brkpt) {
+                content: none;
+            }
+        }
+        img {
+            max-height: calc(100vh - 50px - #{$navbar-height});
+            #adminDashboard:not([style*="none"]) ~ div[id^="masterPageUC_MSTR"] & {
+                max-height: calc(100vh - 50px - 46px - #{$navbar-height});
+            }
+        }
+    }
+    .banner-text {
+        @extend %h1;
+        color: $white;
+        margin-bottom: 0;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        text-align: center;
+        right: 0;
+        transform: translateY(-50%);
+        padding: 3rem 1.5rem;
+        z-index: 98;
+        @media (max-width:$album-stack-overlay-caption-max-brkpt) {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            transform: none;
+        }
+    }
+    .scroll-down {
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,50%);
+        bottom: 0;
+        height: 70px;
+        width: 70px;
+        z-index: 62;                        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border-radius: 50%;
+        color: $color-primary;
+        line-height: 1.8;
+        cursor: pointer;
+        opacity: 1;
+        font-size: 0;
+        letter-spacing: 0;
+        font-family: $base-font-sans-serif;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+        .nc-icon-outline {
+            font-size: 3rem;
+            display: block;
+        }
+        @media (max-width:$album-stack-overlay-caption-max-brkpt) {
+            bottom: 15px;
+            width: 100%;
+            display: none;
+        }
+    }
+}

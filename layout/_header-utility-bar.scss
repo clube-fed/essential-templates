@@ -1,0 +1,115 @@
+// VARIABLES
+$util-bar-quick-links-stack-max-brkpt: 991px;
+
+// HEADER UTILITY BAR
+header.has-util-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-utility-bar {
+    background-color: $color-darkest;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    font-size: 1.4rem;
+    padding: 0 50px;
+    @media (max-width:1299px) {
+        padding: 0 30px;
+    }
+    @media (max-width:1199px) {
+        justify-content: center;
+    }
+    @media (max-width:$util-bar-quick-links-stack-max-brkpt) {
+        padding: 0;
+        .has-util-bar & {
+            order: 1;
+        } 
+    }
+    .welcome {
+        font-weight: 600;
+        @media (max-width:1199px) {
+            display: none;
+        }
+    }
+    .quick-links.opt4 {
+        text-align: center;
+        font-size: 0;
+        [class*="icon"] {
+            position: relative;
+            color: $white;
+            font-size: 1.4rem;
+            display: inline-block;
+            margin-right: 5px;                       
+        }
+        ul {
+            list-style: none;
+            margin: 0 auto;    
+            padding: 0;
+            width: 100%;
+            float: none;
+            display: flex;
+            //flex-wrap: wrap;
+            justify-content: center;
+            @media (max-width:$util-bar-quick-links-stack-max-brkpt) {
+                display: inline-block;
+                width: auto;
+                padding: 25px 15px;
+            }
+            li {
+                display: inline-block;
+                padding: 20px 15px;
+                margin: 0;
+                font-size: 0;
+                //flex: 0 1 250px;
+                vertical-align: top;
+                transition: all .3s ease-in-out; 
+                &:last-child {                    
+                    @media (min-width:1200px) {
+                        padding-right: 0;
+                    }
+                }
+                @media (max-width:$util-bar-quick-links-stack-max-brkpt) {
+                    display: block;
+                    padding: 12px 0;
+                }
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    font-family: $base-font-sans-serif;
+                    font-weight: 400;
+                    text-transform: none;
+                    text-align: center;
+                    color: $white;
+                    line-height: 1.2;
+                    letter-spacing: 0;
+                    text-decoration: none;
+                    position: relative;
+                    transition: opacity 0.3s ease-in-out;
+                    &:hover,&:focus {
+                        text-decoration: underline;
+                    }
+                    body.user-is-tabbing & {
+                        &:focus {
+                            text-decoration: none;
+                            outline-style: dashed;
+                            outline-color: $white;
+                            outline-width: 2px;
+                            opacity: 1;
+                        }
+                    }
+                    @media screen and (max-width:$util-bar-quick-links-stack-max-brkpt) {
+                        padding: 0;
+                        text-align: center;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none !important;
+                    }
+                }            
+            }                
+        }
+    }
+}

@@ -1,0 +1,84 @@
+// VARIABLES
+$article-stack-max-breakpoint: 991px;
+
+$articles-section-bg-color: $color-lightest;
+$articles-section-heading-style: h3;
+
+$article-title-default-color: $color-primary;
+$article-title-hover-color: $article-title-default-color;
+$article-title-hover-text-decoration: underline;
+$article-title-text-transform: none;
+$article-title-letter-spacing: 0;
+$article-title-font-size: 1.6rem;
+$article-title-line-height: 1.5;
+$article-title-font-weight: 500;
+
+$article-postdate-color: #666666;
+$article-postdate-text-transform: none;
+$article-postdate-letter-spacing: 0;
+$article-postdate-font-size: 1.4rem;
+$article-postdate-font-weight: 300;
+
+// ARTICLES v2 
+.articles.opt2 {
+	padding: 30px 15px 15px 15px;
+    background-color: $articles-section-bg-color;
+    @media screen and (min-width: 1200px) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 20px 15px 35px 15px;
+    }
+    @media screen and (max-width: 991px) {
+        padding: 25px 15px;
+        text-align: center;
+    }
+    .view-all-link {
+        @include view-all-link;
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+    .priv-hm-title {        
+        @extend #{$articles-section-heading-style};
+        margin-bottom: 20px;
+    }
+    .newsItem {
+        margin-bottom: 25px;
+        font-size: 0;
+        a {
+            display: block;
+            font-size: $article-title-font-size;
+            line-height: $article-title-line-height;
+            font-weight: $article-title-font-weight;
+            letter-spacing: $article-title-letter-spacing;
+            color: $article-title-default-color;
+            text-transform: $article-title-text-transform;
+            text-decoration: none;
+            margin-bottom: 4px;            
+            transition: all .3s ease-in-out;
+            &:hover, &:focus {                
+                color: $article-title-hover-color;
+                text-decoration: $article-title-hover-text-decoration;
+            }
+        }
+        .article-date {
+            text-transform: $article-postdate-text-transform;
+            font-size: $article-postdate-font-size;
+            font-weight: $article-postdate-font-weight;
+            letter-spacing: $article-postdate-letter-spacing;
+            color: $article-postdate-color;
+            line-height: 1.7;
+        }
+    }
+	@media screen and (max-width: 991px) {
+		margin-top: 30px;
+	}
+    .newsPluginArchiveLink {
+        display: none;
+    }    
+}
+
+.archive-icon {
+    background-image: url("../../../images/archive.png");
+}

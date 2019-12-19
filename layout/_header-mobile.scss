@@ -1,0 +1,105 @@
+// VARIABLES
+
+
+// GLOBAL HEADER MOBILE
+.public, .private {
+    header {
+        &.opt1,&.opt2,&.opt3,&.opt4,&.opt5 {
+            .navbar .navbar-toggler {
+                border: none;
+                flex: 0 0 3.8rem;
+                margin: 0 4.5rem 0 1rem;
+                padding: 0.5rem;
+                height: 34px;
+                width: 38px;
+                position: relative;
+                font-size: 0;
+                body:not(.user-is-tabbing) & {
+                    outline: none;
+                }
+                @media (max-width: 767px) {
+                    //flex-basis: 5.5rem;
+                    margin-right: 1rem;
+                    margin-left: 2rem;
+                }
+                .icon-bar {
+                    background: #b0b0b0;
+                    width: 28px;
+                    height: 2px;
+                    //margin: 6px 0 0;
+                    border-radius: 1px;
+                    display: block;
+                    position: absolute;
+                    transition: all 0.15s ease, left 1ms;
+                    &.active {
+                        background: $color-darkest;
+                    }
+                }
+                .bar-one {
+                    top: calc(50% - 9px);
+                    //margin-top: 0;
+                    &.active {
+                        transform: rotate(45deg);
+                        top: 16px;
+                    }
+                }
+                .bar-two {
+                    top: calc(50% - 1px);
+                    &.active {
+                        opacity: 0;
+                    }
+                }
+                .bar-three {
+                    top: calc(50% + 7px);
+                    &.active {
+                        transform: rotate(-45deg);
+                        top: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width:$mobile-nav-max-brkpt) {
+        header {        
+            &.opt1, &.opt2, &.opt3, &.opt4, &.opt5 {
+                background-color: $mobile-header-bg-color;
+                position: relative;
+                .navbar {           
+                    align-items: center;
+                    padding: 0;            
+                    z-index: 9;            
+                    .navbar-brand {
+                        flex: 1 1 calc(100% - 9.3rem);
+                        padding-left: 5rem;
+                        @media (max-width: 767px) {
+                            padding-left: 1.5rem;
+                        }                            
+                    }
+                    @include mobile-navbar-collapse;
+                    .nav-log-wrap {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.sitewrap,&.modulewrap {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0;
+                z-index: 98;
+                background-color: rgba($color-darkest,0);
+                body.burgerNav-visible & {
+                    background-color: rgba($color-darkest,0.8);
+                    height: auto;
+                }
+            }   
+        }
+    }
+}

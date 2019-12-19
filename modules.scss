@@ -1,0 +1,1493 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+//@import "base/typography";
+//@import "components/buttons";
+
+[id^=masterPageUC] .modulewrap {
+    > .container {
+        position:relative;
+        .abut {
+            display:inline-block;
+            height:auto!important;
+            width:auto!important; 
+            padding:1rem 2rem!important;
+            font-weight:$button-weight !important;
+            font-size:$button-font-size !important;
+            font-family: $button-font !important;
+            letter-spacing: $button-letter-spacing !important;
+            text-decoration:none;
+            text-transform:uppercase;
+            -webkit-transition:.3s;
+            transition:.3s;
+        }
+        input.abut {
+            background: $button-bg;
+            border: none;
+            &:hover,&:focus {
+                background: $button-bg-hover;
+            }
+        }
+    }
+}
+body[class*="iteStats"] .RadInput_Default .riTextBox,
+body[class*="NET_MemberInbox"] .riSingle .riTextBox[type="text"]{
+	font: 400 14px$base-font-sans-serif !important;
+    color: #666;
+    height: 30px;
+	border-color: #ccc !important;
+}
+body[class*="NET_MemberInbox"] div[id*="_StaticGroupDropDownPanel"] {
+    margin-bottom: 16px;
+}
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_statsph_"],
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_statsph_"]:hover,
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="btnRefresh"],
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="btnRefresh"]:hover,
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnChangeDates"],
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnChangeDates"]:hover,
+body[class*="NETEmailUIMain"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_emailUI"],
+body[class*="NETEmailUIMain"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_emailUI"]:hover,
+body[class*="NETBizDBReport"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnBizGo"],
+body[class*="NETBizDBReport"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnBizGo"]:hover,
+body[class*="NETRosterSyncUI"] [id^=masterPageUC] .modulewrap > .container .abut,
+body[class*="NETRosterSyncUI"] [id^=masterPageUC] .modulewrap > .container .abut:hover,
+body[class*="ReleaseNotes"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"],
+body[class*="ReleaseNotes"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover,
+body[class*="v35MessageCenter"] [id^=masterPageUC] .modulewrap > .container .abut,
+body[class*="v35MessageCenter"] [id^=masterPageUC] .modulewrap > .container .abut:hover,
+body[class*="NET_MemberInbox"] [id^=masterPageUC] .modulewrap > .container .abut,
+body[class*="NET_MemberInbox"] [id^=masterPageUC] .modulewrap > .container .abut:hover{
+	padding: 0 15px !important;
+    line-height: 36px !important;
+	margin: -2px 2px 2px !important;
+    max-height: 36px;
+    border: none !important;
+    font-size: 12px !important;
+}
+
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"],
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover{
+	//padding: 0 15px !important;
+	//line-height: 30px !important;
+	margin: 3px 2px 2px !important;
+	//height: 30px !important;
+	border: none !important;
+	//font-size: 12px !important;
+	display: block;
+	min-width: 150px;
+	//max-width: 250px;
+}
+
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"],
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"]:hover,
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"],
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"]:hover,
+body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"],
+body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover{
+    padding: 0 12px;
+    line-height: 1em !important;
+    margin: 0px 2px 2px !important;
+    max-height: 30px;
+    border: none !important;
+    font-size: 12px !important;
+    display: inline-block;
+    min-width: 150px;
+    max-width: 250px;
+}
+
+#ctl00_rgRunLogs .RadGrid_Default{width: 100%;}
+
+body[class*="NETDynEntryFormLanding"]
+
+[id^=masterPageUC] .modulewrap .module .abut:active,[id^=masterPageUC] .modulewrap > .container .abut:hover{background: $color-darkest;}
+
+.modulewrap > .container {
+    padding:2rem 1.5rem 4rem;
+    //font:400 1.6rem/1.6 $base-font-sans-serif;
+    //color:#303030;
+    > .row > #content {
+        text-align:right;
+        > * {
+            text-align: center;
+            .v35ProfileUpdateReport & {
+                text-align: left;
+            }
+        }
+    }
+    .modHeaderLine img{
+        display:none;
+    }
+    a {
+        color: $base-font-color;
+        border:none!important;
+        font-weight:inherit;
+        text-decoration: none;
+        &:hover,&:focus{
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+    .rbm_All a {
+        color: #036;
+    }
+    input, select {
+        display:inline-block;
+        padding: 3px 10px;
+        margin:0 5px 5px 5px;
+        border:1px solid #CCC;
+        border-radius:0;
+        background:0 0;
+        box-shadow:none;
+        outline:0;
+        font-size: 1.6rem !important;
+    }
+    input.abut{
+        padding:5px 12px 6px;
+    }
+    textarea{
+        display:block;
+        padding:3px 10px;
+        margin:0 10px 5px 5px;
+        border:1px solid #CCC!important;
+        border-radius:0;
+        background:none!important;
+        box-shadow:none!important;
+        outline:0;
+    }
+    .pgpagination {
+        width:100%;
+        text-align:center;
+        a {
+            padding:.5rem 1.2rem;
+            margin:0 .2rem;
+            border-radius:0;
+            background:0;
+            color:$base-font-color;
+            font:400 1.4rem $base-font-sans-serif;
+            text-transform:uppercase;
+            &:active,&:hover {
+                background: $color-darkest;
+                color:#FFF;
+                .active {
+                    color:#fff!important;
+                }
+            }
+            &.active {
+                background: $color-darkest!important;
+                box-shadow:none!important;
+                text-shadow:none!important;
+                color:#fff!important;
+            }
+        }
+    }
+    [id$=tblAdminBar] {
+        width:auto!important;
+        border:none!important;
+        >tbody>tr>td {
+            padding:0!important;
+            display: inline-block;
+            //width: 100%;
+            //float: left;
+        }
+    }
+}
+
+input[type="checkbox"],input[type="radio"]{vertical-align:text-bottom;}
+body[class*="EventManager"] td.RosterLetterOn input[type="text"]{margin:5px 5px 5px 0px;}
+.modulewrap .adminBar,.modulewrap .adminbar {
+    background-color:transparent;
+    padding: 0 0 0 1.5rem!important;
+    //font: 24px/2em $base-font-sans-serif;
+    //letter-spacing:.01rem;
+    //color: #313335;
+    display: inline-block !important;
+    text-align: center;
+    /* float: left; */
+}
+.modulewrap .plgHeaderBar{/* position:absolute; *//* top:0; *//* left:15px; *//* right:15px; *//* border-bottom:1px solid #DDD; */font: 30px/1 $base-font-sans-serif;letter-spacing:.1rem;color: #444;text-transform:uppercase;/* text-shadow:0 2px 2px rgba(85,85,85,.25); */display: block;text-align: center;width: 100%;color: #313335;margin: 0 auto;}
+.modulewrap .plgHeaderBar h1 {margin-bottom: 0;}
+.Dgrp_ToolBoxTitleBar{background:#cecece;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-webkit-linear-gradient(top,#cecece 0,#999 100%);background:linear-gradient(to bottom,#cecece 0,#999 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#999999', GradientType=0);padding:5px 20px;margin:0 0 10px;height:auto}
+.dpDiv{background:#FFF}
+.rcCalPopup{-webkit-transition:none!important;transition:none!important}
+.RadPicker input{border:1px solid #CCC!important}
+#divSyncEvent{margin:0!important}
+.moduleTabsWrapper{
+    font-family: $base-font-sans-serif;
+    /*text-transform:uppercase;*/
+    margin: 20px 0 0;
+    padding:0;
+    display:block;
+    position:relative;
+    z-index:3;
+    border-collapse:initial;
+}
+body.MemberRoster, body.MemProfile {    
+    .modulewrap table.moduleTabsWrapper {
+        //display:table;
+    }
+}
+.moduleTabsWrapper {
+    * {
+        margin: 0;
+        height: auto!important;
+        width: auto!important;
+        //font-size: 1.6rem;
+        //letter-spacing:.1rem;
+        //font-weight: 400;
+    }
+    [class*=avTab].hasText {
+        background: $tabstrip-selected-bg;
+        color: $tabstrip-selected-font-color;
+        padding: 0 !important;
+        margin: 0;
+        transition:.3s;
+        border: none;
+        border-top: $tabstrip-selected-top-border;
+        border-color: transparent;
+        font-weight: $tabstrip-tabs-font-weight;
+        a {
+            display:block;
+            //-webkit-transition:color .2s ease-in-out;
+            //transition:color .2s ease-in-out;
+            text-decoration:none;
+            //margin:-10px -15px;
+            padding: 1.5rem 2rem;
+            color: $tabstrip-selected-font-color;
+        }
+        &:hover {
+            //border: none;
+            border-top: $tabstrip-selected-top-border;
+            //background:#FFF;
+            //border-top: $tabstrip-selected-top-border;
+            a {
+                color: $tabstrip-selected-font-color;
+                border:none!important;
+                &:hover{
+                    color: $tabstrip-selected-font-color;
+                }
+            }
+        }
+    }
+    [class*=ON].hasText, [class*=On].hasText {
+        background: $tabstrip-unselected-bg;
+        /* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
+        //border: none;
+        //border-bottom: 2px solid transparent;
+        color: $tabstrip-unselected-font-color;
+        
+        span {
+            /* border-bottom:1px solid #CCC; */
+            padding: 1.5rem 2rem;
+            //margin: 0px 0 -12px!important;
+            //font-weight: $tabstrip-tabs-font-weight;
+        }
+    }
+}
+
+.newsPluginArchiveLink{display: none;}
+
+body[class*=ArticleList] .plgHeaderBar{text-align: center;}
+
+body.modules-body[class*=Article].memberLevelUser .moduleTabsWrapper td.ArchiveTab,body.modules-body[class*=Article].memberLevelUser .mobileTabsWrapper li.ArchiveTab{display: none;}
+
+body[class*=ArticleList] {
+    .adminbar {
+        padding:0!important;display: inline-block;position:relative;margin: 0 0 0;overflow: hidden;right: 15px;top: 17px;float: none;text-align: right !important;display: inline-block !important;/* width: 100% !important; */
+        input {
+            margin:0 0 0 .1rem!important;
+        }
+        >tbody>tr>td:first-child{padding:0 1.9rem 0 0!important;color: #313335;font: 24px/2em $base-font-sans-serif;display: inline-block;/* width: 100%; *//* float: left; */text-align: right;}
+    }
+    .articlePrintLink {
+        display: inline-block;margin: 0rem 0 0 -15px;/* float: left; */position: relative;top: -32px;font-size: 0;
+        a {
+            display:inline-block;vertical-align: top;height:auto!important;width:auto!important;padding: 14px 22px 14px !important;border: 2px solid $base-font-color !important;border-radius:0;background: $color-darkest;font: 700 13px$base-font-sans-serif;letter-spacing: 0.1em;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;margin: 0px 0 0 .1rem!important;line-height: normal;
+            &:active, &:hover {
+                background: $color-darkest;border-color: $base-font-color !important;
+            }
+        }
+    }
+    #articlePrintLink + table {
+        margin:0 0 4rem;text-align:left;
+        > tbody > tr {
+            > .tnavborder {
+                display:none;
+            }
+            &:first-child + tr > .tnavTabON {
+                padding:3rem!important;background: #fff;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
+            }
+        }
+    }
+    [id$="_QuickFilter"] {
+        > tbody > tr > .tnavTabON {
+            padding:0!important;
+        }
+        [id$="_lblFilterText"] font {
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            text-transform:uppercase;
+            display:block;
+            color: #313335;
+        }
+        .abut {
+            margin:0 0 2.8rem!important;
+        }
+        #filterdiv1 {
+            margin:-1.5rem 0 0;
+            br {
+                display:none;
+            }
+            > table {
+                border:.1rem solid #CCC!important;
+                min-width:300px;
+                input {
+                    width:auto;
+                }
+                >tbody>tr{
+                    >td {
+                        &:first-child+td {
+                            text-align:right;
+                        }
+                        padding:.5rem 1.8rem!important;
+                        text-align:left;
+                        height:3rem;
+                        a {
+                            display:block;
+                            position:absolute;
+                            width:100%;
+                            margin:-1.8rem 0 0 -2.1rem;
+                            padding:1rem 2rem;
+                        }
+                        #qf_ALL {
+                            margin:.7rem .3rem 0 1rem;
+                            height:1.2rem;
+                            width:1.2rem;
+                            float:left;
+                            + label {
+                                height:2rem;
+                                vertical-align:middle;
+                                float:left;
+                                margin-top:.6rem;
+                            }
+                        }
+                        #qf_ANY {
+                            margin:.7rem .3rem 0 1rem;height:1.2rem;width:1.2rem;float:left;
+                            +label{height:2rem;vertical-align:middle;float:left;margin-top:.6rem}
+                        }
+                    }
+                    &:first-child>td:first-child {
+                        padding:.8rem 2rem!important;
+                        border-bottom:.1rem solid #CCC;
+                    }
+                }
+            }
+        }
+    }
+    [id$="_tblArticles"] {
+        text-align:center;
+        //font:400 1.4rem/1.6 $base-font-sans-serif;
+        margin:0 0 3rem;
+        position:relative;
+        >tbody{
+            >tr{
+                >td {
+                    display:none;
+                }
+                &:first-child {
+                    border:.1rem solid #CCC;
+                    border-left:none;
+                    border-right:none;
+                    width:100%;
+                    position:absolute;
+                    >td:first-child+td+td, >td:first-child+td+td+td+td {
+                        display:table-cell;
+                        width:auto;
+                        padding:0;
+                    }
+                    +tr>td {
+                        display:table-cell;
+                        padding:1rem;
+                    }
+                }
+                &:nth-child(4){
+                    display: block;
+                    //margin-top: 40px;
+                }
+            }
+            .articleSummaryRow>td:first-child+td,
+            .articleTitleRow>td:first-child+td,
+            >tr:first-child>td:first-child+td {
+                display:none!important;
+            }
+        }
+        [colspan="5"] {
+            display:block;
+            padding:7rem 0 0;
+        }
+        .article-header {
+            font-size:2rem;
+            letter-spacing:.1rem;
+            margin:1rem 1.5rem 1rem 0;
+            display:inline-block;
+            vertical-align:top;
+            display: none;
+        }
+        .modArticlesDayHeader {
+            display:block;
+            background: $color-darkest;
+            b, strong {
+                display:block;
+                margin: 0;
+                color:#fff;
+                font-weight:400;
+                border-bottom:none;
+                font-size:1.8rem;
+                padding: 1rem 2.5rem 1rem 2.5rem;
+                background: transparent;
+                text-align: left;
+                &:first-child {
+                    display:none;
+                }
+            }
+        }
+        .articleTitleRow {
+            text-align:left;
+            [colspan="3"] {
+                display:block;
+                padding: 0 2.5rem 0;
+                background: transparent;
+                margin: 1rem 0 1.5rem;
+            }
+            .modArticlesRowHighlight>a:first-child {
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                text-transform:none;
+                display:inline-block;
+                vertical-align: middle;
+                //width:75%;
+                text-align:left;
+                //float:left;
+                //font-size: 21px;
+                margin-right: 20px;
+            }
+            span {
+                //width:19%;
+                display:inline-block;
+                vertical-align: middle;
+                position:relative;
+                z-index:9;
+                font-size:2.2rem;
+                //text-transform:uppercase;
+                text-align:right;
+                //top: 3px;
+                font-size: 16px;
+                color: #4d5151;
+                strong {
+                    font-weight: 400;
+                }
+                a {
+                    margin: 0 .02rem 0 .02rem;
+                    //text-transform:uppercase;
+                    font-family:$base-font-sans-serif;
+                    font-size: 16px;
+                    color: #4d5151;
+                }
+                &:first-child, &:first-of-type:last-child {
+                    width:19%;
+                }
+                &:last-child{/* width:5%; */color: #4d5151;}
+            }
+        }
+        .articleSummaryRow {
+            text-align:left;
+            .modArticlesRowHighlight[colspan="2"]+td {
+                display:block;
+                padding: .5rem 0 1rem;
+            }
+            >td {
+                padding:0 0 1.4rem;
+            }
+            .modArticlesRowHighlight {
+                text-transform:none;
+                .smallerfont {
+                    font-size:1.4rem;
+                    display:inline-block;
+                    padding: 0 3rem;
+                }
+            }
+        }
+    }
+}
+
+.NET_ArticleView, .v35ArticleView {
+    .plgHeaderBar{text-align:left}
+    .col-xs-12{text-align:right}
+    #articleModHeader{height:0}
+    .adminBar {
+        padding:0!important;display:inline-block;position:relative;margin:7rem 0 0;
+        input{margin:0 0 0 .1rem!important}
+        >tbody>tr>td:first-child{padding:0 1.9rem 0 0!important}
+    }
+    .articlePrintLink {
+        display:inline-block;
+        margin:7rem 0 0 .5rem;
+        float:right;
+        a {
+            display:inline-block;
+            vertical-align:top;
+            height:auto!important;
+            width:auto!important;
+            padding:1rem 1.4rem!important;
+            border:0!important;
+            border-radius:0;
+            background: $color-darkest;
+            font:700 12px/1 $base-font-sans-serif;
+            letter-spacing:.1rem;
+            color:#FFF!important;
+            text-decoration:none;
+            text-transform:uppercase;
+            -webkit-transition:.3s;
+            transition:.3s;
+            margin:0;
+            &:active, &:hover {
+                background: $color-darkest;
+            }
+        }
+    }
+    #articlePrintLink+table{
+        margin:0 0 4rem;text-align:left;
+        >tbody>tr {
+            >.tnavborder {
+                display:none;
+            }
+            &:first-child+tr>.tnavTabON {
+                background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */padding:3rem 4rem 5rem!important;
+            }
+        }
+    }
+    table#articlePageHeader {
+        width:100%;
+        a, span {
+            text-transform:uppercase;
+            font-size:1.4rem;
+            font-weight:400;
+        }
+        .articleTitle {
+            width:75%;
+            font:2.4rem/1 $base-font-sans-serif;
+            display:block;
+            border-bottom:1px solid #CCC;
+            padding:0 0 2rem;
+            margin:4rem auto;
+            text-align:center;
+        }
+    }
+    .articleSummary{
+        display:none;
+    }
+    .articleHtml {
+        font:400 1.4rem/3.1rem $base-font-sans-serif;
+        width:75%;
+        margin:0 auto;
+        color:#666;
+        p img {
+            margin:2rem;
+            max-width:100%;
+        }
+        img {
+            max-width:100%;
+        }
+        >span>table>tbody>tr>td {
+            padding:0;
+        }
+        table {
+            width:100%;
+        }
+    }
+}
+
+body[class*=alendar] {
+    [id$=rmypCalendar_wrapper]{
+        display:inline-block;
+        vertical-align:middle;
+    }
+    [id^=axisCalendar]{
+        text-align:center;
+        position:relative;
+        width:100%;
+        padding:4rem 0 0;
+        #calendarLinkBar {
+            top:0;
+            right:0;
+            position:absolute;
+            width:auto!important;
+            color:transparent;
+            left: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            a {
+                display:inline-block;
+                vertical-align:top;
+                height:auto!important;
+                width:auto!important;
+                padding: 1rem 2rem !important;
+                margin: 0 0 0 0!important;
+                border: $button-border;
+                border-radius:0;
+                background: $button-bg;
+                font-weight:$button-weight;
+                font-size:$button-font-size;
+                font-family:$button-font !important;
+                letter-spacing: $button-letter-spacing;
+                color:$button-font-color!important;
+                text-decoration:none;
+                text-transform:uppercase;
+                -webkit-transition:.3s;
+                transition:.3s;
+                //float:right;
+                line-height: normal;
+                &:active, &:hover {
+                    background: $button-bg-hover;
+                }
+                img {
+                    margin:-4px 0 -2px 3px;
+                    height:14px;
+                    position:relative;
+                }
+                &:focus {
+                    background: $button-bg-hover !important;
+                    //outline:2px solid #000;
+                }
+            }
+        }
+    }
+}
+
+.RadPicker_Silk .rcCalPopup:focus, .RadCalendarMonthView_Silk a:focus{/*outline:2px solid #7b221e*/}
+.RadCalendarMonthView_Silk td[id^="rcMView"] a,
+.RadCalendarMonthView_Silk td a[id$="_NavigationPrevLink"],
+.RadCalendarMonthView_Silk td a[id$="_NavigationNextLink"] {
+color: #000 !important;
+	
+}
+
+.RadCalendarMonthView_Silk .rcButtons input{
+color: #000 !important;
+}
+.RadCalendarMonthView_Silk td[id^="rcMView"].rcSelected a,
+.RadCalendarMonthView_Silk td[id^="rcMView"].rcSelected a:hover,
+.RadCalendarMonthView_Silk td[id^="rcMView"].rcSelected a:focus,
+.RadCalendarMonthView_Silk td[id^="rcMView"] a:hover,
+.RadCalendarMonthView_Silk td[id^="rcMView"] a:focus,
+.RadCalendarMonthView_Silk td a[id$="_NavigationPrevLink"]:hover,
+.RadCalendarMonthView_Silk td a[id$="_NavigationNextLink"]:hover,
+.RadCalendarMonthView_Silk td a[id$="_NavigationPrevLink"]:focus,
+.RadCalendarMonthView_Silk td a[id$="_NavigationNextLink"]:focus,
+.RadCalendarMonthView_Silk .rcButtons input:hover {
+background: $color-darkest !important;
+border-color: $base-font-color !important;
+box-shadow: inset 0 0 4px $base-font-color;	
+color: #fff !important;	
+border-radius: 5px;	
+}
+
+.RadCalendarMonthView_Silk td[id^="rcMView"].rcSelected a:focus,
+.RadCalendarMonthView_Silk td a[id$="_NavigationPrevLink"]:focus,
+.RadCalendarMonthView_Silk td a[id$="_NavigationNextLink"]:focus,
+.RadCalendarMonthView_Silk td[id^="rcMView"] a:focus {
+background: #646464 !important;
+border-color: #646464 !important;
+}
+body[class*=alendar] .calendarLegend{display:block;position: absolute;bottom: 0;width:70%;left:15%;border-top:1px solid #CCC;font:400 1.6rem/1 $base-font-sans-serif!important;text-align:center;letter-spacing:1px;height: 44px;}
+body[class*=alendar] .calendarLegend img{margin:0 5px 3px 0!important}
+body[class*=alendar] .calendarLegend *{display:inline-block;color: #313335;}
+body[class*=alendar] .calendarLegend>tbody>tr>td{padding:10px 0}
+body[class*=alendar] [id^=axisCalendar]>[id$="_admin"]{/* margin:0!important; *//* display:inline-block; *//* position:absolute; *//* top:2.5rem; *//* right:46.7rem; *//* width:auto!important */padding: 0!important;display: inline-block !important;position: relative;margin: 20px auto 0;overflow: hidden;top: 14px;/* text-align: right !important; */width: auto !important;left: 0;text-align: center;right: 0;display: block;}
+body[class*=alendar] [id^=axisCalendar]>[id$="_admin"] td{/* display:table-cell!important */}
+body[class*=alendar] [id^=axisCalendar]>[id$="_admin"]>tbody>tr:first-child,body[class*=alendar] [id^=axisCalendar]>[id$="_admin"]>tbody>tr:first-child+tr+tr{display:none!important}
+body[class*=alendar] [id^=axisCalendar]>[id$="_admin"] input{margin: 0 0 0 2px!important;}
+body[class*=alendar] [id^=axisCalendar] .calendarTitleBar{font-size:1.8rem;line-height:1;display:inline-block;color: #313335;}
+body[class*=alendar] [id^=axisCalendar] .calendarTitleBar b{font-weight:700}
+body[class*=alendar] [id^=axisCalendar] .RadPicker{margin:0!important}
+body[class*=alendar] [id^=axisCalendar] .RadPicker>.rcSingle>tbody>tr>td .rcCalPopup:hover{/* background-position:-13px -4215.5px!important */}
+body[class*=alendar] [id^=axisCalendar]>table{margin:0 0 40px}
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:first-child,body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:last-child,.emptyModuleTableCell{display:none}
+
+body[class*=alendar] .modCalMonth>tbody>tr>td.emptyModuleTableCell{display: table-cell;}
+
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr:first-child+tr+tr+tr+tr>.tnavTabON{
+    background:#FFF;
+    border-top: 2px solid $color-lightest;
+    width:100%;
+    text-align:left;
+    /* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
+    padding:3rem 0!important;
+}
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr:first-child+tr+tr+tr+tr>.tnavTabON>table>tbody>tr>.tnavtabon>table>tbody>tr>td>table>tbody>tr:first-child>td:first-child{padding:0!important}
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr:first-child+tr+tr+tr+tr>.tnavTabON>table>tbody>tr>.tnavtabon>table>tbody>tr>td>table>tbody>tr:first-child>td:first-child+td font{float:right;font-size:1.2rem;text-transform:uppercase;font-weight:400;display:block}
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr:first-child+tr+tr+tr+tr>.tnavTabON>table>tbody>tr>.tnavtabon>table>tbody>tr>td>table>tbody>tr:first-child+tr>.tnavtabon>table>tbody>tr td{padding:0 0 10px;vertical-align:top}
+body[class*=alendar] #btnQuickFilter{margin:0 0 10px}
+body[class*=alendar] .calendarQuickFilterWrap>table{border:1px solid #CCC!important;min-width:300px}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr>td{padding:5px 10px!important;color: #313335;}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr>td .abut{padding: 5px 10px !important;margin: 0 10px 0 0!important;/* border:none!important; */float:none;height:20px;}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr>td>input{height:12px;float:left;margin:7px 2px 10px 8px!important}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr>td>input+label{height:20px;vertical-align:middle;float:left;margin-top:6px;font-weight:400;font-family:$base-font-sans-serif;letter-spacing:1px;color: #000;}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr:first-child>td:first-child{padding:8px 20px!important;border-bottom:1px solid #CCC;color: #000;}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr:first-child+tr>div>table{width:100%}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr:first-child+tr>div>table input{float:left;margin:0 5px 0 0}
+body[class*=alendar] .calendarQuickFilterWrap>table>tbody>tr:first-child+tr>div>table input+label{float:left}
+
+body[class*=alendar] .calendarQuickFilterWrap>table div table input[type="checkbox"]{vertical-align: middle}
+body[class*=alendar] .RadPicker_Default{width:160px;margin:0 0 0 20px}
+body[class*=alendar] .RadPicker_Default input:first-child+table span.riSingle{width: auto !important;}
+body[class*=alendar] [id^=axisCalendar] [id$="rdpStartDate_wrapper"].RadPicker,
+body[class*=alendar] [id^=axisCalendar] [id$="rdpEndDate_wrapper"].RadPicker{width: auto !important;}
+body[class*=alendar] .RadPicker_Default input:first-child+table label{width: auto; margin-right: 4px; font-size: 14px;}
+body[class*=alendar] .RadPicker_Default input:first-child+table input{width: auto;border:1px solid #ddd;padding:5px 10px;margin:10px 0;outline:0;height:30px}
+body[class*=alendar] [id$="_dayTable"]{margin:2rem 0;position:relative}
+body[class*=alendar] [id$="_dayTable"]>tbody td{display:none;background:0 0;}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:first-child{border-bottom:1px solid #CCC;border-top:1px solid #CCC;width:100%;position:absolute}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:first-child td:nth-child(2){display:table-cell;width:auto;padding:0 34px 0 128px!important}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:first-child td:nth-child(6){display:table-cell;width:auto;padding:5px 0}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:first-child+tr>td{display:table-cell;padding:15px 0}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:first-child font{margin:0 15px 0 0;font-size: 1.55rem;letter-spacing:.1rem;}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:nth-child(n+2) td:nth-child(2){display:table-cell;width:175px}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:nth-child(n+2) td:nth-child(6){display:table-cell;width:31px;padding:5px 15px 0 0}
+body[class*=alendar] [id$="_dayTable"]>tbody>tr:nth-child(n+2) td:nth-child(7){display:table-cell}
+body[class*=alendar] [id$="_weekTable"],body[class*=alendar] [id$="_listTable"]{margin:2rem 0;position:relative}
+body[class*=alendar] [id$="_weekTable"]>tbody td,body[class*=alendar] [id$="_listTable"]>tbody td{display:none;background:0 0}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child{border-bottom:1px solid #CCC;border-top:1px solid #CCC;width:100%;position:absolute}
+
+
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td:nth-child(2),body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child td:nth-child(2){display:table-cell;width:auto;padding: 0 70px 0 10px!important;}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td:nth-child(5),body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child td:nth-child(5){display:table-cell;width:auto;padding:5px 0}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child+tr>td{display:table-cell;padding:15px 0}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child font,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child font{margin:0 15px 0 0;font-size: 1.55rem;letter-spacing:.1rem;}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:nth-child(n+2) td:nth-child(2),body[class*=alendar] [id$="_listTable"]>tbody>tr:nth-child(n+2) td:nth-child(2){display:table-cell;}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:nth-child(n+2) td:nth-child(4),body[class*=alendar] [id$="_listTable"]>tbody>tr:nth-child(n+2) td:nth-child(4){display:table-cell;width:31px;padding:5px 15px 0 0}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:nth-child(n+2) td:nth-child(5),body[class*=alendar] [id$="_listTable"]>tbody>tr:nth-child(n+2) td:nth-child(5){display:table-cell}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td{display:table-cell !important;}
+body[class*=alendar] table>tbody .modCalDayRow{vertical-align:top;font-size: 1.4rem;padding: 26px 0 0px;}
+body[class*=alendar] table>tbody .modCalDayRow .smallerfont{display:block;padding:0 20px 0 0;font:400 1.4rem/1.6 $base-font-sans-serif}
+body[class*=alendar] table>tbody .modCalDayRow>a:first-child{width:100%;display:inline-block;float:left;margin:0 0 10px;font: 400 1.55rem/1.6 $base-font-sans-serif;}
+body[class*=alendar] table>tbody .modCalWeekDayHeader a{display:block;margin: 20px 0 0px;color: #fff;text-align:left;font-weight:400;background: $color-darkest;font-size: 16px!important;padding: 10px 2.5rem;text-transform:none;}
+body[class*=alendar] table>tbody .modCalWeekDayHeader a strong{font-weight: 400;}
+body[class*=alendar] table>tbody .modCalWeekDayHeader b{font-weight: 600;}
+body[class*=alendar] table>tbody .modCalWeekRow{vertical-align: middle;font-size: 16px;padding: 10px 0 10px 10px;border-bottom: 1px solid #ccc;}
+body[class*=alendar] table>tbody .modCalWeekRow[nowrap="true"]{/* text-align:right; */width: 70px;}
+body[class*=alendar] table>tbody .modCalWeekRow font, body[class*=alendar] table>tbody .modCalWeekRow .smallerfont{/* display:block; *//* padding:0 20px 0 0; */font: 400 13px/1.6 $base-font-sans-serif;/* text-align:right */}
+body[class*=alendar] table>tbody .modCalWeekRow a{font: 400 21px/1.6 $base-font-sans-serif;width:100%;display:inline-block;float:left;margin: 0 0 5px;vertical-align: top;}
+body[class*=alendar] [id$="_jan"],body[class*=alendar] [id$="_feb"],body[class*=alendar] [id$="_mar"],body[class*=alendar] [id$="_apr"],body[class*=alendar] [id$="_may"],body[class*=alendar] [id$="_jun"],body[class*=alendar] [id$="_jul"],body[class*=alendar] [id$="_aug"],body[class*=alendar] [id$="_sep"],body[class*=alendar] [id$="_oct"],body[class*=alendar] [id$="_nov"],body[class*=alendar] [id$="_dec"]{border:1px solid #CCC;margin-bottom:15px}
+body[class*=alendar] [id$="_jan"]>tbody>tr>td,body[class*=alendar] [id$="_feb"]>tbody>tr>td,body[class*=alendar] [id$="_mar"]>tbody>tr>td,body[class*=alendar] [id$="_apr"]>tbody>tr>td,body[class*=alendar] [id$="_may"]>tbody>tr>td,body[class*=alendar] [id$="_jun"]>tbody>tr>td,body[class*=alendar] [id$="_jul"]>tbody>tr>td,body[class*=alendar] [id$="_aug"]>tbody>tr>td,body[class*=alendar] [id$="_sep"]>tbody>tr>td,body[class*=alendar] [id$="_oct"]>tbody>tr>td,body[class*=alendar] [id$="_nov"]>tbody>tr>td,body[class*=alendar] [id$="_dec"]>tbody>tr>td{padding:5px 10px}
+body[class*=alendar] [id$="_jan"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_feb"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_mar"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_apr"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_may"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_jun"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_jul"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_aug"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_sep"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_oct"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_nov"]>tbody>tr:first-child>td,body[class*=alendar] [id$="_dec"]>tbody>tr:first-child>td{background:none!important;padding:7px 0 4px;font:400 1.3rem/1.6 $base-font-sans-serif;text-transform:uppercase}
+body[class*=alendar] [id$="_jan"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_feb"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_mar"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_apr"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_may"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_jun"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_jul"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_aug"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_sep"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_oct"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_nov"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_dec"]>tbody>tr:first-child+tr>td{padding:8px 10px 5px;background: #ddd !important;color: #000 !important;}
+body[class*=alendar] [id$="_jan"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_feb"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_mar"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_apr"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_may"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_jun"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_jul"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_aug"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_sep"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_oct"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_nov"] td.modCalYearCurrentDayHighlight,body[class*=alendar] [id$="_dec"] td.modCalYearCurrentDayHighlight{background:#F9F5F5}
+body[class*=alendar] .modCalMonth{margin:10px 0 20px;width:100%!important;border:none!important}
+body[class*=alendar] .modCalMonth .modCalMonthDayOfWeekHeader{border:1px solid #CCC!important;padding:5px;color: #313335;font: 400 1.8rem/1.6 $base-font-sans-serif;text-align:center;}
+body[class*=alendar] .modCalMonth>tbody>tr>td{border:1px solid #CCC!important;letter-spacing:1px;font-weight:400}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child{padding:0 10px 0 0;border:none!important}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a{display:block;width:19px;height:19px;color: #313335 !important;}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a:hover {color: $base-font-color!important}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a:hover{background-position:-19px 0}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a img{display:none}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth{padding:6px;background:#EEE!important}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td{display:none;font-size:1.6rem;padding:5px 0 0}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td a,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td font{font-size:1.2rem;color: #000;font-weight: inherit;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td+td{display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td+td img{margin:0 auto;display:block;width:90%;border-bottom:1px solid $base-font-color;height:1px}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr:first-child td a{font-size: 1.6rem;font-family: $base-font-sans-serif;color: #000;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay{padding:6px}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td{display:none;font-size:1rem;padding:5px 0 0;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td a,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td font{font-size: 1.2rem;font-family: $base-font-sans-serif;font-weight: inherit;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td:first-child+td,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td:first-child+td+td{display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr>td:first-child+td+td img{margin: 0 0;display:block;width: 94%;border-bottom:1px solid $base-font-color;height:1px;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDay>table>tbody>tr:first-child td a{font-size: 1.6rem;color: $base-font-color;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay{padding:6px}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td{display:none;font-size:1rem;padding:5px 0 0}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td a,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td font{font-size:1.2rem;font-family: $base-font-sans-serif;font-weight: inherit;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td:first-child+td,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td:first-child+td+td{display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr>td:first-child+td+td img{margin: 0 0;display:block;width: 94%;border-bottom: 1px solid $base-font-color;height:1px;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekEndDay>table>tbody>tr:first-child td a{font-size: 1.6rem;}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay{padding:6px;border: 2px solid $base-font-color!important;}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td{display:none;font-size:1rem;padding:5px 0 0}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td a,body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td font{font-size: 1.2rem;}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td:first-child+td,body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td:first-child+td+td{display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr>td:first-child+td+td img{margin:0 auto;display:block;width:90%;border-bottom:1px solid $base-font-color;height:1px}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
+body[class*=alendar] .modCalMonth>tbody>tr .currentDay>table>tbody>tr:first-child td a{font-size: 1.6rem;font-weight: 600;}
+body[class*=alendar] .modCalMonth>tbody>tr .calendarEventPastDate{background:#F7F7F7}
+
+body[class*=alendar] form[action*="view=l4"] .emptyModuleTableCell{display: table-cell;}
+.NETEventView .module .col-xs-12,.v35EventView .module .col-xs-12,.v35EvtView .module .col-xs-12{text-align:right;position:relative}
+.NETEventView .module .col-xs-12>table:first-child,.v35EventView .module .col-xs-12>table:first-child,.v35EvtView .module .col-xs-12>table:first-child{text-align: center !important;display: table;/* height:0 */}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table,.v35EventView .module .col-xs-12>table:first-child+link+script+table,.v35EvtView .module .col-xs-12>table:first-child+link+script+table{margin: 20px auto 0;/* display: block; */width: 100% !important;position: relative;right: auto;z-index:98;float: none;text-align: center !important;left: auto;}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table>tbody>tr,.v35EventView .module .col-xs-12>table:first-child+link+script+table>tbody>tr,.v35EvtView .module .col-xs-12>table:first-child+link+script+table>tbody>tr{display:none}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table>tbody>tr:first-child+tr+tr,.v35EventView .module .col-xs-12>table:first-child+link+script+table>tbody>tr:first-child+tr+tr,.v35EvtView .module .col-xs-12>table:first-child+link+script+table>tbody>tr:first-child+tr+tr{display: block;width: auto;text-align: center;margin: 0 auto;/* position: relative; *//* left: 25%; *//* right: 25%; */}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table input,.v35EventView .module .col-xs-12>table:first-child+link+script+table input,.v35EvtView .module .col-xs-12>table:first-child+link+script+table input{margin:0 0 0 2px}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table+table,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table{margin: 60px 0 40px;text-align:left;display:block;width:100%;clear: both;}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td{display:block;width:100%}
+.NETEventView .module .col-xs-12>table:first-child+link+script+table+table .tNavBorder,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table .tnavBorder,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child+tr+tr,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child>td:first-child+td+td,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child,.NETEventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child+td+td+td+td,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table .tNavBorder,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table .tnavBorder,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child+tr+tr,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child>td:first-child+td+td,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child,.v35EventView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child+td+td+td+td,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table .tNavBorder,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table .tnavBorder,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child+tr+tr,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr:first-child>td:first-child+td+td,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child,.v35EvtView .module .col-xs-12>table:first-child+link+script+table+table>tbody>tr>td:first-child+td+td+td+td{display:none}
+.NETEventView .module [class$=EventLink],.v35EventView .module [class$=EventLink],.v35EvtView .module [class$=EventLink]{font:400 1.2rem/1.6 $base-font-sans-serif;padding:0 0 0 .8rem;position:relative;z-index:98;float:left;color:#666}
+.NETEventView .module [class$=EventLink]:active,.NETEventView .module [class$=EventLink]:hover,.v35EventView .module [class$=EventLink]:active,.v35EventView .module [class$=EventLink]:hover,.v35EvtView .module [class$=EventLink]:active,.v35EvtView .module [class$=EventLink]:hover{text-decoration:none;color:$base-font-color}
+.NETEventView .module .nextNextEventLink,.v35EventView .module .nextNextEventLink,.v35EvtView .module .nextNextEventLink{float:right;right:1.2rem}
+.NETEventView .module #eventView,.v35EventView .module #eventView,.v35EvtView .module #eventView{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */position:relative}
+.NETEventView .module #eventView [id^=eventFlyer] a,.NETEventView .module #eventView [id^=eventSummary] a,.v35EventView .module #eventView [id^=eventFlyer] a,.v35EventView .module #eventView [id^=eventSummary] a,.v35EvtView .module #eventView [id^=eventFlyer] a,.v35EvtView .module #eventView [id^=eventSummary] a{color:$base-font-color}
+.NETEventView .module #eventView #eventHeader,.v35EventView .module #eventView #eventHeader,.v35EvtView .module #eventView #eventHeader{background:#FFF;border-bottom:1px solid #CCC;color:#666;font-family:$base-font-sans-serif;height:35px;margin:0 0 20px;padding:10px 0}
+.NETEventView .module #eventView #eventHeader #eventHeaderBack,.v35EventView .module #eventView #eventHeader #eventHeaderBack,.v35EvtView .module #eventView #eventHeader #eventHeaderBack{width:auto;font-size:1.2rem;letter-spacing:.1rem;padding:0 1rem 0 0;margin:0 1rem 0 0;border-right:1px solid #ddd;position:relative;z-index:99}
+.NETEventView .module #eventView #eventHeader #eventHeaderBack img,.v35EventView .module #eventView #eventHeader #eventHeaderBack img,.v35EvtView .module #eventView #eventHeader #eventHeaderBack img{height:0;width:0;margin:-.2rem .2rem 0 0;border:.6rem solid transparent;border-right:.6rem solid #000}
+.NETEventView .module #eventView #eventHeader #eventHeaderRightSpacer,.v35EventView .module #eventView #eventHeader #eventHeaderRightSpacer,.v35EvtView .module #eventView #eventHeader #eventHeaderRightSpacer{display:none}
+.NETEventView .module #eventView #eventHeader #eventHeaderTitle,.v35EventView .module #eventView #eventHeader #eventHeaderTitle,.v35EvtView .module #eventView #eventHeader #eventHeaderTitle{width:100%;margin:0;padding:0;position:relative}
+.NETEventView .module #eventView #eventHeader #eventHeaderTitle .TitleText,.v35EventView .module #eventView #eventHeader #eventHeaderTitle .TitleText,.v35EvtView .module #eventView #eventHeader #eventHeaderTitle .TitleText{display:none}
+.NETEventView .module #eventView #eventHeader #eventHeaderTitle img:last-child,.v35EventView .module #eventView #eventHeader #eventHeaderTitle img:last-child,.v35EvtView .module #eventView #eventHeader #eventHeaderTitle img:last-child{border-left:.6rem solid #000;border-right:0;position:absolute;right:0}
+.NETEventView .module #eventView #eventHeader #eventHeaderTitle img,.v35EventView .module #eventView #eventHeader #eventHeaderTitle img,.v35EvtView .module #eventView #eventHeader #eventHeaderTitle img{border:.6rem solid transparent;border-right:.6rem solid #000;height:0;width:0;float:left;margin:.4rem 0 0}
+.NETEventView .module #eventView #eventData,.v35EventView .module #eventView #eventData,.v35EvtView .module #eventView #eventData{padding:0 40px}
+.NETEventView .module #eventView #eventData #topLinkBar,.v35EventView .module #eventView #eventData #topLinkBar,.v35EvtView .module #eventView #eventData #topLinkBar{text-align:center;padding:3px 0;position:absolute;top:30px;margin:0 auto;left:0;right:0}
+.NETEventView .module #eventView #eventData #topLinkBar ul li,.v35EventView .module #eventView #eventData #topLinkBar ul li,.v35EvtView .module #eventView #eventData #topLinkBar ul li{font-size:1.2rem;display:inline-block;padding:.5rem}
+.NETEventView .module #eventView #eventData #eventDateBottom,.NETEventView .module #eventView #eventData #eventDateTop,.v35EventView .module #eventView #eventData #eventDateBottom,.v35EventView .module #eventView #eventData #eventDateTop,.v35EvtView .module #eventView #eventData #eventDateBottom,.v35EvtView .module #eventView #eventData #eventDateTop{width:75%;overflow:hidden;position:relative;margin:0 auto;padding:1rem 0;font:400 1.4rem/1.6 $base-font-sans-serif}
+.NETEventView .module #eventView #eventData .eventSummarySectionAbove,.NETEventView .module #eventView #eventData .eventSummarySectionBelow,.v35EventView .module #eventView #eventData .eventSummarySectionAbove,.v35EventView .module #eventView #eventData .eventSummarySectionBelow,.v35EvtView .module #eventView #eventData .eventSummarySectionAbove,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow{padding:0}
+.NETEventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom,.NETEventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop,.NETEventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom,.NETEventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop,.v35EventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom,.v35EventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop,.v35EventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom,.v35EventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop,.v35EvtView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom,.v35EvtView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop{text-align:justify;font:400 1.4rem/1.6 $base-font-sans-serif;width:75%;margin:0 auto;padding:0;color:#000}
+.NETEventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom img,.NETEventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop img,.NETEventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom img,.NETEventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop img,.v35EventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom img,.v35EventView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop img,.v35EventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom img,.v35EventView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop img,.v35EvtView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryBottom img,.v35EvtView .module #eventView #eventData .eventSummarySectionAbove #eventSummaryTop img,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryBottom img,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow #eventSummaryTop img{margin:20px;max-width:100%}
+.NETEventView .module #eventView #eventData #eventTitleBottom,.NETEventView .module #eventView #eventData #eventTitleTop,.v35EventView .module #eventView #eventData #eventTitleBottom,.v35EventView .module #eventView #eventData #eventTitleTop,.v35EvtView .module #eventView #eventData #eventTitleBottom,.v35EvtView .module #eventView #eventData #eventTitleTop{font:400 2.1rem/1.6 $base-font-sans-serif;display:block;width:75%;border-bottom:1px solid #CCC;padding:0 0 10px}
+.NETEventView .module #eventView #eventData #eventTitleTop,.v35EventView .module #eventView #eventData #eventTitleTop,.v35EvtView .module #eventView #eventData #eventTitleTop{margin:2rem auto 1rem}
+.NETEventView .module #eventView #eventData #eventTitleBottom,.v35EventView .module #eventView #eventData #eventTitleBottom,.v35EvtView .module #eventView #eventData #eventTitleBottom{margin:1rem auto 2rem}
+
+.v35EvtView .module #eventView #eventData #eventTitleBottom{display:none;}
+
+.NETEventView .module #eventView #eventData .eventSummarySectionBelow #eventTitleBottom,.v35EventView .module #eventView #eventData .eventSummarySectionBelow #eventTitleBottom,.v35EvtView .module #eventView #eventData .eventSummarySectionBelow #eventTitleBottom{padding:20px 0 2px}
+.NETEventView .module #eventView #eventData #eventFlyer,.v35EventView .module #eventView #eventData #eventFlyer,.v35EvtView .module #eventView #eventData #eventFlyer{padding:30px 0}
+
+.module #eventFlyer h1:before,
+.module #eventFlyer h1:after,
+.module .articleHtml h1:before,
+.module .articleHtml h1:after{
+	display: none;
+}
+
+.module #eventFlyer ~ div[id$="_eventSummarySectionBottom"],
+.module #eventFlyer ~ div[id$="_bottomRegInfo"] {
+	display: none;
+}
+
+.NETEventInfo {
+    #Table6 {
+        background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */padding:0 30px 10px!important;display:block;border-bottom:none!important;
+        tr:first-child td{
+            width:100%;
+            &:first-child {
+                width:25%;
+            }
+            &:last-child {
+                width:75%;
+            }
+        }
+    }
+    #Table1, #Table1+table, +table+table {
+        background:#FFF;
+        border-top: 2px solid #e0e0dc;
+        width:100%;
+        text-align:left;
+        //box-shadow:0 3px 30px 3px rgba(0,0,0,.05);
+        padding:10px 30px!important;
+        display:block;
+        border-top:none!important;
+        border-bottom:none!important;
+    }
+    #Table1+table+table>tbody>tr{
+        background: $color-darkest;
+        color:#FFF;
+        &:first-child td{
+            width:100%;
+            text-align:center!important;
+        }
+        &:last-child td:first-child{
+            width:25%;
+        }
+        &:last-child td:last-child{
+            width:75%;
+        }
+        td{
+            padding:10px;
+        }
+        a {
+            color:#FFF;
+            &:active,&:hover{
+                color:#FFF;
+                border-bottom:1px solid;
+            }
+        }
+    }
+    #eventReportWrapperDiv {
+        background:#FFF;
+        border-top: 2px solid #e0e0dc;
+        width:100%;
+        text-align:left;
+        /* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
+        padding:10px 30px!important;
+        display:block;
+        border-top:none!important;
+        border-bottom:none!important;
+        +div {
+            background:#FFF;
+            border-top: 2px solid #e0e0dc;
+            width:100%;
+            text-align:left;
+            /* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
+            padding:10px 30px!important;
+            display:block;
+            border-top:none!important;
+        }
+    }
+    #divActions {
+        padding:10px 10px 7px!important;
+        width:auto!important;
+        li, ul {
+            list-style:none!important;
+            list-style-image:url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)!important;
+            padding:0;
+            margin:0;
+        }
+        li {
+            margin:0 0 3px;
+        }
+    }
+}
+
+.AddMembership,.MemberRoster,.v35Directory {
+    .module .col-xs-12>table:first-child {
+        //display:block;
+        //height:0;
+        margin: 0 auto 10px;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    [id$=tblHeader] {
+        display: block;
+        position:absolute;
+        margin:0;
+        left: 0;
+        width: 100%;
+        text-align: left !important;
+        >tbody>tr:first-child,>tbody>tr:first-child+tr+tr {
+            display: none;
+        }
+        >tr>td:first-child {
+            padding:0 2.7rem 0 0!important;
+        }
+        .adminbar input{
+            margin: 0 0 0 .5rem !important;
+            float:left;
+        }
+    }
+    .RosterRowHidden {
+        color:#8A0A0A!important;
+        &:hover {
+            color:#540808!important;
+        }
+    }
+    #printLink {
+        display:inline-block;
+        position:relative;
+        margin: 0 0 0 -15px;
+        float:right;
+        a {    
+            display:inline-block;
+            height:auto!important;
+            width:auto!important;
+            padding: 1rem 2rem !important;
+            margin: 0px 0 0 .1rem!important;
+            border: 2px solid $button-bg !important;
+            border-radius:0;
+            background: $button-bg;
+            font-weight:$button-weight;
+            font-size:$button-font-size;
+            font-family: $button-font;
+            letter-spacing: $button-letter-spacing;
+            color:$button-font-color !important;
+            text-decoration:none;
+            text-transform:uppercase;
+            -webkit-transition:.3s;
+            transition:.3s;
+            vertical-align:top;
+            line-height:1em;
+            &:active,&:hover {
+                background: $button-bg-hover;
+                border-color: $button-bg-hover !important;
+            }
+        }
+        +table>tbody>tr:first-child+tr+tr,
+        +table>tbody>tr:first-child>td:first-child,
+        +table>tbody>tr:first-child>td:first-child+td+td,
+        +table>tbody>tr>.tnavBorder {
+            display:none;
+        }
+        +table>tbody>tr:first-child+tr>td:first-child+td+td,
+        +table>tbody>tr:first-child>td:first-child+td {
+            width:100%;
+        }
+        +table>tbody>tr:first-child+tr>.tnavTabON {
+            padding:3rem 0!important;
+            background:#FFF;
+            border-top: 2px solid $color-lightest;
+            width:100%;
+            text-align:left;
+            //box-shadow:0 3px 30px 3px rgba(0,0,0,.05);
+        }
+    }
+    [id$="_tblAdminStuff"]+table {
+        * {
+            display: block;
+        }
+        tr:first-child+tr td:first-child,
+        tr:last-child td:first-child {
+            display:none;
+        }
+    }
+}
+
+[id$=rosterControl_Panel2]{padding:0 0 2rem!important}
+[id$=rosterControl_lbShowAll]{font-family:$base-font-sans-serif;font-size:1rem;text-transform:uppercase;letter-spacing:0;font-weight: 400;}
+[class^=qFilter]{width:20%}
+[class^=qFilter].label font{font-family:$base-font-sans-serif;font-size:1.2rem;font-weight:400;color:$color-primary;letter-spacing:.14285rem;text-transform:uppercase}
+[class^=qFilter].control input{padding:.1875rem 1rem;margin:.1875rem 0 0;height:3rem;outline:0;font-family:$base-font-sans-serif;font-size:1.6rem;width:100%!important}
+.qFilterButton{width:20%}
+.qFilterButton.label font{font-family:$base-font-sans-serif;font-size:.75rem;font-weight:400;color:$color-primary;letter-spacing:.14285rem;text-transform:uppercase}
+.qFilterButton.control input{padding:.1875rem 1rem;height:3rem;outline:0;font-family:$base-font-sans-serif;margin:0 0 0!important;font-size:1.1rem}
+[id$=rosterControl_tblListing] td{padding:2.5rem 1rem}
+[id$=rosterControl_tblListing] .RosterColumnTitle td{padding:.5rem 1rem}
+/*[id$=rosterControl_tblListing] .RosterColumnTitle + tr > td{font:400 2.2rem/1 $base-font-sans-serif;letter-spacing:.1rem;text-transform:uppercase;color:#CCC;text-align:center!important;padding:6.5rem 1rem 5rem}*/
+[id$=rosterControl_tblListing] .RosterColumnTitle + tr > td br{display:none}
+/*[id$=rosterControl_tblListing] .RosterColumnTitle + [class^=RosterRow] > td{font-size:1rem;padding:1.56rem 0.625rem;text-align:left!important;color:#222}*/
+[id$=rosterControl_tblListing] .RosterColumnTitle + [class^=RosterRow] > td br{display:inline}
+[id$=rosterControl_tblListing] .RosterColumnTitle > td{font:400 1.4rem/1 $base-font-sans-serif;border-bottom:.1rem solid #ccc;border-top:.1rem solid #ccc;text-transform:uppercase;letter-spacing:.2rem;color:#313335}
+[id$=rosterControl_tblListing] .RosterColumnTitle > td b{font-weight:400}
+[id$=rosterControl_tblListing] .RosterColumnTitle > td u{text-decoration:none}
+[id$=rosterControl_tblListing] .RosterRowOff{background:#EEE}
+[id$=rosterControl_tblListing] .RosterRowOn{background:#FFF}
+[id$=rosterControl_tblListing] [class^=RosterRow] > td:first-child+td{text-align:right}
+[id$=rosterControl_tblListing] [class^=RosterRow] > td{font:400 1.5rem/1 $base-font-sans-serif;letter-spacing:.1rem;color:#222;text-transform:none!important}
+[id$=rosterControl_tblListing] [class^=RosterRow] > td b{font-weight:400}
+[id*=rosterControl_tblLetter]{font:400 1.8rem/1 $base-font-sans-serif;text-transform:uppercase;border-bottom:.1rem solid #DDD;border-top:.1rem solid #DDD;margin:0 0 2rem}
+[id*=rosterControl_tblLetter]>tbody>tr>td{text-align:center!important}
+[id*=rosterControl_tblLetter] a{border:none!important;display:block}
+[id*=rosterControl_tblLetter] .RosterLetterOn,[id*=rosterControl_tblLetter] .rosterletteron{color:#313335!important;background:#EEE;font-weight:600;padding:0}
+[id*=rosterControl_tblLetter] .RosterLetterOff,[id*=rosterControl_tblLetter] .rosterletteroff{color:$base-font-color;padding:0}
+[id*=rosterControl_tblLetter] .RosterLetterOff:hover,[id*=rosterControl_tblLetter] .rosterletteroff:hover{color:$color-darkest;background:$color-lightest;}
+[id$=rosterControl_tblLetters]{margin:2rem 0}
+[id$=rosterControl_tblLetterBarBottom]{margin:2rem 0 0}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child,[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr+tr+tr{display:none}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr,[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr+tr{display:inline-block}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr{float:left}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr>td b{font-size:1.4rem;font-weight:400;text-transform:uppercase}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr+tr{float:right;margin:.4rem 0 0}
+[id$=rosterControl_tblResultsShell]>tbody>tr:first-child+tr+tr>td a{font-size:1rem;text-transform:uppercase}
+[id$=rosterControl_rapLoginReport]{font:400 1.4rem/1 $base-font-sans-serif}
+[id$=rosterControl_rapLoginReport]>table:first-child td{padding:0 1.2rem 0 0;text-transform:uppercase;font-size:1.2rem}
+[id$=rosterControl_rapLoginReport]>table:first-child td:last-child{padding:0}
+[id$=rosterControl_rapLoginReport]>table:first-child td:last-child a{font-size:400 1.2rem $base-font-sans-serif;font-family:$base-font-sans-serif;text-transform:uppercase;letter-spacing:.1rem}
+[id$=rosterControl_rapLoginReport]>table:first-child .RadPicker input{height:3rem!important;padding:.3rem 1rem!important}
+[id$=rosterControl_rapLoginReport]>table:first-child [id$=rosterControl_lbShowAll]{float:none}
+[id$=rosterControl_tblInput] i{font-style:normal}
+[id$=rosterControl_btnAdd]{margin-bottom:2rem!important}
+[id$=MyProfile] [id$=ProfilePage] td:first-child{width:40%}
+table#profilePhoto{margin:0 auto 1.42857rem}
+.MemProfile .module .col-xs-12>table:first-child,.MemberEdit .module .col-xs-12>table:first-child{height:0;display:block}
+.MemProfile [id$="_tblHeader"],.MemberEdit [id$="_tblHeader"]{margin:7rem 0 0;padding:0!important;display:inline-block;width:auto}
+.MemProfile [id$="_tblHeader"]>tbody>tr:first-child,.MemProfile [id$="_tblHeader"]>tbody>tr:first-child+tr+tr,.MemberEdit [id$="_tblHeader"]>tbody>tr:first-child,.MemberEdit [id$="_tblHeader"]>tbody>tr:first-child+tr+tr{display:none}
+.MemProfile [id$="_tblHeader"] .adminbar,.MemberEdit [id$="_tblHeader"] .adminbar{padding:0!important}
+.MemProfile [id$="_tblHeader"] .adminbar input,.MemberEdit [id$="_tblHeader"] .adminbar input{float:right}
+.MemProfile #printLink,.MemberEdit #printLink{display:inline-block;position:relative;margin:7rem 0 0;float:right}
+.MemProfile #printLink a,.MemberEdit #printLink a{display:inline-block;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;vertical-align:top}
+.MemProfile #printLink a:active,.MemProfile #printLink a:hover,.MemberEdit #printLink a:active,.MemberEdit #printLink a:hover{background: $color-darkest}
+.MemProfile #Table2,.MemberEdit #Table2{margin:0 0 2.85714rem}
+.MemProfile #Table2>tbody>tr:first-child+tr+tr,.MemProfile #Table2>tbody>tr:first-child+tr>td:first-child,.MemProfile #Table2>tbody>tr:first-child+tr>td:first-child+td+td+td+td,.MemProfile #Table2>tbody>tr:first-child>td:first-child,.MemProfile #Table2>tbody>tr:first-child>td:first-child+td+td,.MemProfile #Table2>tbody>tr>.tnavBorder,.MemberEdit #Table2>tbody>tr:first-child+tr+tr,.MemberEdit #Table2>tbody>tr:first-child+tr>td:first-child,.MemberEdit #Table2>tbody>tr:first-child+tr>td:first-child+td+td+td+td,.MemberEdit #Table2>tbody>tr:first-child>td:first-child,.MemberEdit #Table2>tbody>tr:first-child>td:first-child+td+td,.MemberEdit #Table2>tbody>tr>.tnavBorder{display:none}
+.MemProfile #Table2>tbody>tr>.tnavTabON,.MemberEdit #Table2>tbody>tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.MemProfile [id$=tblMyProfile]>tbody>tr>td:first-child{padding:0 3rem 0 0}
+.MemProfile [id$=tblMyProfile]>tbody>tr>td:last-child{padding:0 0 0 3rem}
+.MemProfile [id$="_tblProfile"]>tbody>tr:first-child>td strong{display:block;float:left;width:75%;padding:0 0 .5rem;font:400 2rem $base-font-sans-serif}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td:first-child{width:25%}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td:first-child i{display:block;padding:.5rem 1rem;margin:0 0 .5rem;background:#EEE;font-style:normal}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td:first-child b i{padding:0;margin:1.5rem 0 2rem;border-bottom:1px solid #CCC;border-right:0;background:0 0;color:#666;text-transform:uppercase;letter-spacing:.1rem}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td{padding:0 .5rem;border:none!important;vertical-align:middle; display:table-cell}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td b{display:block;color:#666;font-weight:400;text-align:left}
+.MemProfile [id$="_tblProfile"]>tbody>tr>td:first-child+td+td{text-align:left;padding:.5rem 0;color:#666}
+.MemProfile [id$="_tblProfile"]>tbody>.modRosterHiliteHiddenField>td:first-child+td+td{color:#888!important}
+.MemProfile #memberPhoto{width:70%;margin:0 0 0 auto}
+.MemProfile #memberPhoto~table{margin:0 0 0 auto}
+.MemProfile #memberPhoto>tbody>tr:first-child+tr td{line-height:0}
+.MemProfile #memberPhoto>tbody>tr:first-child+tr td input{border:none;display:block;padding:1rem .8rem .8rem;height:3.1rem;width:100%!important;margin:0}
+.MemProfile #memberPhoto p{margin:0}
+.MemProfile #memberPhoto>tbody>tr:first-child img{display:block;max-width:100%;margin:0 auto}
+.MemberEdit [id$="_tblInput"]{width:100%}
+
+.MemberEdit table[id$="rosterControl_tblInput"] td{padding: 2px auto;}
+.axisDialogBox .dialogActions ul li.close a{width: 19px;height: 12px;  background-position: -96px -4px;}
+.axisDialogBox .dialogActions ul li.close a img{min-width: 100%;max-width: 100%;height: auto;vertical-align: top;}
+.NET_MemberInbox .module .col-xs-12,.v35MessageCenter .module .col-xs-12{padding:25px 15px 0}
+.NET_MemberInbox .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child,.NET_MemberInbox .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child,.v35MessageCenter .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child,.v35MessageCenter .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child{background: $color-darkest;color:#FFF}
+.NET_MemberInbox .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td,.NET_MemberInbox .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td,.v35MessageCenter .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td,.v35MessageCenter .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td{padding:15px;vertical-align:middle}
+.NET_MemberInbox .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td a,.NET_MemberInbox .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td a,.v35MessageCenter .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td a,.v35MessageCenter .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td a{color:#FFF!important;line-height:1.5;display:inline-block;text-align:center}
+.NET_MemberInbox .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td a img,.NET_MemberInbox .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td a img,.v35MessageCenter .module .col-xs-12 [id$=tblMessages]>tbody>tr:first-child>td a img,.v35MessageCenter .module .col-xs-12 [id$=tblScheduledMessages]>tbody>tr:first-child>td a img{display:none}
+.NET_MemberInbox .module .col-xs-12 [id$="_trMailReport"],.v35MessageCenter .module .col-xs-12 [id$="_trMailReport"]{display:inline-block;width:auto!important;color:#DDD;float:right}
+.NET_MemberInbox .module .col-xs-12 [id$="_trMailReport"] a,.v35MessageCenter .module .col-xs-12 [id$="_trMailReport"] a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:right}
+.NET_MemberInbox .module .col-xs-12 [id$="_trMailReport"] a:active,.NET_MemberInbox .module .col-xs-12 [id$="_trMailReport"] a:hover,.v35MessageCenter .module .col-xs-12 [id$="_trMailReport"] a:active,.v35MessageCenter .module .col-xs-12 [id$="_trMailReport"] a:hover{background: $color-darkest}
+.NET_MemberInbox .module .col-xs-12 [id$="_trMailReport"] a img,.v35MessageCenter .module .col-xs-12 [id$="_trMailReport"] a img{margin:-2px 0 -2px 3px}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table,.v35MessageCenter .module .col-xs-12>table:first-child+table{margin:0 0 40px;position:relative}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table .rosterletteroff,.v35MessageCenter .module .col-xs-12>table:first-child+table .rosterletteroff{background: $color-darkest;color:#FFF}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table .rosterletteroff>td,.v35MessageCenter .module .col-xs-12>table:first-child+table .rosterletteroff>td{padding:5px 15px;vertical-align:middle}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table .rosterletteroff>td:first-child,.v35MessageCenter .module .col-xs-12>table:first-child+table .rosterletteroff>td:first-child{width:35%}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table>tbody>tr>td,.v35MessageCenter .module .col-xs-12>table:first-child+table>tbody>tr>td{display:none}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table>tbody>tr:first-child+tr>td:first-child+td,.NET_MemberInbox .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td:first-child+td,.v35MessageCenter .module .col-xs-12>table:first-child+table>tbody>tr:first-child+tr>td:first-child+td,.v35MessageCenter .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td:first-child+td{display:table-cell;width:100%}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table>tbody>tr>.tnavBorder,.v35MessageCenter .module .col-xs-12>table:first-child+table>tbody>tr>.tnavBorder{display:none!important}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table>tbody>tr>.tnavTabON,.v35MessageCenter .module .col-xs-12>table:first-child+table>tbody>tr>.tnavTabON{display:table-cell;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NET_MemberInbox .module .col-xs-12>table:first-child+table [id$="_litHTML"] iframe:first-child,.v35MessageCenter .module .col-xs-12>table:first-child+table [id$="_litHTML"] iframe:first-child{border:1px solid #CCC!important;margin:0 0 10px!important;padding:20px!important}
+.NETCVM .module table:first-child+table{margin:0 0 40px}
+.NETCVM .module table:first-child+table>tbody>tr:first-child+tr+tr,.NETCVM .module table:first-child+table>tbody>tr:first-child>td:first-child,.NETCVM .module table:first-child+table>tbody>tr:first-child>td:first-child+td+td{display:none}
+.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>td:first-child+td+td,.NETCVM .module table:first-child+table>tbody>tr:first-child>td:first-child+td{width:100%}
+.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */font:400 1.4rem/1.6 $base-font-sans-serif}
+.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child+tr,.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child+tr+tr,.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child>td:first-child,.NETCVM .module table:first-child+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child>td:first-child+td+td+td{display:none}
+.NETEmailUIEditSched [id$=tblMessages]>tbody>tr:first-child,.NETEmailUIEditSched [id$=tblScheduledMessages]>tbody>tr:first-child,.NETEmailUIMain [id$=tblMessages]>tbody>tr:first-child,.NETEmailUIMain [id$=tblScheduledMessages]>tbody>tr:first-child{background: $color-darkest;color:#fff}
+.NETEmailUIEditSched [id$=tblMessages]>tbody>tr:first-child>td,.NETEmailUIEditSched [id$=tblScheduledMessages]>tbody>tr:first-child>td,.NETEmailUIMain [id$=tblMessages]>tbody>tr:first-child>td,.NETEmailUIMain [id$=tblScheduledMessages]>tbody>tr:first-child>td{padding:15px;vertical-align:middle}
+.NETEmailUIEditSched [id$=tblMessages]>tbody>tr:first-child>td a,.NETEmailUIEditSched [id$=tblScheduledMessages]>tbody>tr:first-child>td a,.NETEmailUIMain [id$=tblMessages]>tbody>tr:first-child>td a,.NETEmailUIMain [id$=tblScheduledMessages]>tbody>tr:first-child>td a{color:#fff!important;line-height:1.5;display:inline-block;text-align:center}
+.NETEmailUIMain [id$=tblMessages]>tbody>tr:first-child>td a {background: transparent;}
+.NETEmailUIEditSched [id$=tblMessages]>tbody>tr:first-child>td a img,.NETEmailUIEditSched [id$=tblScheduledMessages]>tbody>tr:first-child>td a img,.NETEmailUIMain [id$=tblMessages]>tbody>tr:first-child>td a img,.NETEmailUIMain [id$=tblScheduledMessages]>tbody>tr:first-child>td a img{display:none}
+.NETEmailUIEditSched .modulewrap .module .col-xs-12>table:first-child+table,.NETEmailUIMain .modulewrap .module .col-xs-12>table:first-child+table{margin:0 0 40px}
+.NETEmailUIEditSched .modulewrap .module .col-xs-12>table:first-child+table>tbody>tr>.tnavTabON,.NETEmailUIMain .modulewrap .module .col-xs-12>table:first-child+table>tbody>tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table{margin:0 0 40px}
+.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr+tr,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child>td:first-child,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child>td:first-child+td+td{display:none}
+.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>td:first-child+td+td,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child>td:first-child+td{width:100%}
+.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */font:400 1rem/1.6 $base-font-sans-serif}
+.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child+tr,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child+tr+tr,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child>td:first-child,.NETCEDynamicGroups .module .row>.col-xs-12>style:first-child+script+link+table+table>tbody>tr:first-child+tr>.tnavTabON>.tnavTabContent>tbody>tr:first-child>td:first-child+td+td+td{display:none}
+.EventReportListing .module .col-xs-12>script:first-child+table+div+div{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border-collapse:initial;margin:0 0 40px;display:block!important}
+.EventReportListing .module .col-xs-12>script:first-child+table+div+div [id$=tblGlobalReports]>tbody>tr:first-child,.EventReportListing .module .col-xs-12>script:first-child+table+div+div [id$=tblLocalReports]>tbody>tr:first-child{background: $color-darkest;color:#FFF}
+.EventManager #divActions,.EventManager #divHelp{padding:10px 10px 7px!important;width:auto!important}
+.EventManager #divActions li,.EventManager #divActions ul,.EventManager #divHelp li,.EventManager #divHelp ul{list-style:none!important;list-style-image:url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)!important;padding:0;margin:0}
+.EventManager #divActions li,.EventManager #divHelp li{margin:0 0 3px}
+.EventManager [id$="_tblEvents"]>tbody>tr:first-child{background: $color-darkest;color:#fff;height: 30px;vertical-align: middle;}
+.EventManager [id$="_tblEvents"]>tbody>tr:first-child td{vertical-align: middle!important;margin: 0;padding: 4px 10px 0;}
+.EventManager [id$="_tblEvents"]>tbody>tr>td{padding:0 10px;/* line-height: 30px; */}
+.EventManager .module .floatedTableHeader{border-bottom:1px solid #000;display:block;background:#eee;padding:0 15px 0 0}
+.EventManager .module .col-xs-12>script:first-child+table+table{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border-collapse:initial;margin:0 0 40px;}
+.EventManager .module .col-xs-12>script:first-child+table+table td{font-size:14px!important}
+.EventManager .module .col-xs-12>script:first-child+table+table+div{margin:0 0 20px}
+.EventManager .module .col-xs-12>script:first-child+table+table+div a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+.EventManager .module .col-xs-12>script:first-child+table+table+div a:active,.EventManager .module .col-xs-12>script:first-child+table+table+div a:hover{background: $color-darkest}
+.EventManager .module .col-xs-12>script:first-child+table+table+div+div{color:transparent;margin:0 -110px 0 0}
+.EventManager .module .col-xs-12>script:first-child+table+table+div+div a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:left;text-indent:initial}
+.EventManager .module .col-xs-12>script:first-child+table+table+div+div a:active,.EventManager .module .col-xs-12>script:first-child+table+table+div+div a:hover{background: $color-darkest}
+.EventManager .module [id$="_rapEvents"]{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */}
+.GlobalNotifications .module .col-xs-12 .plgHeaderBar{padding:0 0 10px}
+.GlobalNotifications .module .col-xs-12>table{margin:60px 0 40px;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05)*/}
+.GlobalNotifications .module .col-xs-12>table>tbody>tr>td:first-child{display:none}
+.GlobalNotifications .module .col-xs-12>table>tbody>tr>td:first-child+td{padding:30px}
+.NETBizDBReport .module table:first-child~table{margin:0 0 40px;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETBizDBReport .module table:first-child~table>tbody>tr>td:first-child{padding:0 0 0 30px}
+.NETBizDBReport .module table:first-child~table>tbody>tr:first-child>td{padding:30px 30px 0}
+.NETBizDBReport .module table:first-child~table>tbody>tr:first-child+tr+tr>td:first-child+td,.NETBizDBReport .module table:first-child~table>tbody>tr:first-child+tr>td:first-child+td+td{padding:0 30px 0 0}
+.NETBizDBReport .module table:first-child~table>tbody>tr:first-child+tr+tr+tr>td{padding:0 30px 30px}
+[id$=imgButInvisibleRefresh]{visibility:hidden}
+.NET_SiteStats [id$=tabMainContent] span.icon{display:none}
+.NET_SiteStats .module .col-xs-12 table:first-child+table{margin:0 0 40px}
+.NET_SiteStats .module .col-xs-12 table:first-child+table [id$="_pnlTView"]{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETsitesConfig .module .col-xs-12 #Table1{margin:0 0 40px}
+.NETsitesConfig .module .col-xs-12 #Table1 .moduleTabsWrapper{margin:0 0 -1px}
+.NETsitesConfig .module .col-xs-12 #Table1>tbody>tr:first-child>td:first-child,.NETsitesConfig .module .col-xs-12 #Table1>tbody>tr:first-child>td:first-child+td+td{display:none}
+.NETsitesConfig .module .col-xs-12 #Table1>tbody>tr:first-child>td:first-child+td{width:100%}
+.NETsitesConfig .module .col-xs-12 #Table1>tbody>tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05)*/}
+.PollManager .module .col-xs-12>table:first-child+table{margin:40px 0;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.PollManager .module .col-xs-12>table:first-child+table>tbody>tr>td{padding:0 30px 30px}
+.PollManager .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td{padding:30px}
+.SiteStatsMain [id$=cblDisplayStat]{border-collapse:collapse;width:300px;display:inline-block;text-align:left}
+.SiteStatsMain [id$=cblDisplayStat] tr{display:inline-block;width:50%}
+.SiteStatsMain [id$=cblDisplayStat] tr td{display:inline-block;width:100%}
+.SiteStatsMain [id$=cblDisplayStat] tr td input{vertical-align:top;margin:3px 10px 5px 5px}
+.SiteStatsMain [id$=cblDisplayStat] tr td label{width:70%}
+.SiteStatsMain [id$=cblDisplayStat] tr td nobr{white-space:normal}
+.SiteStatsMain #siteStatisticsWrapper>table{margin:0 0 40px}
+.SiteStatsMain #siteStatisticsWrapper>table>tbody>tr:first-child+tr+tr{display:none}
+.SiteStatsMain #siteStatisticsWrapper>table>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.SiteStatsMain #siteStatisticsWrapper>table .RadToolTip .rtWrapper{table-layout:fixed;width:300px}
+.SiteStatsSessions .module link:first-child+link+table+table{margin:0 0 40px}
+.SiteStatsSessions .module link:first-child+link+table+table>tbody>tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05)*/}
+.v35ActiveUserListing .module .col-xs-12>table:first-child+table{margin:0 0 40px;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.v35ActiveUserListing .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td:first-child,.v35ActiveUserListing .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td:first-child+td+td{display:none}
+.v35ActiveUserListing .module .col-xs-12>table:first-child+table>tbody>tr:first-child>td:first-child+td{padding:30px!important}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table{height:50px;margin:3rem 0 0;text-align:left}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border-bottom:0}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table>tbody>tr:first-child+tr+tr{display:none}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table>tbody>tr>td{padding:0 30px}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table>tbody>tr:first-child>td{padding:30px 30px 0}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border-top:0}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table>tbody>tr:first-child+tr+tr+tr{display:none}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table>tbody>tr:first-child>td{padding:30px 30px 0}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table>tbody>tr:first-child+tr>td{padding:0 30px}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table>tbody>tr:first-child+tr+tr>td{padding:30px 30px 0}
+.v35ProfileUpdateReport .module .col-xs-12>script:first-child+table+table+table>tbody>tr:first-child+tr+tr+tr+tr>td{padding:0 30px 30px}
+.v35SiteConfig #Table1{margin:40px 0}
+.v35SiteConfig #Table1 .moduleTabsWrapper{margin:0 0 -1px}
+.v35SiteConfig #Table1>tbody>tr:first-child>td:first-child,.v35SiteConfig #Table1>tbody>tr:first-child>td:first-child+td+td{display:none}
+.v35SiteConfig #Table1>tbody>tr:first-child>td:first-child+td{width:100%}
+.v35SiteConfig #Table1>tbody>tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETSrvyMain .col-xs-12 #Table1,.v35SurveyManager .col-xs-12 #Table1{margin:0 0 40px}
+.NETSrvyMain .col-xs-12 #Table1>tbody>tr:first-child+tr>.tnavTabON,.v35SurveyManager .col-xs-12 #Table1>tbody>tr:first-child+tr>.tnavTabON{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETSrvyMain .col-xs-12 #Table1 .modArticlesDayHeader,.v35SurveyManager .col-xs-12 #Table1 .modArticlesDayHeader{background: $color-darkest;color:#FFF}
+.NETSrvyMain .col-xs-12 .modSurveyEditDividerHdr,.v35SurveyManager .col-xs-12 .modSurveyEditDividerHdr{padding:0 0 30px}
+.FirstImpressionListing .module .RosterLetterOff{background: $color-darkest;color:#fff}
+.FirstImpressionListing .module .col-xs-12 div[align=right]{margin:20px 0;text-indent:-9999px;overflow:auto;color:transparent}
+.FirstImpressionListing .module .col-xs-12 div[align=right] a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;float:right;text-indent:0}
+.FirstImpressionListing .module .col-xs-12 div[align=right] a:active,.FirstImpressionListing .module .col-xs-12 div[align=right] a:hover{background: $color-darkest}
+.FirstImpressionListing .module .col-xs-12>div[style]{background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */padding:30px 30px 0!important;font-size:2rem;border-bottom:none!important}
+.FirstImpressionListing .module .col-xs-12 [id$=tblActivePages],.FirstImpressionListing .module .col-xs-12 [id$=tblExpiredPages],.FirstImpressionListing .module .col-xs-12 [id$=tblPendingPages]{background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border-collapse:separate;border-top:none!important;padding:10px 30px 30px!important}
+.FirstImpressionListing .module .col-xs-12 [id$=tblActivePages]+div,.FirstImpressionListing .module .col-xs-12 [id$=tblExpiredPages]+div,.FirstImpressionListing .module .col-xs-12 [id$=tblPendingPages]+div{margin:40px 0 0}
+.NETDynEntryFormLanding .module .col-xs-12 .RosterLetterOff{background: $color-darkest;color:#fff}
+.NETDynEntryFormLanding .module .col-xs-12 .RosterLetterOff>td{padding:10px}
+.NETDynEntryFormLanding .module .col-xs-12 .RosterLetterOff>td.emptyModuleTableCell{display: table-cell;}
+.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table{width:100%;height:50px;margin:1rem 0 6rem;float:left;text-align:left}
+.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table+table{display:inline-block;width:100%;margin:0 0 40px;padding:0!important;/*position:absolute;*/right:15px;text-align:right}
+.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table+table *{display:inline-block;color:transparent;letter-spacing:-.3rem}
+.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table+table a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s;margin:0}
+.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table+table a:active,.NETDynEntryFormLanding .module .col-xs-12>script:first-child+table+table a:hover{background: $color-darkest}
+.NETDynEntryFormLanding .module .col-xs-12 [id$="_tblForms"]{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.NETResultsLanding .module .col-xs-12 table:first-child+table{padding:3rem!important;background:#FFF;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */border:none}
+.NETResultsLanding .module .col-xs-12 [id$="_tblSubmissions"]{margin:0 0 40px;padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div>a{display:inline-block;vertical-align:top;height:auto!important;width:auto!important;padding:1rem 1.4rem!important;margin:0 0 0 .42857rem;border:0!important;border-radius:0;background: $color-darkest;font:700 12px/1 $base-font-sans-serif;letter-spacing:.1rem;color:#FFF!important;text-decoration:none;text-transform:uppercase;-webkit-transition:.3s;transition:.3s}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div>a:active,.NETFullFormReport .module .col-xs-12 script:first-child+table+div>a:hover{background: $color-darkest}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */display:block!important;margin:40px 0 0}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div{max-width:100%;overflow:auto}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div>table>tbody>tr:first-child>td{vertical-align:bottom;min-width:150px;padding:5px 5px 10px;background:#333;color:#FFF}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div>table>tbody>tr:first-child>td img{vertical-align:bottom;float:right;width:17px}
+.NETDynamicForm .module .col-xs-12 .formBaseFormWrapper,.NETDynamicFormView .module .col-xs-12 #Table2>tbody>tr:first-child+tr>td>table,.NETFormReport .module .col-xs-12 table:first-child+div{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
+.SupportContacts .module .col-xs-12>table+table{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */display:block}
+.SupportContacts .module .plgHeaderBar{position:relative;left:0;right:0;padding:0 0 10px;overflow:auto;height:auto;text-align:center}
+.SupportContacts .module .plgHeaderBar b{font-weight:400;display:inline-block;padding:0 0 10px;border-bottom:1px solid #CCC}
+.SupportContacts .module .plgHeaderBorder{border-bottom:1px solid #CCC}
+.SupportContacts .module tr[id$=Group] tbody,.SupportContacts .module tr[id$=Group] td,.SupportContacts .module tr[id$=Group] tr,.SupportContacts .module tr[id$=trAM] tbody,.SupportContacts .module tr[id$=trAM] td,.SupportContacts .module tr[id$=trAM] tr,.SupportContacts .module tr[id$=trAM]+tr tbody,.SupportContacts .module tr[id$=trAM]+tr td,.SupportContacts .module tr[id$=trAM]+tr tr{display:inline-block;width:100%;border:none!important;overflow:auto;height:auto!important}
+.SupportContacts .module tr[id$=Group] table table,.SupportContacts .module tr[id$=trAM] table table,.SupportContacts .module tr[id$=trAM]+tr table table{width:100%!important}
+.SupportContacts .module tr[id$=Group] table table td,.SupportContacts .module tr[id$=trAM] table table td,.SupportContacts .module tr[id$=trAM]+tr table table td{width:25%!important}
+.RadGrid_Axis .rgAdd,.RadGrid_Axis .rgCancel,.RadGrid_Axis .rgCollapse,.RadGrid_Axis .rgDel,.RadGrid_Axis .rgEdit,.RadGrid_Axis .rgExpCSVP,.RadGrid_Axis .rgExpDOC,.RadGrid_Axis .rgExpPDF,.RadGrid_Axis .rgExpXLS,.RadGrid_Axis .rgExpand,.RadGrid_Axis .rgFilter,.RadGrid_Axis .rgPageFirst,.RadGrid_Axis .rgPageLast,.RadGrid_Axis .rgPageNext,.RadGrid_Axis .rgPagePrev,.RadGrid_Axis .rgRefresh,.RadGrid_Axis .rgSortAsc,.RadGrid_Axis .rgSortDesc,.RadGrid_Axis .rgUngroup,.RadGrid_Axis .rgUpdate{background-image:url(../../../A_Master/NET/Telerik/Skins/Axis/Grid/sprite.gif)!important;border:none!important;background-color:transparent!important;background-repeat:no-repeat!important}
+.RadGrid_Axis .rgExpand{background-position:5px -496px!important}
+.RadGrid_Axis .rgHeader .rgSortDesc{background-position:3px -198px!important;height:10px}
+.RadGrid_Axis .rgCollapse{background-position:3px -444px!important}
+.RadGrid_Axis .rgPageFirst{background-position:0 -550px!important}
+.RadGrid_Axis .rgPagePrev{background-position:0 -700px!important}
+.RadGrid_Axis .rgPageNext{background-position:0 -850px!important}
+.RadGrid_Axis .rgPageLast{background-position:0 -1000px!important}
+.RadTabStrip .rtsUL,.RadTabStripVertical .rtsUL{min-width:400px}
+.modStatsUserBar,.modStatsVisitorBar{text-align:left}
+.RadGrid .rgHeader{background: $color-darkest;color:#FFF}
+.RadGrid .rgHeader input{display:none}
+
+
+/*mobile*/
+
+.module .injectContent > div {
+background: #fff;	
+}
+
+div.mobileTabsWrapper {
+	
+background: #f2f2f4;
+border-color:#dddddf;
+}
+
+div.mobileTabsWrapper ul.mobileTabs {
+	padding: 0;
+}
+
+div.mobileTabsWrapper ul.mobileTabs li{
+	
+background: transparent !important;
+	
+margin-bottom: -2px;
+	
+border-bottom: 2px solid transparent;
+	
+border-top: 2px solid transparent;
+	
+border-left: none;
+	
+border-right: none;
+	
+margin-left: 2px;
+	
+margin-right: 2px;
+}
+
+div.mobileTabsWrapper ul.mobileTabs li a {text-transform: uppercase;font-weight: 500;letter-spacing: 0.025em;font-size: 12px;color: #313335 !important;padding: 2px 4px 2px;}
+
+div.mobileTabsWrapper ul.mobileTabs li.selected{
+	
+border-top-color: $base-font-color;
+background: #fff !important;
+border-bottom-color: #fff;
+
+}
+
+div.mobileTabsWrapper ul.mobileTabs li.selected a{
+	color: $base-font-color !important;	
+}
+
+.injectContent .paneDiv, .injectContent #artButtons, .injectContent #calButtons, .injectContent #stmtButtons, .injectContent #rbmButtons, .injectContent #ncButtons, .injectContent #directoryFrame  {background: #fff;/* margin-right: 10px; */width: 98%;margin: 10px auto 10px;}
+
+ 
+
+.injectContent .listView {
+	
+padding-bottom: 0.25%;
+	
+width: 98%;
+	
+margin: 0 auto 0;
+}
+
+
+
+.injectContent .headerBar, .injectContent .pluginTitleBar, .injectContent .sploderTitleBar {
+	background: #F5F1E9 !important;
+	margin-bottom: 15px;
+}
+
+.injectContent .listView li.subHeader{
+	background: none;
+    color: #666;
+}
+
+.injectContent .listView li{
+	background: #f6f6f1;
+	margin: 0 auto 10px !important;
+	/* width: 98%; */
+	padding: 10px;
+}
+
+.injectContent .listView li.selected{
+	color: #000;
+	text-decoration:  underline;
+}
+
+.injectContent #directoryFrame  {
+padding-bottom: 10px;	
+}
+
+
+
+.injectContent #eventFrame {
+
+padding: 1%;
+    margin: 0 auto;
+}
+
+.injectContent #articleFrame {
+overflow: hidden;
+padding: 0.5%;
+    margin: 0 auto;	
+}
+
+.injectContent #directoryFrame .searchBox {
+    margin: 0 0 20px !important;
+    clear: both;
+    top: 10px;
+	
+}
+
+.injectContent #directoryFrame .searchBox input.textbox {
+
+	    border: none;
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: inherit;
+}
+
+#eventView li#syncLI {
+	position: relative;
+}
+
+#divSyncEvent {
+	top: 28px !important;left: 50px !important;
+}
+
+td.label {
+	color: #313335;
+}
+
+iframe#sendATestiframe { 
+min-height: 375px; 
+} 
+
+div#sendATest { 
+min-height: 410px; 
+} 
+iframe#imageExploreriframe { 
+min-height: 535px; 
+}
+iframe#updatePhotoiframe {
+min-height: 268px; 
+}
+
+#groupsMembersFrameTable iframe#groupsMembersiframe {
+	min-height: 275px;
+}
+iframe#evtPopMgriframe { 
+	min-height: 535px
+}
+
+iframe#rdpPagePropsiframe {
+    min-height: 410px;
+}
+
+iframe#openGroupiframe {
+    min-height: 290px;
+}
+iframe#updatePhotoiframe {
+    min-height: 265px;
+}
+
+iframe#RosterConfigiframe{
+	min-height: 570px	
+}
+
+iframe#editor_reAxisEditor_contentIframe {
+    min-height: 568px;
+}
+
+
+body[class*=alendar].burgerNav [id^=axisCalendar]>[id$="_admin"] {
+	position: static;
+	margin: 20px auto 0px;
+	text-align: left;
+}
+
+body[class*=alendar].burgerNav [id^=axisCalendar]>[id$="_admin"] td {
+	text-align: left;
+	display: block;
+}
+
+body[class*=alendar].burgerNav [id^=axisCalendar] #calendarLinkBar {
+
+position: static;
+
+text-align: left;
+}
+body[class*=alendar].burgerNav [id^=axisCalendar] #calendarLinkBar a {
+	margin: 4px 0 4px 0!important;
+	float: none;
+}
+
+.AddMembership.burgerNav [id$=tblHeader], .MemberRoster.burgerNav [id$=tblHeader], .v35Directory.burgerNav [id$=tblHeader] {
+	position: static;
+	margin: 0 auto;
+}
+
+.AddMembership.burgerNav #printLink, .MemberRoster.burgerNav #printLink, .v35Directory.burgerNav #printLink {
+	position: static;
+    margin: 0 0 0 14px;
+    text-align: left;
+    display: block;
+}
+
+.moduleFilterLabel{font-size: 1.6rem;letter-spacing: 0.1em;text-transform:uppercase;display:block;color: #313335;}

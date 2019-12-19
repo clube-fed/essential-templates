@@ -1,0 +1,80 @@
+// VARIABLES
+$footer-bg-color: $color-primary;
+$footer-default-font-color: $white;
+$footer-social-icons-color: $footer-default-font-color;
+
+// FOOTER v3
+footer.opt3 {
+    background: $footer-bg-color;
+    color: $footer-default-font-color;
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    > div {
+        padding: 0.5rem 3rem;
+        @media (max-width:767px) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        &:first-child {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+        &:last-child {
+            padding-bottom: 2.7rem;
+        }
+    }    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            font-size: 1.4rem;
+            @media (max-width:767px) {
+                width: 100%;
+            }
+            span[class*="icon"] {
+                margin-right: 5px;
+            }
+            &:nth-last-child(n+2) {
+                margin-bottom: 1rem;
+                @media (min-width:768px) {
+                    margin-bottom: 0;
+                    margin-right: 3.5rem;                    
+                }                
+            }
+        }
+    }
+    a {
+        color: $footer-default-font-color;
+        text-decoration: none;
+        &:hover,&:focus {
+            color: $footer-default-font-color;
+            text-decoration: underline;
+        }
+    }
+    .social {
+        font-size: 0;
+        padding: 3rem;
+        ul {
+            font-size: 0;
+            li {
+                font-size: 0;
+                letter-spacing: 0;
+                margin: 0;
+                @media (max-width:767px) {
+                    width: auto;
+                }
+                span[class*="icon"] {
+                    font-size: 1.9rem;
+                    margin: 0 10px;
+                    color: $footer-social-icons-color;
+                }
+            }
+        }
+    }
+}

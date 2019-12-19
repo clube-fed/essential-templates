@@ -1,0 +1,48 @@
+// VARIABLES
+$sub-nav-bg-color: $color-primary;
+$sub-nav-default-font-color: $white;
+$sub-nav-selected-font-color: $white;
+$sub-nav-font-family: $base-font-sans-serif;
+$sub-nav-font-size: 1.6rem;
+$sub-nav-font-letter-spacing: 0;
+$sub-nav-font-text-transform: none;
+
+// SUB-NAV v2 (HORIZONTAL)
+.sub-nav.opt2 {
+    background-color: $sub-nav-bg-color;
+    padding: 0 15px;
+    text-align: center;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 8px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        min-height: 6rem;
+        li {
+            padding: 1rem 2.5rem;
+            a {
+                color: $sub-nav-default-font-color;
+                font-family: $sub-nav-font-family;
+                font-size: $sub-nav-font-size;
+                text-transform: $sub-nav-font-text-transform;
+                letter-spacing: $sub-nav-font-letter-spacing;
+                text-decoration: none;
+                border-bottom: 1px solid transparent;
+                transition: all 0.3s ease-in-out;
+                &:hover,&:focus {
+                    color: $sub-nav-selected-font-color;
+                    border-color: $white;
+                }
+            }
+            &.selectedItem {
+                a {
+                    color: $sub-nav-selected-font-color;
+                    border-color: $white;
+                }
+            }
+        }
+    }
+}

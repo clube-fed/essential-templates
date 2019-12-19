@@ -1,0 +1,147 @@
+//.sitewrap {
+    [id$="_accordian"].RadPanelBar {
+        width: 100% !important;
+        margin: 2rem 0;
+        background: 0 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        > ul {
+            border: none;
+        }
+        .rpRootGroup .rpLink {
+            display: table;
+            width: 100%;
+            background: 0 0;
+            border: none !important;
+            font: inherit;
+            padding: $accordion-bar-padding;
+            @media (max-width:767px) {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            * {
+                width: auto;
+                height: auto;
+                padding: 0;
+                margin: 0;
+                border: none;
+                background: 0 0 !important;
+            }
+            &:active, &:hover {
+                font: inherit;
+                .rpOut {
+                    padding: 0;
+                    font: inherit;
+                }
+            }
+            .rpOut {
+                display: flex;
+                //vertical-align: middle;
+                //width: 100%;
+                font: inherit;
+                position: relative;
+                line-height: 0;
+                margin: 0;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .rpText {
+                padding: 0 !important;
+            }
+            .rpExpandHandle, .rpText {
+                display: inline-block;
+                position: relative;
+            }
+        }
+        > ul > li {
+            margin: 0 0 10px !important;
+            padding: 0;
+            border: none;
+            &:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+        .rpRootGroup .rpLink {
+            background: $accordion-bar-closed-bg !important;
+            border: $accordion-bar-closed-border !important;
+            > span {
+                //padding: 0;
+                //line-height: 1.8;
+                @media (max-width:767px) {
+                    //padding-left: 1.5rem !important;
+                    //padding-right: 4.5rem !important;
+                }
+            }
+            .rpText {
+                font-family: $accordion-bar-font-family;
+                font-weight: $accordion-bar-font-weight;
+                font-size: $accordion-bar-font-size;
+                line-height: $accordion-bar-line-height !important;
+                letter-spacing: $accordion-bar-letter-spacing;
+                text-transform: $accordion-bar-text-transform;
+                color: $accordion-bar-closed-font-color;
+            }
+            .rpExpandHandle {
+                //position: absolute;
+                //right: 3rem;
+                //top: calc(50% - 0.475em);
+                flex: 0 0 5rem;
+                order: 1;
+                padding: 0 0 0 3.5rem;
+                float: none;
+                -webkit-transition: .3s;
+                transition: .3s;
+                color: $accordion-icon-closed-color;
+                line-height: 1;
+                height: auto;
+                width: auto;
+                font-size: $accordion-icon-size;
+                &:after {
+                    content: $accordion-icon-closed;
+                    font-family: 'Nucleo Glyph';
+                    font-size: inherit;
+                }
+                @media (max-width:767px) {
+                    right: 1.5rem;
+                }
+            }
+            &.rpExpanded {
+                background: $accordion-bar-open-bg !important;
+                border: $accordion-bar-open-border !important;
+                .rpText {
+                    color: $accordion-bar-open-font-color;
+                }
+                .rpExpandHandle {
+                    color: $accordion-icon-open-color;
+                    &:after {
+                        content: $accordion-icon-open;
+                    }
+                }
+            }
+        }
+        .rpSlide .rpGroup .rpTemplate {
+            padding: 4rem 7rem 5rem;
+            border: $accordion-content-border !important;
+            border-top: 0 !important;
+            background: $accordion-content-bg-color !important;
+            font-family: $base-font-family;
+            font-weight: $base-font-weight;
+            font-size: $base-font-size;
+            line-height: $base-line-height;
+            color: $base-font-color;
+            p {
+                line-height: $base-line-height;
+            }
+            @media (max-width:1199px) {
+                padding: 3rem 5rem 4rem;
+            }
+            @media (max-width:768px) {
+                padding: 1.5rem 2rem;
+            }
+        }
+    }
+.mpContent ~ .RadPanelBar_accordionTemplate, .RadPanelBar_accordionTemplate ~ .mpContent {
+    margin-top: 30px;
+}
+//}

@@ -1,0 +1,112 @@
+// button styles
+.abut {    
+    font-family: $button-font;
+    font-size: $button-font-size;
+    font-weight: $button-weight;
+    text-transform: uppercase;
+    letter-spacing: $button-letter-spacing;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: $button-font-color;
+    background-color: $button-bg;
+    background-image: none;
+    border: $button-border;
+    border-radius: 0;
+    padding: $button-padding;
+    margin: 0;
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover, &:focus, &:active {
+        text-decoration: none;
+        background-color: $button-bg-hover;
+        border-color: $button-border-hover-color;
+    }
+    &-secondary {
+        font-family: $second-button-font;
+        font-size: $second-button-font-size;
+        font-weight: $second-button-weight;
+        text-transform: uppercase;
+        letter-spacing: $second-button-letter-spacing;
+        line-height: 1em;
+        text-align: center;
+        text-decoration: none;
+        color: $second-button-font-color;
+        background-color: $second-button-bg;
+        border: $second-button-border;
+        border-radius: 0;
+        padding: $second-button-padding;
+        margin: 0;
+        display: inline-block;
+        width: auto;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            background-color: $second-button-bg-hover;
+            border-color: $second-button-border-hover-color;
+        }
+    }
+    form[action*="ArticleEdit"] & {
+        padding: .75rem 1.25rem;
+        border: inherit;        
+    }
+}
+
+.sitewrap,.modulesWrap {
+    header {
+        .log-link.abut-secondary {    
+            min-width: 130px !important;
+            //padding-left: 15px !important;
+            //padding-right: 15px !important;
+            //padding-top: 19px !important;
+            //padding-bottom: 18px !important;
+            //line-height: 30px;
+            @media screen and (max-width:476px) {
+                width: 100% !important;
+                min-width: 0 !important;
+            }
+        }
+    }
+}
+
+// button for modules
+.modulesWrap {
+    .abut {
+      margin: 2px;
+      padding: 18px 39px 17px 39px;
+      width: auto !important;
+        letter-spacing: .1em;
+    }
+    .qFilterButton input.abut {
+        padding: 11px 25px 10px !important;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+  .abut {
+    width: 100%;
+  }
+  // button for modules
+  .modulesWrap .abut {
+    margin: 2px;
+    padding: 5px 10px;
+    width: auto !important;
+  }
+}
+
+// mobile button
+.mobileButton {
+    background-color: $button-bg;
+    color: $button-font-color;    
+    border-color: darken($button-bg,10%);
+    @media screen and (max-width:367px) {
+        padding: 5px;
+        &.searchButton {
+            padding: 0 5px;
+        }
+    }
+}

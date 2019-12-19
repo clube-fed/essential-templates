@@ -1,0 +1,164 @@
+// VARIABLES
+$cal-event-img-stack-max-brkpt: 768px;
+$cal-event-img-before-stack-min-brkpt: $cal-event-img-stack-max-brkpt + 1;
+
+// CALENDAR v4
+.calendar.opt4 {
+    background-color: $color-darkest;
+    color: $white;
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    @media (max-width:1024px) {
+        padding: 15px;
+    }
+    @media (max-width:$cal-event-img-stack-max-brkpt) {
+        padding: 0;
+    }
+    .view-all-link {
+        @include view-all-link;
+    }
+    [id^="calPlugin"] ~ .clickToEditDiv {
+        position: relative;
+        z-index: 98;
+    }
+    > .mpContent:first-child {
+        font-size: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(8px);
+        opacity: 0.35;
+        img {
+            visibility: hidden;
+            height: 0;
+        }
+        + .clickToEditDiv {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0;
+            &:after {
+                content: '(background image)';
+                font-size: 0.8rem;
+                color: $white;
+                display: block;
+            }
+        }
+    }
+    [id$="EventsWrapper"] {
+        display: flex;
+        opacity: 0;
+        .slick-arrow {
+            font-size: 0;
+            background: none;
+            border: none;
+            color: $white;
+            //position: absolute;
+            flex: 0 0 140px;
+            z-index: 98;
+            @media (min-width:1024px) {
+                height: auto !important;
+            }
+            @media (max-width:1366px) {
+                flex-basis: 80px;
+            }            
+            span[class*="icon"] {
+                font-size: 3.6rem;
+                @media (max-width:$cal-event-img-stack-max-brkpt) {
+                    font-size: 2.4rem;
+                }
+            }
+            &.slick-prev {
+                left: 0;
+            }
+            &.slick-next {
+                right: 0;
+            }
+            @media (max-width:$cal-event-img-stack-max-brkpt) {
+                flex-basis: 40px;
+                position: absolute;
+                top: 0;
+            }
+        }
+        .slick-list {
+            max-width: 1220px;
+            margin: 0 auto;
+        }
+        .slick-track {            
+            @media (min-width:$cal-event-img-before-stack-min-brkpt) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .event-wrap {
+            display: flex;
+            align-items: center;
+            @media (max-width:$cal-event-img-stack-max-brkpt) {
+                flex-wrap: wrap;
+            }
+        }
+        .event-image {
+            //flex: 0 0 800px;
+            @media (max-width:1366px) {
+                //flex-basis: 700px;
+            }
+        }
+        .event-info {
+            padding: 0 0 0 50px;
+            flex: 0 0 420px;
+            @media (max-width:1199px) {
+                padding-left: 30px;
+                flex-basis: 350px;                
+            }
+            @media (max-width:$cal-event-img-stack-max-brkpt) {
+                flex-basis: 100%;
+                padding: 40px 17px;
+            }
+            .event-date {
+                font-family: $base-font-serif;
+                font-weight: 500;
+                line-height: 1.88;
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+                @media (max-width:$cal-event-img-stack-max-brkpt) {
+                    margin-bottom: 0.6rem;
+                }
+                span[class*="icon"] {
+                    margin-right: 10px;
+                }
+            }
+            .event-title {
+                @extend %h2;
+                color: $white;
+                margin-bottom: 0.5em;
+                @media (max-width:1024px) {
+                    font-size: 2.4rem;
+                }
+                @media (max-width:$cal-event-img-stack-max-brkpt) {
+                    line-height: 1;
+                }
+            }
+            .event-summary {
+                font-weight: 200;
+                color: $white;
+                line-height: 1.63;
+                font-size: 1.6rem;
+            }
+            .event-cta {
+                font-weight: 300;
+                color: $white;
+                display: inline-block;
+                margin-top: 3rem;
+                span[class*="icon"] {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

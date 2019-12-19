@@ -1,0 +1,30 @@
+// VARIABLES
+
+
+// STATIC BANNER (typically a content page banner)
+.sitewrap:not(.hasBannerAlbum) .banner {
+    max-height: $content-banner-max-height;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $color-darkest;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 0;
+    .mpContent {
+        max-height: inherit;
+        img {
+            width: 100%;
+            visibility: hidden;
+        }
+    }
+    &:not(.empty-banner) .clickToEditDiv {
+        margin-top: -22px !important;
+        position: relative;
+        z-index: 61;
+    }
+    &.empty-banner {
+        background: transparent;
+    }
+}

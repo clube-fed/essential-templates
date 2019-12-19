@@ -1,0 +1,234 @@
+// VARIABLES
+$desktop-logo-path-for-bg-img: "../images/logo_vert.svg";
+$nav-top-alignment-in-header: center;
+$nav-top-default-font-color: #888888;
+$nav-top-hover-font-color: $color-primary;
+$nav-top-selected-font-color: $nav-top-hover-font-color;
+$nav-top-mobile-default-font-color: $nav-top-default-font-color;
+$nav-top-mobile-hover-font-color: $nav-top-hover-font-color;
+$nav-top-mobile-selected-font-color: $nav-top-selected-font-color;
+$nav-top-font-family: $base-font-sans-serif;
+$nav-top-font-size: 1.4rem;
+$nav-top-font-weight: 600;
+$nav-top-font-text-transform: uppercase;
+$nav-top-font-letter-spacing: 1.5px;
+$nav-top-li-top-bott-padding: 1.7rem;
+$nav-top-li-left-right-padding: 2.6rem;
+$nav-top-li-LR-padding-smaller-brkpt: 1425px;
+$nav-top-li-LR-padding-smaller: 2.3rem;
+$nav-top-li-padding: $nav-top-li-top-bott-padding $nav-top-li-left-right-padding;
+$nav-top-logo-and-login-flex-basis: 150px;
+
+// HEADER v4
+header.opt4 {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); 
+    z-index: 99;
+    position: relative;
+    background-color: $white;
+    .navbar {
+        padding: 0;
+        align-items: center;
+        height: $navbar-height;
+        .navbar-toggler, .nav-log-wrap {
+            flex: 0 1 $nav-top-logo-and-login-flex-basis !important;
+            @media (max-width:$mobile-nav-max-brkpt) {
+                flex-basis: auto !important;
+            }
+        }
+        .navbar-toggler {            
+            .menu-label {
+                color: $nav-top-default-font-color;
+                font-family: $nav-top-font-family;
+                font-size: $nav-top-font-size;
+                font-weight: $nav-top-font-weight;
+                text-transform: $nav-top-font-text-transform;
+                letter-spacing: $nav-top-font-letter-spacing;
+                line-height: 0.75em;
+                margin: 22px 0 6px;
+                display: block;
+                @media (max-width:$mobile-nav-max-brkpt) {
+                    display: none;
+                }
+            }
+            @media (min-width:$desktop-nav-min-brkpt) {
+                height: auto !important;
+                width: auto !important;
+                margin: 0 !important;
+                .icon-bar {
+                    margin: 6px auto;
+                    width: 23px !important;
+                    position: relative !important;
+                    transform-origin: left;
+                    background: $nav-top-selected-font-color !important;
+                    &.bar-one, &.bar-three {
+                        &.active {
+                            top: 0;
+                            left: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-brand {
+            align-self: center;
+            margin: 0;
+            padding: 0;
+            height: $navbar-height;
+            display: flex;
+            align-items: center;
+            img {
+                max-width: 100%;
+            }
+            @media (min-width:$desktop-nav-min-brkpt) {
+                order: 1;
+                background: url(#{$desktop-logo-path-for-bg-img}) no-repeat center center;
+                //background-size: contain;
+                background-size: auto calc(100% - 20px);
+                img {
+                    visibility: hidden;
+                }
+            }
+        }
+        .navbar-collapse {
+            justify-content: $nav-top-alignment-in-header;
+            align-items: stretch;
+            position: relative;
+            z-index: 9;
+            @media (min-width:$desktop-nav-min-brkpt) {
+                order: 3;
+            }
+            .navbar-nav {
+                .dropdown {
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &.open {
+                        > .dropdown-toggle .caret:before {
+                            content: "\eab0";
+                        }
+                    }
+                    &.dropleft,&.dropright {
+                        .dropdown-toggle:before {
+                            content: none;
+                        }
+                    }
+                }
+                .dropdown-toggle {
+                    display: flex;
+                    align-items: center;
+                    flex: 0 1 8rem;
+                    justify-content: center;
+                    cursor: pointer;
+                    .caret {
+                        font-size: 0;
+                        &:before {
+                            @include mobile-nav-caret-font;
+                            content: "\eaad";
+                            color: #b0b0b0;
+                            font-size: 1.2rem;
+                        }                        
+                    }
+                    &:after {
+                        content: none;
+                    }
+                }
+                > li.open .dropdown-toggle .caret:before {
+                    color: $nav-top-selected-font-color;
+                }
+                .dropdown-menu {                    
+                    margin: 0;                    
+                    border-radius: 0;                    
+                    padding: 0.9rem 0 0.9rem 2rem;      
+                    transition: .2s;
+                    .nav-link {
+                        color: $nav-top-selected-font-color;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        padding: 0.9rem 3rem;
+                        text-align: left;
+                        letter-spacing: 0;
+                        text-transform: none;
+                        font-family: $nav-sub-font-family;
+                        line-height: 1.3;
+                        transition: all 0.3s ease-in-out;
+                        &:hover,&:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                // TOP NAV
+                > li {
+                    align-items: stretch;
+                    display: flex;
+                    text-align: center;
+                    border-bottom: 1px solid #e4e4e4;
+                    &:last-child {
+                        display: none;
+                        > a.nav-link {
+                            color: $nav-top-selected-font-color;
+                        }
+                    }
+                    > a.nav-link {
+                        display: flex;
+                        align-items: center;
+                        transition: all 0.3s ease-in-out;
+                        color: $nav-top-default-font-color;
+                        font-family: $nav-top-font-family;
+                        font-size: $nav-top-font-size;
+                        font-weight: $nav-top-font-weight;
+                        text-transform: $nav-top-font-text-transform;
+                        letter-spacing: $nav-top-font-letter-spacing;
+                        padding: $nav-top-li-padding;
+                        @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
+                            padding-left: $nav-top-li-LR-padding-smaller;
+                            padding-right: $nav-top-li-LR-padding-smaller;
+                        }
+                        &:hover,&:focus {
+                            color: $nav-top-hover-font-color;
+                        }
+                        span[class*="nc-icon"] {
+                            font-size: 2.1rem;
+                            margin: 0 1rem 1rem 0;
+                        }
+                    }
+                    &.open, &.selectedItem, &.selectedParent, &.selectedGrandParent {
+                        > a.nav-link {
+                            color: $nav-top-selected-font-color;
+                        }                        
+                    }
+                    li {
+                        &.selectedItem > .nav-link,
+                        &.selectedParent > .nav-link,
+                        &.selectedGrandParent > .nav-link,
+                        &.open > .nav-link {
+                            text-decoration: $nav-sub-font-hover-decoration;
+                        }                        
+                    }                    
+                }
+            }
+        }
+        @include mobile-navbar-collapse;
+        .nav-log-wrap {
+            align-self: center;
+            text-align: center;
+            @media (min-width:$desktop-nav-min-brkpt) {
+                order: 2;
+            }
+            span[class*="icon"] {
+                color: $nav-top-selected-font-color;
+                @media (min-width:$desktop-nav-min-brkpt) {
+                    display: block;
+                    font-size: 2.4rem;
+                    margin-bottom: 11px;
+                    margin-top: 5px;
+                }
+            }
+            .log-link {
+                color: $nav-top-default-font-color;
+                letter-spacing: $nav-top-font-letter-spacing;
+                font-weight: $nav-top-font-weight;
+                font-size: $nav-top-font-size;
+                text-transform: $nav-top-font-text-transform;
+            }
+        }
+    }
+}

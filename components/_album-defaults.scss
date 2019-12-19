@@ -1,0 +1,121 @@
+// VARIABLES
+
+
+// DEFAULT ALBUM STYLES
+.scroll-album {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    > table .plgHeaderBar {
+        padding-right: 15px;
+    }
+    [id*="photoPluginWrapper"] {
+        width: 100% !important;
+        //height: 400px !important;
+        @media (min-width: 768px) {
+            //height:580px !important;
+        }
+        > div {
+            //height: 100%;
+        }
+    }
+    .album-image {
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include bg-img-cover;
+        a[class*="nextImg"], a[class*="prevImg"] {
+            position: absolute;
+            text-align: center;
+            color: $white;
+            font-size: 0;
+            background-color: rgba($black,0.5);
+            border-radius: 50%;
+            padding: 1.5rem;
+            margin: 0 2rem;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+            @media (max-width:767px) {
+                margin: 0 1rem;
+            }
+            > em {
+                display: block;
+                background-color: transparent;
+                transition: all .3s ease-out;
+                font-size: 2.1rem;
+                letter-spacing: 0;
+            }
+            &:hover {
+                color: $white;
+                background-color: rgba($black,1);
+            }
+        }
+        a[class*="nextImg"] {
+            right: 0;
+        }
+        a[class*="prevImg"] {
+            left: 0;
+        }
+    }
+}
+
+.thumbs-album {
+    [id*="photoPluginWrapper"] {
+        width: 100% !important;
+    }
+    .carousel {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        text-align: center !important;
+        @media (min-width:992px) {
+            text-align: left !important;
+        }
+        > div {
+            display: block !important;
+            height: 100% !important;
+            padding: 0.8rem !important;
+            flex: 0 0 50%;
+            max-width: 50%;
+            @media (min-width:768px) {
+                padding: 1.5rem !important;
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+            @media (min-width:992px) {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+            > img {
+                height: auto;
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .thumbs-arrows-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: $base-font-weight;
+        color: $base-font-color;
+        font-size: $base-font-size;
+        line-height: 1;
+        padding-top: 15px;
+        > a {
+            font-size: 0;
+            line-height: 1;
+            padding: 0 15px;
+            > em {
+                font-size: 3rem;
+                color: #b0b0b0;
+            }
+        }
+        > span {
+            margin: 0 5px;
+        }
+    }
+}

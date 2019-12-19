@@ -1,0 +1,143 @@
+// VARIABLES
+$quick-links-stack-max-breakpoint: 767px;
+$quick-link-font-default-color: $white;
+$quick-link-font-hover-color: $color-primary;
+$quick-link-font-text-transform: uppercase;
+$quick-link-font-letter-spacing: 1.78px;
+$quick-link-font-weight: 500;
+$quick-link-font-size: 1.6rem;
+
+// QUICK LINKS v2
+.quick-links.opt2 {
+    min-height: 400px;
+    background-size: cover;
+    background-position: center center;
+    background-color: $color-darkest;
+    text-align: center;
+    color: $white;
+    font-size: 0;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 3rem 1.5rem;
+    @media (max-width:$quick-links-stack-max-breakpoint) {
+        min-height: 290px;
+    }
+    > .mpContent {
+        font-size: 0;
+        img {
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+        }
+        &:after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: rgba($color-primary, 0.7);
+        }
+    }
+    > .clickToEditDiv {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .welcome {
+        position: relative;        
+        h1 {
+            line-height: 1;
+            margin-bottom: 2rem;
+            color: $white;
+            @media screen and (max-width:$quick-links-stack-max-breakpoint) {
+                font-size: 2.8rem;
+            }
+        }
+    }
+    
+    .nc-icon-outline {
+        display: none;                       
+    }
+    .quick-link-arrow {
+        
+    }
+    ul {
+        list-style: none;
+        margin: 0 auto;    
+        padding: 0;
+        width: 100%;
+        max-width: 990px;
+        float: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (max-width:$quick-links-stack-max-breakpoint) {
+            display: inline-block;
+            width: 100%;
+        }
+        li {
+            display: flex;
+            padding: 9px 15px;
+            margin: 0;
+            font-size: 0;
+            flex: 0 1 330px;
+            vertical-align: top;
+            transition: all .3s ease-in-out;                    
+            @media screen and (max-width:$quick-links-stack-max-breakpoint) {
+                display: block;
+                padding: 0 0 15px 0;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 2px solid $white;
+                background-color: rgba($white,0);
+                width: 100%;
+                font-size: $quick-link-font-size;
+                font-family: $base-font-sans-serif;
+                font-weight: $quick-link-font-weight;
+                text-transform: $quick-link-font-text-transform;
+                text-align: left;
+                color: $quick-link-font-default-color;
+                line-height: 1.2;
+                letter-spacing: $quick-link-font-letter-spacing;
+                text-decoration: none;
+                padding: 19px 25px 19px 35px;
+                position: relative;
+                transition: all 0.3s ease-in-out;
+                &:hover,&:focus {
+                    background-color: rgba($white,1);
+                    color: $quick-link-font-hover-color;
+                }
+                > span {
+                    letter-spacing: 0;
+                    flex: 0 0 4rem;
+                    text-align: right;
+                }
+                body.user-is-tabbing & {
+                    &:focus {
+                        text-decoration: none;
+                        //outline-style: dashed;
+                        outline-color: $white;
+                        outline-width: 2px;
+                        opacity: 1;
+                    }
+                }
+                @media screen and (max-width:$quick-links-stack-max-breakpoint) {
+                    padding: 11px 15px;
+                    min-height: 44px;
+                    //text-align: left;
+                    //display: flex;
+                    //align-items: center;
+                    //text-decoration: none !important;
+                }
+            }            
+        }                
+    }
+}

@@ -1,0 +1,53 @@
+// MAIN CONTENT
+.intro {
+    padding-top: 70px;
+    padding-bottom: 65px;
+    text-align: center;
+    @media (max-width:1024px) {
+        padding: 50px 15px;
+    }
+    @media (max-width:767px) {
+        padding: 30px 15px;
+    }
+}
+
+.one-column, .two-column {
+    padding: 70px 15px 105px;
+    @media (max-width:1024px) {
+        padding: 50px 15px;
+    }
+}
+
+.two-column {    
+    .private.home & {
+        max-width: 1200px;
+        padding-top: 50px;
+        padding-bottom: 60px;
+        .col-lg-9 {
+            @media (min-width:992px) {
+                padding-right: 45px;
+            }
+        }
+        .col-lg-3 {
+            .mpContent {
+                background-color: $color-lightest;
+                padding: 30px 15px;                
+                @media screen and (min-width: 1200px) {
+                    padding-right: 30px;
+                    padding-left: 30px;
+                }
+                @media screen and (max-width: 1024px) {
+                    padding: 20px 15px 35px 15px;
+                }
+                @media screen and (max-width: 991px) {
+                    padding: 25px 15px;
+                    text-align: center;
+                }
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
