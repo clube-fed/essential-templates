@@ -121,14 +121,14 @@
                         text-transform: $tabstrip-tabs-text-transform;
                         letter-spacing: $tabstrip-tabs-letter-spacing;
                         border: none !important;
-                        border-top: $tabstrip-selected-top-border !important;
+                        border-top: $tabstrip-unselected-top-border !important;
                         color: $tabstrip-unselected-font-color !important;
                         &:before {
                             display: none !important;
                         }
                         &.selected {
                             background: $tabstrip-selected-bg !important;
-                            border-top: $tabstrip-selected-top-border !important;
+                            border-color: $tabstrip-selected-top-border-color !important;
                             .wrap {
                                 color: $tabstrip-selected-font-color;
                             }
