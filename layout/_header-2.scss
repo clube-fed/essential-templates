@@ -16,6 +16,7 @@ $nav-top-li-left-right-padding: 2.6rem;
 $nav-top-li-LR-padding-smaller-brkpt: 1425px;
 $nav-top-li-LR-padding-smaller: 2.3rem;
 $nav-top-li-padding: $nav-top-li-top-bott-padding $nav-top-li-left-right-padding;
+$nav-top-li-bullet-content-value: '\2022';
 $nav-top-li-bullet-size: 1.4rem;
 $nav-top-li-bullet-color: #e4e4e4;
 $nav-top-logo-and-login-flex-basis: 246px;
@@ -195,7 +196,7 @@ header.opt2 {
                         border: none;
                         flex-wrap: nowrap !important;
                         &:before {
-                            content: '\2022';
+                            content: $nav-top-li-bullet-content-value;
                             font-size: $nav-top-li-bullet-size;
                             color: $nav-top-li-bullet-color;
                             align-items: center;
