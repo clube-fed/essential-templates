@@ -238,7 +238,7 @@ $login-cookie-and-pw-font-weight: 400;
                 letter-spacing: $button-letter-spacing;
                 //line-height: 44px;
                 border-radius: 0;
-                //padding: 1px !important;
+                padding: $button-padding !important;
                 outline: 0;
                 border-color: $white !important;
                 width: 100%;
@@ -249,7 +249,7 @@ $login-cookie-and-pw-font-weight: 400;
                 &:hover,&:focus {
                     background-color: $second-button-bg-hover;
                     color: $second-button-font-color;
-                    border-color: $second-button-bg-hover !important;
+                    border-color: $second-button-border-hover-color !important;
                 }
             }
         }
