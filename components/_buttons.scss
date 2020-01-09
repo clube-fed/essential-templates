@@ -23,6 +23,7 @@
         text-decoration: none;
         background-color: $button-bg-hover;
         border-color: $button-border-hover-color;
+        color: $button-font-hover-color;
     }
     &-secondary {
         font-family: $second-button-font;
@@ -47,6 +48,7 @@
             text-decoration: none;
             background-color: $second-button-bg-hover;
             border-color: $second-button-border-hover-color;
+            color: $second-button-font-hover-color;
         }
     }
     form[action*="ArticleEdit"] & {
