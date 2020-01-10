@@ -1,5 +1,5 @@
 html {
-    font-size: $root-font-size;
+    font-size: ($root-font-size-minus-unit / 16) * 1em;
     height: 100%;
     margin: 0;
     padding: 0;
