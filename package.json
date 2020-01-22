@@ -1,0 +1,26 @@
+{
+  "name": "essential-templates-2020",
+  "version": "1.0.0",
+  "description": "Master repository for the new 2020 Essential Templates. See [repository wiki](https://github.com/clube-fed/essential-templates-2020/wiki) for examples and details on specific components.",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "grunt concat",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clube-fed/essential-templates-2020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clube-fed/essential-templates-2020/issues"
+  },
+  "homepage": "https://github.com/clube-fed/essential-templates-2020#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  }
+}
