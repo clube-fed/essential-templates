@@ -62,7 +62,7 @@ header.opt4 {
                     background: $nav-top-selected-font-color !important;
                     &.bar-one, &.bar-three {
                         &.active {
-                            top: 0;
+                            top: 0 !important;
                             left: 2px;
                         }
                     }
