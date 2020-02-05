@@ -207,6 +207,7 @@ $j('header.opt2').each(function(){
     $j('a.log-link', this).wrap( "<div class='nav-log-wrap'></div>" );
 });
 $j('header.opt4').each(function(){
+    $j(this).parents('.sitewrap').addClass('has-header4');
     var last_nav_item_text = $j.trim($j('.navbar-nav > li:last-child > .nav-link > .rootLevelSpan',this).text());
     $j('.navbar-nav > li:last-child > .nav-link', this).clone().removeClass('.nav-link').addClass('log-link').appendTo('.navbar');    
     if (last_nav_item_text == 'Login') {
