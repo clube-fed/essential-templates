@@ -10,8 +10,8 @@ $nav-top-mobile-selected-font-color: $nav-top-selected-font-color;
 $nav-top-font-family: $base-font-sans-serif;
 $nav-top-font-size: 1.4rem;
 $nav-top-font-weight: 600;
-$nav-top-font-text-transform: uppercase;
-$nav-top-font-letter-spacing: 1.5px;
+$nav-top-font-text-transform: none;
+$nav-top-font-letter-spacing: 0;
 $nav-top-li-top-bott-padding: 1.7rem;
 $nav-top-li-left-right-padding: 2.6rem;
 $nav-top-li-LR-padding-smaller-brkpt: 1425px;
@@ -29,6 +29,24 @@ header.opt4 {
         padding: 0;
         align-items: center;
         height: $navbar-height;
+        @media (min-width:$desktop-nav-min-brkpt) {
+            &:after {
+                content: '';
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 0;
+                z-index: 99;
+                background-color: rgba($color-darkest, 0);
+                transition: background 0.3s ease-in-out;
+                body.burgerNav-visible & {
+                    background-color: rgba($color-darkest, 0.9);
+                    height: 100vh;
+                }
+            }
+        }
         .navbar-toggler, .nav-log-wrap {
             flex: 0 1 $nav-top-logo-and-login-flex-basis !important;
             @media (max-width:$mobile-nav-max-brkpt) {
@@ -41,11 +59,18 @@ header.opt4 {
                 font-family: $nav-top-font-family;
                 font-size: $nav-top-font-size;
                 font-weight: $nav-top-font-weight;
-                text-transform: $nav-top-font-text-transform;
-                letter-spacing: $nav-top-font-letter-spacing;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
                 line-height: 0.75em;
                 margin: 22px 0 6px;
                 display: block;
+                @media (min-width:$desktop-nav-min-brkpt) {
+                    body.burgerNav-visible & {
+                        visibility: hidden;
+                        margin: 0;
+                        font-size: 0;
+                    }
+                }
                 @media (max-width:$mobile-nav-max-brkpt) {
                     display: none;
                 }
@@ -54,12 +79,22 @@ header.opt4 {
                 height: auto !important;
                 width: auto !important;
                 margin: 0 !important;
+                z-index: 101;
+                body.burgerNav-visible & {
+                    height: 90px !important;
+                    align-self: flex-start;
+                    //flex-basis: 80px !important;
+                }
                 .icon-bar {
                     margin: 6px auto;
                     width: 23px !important;
                     position: relative !important;
                     transform-origin: left;
                     background: $nav-top-selected-font-color !important;
+                    transition: all 0.3s ease-in-out;
+                    body.burgerNav-visible & {
+                        margin: 6px auto 6px 20px;
+                    }
                     &.bar-one, &.bar-three {
                         &.active {
                             top: 0 !important;
@@ -96,6 +131,21 @@ header.opt4 {
             z-index: 9;
             @media (min-width:$desktop-nav-min-brkpt) {
                 order: 3;
+                z-index: 100;
+                min-height: 100vh;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                padding-top: 90px;
+                flex: 0 0 320px;
+                width: 320px;
+                transition: all 0.3s ease-in-out;
+                &.show {
+                    left: 0;
+                }
+                > .navProps {
+                    margin-top: -24px;
+                }
             }
             .navbar-nav {
                 .dropdown {
@@ -161,6 +211,9 @@ header.opt4 {
                     display: flex;
                     text-align: center;
                     border-bottom: 1px solid #e4e4e4;
+                    &:first-child {
+                        border-top: 1px solid #e4e4e4;
+                    }
                     &:last-child {
                         display: none;
                         > a.nav-link {
@@ -178,10 +231,10 @@ header.opt4 {
                         text-transform: $nav-top-font-text-transform;
                         letter-spacing: $nav-top-font-letter-spacing;
                         padding: $nav-top-li-padding;
-                        @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
+                        /* @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
                             padding-left: $nav-top-li-LR-padding-smaller;
                             padding-right: $nav-top-li-LR-padding-smaller;
-                        }
+                        } */
                         &:hover,&:focus {
                             color: $nav-top-hover-font-color;
                         }
@@ -224,10 +277,10 @@ header.opt4 {
             }
             .log-link {
                 color: $nav-top-default-font-color;
-                letter-spacing: $nav-top-font-letter-spacing;
+                letter-spacing: 1.5px;
                 font-weight: $nav-top-font-weight;
                 font-size: $nav-top-font-size;
-                text-transform: $nav-top-font-text-transform;
+                text-transform: uppercase;
             }
         }
     }
