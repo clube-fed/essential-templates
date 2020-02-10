@@ -1,0 +1,29 @@
+BASE: essential templates
+
+
+
+=====/ FONTS /=====
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Spectral:300,400,500,600|Spectral+SC:400,500,600,700&display=swap" rel="stylesheet">
+
+font-family: 'Spectral', serif; (extra-light 200, light 300, regular 400, medium 500, semi-bold 600, bold 700, extra-bold 800)
+font-family: 'Spectral SC', serif; (extra-light 200, light 300, regular 400, medium 500, semi-bold 600, bold 700, extra-bold 800)
+font-family: 'Lato', sans-serif; (thin 100, light 300, regular 400, bold 700, black 900)
+
+
+=====/ IMAGE SIZES /=====
+
+
+
+
+=====/ NOTES /=====
+
+
+Checklist: https://docs.google.com/spreadsheets/d/1ESJYvsWxj_356G025zysIFGXFUjEiRuoHplQSYn5Rmo/edit?usp=sharing
+
+Invision: https://invis.io/W4VUUKCD2KC
+
+Public Home: https://www.ceclients.com/sites/SankatyHeadGolfClub2019/default.aspx?p=DynamicModule&PageId=133&ssid=100174&vnf=1
+
+Private Home: https://www.ceclients.com/sites/SankatyHeadGolfClub2019/default.aspx?p=dynamicmodule&pageid=153&ssid=100206&vnf=1
+
+
