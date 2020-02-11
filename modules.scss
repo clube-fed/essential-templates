@@ -242,7 +242,7 @@ body.MemberRoster, body.MemProfile {
         margin: 0;
         transition:.3s;
         border: none;
-        border-top: $tabstrip-selected-top-border;
+        border-top: $tabstrip-unselected-top-border;
         border-color: transparent;
         font-weight: $tabstrip-tabs-font-weight;
         a {
@@ -256,7 +256,7 @@ body.MemberRoster, body.MemProfile {
         }
         &:hover {
             //border: none;
-            border-top: $tabstrip-selected-top-border;
+            border-color: $tabstrip-selected-top-border-color;
             //background:#FFF;
             //border-top: $tabstrip-selected-top-border;
             a {
