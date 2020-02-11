@@ -322,5 +322,13 @@ $login-cookie-and-pw-font-weight: 400;
         &_forgotPassword {
             float: right;
         }
+        .logged-in {
+            color: $white;
+            a {
+                display: block;
+                color: $white;
+                margin-bottom: 15px;
+            }
+        }
     }
 }
