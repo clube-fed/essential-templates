@@ -248,7 +248,7 @@ $login-cookie-and-pw-font-weight: 400;
                 transition: all .3s ease-in-out;
                 &:hover,&:focus {
                     background-color: $second-button-bg-hover;
-                    color: $second-button-font-color;
+                    color: $second-button-font-hover-color;
                     border-color: $second-button-border-hover-color !important;
                 }
             }
