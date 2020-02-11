@@ -431,6 +431,7 @@ $j('.calendar.opt3 [id$="EventsWrapper"] > div').each(function(){
     //$j( '.event-image img:first-child', this ).attr('alt',eventTitle);
     $j( '.event-image img', this ).attr('alt','');
     $j( '.event-image img + img', this ).attr('aria-hidden','true').attr('alt','');
+    $j(this).contents().unwrap();
 });
 
 /*******************
