@@ -715,7 +715,8 @@ body[class*=alendar] [id^=axisCalendar] .RadPicker>.rcSingle>tbody>tr>td .rcCalP
 body[class*=alendar] [id^=axisCalendar]>table{margin:0 0 40px}
 body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:first-child,body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:last-child,.emptyModuleTableCell{display:none}
 
-body[class*=alendar] .modCalMonth>tbody>tr>td.emptyModuleTableCell{display: table-cell;}
+body[class*="sitesConfig"] table#Table1 td.emptyModuleTableCell, body[class*=alendar] .modCalMonth>tbody>tr>td.emptyModuleTableCell, table[id$="_rosterControl_tblListing"]>tbody>tr>td.emptyModuleTableCell,
+table[id$="_tblRegs"]>tbody>tr>td.emptyModuleTableCell {display: table-cell;}
 
 body[class*=alendar] [id^=axisCalendar]>table>tbody>tr:first-child+tr+tr+tr+tr>.tnavTabON{
     background:#FFF;
