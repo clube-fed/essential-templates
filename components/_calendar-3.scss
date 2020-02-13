@@ -132,7 +132,7 @@ $cal-event-cta-icon-hover-color: #444444;
                 }
             }
         }
-        > div {
+        > a.event-link {
             flex: 0 1 calc(50% - 30px);
             max-width: #{$cal-event-img-width-value}px;
             margin-left: 15px;
@@ -140,29 +140,32 @@ $cal-event-cta-icon-hover-color: #444444;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            margin-bottom: 2rem;
+            height: 100%;            
+            ._Telerik_IE9 & {
+                flex-basis: #{$cal-event-img-width-value}px !important;
+            }
             @media (max-width:$cal-events-stack-max-breakpoint) {
                 flex: 1 1 auto;
-                margin: 0;
+                margin-left: 0;
+                margin-right: 0;
+                display: block;
             }
-            > a.event-link {
-                margin-bottom: 2rem;
-                height: 100%;
-                &:hover,&:focus {
-                    text-decoration: none;
-                    .event-info .event-title {
-                        color: $cal-event-title-hover-color;
-                    }
-                    .event-info .event-cta span {
-                        color: $cal-event-cta-icon-hover-color;
-                    }
-                    
-                    .event-image:after {
-                        background: rgba($black,0.5);
-                    }
+            &:hover,&:focus {
+                text-decoration: none;
+                .event-info .event-title {
+                    color: $cal-event-title-hover-color;
                 }
-                @media (max-width:$cal-events-stack-max-breakpoint) {
-                    flex-wrap: wrap;
+                .event-info .event-cta span {
+                    color: $cal-event-cta-icon-hover-color;
                 }
+                
+                .event-image:after {
+                    background: rgba($black,0.5);
+                }
+            }
+            @media (max-width:$cal-events-stack-max-breakpoint) {
+                flex-wrap: wrap;
             }
         }
     }
