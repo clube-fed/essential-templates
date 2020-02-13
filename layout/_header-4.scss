@@ -119,6 +119,7 @@ header.opt4 {
                 background: url(#{$desktop-logo-path-for-bg-img}) no-repeat center center;
                 //background-size: contain;
                 background-size: auto calc(100% - 20px);
+                margin: 0 auto;
                 img {
                     visibility: hidden;
                 }
