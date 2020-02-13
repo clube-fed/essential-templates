@@ -15,6 +15,9 @@ $quick-links-stack-max-breakpoint: 768px;
     justify-content: center;
     position: relative;
     padding: 3rem 1.5rem;
+    ._Telerik_IE9 & {
+        height: 400px;
+    }
     @media (max-width:$quick-links-stack-max-breakpoint) {
         min-height: 290px;
     }
@@ -99,7 +102,10 @@ $quick-links-stack-max-breakpoint: 768px;
             font-size: 0;
             flex: 0 1 250px;
             vertical-align: top;
-            transition: all .3s ease-in-out;                    
+            transition: all .3s ease-in-out;
+            ._Telerik_IE9 & {
+                flex-basis: 240px !important;
+            }
             @media screen and (max-width:$quick-links-stack-max-breakpoint) {
                 display: block;
                 padding: 0 0 15px 0;
