@@ -35,7 +35,7 @@ $card-caption-bottom-border: 2px solid $color-quaternary;
             text-decoration: none;
             display: flex;
             flex-direction: column;
-            flex-basis: 100%;
+            //flex-basis: 100%;
             &:hover,&:focus {
                 .card-bg-img:after {
                     background-color: rgba(0,0,0,0.5);
