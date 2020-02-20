@@ -8,6 +8,7 @@ module.exports = function (grunt) {
                     './js/components/banner.js',                    
                     './js/components/bootstrapNav.js', 
                     './js/components/header.js',
+                    './js/components/headerScroll.js',
                     //'./js/components/headerOpt2.js',
                     './js/components/headerOpt4.js',
                     //'./js/components/calOpt1.js',
