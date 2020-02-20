@@ -110,10 +110,11 @@ $cal-events-stack-max-breakpoint: 991px;
                 }
             }
         }
-        > div > a.event-link {
+        > a.event-link {
             display: flex;
             justify-content: center;
             margin-bottom: 1rem;
+            text-decoration: none;
             &:hover,&:focus {
                 text-decoration: none;
                 .event-info .event-cta {
