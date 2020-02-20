@@ -97,10 +97,11 @@ $cal-event-title-text-transform: none;
                 margin-bottom: 0;
             }
         }
-        > div > a.event-link {
+        > a.event-link {
             display: flex;
             align-items: center;
             margin-bottom: 1rem;
+            text-decoration: none;
             &:hover,&:focus {
                 text-decoration: none;
                 .event-image:after {
