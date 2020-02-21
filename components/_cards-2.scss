@@ -141,7 +141,7 @@ $cards-stack-max-breakpoint: 991px;
         &:nth-child(odd):last-child {
             flex: 0 1 #{$full-width-card-width-value}px;
             max-width: #{$full-width-card-width-value}px;
-            margin-bottom: 0;
+            //margin-bottom: 0;
             .card-link-wrap {
                 @include data-aspect-ratio ($full-width-card-width-value, $full-width-card-height-value);
                 display: flex;
