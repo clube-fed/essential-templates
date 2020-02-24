@@ -7,6 +7,7 @@ $articles-section-heading-style: h3;
 $article-title-default-color: $color-primary;
 $article-title-hover-color: $article-title-default-color;
 $article-title-hover-text-decoration: underline;
+$article-title-font-family: $base-font-sans-serif;
 $article-title-text-transform: none;
 $article-title-letter-spacing: 0;
 $article-title-font-size: 1.6rem;
@@ -49,6 +50,7 @@ $article-postdate-font-weight: 300;
         a {
             display: block;
             font-size: $article-title-font-size;
+	    font-family: $article-title-font-family;
             line-height: $article-title-line-height;
             font-weight: $article-title-font-weight;
             letter-spacing: $article-title-letter-spacing;
