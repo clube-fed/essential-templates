@@ -1,5 +1,27 @@
 // VARIABLES
 $cal-events-stack-max-breakpoint: 991px;
+$cal-event-image-width: 399px;
+$cal-date-background-color: $color-darkest;
+$cal-date-hover-background-color: $color-darkest;
+$cal-date-font-family: $base-font-sans-serif;
+$cal-date-font-color: $white;
+$cal-date-font-letter-spacing: 0;
+$cal-date-font-weight: 300;
+$cal-date-month-font-size: 2.4rem;
+$cal-date-number-font-size: 5rem;
+$cal-event-info-background-color: $color-lightest;
+$cal-event-title-font-family: $base-font-serif;
+$cal-event-title-font-color: $color-secondary;
+$cal-event-title-font-size: 3.2rem;
+$cal-event-title-font-weight: 400;
+$cal-event-title-line-height: 1.28;
+$cal-event-cta-link-font-family: $base-font-sans-serif;
+$cal-event-cta-link-default-font-color: $color-secondary;
+$cal-event-cta-link-hover-font-color: $color-tertiary;
+$cal-event-cta-link-font-size: 1.6rem;
+$cal-event-cta-link-default-font-weight: 300;
+$cal-event-cta-link-hover-font-weight: 400;
+
 
 // CALENDAR PLUGIN v1
 .calendar.opt1 {
@@ -30,7 +52,7 @@ $cal-events-stack-max-breakpoint: 991px;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: $color-primary;
+            background-color: $cal-date-background-color;
             text-transform: uppercase;
             line-height: 1;
             text-align: center;
@@ -42,16 +64,17 @@ $cal-events-stack-max-breakpoint: 991px;
                 display: none;
             }
             span {
-                font-size: 2.4rem;
-                font-weight: 300;
-                color: $white;
+                font-family: $cal-date-font-family;
+                font-size: $cal-date-month-font-size;
+                font-weight: $cal-date-font-weight;
+                color: $cal-date-font-color;
                 &.calDay {
-                    font-size: 5rem;
+                    font-size: $cal-date-number-font-size;
                 }
             }
         }
         .event-image {
-            flex: 0 0 399px;
+            flex: 0 0 #{$cal-event-image-width};
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -86,7 +109,7 @@ $cal-events-stack-max-breakpoint: 991px;
             flex-direction: column;
             justify-content: center;
             flex-basis: 100%;
-            background-color: $color-lightest;            
+            background-color: $cal-event-info-background-color;            
             font-size: 0;            
             padding: 5rem 7rem 3rem 5.7rem;
             @media (max-width:$cal-events-stack-max-breakpoint) {
@@ -95,14 +118,18 @@ $cal-events-stack-max-breakpoint: 991px;
             }
             .event-title {
                 @extend %h2;
-                color: #444444;
+                color: $cal-event-title-font-color;
+                font-family: $cal-event-title-font-family;
+                font-size: $cal-event-title-font-size;
+                font-weight: $cal-event-title-font-weight;
+                line-height: $cal-event-title-line-height;
                 margin-bottom: 0;
             }
             .event-cta {
-                color: $color-secondary;
-                font-family: $base-font-sans-serif;
-                font-size: 1.6rem;
-                font-weight: 300;
+                color: $cal-event-cta-link-default-font-color;
+                font-family: $cal-event-cta-link-font-family;
+                font-size: $cal-event-cta-link-font-size;
+                font-weight: $cal-event-cta-link-default-font-weight;
                 margin-top: 2rem;
                 transition: color 0.3s ease-in-out;
                 span {
@@ -118,7 +145,8 @@ $cal-events-stack-max-breakpoint: 991px;
             &:hover,&:focus {
                 text-decoration: none;
                 .event-info .event-cta {
-                    color: $color-primary;
+                    color: $cal-event-cta-link-hover-font-color;
+                    font-weight: $cal-event-cta-link-hover-font-weight;
                 }
                 .event-image:after {
                     background: rgba($black,0.5);
