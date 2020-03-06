@@ -7,8 +7,8 @@ Create a display theme and select it from the Display Theme dropdown in admin co
 ### Mobile Web tab
 Append in `<head>` above scripts:
 ```
-[FAVICON HTML HERE]
-[FONT LINK HERE]
+<!--[FAVICON HTML HERE]-->
+<!--[FONT LINK HERE]-->
 <link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
@@ -28,14 +28,14 @@ Append directly above `</body>`:
 
 Head Tag Top:
 ```
-[FONT LINK HERE]
+<!--[FONT LINK HERE]-->
 <link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
 ```
 Head Tag Bottom:
 ```
-[FAVICON HTML HERE]
+<!--[FAVICON HTML HERE]-->
 <script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
 <script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>');</script>
 <link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
