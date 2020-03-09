@@ -306,5 +306,11 @@ $login-cookie-and-pw-font-weight: 400;
         &_forgotPassword {
             float: right;
         }
+        .logged-in {
+            a {
+                display: block;
+                margin-bottom: 15px;
+            }
+        }
     }
 }
