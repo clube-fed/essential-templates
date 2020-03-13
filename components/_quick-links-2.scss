@@ -119,6 +119,9 @@ $quick-link-font-size: 1.6rem;
                     letter-spacing: 0;
                     flex: 0 0 4rem;
                     text-align: right;
+                    &:first-child:nth-last-child(2) {
+                        display: none;
+                    }
                 }
                 body.user-is-tabbing & {
                     &:focus {
