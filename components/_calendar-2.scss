@@ -95,6 +95,7 @@ $cal-event-title-text-transform: none;
                 text-transform: $cal-event-title-text-transform;
                 line-height: $cal-event-title-line-height;
                 margin-bottom: 0;
+                transition: all 0.3s ease-in-out;
             }
         }
         > a.event-link {
