@@ -14,6 +14,7 @@ $article-title-font-size: 1.6rem;
 $article-title-line-height: 1.5;
 $article-title-font-weight: 500;
 
+$article-postdate-font-family: $base-font-sans-serif;
 $article-postdate-color: #666666;
 $article-postdate-text-transform: none;
 $article-postdate-letter-spacing: 0;
@@ -65,6 +66,7 @@ $article-postdate-font-weight: 300;
             }
         }
         .article-date {
+	    font-family: $article-postdate-font-family;
             text-transform: $article-postdate-text-transform;
             font-size: $article-postdate-font-size;
             font-weight: $article-postdate-font-weight;
