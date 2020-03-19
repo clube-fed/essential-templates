@@ -1,0 +1,196 @@
+// VARIABLES
+$full-width-cross-img-width-value: 1540; // omit unit from value
+$full-width-cross-img-height-value: 500; // omit unit from value
+$cross-panel-margin: 30px;
+$cross-panel-top-bott-padding: 65px;
+$cross-stack-max-breakpoint: 991px;
+$cross-stack-min-brkpt: ($cross-stack-max-breakpoint + 1);
+$cross-stack-text-bg-color: $color-lightest;
+$cross-cta-link-bg: transparent;
+$cross-cta-link-bg-hover: $button-bg-hover;
+$cross-cta-link-font-color: $white;
+$cross-cta-link-font-hover-color: $button-font-hover-color;
+$cross-cta-link-font: $button-font;
+$cross-cta-link-weight: $button-weight;
+$cross-cta-link-font-size: $button-font-size;
+$cross-cta-link-letter-spacing: $button-letter-spacing;
+$cross-cta-link-padding: $button-padding;
+$cross-cta-link-border: 1px solid $white;
+$cross-cta-link-border-hover-color: $cross-cta-link-bg-hover;
+$cross-cta-link-max-width: 265px;
+
+// CROSS-MARKETING PANEL 
+.crossmarketing-panel {
+    justify-content: center;
+    position: relative;
+    padding: $cross-panel-top-bott-padding 0;
+    margin: $cross-panel-margin;
+    text-align: center;    
+    @media (min-width:1601px) {
+        margin: $cross-panel-margin auto;
+        max-width: #{$full-width-cross-img-width-value}px;
+    }
+    @media (max-width:$cards-stack-max-breakpoint) {
+        flex-wrap: wrap;
+        align-items: center;
+        background-color: $cross-stack-text-bg-color;
+        padding-top: 0;
+        padding-bottom: 30px;
+        &:before {
+            content: none;
+        }
+    }
+    @media (max-width:767px) {
+        padding: 0 0 30px 0;
+        margin: 15px;
+    }
+    > .mpContent {
+        font-size: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include bg-img-cover;
+        @media (max-width:$cross-stack-max-breakpoint) {
+            @include data-aspect-ratio($full-width-cross-img-width-value,$full-width-cross-img-height-value);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba($black,0.45);
+            @media (max-width:$cross-stack-max-breakpoint) {
+                content: none;
+            }
+        }
+        img {
+            visibility: hidden;
+            height: 0;
+            margin: 0;
+        }
+    }
+    .container {
+        min-height: $full-width-cross-img-height-value - $cross-panel-top-bott-padding - $cross-panel-top-bott-padding;
+        ._Telerik_IE9 & {
+            height: $full-width-cross-img-height-value - $cross-panel-top-bott-padding - $cross-panel-top-bott-padding;
+        }
+        @media (max-width:$cross-stack-max-breakpoint) {
+            position: relative;
+            min-height: 0;
+            padding-top: 30px;
+        }
+        .row {            
+            @media (min-width:$cross-stack-min-brkpt) {
+                width: 100%;
+            }
+        }
+        .mpContent {
+            * {                
+                @media (min-width:992px) {
+                    color: $white;
+                }
+            }
+            > * {
+                margin-bottom: 0.5em;
+            }
+            h3 {
+                //@extend %h1;
+                margin-bottom: 0.5em !important;
+                @media (min-width:992px) {
+                    color: $white;
+                }
+                @media (max-width:767px) {
+                    font-size: 3.2rem;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+            > a, > a.abut, > a.abut-secondary {                
+                padding: $cross-cta-link-padding;
+                border: $cross-cta-link-border;
+                background-color: $cross-cta-link-bg;
+                width: 100%;
+                max-width: $cross-cta-link-max-width;
+                margin-top: 4.2rem;
+                font-family: $cross-cta-link-font;
+                font-size: $cross-cta-link-font-size;
+                font-weight: $cross-cta-link-weight;
+                letter-spacing: $cross-cta-link-letter-spacing;
+                box-shadow: none;
+                color: $cross-cta-link-font-color;
+                @media (min-width:$cross-stack-min-brkpt) {
+                    &:hover,&:focus {
+                        background-color: $cross-cta-link-bg-hover;
+                        color: $cross-cta-link-font-hover-color;
+                        border-color: $cross-cta-link-border-hover-color;
+                    }
+                }
+                @media (max-width:$cards-stack-max-breakpoint) {
+                    margin-top: 3rem;
+                    background-color: $cross-cta-link-bg-hover;
+                    color: $cross-cta-link-font-hover-color;
+                    border-color: $cross-cta-link-border-hover-color;
+                }
+                &:after {
+                    content: none;
+                }                
+            }
+        }
+    }
+    .cross-admin {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: auto;
+        @media (max-width:767px) {
+            position: relative;
+        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            .clickToEditDiv {
+                border-color: $color-darkest;
+                border-style: solid;
+                border-width: 1px 0;
+                padding: 0.5rem 1rem !important;
+                margin: 5px 0 !important;
+                height: 100%;
+                background-color: rgba($white,0.7);
+                &:before {
+                    content: '';
+                    display: block;
+                    font-size: 1.2rem;
+                }
+                img {
+                    max-width: 100%;
+                }
+            }
+            &.cross-cte-img .clickToEditDiv:before {
+                content: 'Image:';
+            }
+            &.cross-cte-txt .clickToEditDiv:before {
+                content: 'Text:';
+            }
+            &:first-child .clickToEditDiv {
+                border-width: 1px 0 1px 1px;
+                padding-left: 0.5rem !important;
+            }
+            &:last-child .clickToEditDiv {
+                border-width: 1px 1px 1px 0;
+                padding-right: 0.5rem !important;
+            }
+        }            
+    }
+    .card-deck + &, .one-column + &, .two-column + & {
+        margin-top: 0;
+    }    
+}
