@@ -224,6 +224,19 @@ header.opt2 {
                             display: block;
                             transform: scaleY(1) translateX($subnav-translateX) !important;
                         }
+                        &[id$="#{$priv-home-menu-id}"].selectedItem {
+                            > a.nav-link {
+                                color: $nav-top-default-font-color;
+                                &:hover,&:focus {
+                                    color: $nav-top-hover-font-color;
+                                }
+                            }
+                            &.open, &:hover {
+                                > a.nav-link {
+                                    color: $nav-top-hover-font-color;
+                                }
+                            }
+                        }
                         li {
                             &.dropdown {
                                 > .dropdown-menu {
