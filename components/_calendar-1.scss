@@ -9,6 +9,7 @@ $cal-date-font-letter-spacing: 0;
 $cal-date-font-weight: 300;
 $cal-date-month-font-size: 2.4rem;
 $cal-date-number-font-size: 5rem;
+$cal-date-number-font-family: $base-font-sans-serif;
 $cal-event-info-background-color: $color-lightest;
 $cal-event-title-font-family: $base-font-serif;
 $cal-event-title-font-color: $color-secondary;
@@ -70,6 +71,7 @@ $cal-event-cta-link-hover-font-weight: 400;
                 color: $cal-date-font-color;
                 &.calDay {
                     font-size: $cal-date-number-font-size;
+                    font-family: $cal-date-number-font-family;
                 }
             }
         }
