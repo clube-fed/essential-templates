@@ -43,6 +43,9 @@
                     padding: 25px 15px;
                     text-align: center;
                 }
+                &.empty-sidebar-minipg {
+                    padding: 0 !important;
+                }
                 &:not(:first-child) {
                     margin-top: 2rem;
                 }
