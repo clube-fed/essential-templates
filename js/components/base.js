@@ -56,3 +56,9 @@ function setMainContentHeight() {
     $j('.sitewrap.private.content .mainContent').css('min-height', ($j(window).height() - $j('header').outerHeight() - $j('.banner').outerHeight() - $j('footer').outerHeight() - maincontenttopbotmargins));
 };
 setTimeout(setMainContentHeight, 500);
+
+$j('.private.home .two-column .col-lg-3 > .mpContent').each(function() {
+    if (!$j.trim($j(this).html()).length) {
+        $j(this).addClass('empty-sidebar-minipg');
+    }
+});
