@@ -954,6 +954,12 @@ function setMainContentHeight() {
 };
 setTimeout(setMainContentHeight, 500);
 
+$j('.private.home .two-column .col-lg-3 > .mpContent').each(function() {
+    if (!$j.trim($j(this).html()).length) {
+        $j(this).addClass('empty-sidebar-minipg');
+    }
+});
+
 /*******************
 Formbase edits 
 ******************/
