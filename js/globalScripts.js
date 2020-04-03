@@ -64,27 +64,6 @@ right: 0
 
 });
 
-/*********
- HIDE TEXT BOX ON PRIVATE HOME IF EMPTY (Removes Background Color)
- *********/
-
-$j(document).ready(function() {
-
-    function isEmpty(element){
-        return !$j.trim(element.html())
-    }
-    $j(".sidebar").each(function() {
-      var sidebar = $j(this);
-      var body = sidebar.find(".mpContent");
-    
-      if(isEmpty(body)) {
-        console.log("EMPTY");
-        body.hide();
-      } 
-    });
-   
-  });
-
 /*******************
 BOOTSTRAP HELPERS
 ******************/
