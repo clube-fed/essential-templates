@@ -36,13 +36,15 @@ $j('#toggle-edits').change(function () {
     if (!this.checked) {
         //  ^
         $j('.clickToEditDiv').show();
-        $j("img[title='Click to edit Plugin Properties']").parentsUntil("table").show();
+        $j(".plgHeaderBar a:not([onclick*='PhotoGallery']) img[title='Click to edit Plugin Properties']").parentsUntil("table").show();
+        $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().show();
         $j("img[title='Click to edit accordion properties']").parentsUntil("div").show();
         $j("img[title='Click to edit navigation properties']").parentsUntil("div").show();
 
     } else {
         $j('.clickToEditDiv').hide();
-        $j("img[title='Click to edit Plugin Properties']").parentsUntil("table").hide();
+        $j(".plgHeaderBar a:not([onclick*='PhotoGallery']) img[title='Click to edit Plugin Properties']").parentsUntil("table").hide();
+        $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().hide();
         $j("img[title='Click to edit accordion properties']").parentsUntil("div").hide();
         $j("img[title='Click to edit navigation properties']").parentsUntil("div").hide();
     }

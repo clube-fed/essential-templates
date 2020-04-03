@@ -479,12 +479,14 @@ $j('.calendar.opt2 [id$="EventsWrapper"] > a').each(function(){
 calendar plugin v3
 ******************/
 $j('.calendar.opt3 [id$="EventsWrapper"] > div').each(function(){
+    $j(this).contents().unwrap();
+});
+$j('.calendar.opt3 [id$="EventsWrapper"] > a').each(function(){
     $j('.event-image', this).css('background-image', "url("+ $j('.event-image img', this).attr("src") +")");
     //var eventTitle = $j('.event-title',this).text();
     //$j( '.event-image img:first-child', this ).attr('alt',eventTitle);
     $j( '.event-image img', this ).attr('alt','');
     $j( '.event-image img + img', this ).attr('aria-hidden','true').attr('alt','');
-    $j(this).contents().unwrap();
 });
 
 /*******************
@@ -866,9 +868,9 @@ $j( '.content .tsContent .mpContent img:not([alt])' ).each( function(){
 /******************* 
 add class when subnav is empty 
 ******************/
-$j( '.content .subnav' ).each( function(){
+$j( '.content .sub-nav' ).each( function(){
 if(!$j.trim($j('ul.ulMenu',this).html()).length) { 
-$j(this).parents('.sidebar').addClass('emptySubnav').siblings('main.col-xs-12').removeClass('pull-right col-md-9').addClass('col-md-10 col-md-offset-1');
+$j(this).removeClass('d-lg-block');
     }
 });
 
@@ -929,13 +931,15 @@ $j('#toggle-edits').change(function () {
     if (!this.checked) {
         //  ^
            $j('.clickToEditDiv').show();
-           $j( "img[title='Click to edit Plugin Properties']" ).parentsUntil( "table" ).show();
+$j(".plgHeaderBar a:not([onclick*='PhotoGallery']) img[title='Click to edit Plugin Properties']").parentsUntil("table").show();
+        $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().show();
       		$j( "img[title='Click to edit accordion properties']" ).parentsUntil( "div" ).show();
       		$j( "img[title='Click to edit navigation properties']" ).parentsUntil( "div" ).show();
       
         } else {
             $j('.clickToEditDiv').hide();
-            $j( "img[title='Click to edit Plugin Properties']" ).parentsUntil( "table" ).hide();
+$j(".plgHeaderBar a:not([onclick*='PhotoGallery']) img[title='Click to edit Plugin Properties']").parentsUntil("table").hide();
+        $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().hide();
   			$j( "img[title='Click to edit accordion properties']" ).parentsUntil( "div" ).hide();
   			$j( "img[title='Click to edit navigation properties']" ).parentsUntil( "div" ).hide();
 }
