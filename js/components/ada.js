@@ -82,6 +82,24 @@ $j('.login-wrap .login-inputs_cookie span.advLogRemoveChk').focus(function () {
 	//});
 });
 
+$j('.login-wrap .login-inputs_forgotPassword a').focus(function () {
+	$j(this).on('keydown', function (e) {
+		if (e.which == 13) {
+			e.preventDefault();
+			$j(this).trigger('click');
+		}
+	});
+});
+
+$j('#forgotcredsModalOverlay').focusin(function () {
+	$j(this).on('keydown', function (e) {
+		if (e.which == 27) {
+			e.preventDefault();
+			$j('#forgotcredsFrameTable #AxisDialogTitleBarCloseIcon').trigger('click');
+		}
+	});
+});
+
 //ADA for tabstrip and accordion
 $j('.tabstrip.RadTabStrip_Tab_responsive > .levelwrap.level1 > ul > li > a > span.wrap > span.innerWrap').each(function () {
 	var ariaLinkLabel = "Click to read more about " + $j(this).text();
