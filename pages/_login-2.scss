@@ -196,6 +196,9 @@ $login-cookie-and-pw-font-weight: 400;
                 &::placeholder {
                     color: $login-inputs-font-color;
                 }
+                &[style*="red"]::placeholder {
+                    color: $white;
+                }
                 &:focus {
                     color: $login-inputs-focus-font-color;
                     //border: none;
