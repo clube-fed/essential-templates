@@ -187,3 +187,8 @@ body:not([class*="-log"]) {
 .RadEditor.Default.reWrapper table {
     border-collapse: separate;
 }
+
+// Form section title style
+.formSection .rosterletteroff {
+    @extend h4;
+}
