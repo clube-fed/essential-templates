@@ -112,3 +112,13 @@
         }
     }
 }
+
+.table-button td a {
+    @extend .abut;
+    margin: 15px;
+}
+
+.table-button-secondary td a {
+    @extend .abut-secondary;
+    margin: 15px;
+}
