@@ -2,6 +2,7 @@
 $cal-events-stack-max-breakpoint: 991px;
 $cal-event-img-width-value: 415; // omit unit from value
 $cal-event-img-height-value: 421; // omit unit from value
+$cal-event-title-font-family: $base-font-sans-serif;
 $cal-event-title-font-size: 2.6rem;
 $cal-event-title-font-weight: 300;
 $cal-event-title-letter-spacing: 0;
@@ -117,6 +118,7 @@ $cal-event-cta-icon-hover-color: #444444;
                 flex: 1 1 auto;
             }
             .event-title {
+                font-family: $cal-event-title-font-family;
                 font-size: $cal-event-title-font-size;
                 font-weight: $cal-event-title-font-weight;
                 letter-spacing: $cal-event-title-letter-spacing;
