@@ -139,6 +139,7 @@ header.opt2 {
                             &:hover,&:focus {
                                 text-decoration: $nav-sub-font-hover-decoration;
                                 background: $nav-sub-font-hover-bgcolor;
+                                color: $nav-sub-hover-font-color;
                             }
                         }
                     }
