@@ -7,6 +7,7 @@ $article-postdate-text-transform: uppercase;
 $article-postdate-letter-spacing: 1.44px;
 $article-postdate-font-size: 1.2rem;
 $article-postdate-font-weight: 600;
+$article-title-font-family: $base-font-serif;
 $article-title-default-color: $color-primary;
 $article-title-hover-color: $article-title-default-color;
 $article-title-text-transform: none;
@@ -77,6 +78,7 @@ $article-cta-icon-hover-color: $color-primary;
             margin-bottom: 2.3rem;
             text-transform: $article-title-text-transform;
             letter-spacing: $article-title-letter-spacing;
+            font-family: $article-title-font-family;
             @media (max-width:$article-stack-max-breakpoint) {
                 margin-bottom: 1.8rem;
             }
