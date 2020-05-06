@@ -12,9 +12,13 @@ Append in `<head>` above scripts:
 <link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
-<script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>
 <link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+```
+Append in `</head>` above scripts:
+```
+<script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
+```
 ```
 Append directly above `</body>`:
 ```
