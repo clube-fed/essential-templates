@@ -19,7 +19,6 @@ Append in `</head>` above scripts:
 ```
 <script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
 ```
-```
 Append directly above `</body>`:
 ```
 <script src="//clubessential.s3.amazonaws.com/js/overridePhotoAlbum.min.js"></script>
