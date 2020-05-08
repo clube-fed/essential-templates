@@ -1069,7 +1069,7 @@ body[class*=alendar] form[action*="view=l4"] .emptyModuleTableCell{display: tabl
 [id$=rosterControl_tblListing] .RosterColumnTitle > td u{text-decoration:none}
 [id$=rosterControl_tblListing] .RosterRowOff{background:#EEE}
 [id$=rosterControl_tblListing] .RosterRowOn{background:#FFF}
-[id$=rosterControl_tblListing] [class^=RosterRow] > td:first-child+td{text-align:right}
+/*[id$=rosterControl_tblListing] [class^=RosterRow] > td:first-child+td{text-align:right}*/
 [id$=rosterControl_tblListing] [class^=RosterRow] > td{font:400 1.5rem/1 $base-font-sans-serif;letter-spacing:.1rem;color:#222;text-transform:none!important}
 [id$=rosterControl_tblListing] [class^=RosterRow] > td b{font-weight:400}
 [id*=rosterControl_tblLetter]{font:400 1.8rem/1 $base-font-sans-serif;text-transform:uppercase;border-bottom:.1rem solid #DDD;border-top:.1rem solid #DDD;margin:0 0 2rem}
