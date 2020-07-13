@@ -123,3 +123,9 @@
 .lightBoxDiv {
     box-sizing: initial;
 }
+
+.lightBoxDiv.mobileSploder {
+    top: 0 !important;
+    padding-top: 30vh;
+    position: absolute;
+}
