@@ -201,8 +201,10 @@ $j('header.opt2').each(function () {
     $j('.navbar-nav > li:last-child > .nav-link', this).clone().removeClass('.nav-link').addClass('abut-secondary log-link').appendTo('.navbar');
     if (last_nav_item_text == 'Logout') {
         $j('a.log-link', this).text('Logout');
-    } else {
+    } else if (last_nav_item_text == 'Login') {
         $j('a.log-link', this).text('Login');
+    } else {
+        $j('a.log-link', this).text('Member Login');
     }
     $j('a.log-link', this).wrap("<div class='nav-log-wrap'></div>");
 });
