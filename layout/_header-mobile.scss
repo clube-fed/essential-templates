@@ -57,6 +57,36 @@
                     }
                 }
             }
+            @media (min-width:$desktop-nav-min-brkpt) {
+                body.isMobile & {
+                    .navbar {
+                        .navbar-collapse {
+                            .navbar-nav {
+                                .dropdown {
+                                    justify-content: flex-end;
+                                }
+                                .dropdown-toggle {
+                                    display: flex;
+                                    flex: 0 0 4rem;
+                                }
+                                > li {
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    > a.nav-link {
+                                        margin-bottom: 4rem;
+                                        &:after {
+                                            content: none !important;
+                                        }
+                                    }
+                                    &.dropdown > a.nav-link {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
