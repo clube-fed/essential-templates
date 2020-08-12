@@ -225,10 +225,15 @@ header.opt1 {
                         > .dropdown-menu {
                             transform: scaleY(0) translateX(0);
                         }
-                        &:hover > .dropdown-menu,
                         > a.nav-link:focus ~ .dropdown-menu {
                             display: block;
                             transform: scaleY(1) translateX($subnav-translateX) !important;
+                        }
+                        &:hover > .dropdown-menu {                            
+                            body:not(.isMobile) & {
+                                display: block;
+                                transform: scaleY(1) translateX($subnav-translateX) !important;
+                            }
                         }
                         li {
                             &.dropdown {
