@@ -74,6 +74,7 @@ $cal-event-cta-icon-hover-color: #444444;
             }
             .event-date {
                 @extend %h4;
+                margin-bottom: 0;
                 z-index: 1;
                 color: $white;
                 display: flex;
