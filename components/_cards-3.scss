@@ -93,6 +93,7 @@ $card-caption-bottom-border: 2px solid $color-quaternary;
                 color: $card-caption-default-font-color;
                 z-index: 1;
                 position: relative;
+                margin-bottom: 0;
                 transition: color 0.3s ease-in-out;
                 a {
                     text-decoration: none;
