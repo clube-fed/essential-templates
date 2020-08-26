@@ -1,0 +1,219 @@
+// VARIABLES
+$collage-inner-spacing: 6px;
+$collage-inner-spacing-half: 3px;
+
+// BEGIN CONTENT PAGE COLLAGE
+.collage.opt3 {
+    margin: $collage-inner-spacing 0;
+    color: $white;
+    //background-color: #fff;
+    //margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    padding-top: 62.5%;
+    @media screen and (max-width:767px) {
+        padding-top: 153%;
+    }
+    @media screen and (max-width:768px) {
+        margin: $collage-inner-spacing;
+    }
+    .mpContent {
+        position: relative;
+        * {
+            color: $white;
+        }
+        img {
+            @media screen and (min-width:768px) {
+                position: absolute;
+            }
+        }
+    }
+    .no-collage-img {
+        @media screen and (max-width:767px) {
+            padding: 30px 15px;
+        }
+        .mpContent {        
+            width: 100%;
+            text-align: center;
+            @media screen and (min-width:768px) {
+                //position: absolute !important;
+                //height: auto !important;
+                //position: absolute;
+                //top: 50%;
+                //transform: translateY(-50%);
+                //left: 0;
+            }
+        }
+    }
+    .clickToEditDiv {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width:1024px) {
+        //margin-left: 15px;
+        //margin-right: 15px;
+    }
+    > div {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        position: absolute;
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            height: 100%;
+            &:first-child {
+                width: 38.7%;
+                @media screen and (min-width:768px) {
+                    padding-right: $collage-inner-spacing;
+                }
+                @media screen and (max-width:767px) {
+                    width: 100%;
+                }
+            }
+            &:nth-child(2) {
+                width: 28.6%;
+                padding-right: $collage-inner-spacing;
+            }
+            &:last-child {
+                width: 32.7%;
+            }
+            @media screen and (max-width:767px) {
+                &:nth-child(n+2) {
+                    display: none;
+                    &.hasCalloutLink, &.hasCalloutLink > .hasCalloutLink {
+                        display: block;
+                    }
+                }
+            }
+            > div {
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                .mpContent {
+                    height: 100%;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    img {
+                        opacity: 0;
+                        @media screen and (max-width:476px) {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // COL 1 
+    .one {
+        width: 50%;
+        height: 20.5%;
+        padding-right: $collage-inner-spacing;
+    }
+    .two {
+        width: 50%;
+        height: 20.5%;
+        //padding-bottom: 15px;
+    }
+    .three {
+        width: 100%;
+        height: 37.8%;
+        //padding-right: 15px;
+        padding-top: $collage-inner-spacing;            
+    }
+    .four {
+        width: 50%;
+        height: 41.8%;
+        padding-right: $collage-inner-spacing;
+        padding-top: $collage-inner-spacing;
+    }
+    .five {
+        width: 50%;
+        height: 41.8%;
+        padding-top: $collage-inner-spacing;
+    }
+    // COL 2
+    .six {
+        width: 100%;
+        height: 31.2%;
+    }
+    .seven {
+        width: 100%;
+        height: 37.1%;
+        padding-top: $collage-inner-spacing;
+    }
+    .eight {
+        width: 100%;
+        height: 31.7%;
+        padding-top: $collage-inner-spacing;
+    }
+    // COL 3
+    .nine {
+        width: 100%;
+        height: 37.1%;
+    }
+    .ten {
+        width: 50%;
+        height: 25.1%;
+        padding-top: $collage-inner-spacing;
+        padding-right: $collage-inner-spacing-half;
+    }
+    .eleven {
+        width: 50%;
+        height: 25.1%;
+        padding-top: $collage-inner-spacing;
+        padding-left: $collage-inner-spacing-half;
+    }
+    .twelve {
+        width: 100%;
+        height: 37.8%;
+        padding-top: $collage-inner-spacing;
+    }
+    .no-collage-img {
+        &.one > .mpContent {
+            background-color: $color-primary;           
+        }
+        &.two > .mpContent {
+            background-color: $color-quaternary;
+        }
+        &.three > .mpContent {
+            background-color: $color-secondary;           
+        }
+        &.four > .mpContent {
+            background-color: $color-lightest;
+        }
+        &.five > .mpContent {
+            background-color: $color-tertiary;
+        }
+        &.six > .mpContent {
+            background-color: $color-quaternary;
+        }
+        &.seven > .mpContent {
+            background-color: $color-secondary;
+        }
+        &.eight > .mpContent {
+            background-color: $color-primary;           
+        }
+        &.nine > .mpContent {
+            background-color: $color-quaternary;
+        }
+        &.ten > .mpContent {
+            background-color: $color-secondary;           
+        }
+        &.eleven > .mpContent {
+            background-color: $color-lightest;
+        }
+        &.twelve > .mpContent {
+            background-color: $color-tertiary;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+// MINIPAGE COLLAGE v1
+.collage.opt1 {
+    margin: 10px 0;
+    color: $white;
+    //background-color: #fff;
+    //margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    @media screen and (max-width:767px) {
+        margin: 15px 15px 5px;
+    }
+    .mpContent {
+        position: relative;
+        * {
+            color: $white;
+        }
+        img {
+            @media screen and (min-width:768px) {
+                position: absolute;
+            }
+        }
+    }
+    .no-collage-img {
+        @media screen and (max-width:767px) {
+            padding: 30px 15px;
+        }
+        .mpContent {        
+            width: 100%;
+            text-align: center;
+            @media screen and (min-width:768px) {
+                //position: absolute !important;
+                //height: auto !important;
+                //position: absolute;
+                //top: 50%;
+                //transform: translateY(-50%);
+                //left: 0;
+            }
+        }
+    }
+    .clickToEditDiv {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media screen and (max-width:1024px) {
+        //margin-left: 15px;
+        //margin-right: 15px;
+    }        
+    @media screen and (min-width:768px) {
+        padding-top: 55.7%;
+    }
+    > div {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;            
+        @media screen and (min-width:768px) {
+            position: absolute;
+        }
+        > div {
+            display: inline-block;
+            vertical-align: top;
+            height: 51%;
+            width: 100%;
+            &:first-child {
+                // width: 40%;
+                @media screen and (min-width:768px) {
+                    padding-bottom: 10px;
+                    height: 49%;
+                }
+                @media screen and (max-width:767px) {
+                    // width: 100%;
+                }
+            }
+            &:nth-child(2) {
+                // width: 40%;
+                // padding-right: 12px;
+            }
+            &:last-child {
+                // width: 20%;
+            }
+            @media screen and (max-width:767px) {
+                height: auto;
+                &:nth-child(n+2) {
+                    // display: none;
+                    &.hasCalloutLink, &.hasCalloutLink > .hasCalloutLink {
+                        display: block;
+                    }
+                }
+            }
+            > div {
+                display: inline-block;
+                position: relative;
+                vertical-align: top;
+                @media screen and (max-width:767px) {
+                    margin-bottom: 10px !important;
+                }
+                .mpContent {
+                    height: 100%;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    img {
+                        opacity: 0;
+                        @media screen and (max-width:476px) {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .one {
+        width: 22.1875%;
+        height: 100%;
+        padding-right: 10px;
+        @media (max-width:767px) {
+            display: table;
+            margin: 0 auto;
+            height: auto;
+            width: auto;
+            padding-right: 0;
+        }
+    }
+    .two {
+        width: 23.8125%;
+        height: 100%;
+        padding-right: 10px;
+        @media (max-width:767px) {
+            display: table;
+            margin: 0 auto;
+            height: auto;
+            width: auto;
+            padding-right: 0;
+        }
+    }
+    .three {
+        width: 54%;
+        height: 100%;
+        //padding-right: 15px;
+        // padding-top: 12px;
+        @media (max-width:767px) {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .four {
+        width: 54.625%;
+        height: 100%;
+        padding-right: 10px;
+        @media (max-width:767px) {
+            height: auto;
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    .five {
+        width: 45.375%;
+        height: 100%;
+        @media (max-width:767px) {
+            height: auto;
+            width: 100%;
+        }
+    }
+    .no-collage-img {
+        &.one > .mpContent {
+            background-color: $color-primary;           
+        }
+        &.two > .mpContent {
+            background-color: $color-quaternary;
+        }
+        &.three > .mpContent {
+            background-color: $color-secondary;           
+        }
+        &.four > .mpContent {
+            background-color: $color-quinary;
+        }
+        &.five > .mpContent {
+            background-color: $color-tertiary;
+        }
+    }
+}
