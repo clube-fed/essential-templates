@@ -1,0 +1,273 @@
+// VARIABLES
+$hole-title-bg-color: $color-darkest; 
+$tee-color-red: var(--red);
+$tee-color-orange: var(--orange);
+$tee-color-green: var(--green);
+$tee-color-blue: var(--blue);
+$tee-color-yellow: var(--yellow);
+$tee-color-purple: var(--purple);
+$tee-color-teal: var(--teal);
+$tee-color-gray: var(--gray);
+$tee-color-gold: #d49341;
+
+// COURSE TOUR v1
+.course-tour.opt1 {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 59px 0 5.9375%;
+    @media (max-width:1024px) {
+        //padding-bottom: 0;
+    }
+    .card-panels + div > & {
+        padding-top: 40px;
+    }
+    > .container > .row > .col-12 > .mpContent {
+        text-align: center;
+        h4 {
+            color: #63828f;
+        }
+        h5 {
+            margin-bottom: 2rem;
+        }
+    }
+    .RadTabStrip_Tab_responsive .levelwrap.level1 > ul {
+        @media (min-width:1024px) {
+            display: flex;
+            justify-content: stretch;
+            > li {
+                flex: 1;
+                > a {
+                    padding-left: 1.4rem !important;
+                    padding-right: 1.4rem !important;
+                    padding-top: 2.3rem !important;
+                    padding-bottom: 2.6rem !important;
+                }
+            }
+        }
+    }
+    [id$="_tblTop"] {
+        &:last-child {
+            // margin-top: 6.3rem;
+        }
+        .tsContent {
+            background: $color-lightest !important;
+            padding: 42px;
+            @media (max-width:1199px) {
+                padding: 30px;
+            }
+            @media (max-width:1024px) {
+                padding: 30px 15px;
+            }
+            h4 {
+                // color: #426a7a;
+                // font-weight: 600;
+                // font-size: 1.6rem;
+                // letter-spacing: 1px;
+            }
+            p {
+                // font-size: 1.4rem;
+                // line-height: 1.93;
+                // letter-spacing: 0;
+                // color: $color-primary;
+            }
+        }
+    }
+    [id$="_radTabsTop"] .levelwrap {
+        //background: $color-tertiary !important;
+        > ul {
+            @media (max-width:1023px) {
+                position: relative;
+                text-align: left;
+                padding: 0 0 0 175px !important;
+                &:after {
+                    content: 'Scroll for More \00a0\00a0\2192';
+                    display: inline-block;
+                    height: auto;
+                    max-width: 185px;
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    z-index: 99;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-family: $tabstrip-tabs-font-family;
+                    font-size: 1.25rem;
+                    line-height:1;
+                    text-transform:uppercase;
+                    letter-spacing: 0;
+                    color: $white;
+                    height:auto;
+                    max-width:160px;
+                }
+            }
+        }
+    }
+    .hole-wrap {
+        display: flex;
+        //max-width: 1300px;
+        margin: 0 auto;
+        .sitewrap & {
+            @media (max-width:991px) {
+                flex-wrap: wrap;
+                > div {
+                    flex: 1 1 100% !important;
+                }
+            }
+        }
+        .hole-media-wrap {
+            padding-right: 27px;
+            flex: 1;
+            .sitewrap & {
+                font-size: 0;
+                @media (max-width:991px) {
+                    order: 1;
+                    padding-right: 0;
+                    text-align: center;
+                }
+            }
+        }
+        .hole-info-wrap {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 542px;
+            background: $white;
+            .abut {
+                width: 100%;
+                max-width: 207px;            
+                @media (min-width:768px) {
+                    margin-top: 2.4rem;
+                }
+            }
+            > div {
+                &:first-child {
+                    flex: 0;
+                    // HOLE TITLE
+                    > div {
+                        font-size: 1.65rem;
+                        font-weight: 700;
+                        letter-spacing: 0.59px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $white;
+                        cursor: default;
+                        margin: 0;
+                        padding: 0;
+                        min-width: 155px;
+                        line-height: 44px;
+                        float: left;
+                        position: relative;
+                        background-color: $hole-title-bg-color;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none; 
+                        transition: background-color 0.2s ease;
+                        &:before,&:after {
+                            content: " ";
+                            position: absolute;
+                            top: 0;
+                            right: -18px;
+                            width: 0;
+                            height: 0;
+                            border-top: 22px solid transparent;
+                            border-bottom: 22px solid transparent;
+                            border-left: 18px solid $hole-title-bg-color;	
+                            z-index: 2;
+                            transition: border-color 0.2s ease;
+                        }
+                        &:before {
+                            right: auto;
+                            left: 0;
+                            border-left: 17px solid #fff;	
+                            z-index: 0;
+                            border: none;
+                        }
+                    }
+                }
+                &:last-child {
+                    padding: 51px 40px 55px;
+                    @media (max-width:767px) {
+                        padding: 30px 15px;
+                    }
+                    > div {
+                        // PAR & HANDICAP INFO
+                        &:first-child {
+                            font-weight: 600;
+                            color: #334755;
+                            letter-spacing: 0.93px;
+                            font-size: 1.3rem;
+                            text-transform: uppercase;
+                            > span, > font {
+                                &:nth-child(n+2) {
+                                    &:before {
+                                        content: '\007c';
+                                        padding: 0 1.5rem;
+                                    }
+                                }
+                                @media (max-width:767px) {
+                                    display: block;
+                                    &:before {
+                                        content: none !important;
+                                    }
+                                }
+                            }
+                        }
+                        // HOLE YARDAGE
+                        &:nth-child(2) {
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            letter-spacing: 0;
+                            color: #444444;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 4.5rem;
+                            margin-top: 1rem;
+                            @media (max-width:767px) {
+                                flex-wrap: wrap;
+                                flex-direction: column;
+                                //align-items: center;
+                                justify-content: center;
+                                margin-bottom: 3rem;
+                            }
+                            > span, > font {
+                                padding-top: 5px !important;
+                                padding-bottom: 5px !important;
+                                @media (max-width:767px) {
+                                    padding: 5px 0 !important;
+                                }
+                                &:nth-child(n+2) {
+                                    padding-left: 3rem;
+                                }
+                                &:before {
+                                    content: '';
+                                    height: 17px;
+                                    width: 17px;
+                                    display: inline-block;
+                                    margin-right: 8px;
+                                    margin-bottom: 0;
+                                    vertical-align: middle;
+                                    border-radius: 50%;
+                                    border: 1px solid transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+    
+    .hole-info-wrap .white:before {background-color:#ffffff;border-color:#979797 !important;}
+    .hole-info-wrap .black:before {background-color:#000000;}
+    .hole-info-wrap .red:before {background-color:$tee-color-red;}
+    .hole-info-wrap .blue:before {background-color:$tee-color-blue;}
+    .hole-info-wrap .green:before {background-color:$tee-color-green;}
+    .hole-info-wrap .gold:before {background-color:$tee-color-gold;}
+    .hole-info-wrap .yellow:before {background-color:$tee-color-yellow;}
+    .hole-info-wrap .purple:before {background-color:$tee-color-purple;}
+    .hole-info-wrap .orange:before {background-color:$tee-color-orange;}
+    .hole-info-wrap .teal:before {background-color:$tee-color-teal;}
+    .hole-info-wrap .gray:before {background-color:$tee-color-gray;}
+}
