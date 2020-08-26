@@ -33,7 +33,7 @@
                 text-align: center;
                 white-space: nowrap;
                 font-size: 0;
-                @media (max-width:1024px) {
+                @media (max-width:1023px) {
                     position: relative;
                     text-align: left;
                     &:after {
@@ -95,7 +95,7 @@
             background: $tabstrip-unselected-bg !important;
             width: 100% !important;
             > ul {                
-                @media (max-width:1024px) {
+                @media (max-width:1023px) {
                     padding: 0 0 0 170px !important;
                     &:after {
                         font-weight: $tabstrip-tabs-font-weight;
