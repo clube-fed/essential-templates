@@ -1,0 +1,326 @@
+// VARIABLES
+$tsContent-bg-color: $white;
+$tab-selected-font-color: $tabstrip-selected-font-color;
+$tab-selected-bg-color: $tabstrip-selected-bg;
+$tee-color-red: var(--red);
+$tee-color-orange: var(--orange);
+$tee-color-green: var(--green);
+$tee-color-blue: var(--blue);
+$tee-color-yellow: var(--yellow);
+$tee-color-purple: var(--purple);
+$tee-color-teal: var(--teal);
+$tee-color-gray: var(--gray);
+$tee-color-gold: #d49341;
+
+// COURSE TOUR v2
+.course-tour.opt2 {
+    // BEGIN VERTICAL TABS
+    @media (min-width:1025px) {
+        [id$="_tblTop"] {
+            box-shadow: none;
+            .tsContent {
+                height: 100%;
+                padding: 0;
+                border: none !important;
+                .mpContent {
+                    display: flex;
+                    
+                }
+            }
+            > tbody {
+                display: flex;
+                > tr {
+                    &:first-child {
+                        flex: 1 0 50px;
+                        > td:nth-child(2) {
+                            height: 100%;
+                            display: block;
+                            > table, > table > tbody, > table > tbody > tr, > table > tbody > tr > td:first-child, .tabstrip, .levelwrap.level1 {
+                                height: 100%;
+                                display: block;
+                            }
+                            .levelwrap.level1 > ul {
+                                height: 100%;
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        flex: 1;
+                        flex-basis: 100%;
+                        > td:nth-child(2) {
+                            display: block;
+                            height: 100%;
+                            > div {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        [id$="_radTabsTop"] .levelwrap.level1 > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            
+            > li {
+                display: flex;
+                flex: 1 1 32px;
+                justify-content: center;
+                align-items: center;
+                > a {
+                    border-left: 3px solid $tabstrip-selected-top-border-color !important;
+                    border-top: none !important;
+                    padding: 5px !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    &.selected {
+                        //border-color: $tabstrip-selected-top-border-color;
+                        background: $tab-selected-bg-color !important;
+                        .wrap {
+                            color: $tab-selected-font-color;
+                        }
+                    }
+                    .wrap {
+                        .innerWrap {
+                            // font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+    padding: 0 46px 70px 106px;
+    max-width: 1600px;
+    margin: 0 auto;
+    @media (max-width:1199px) {
+        padding: 0 50px 15px 50px;
+    }
+    @media (max-width:991px) {
+        padding: 0 15px 50px;
+    }
+    [id$="_radTabsTop"] .levelwrap.level1 {        
+        > ul {
+            @media (width:1024px) {
+                padding: 0 1px !important;
+            }
+            &:after {
+                @media (min-width:1024px) {
+                    content: none;
+                }
+            }
+            > li > a {
+                @media (max-width:1024px) {
+                    padding: 1.7rem 1.8rem 1.6rem !important;
+                }
+            }
+        }
+    }
+    .scorecard {
+        font-size: 1.55rem;
+        font-weight: 600;
+        color: #186f5a;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        line-height: 1;
+        @media (min-width:1025px) {
+            position: absolute;
+            right: 5rem;
+            bottom: 0;
+        }
+        @media (max-width:1024px) {
+            padding: 0 5rem 5rem;
+        }
+        @media (max-width:767px) {
+            padding: 0 1.5rem 3rem;
+        }
+        span[class*="icon"] {
+            margin-left: 10px;
+            font-size: 1.8rem;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+    }
+    .tsContent {
+        padding: 0;
+        background-color: $tsContent-bg-color !important;
+        .mpContent {
+            height: 100%;
+            display: flex;
+            @media (max-width:1024px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                > div {
+                    flex: 1 1 100% !important;
+                }
+            }    
+            > .hole-media {
+                //padding-right: 27px;
+                flex: 1;
+                font-size: 0;
+                @media (max-width:1024px) {
+                    order: 1;
+                    padding-right: 0;
+                }
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .hole-info-wrap {            
+                flex: 0 0 500px;
+                @media (min-width:1025px) {
+                    margin-top: 5rem;
+                    padding-bottom: 5rem;
+                    position: relative;
+                }
+                @media (max-width:1024px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .hole-info {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 auto;
+                    background: $white;
+                    padding: 3rem 1.5rem;                
+                    position: relative;
+                    @media (min-width:768px) {
+                        padding: 5rem;
+                    }
+                    @media (min-width:1025px) {
+                        flex-basis: 500px;
+                        left: -5rem;                        
+                        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+                        min-height: 500px;
+                        padding-top: 6.3rem;
+                    }
+                }
+                .hole-num {
+                    @extend %h3;
+                    text-transform: uppercase;
+                    margin-bottom: 12px;
+                }
+                .hole-yardage {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    color: $base-font-color;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 2.6rem;
+                    margin-top: 1rem;
+                    border: 1px solid #eeeeee;
+                    border-left: none;
+                    border-right: none;
+                    padding: 9px 0;
+                    @media (max-width:767px) {
+                        //flex-wrap: wrap;
+                        //flex-direction: column;
+                        //align-items: center;
+                        //justify-content: center;
+                        margin-bottom: 3rem;
+                    }
+                    > span, > font {
+                        padding-top: 5px !important;
+                        padding-bottom: 5px !important;
+                        @media (max-width:767px) {
+                            padding: 5px 0 !important;
+                        }
+                        &:nth-child(n+2) {
+                            padding-left: 3rem;
+                        }
+                        &:before {
+                            content: '';
+                            height: 13px;
+                            width: 13px;
+                            display: inline-block;
+                            margin-right: 8px;
+                            margin-bottom: 5px;
+                            vertical-align: middle;
+                            border-radius: 50%;
+                            border: 1px solid transparent;
+                        }
+                        &.blue:before {background-color:$tee-color-blue;}
+                        &.white:before {background-color:#ffffff;border-color:#979797 !important;}
+                        &.red:before {background-color:$tee-color-red;}
+                        &.black:before {background-color:$black;}
+                        &.yellow:before {background-color:$tee-color-yellow;}
+                        &.green:before {background-color:$tee-color-green;}
+                        &.gold:before {background-color:$tee-color-gold;}
+                        &.purple:before {background-color:$tee-color-purple;}
+                        &.orange:before {background-color:$tee-color-orange;}
+                        &.teal:before {background-color:$tee-color-teal;}
+                        &.gray:before {background-color:$tee-color-gray;}
+                    }
+                }
+                .hole-desc {
+                    strong {
+                        font-weight: 500;
+                        font-size: 1.8rem;
+                        color: #4d5465;
+                    }
+                }
+                > div > div {
+                    &:first-child {
+                        flex: 0;
+                        > div {
+                            font-size: 1.65rem;
+                            font-weight: 700;
+                            letter-spacing: 0.59px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: $white;
+                            cursor: default;
+                            margin: 0;
+                            padding: 0;
+                            min-width: 155px;
+                            line-height: 44px;
+                            float: left;
+                            position: relative;
+                            background-color: $color-quinary;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none; 
+                            transition: background-color 0.2s ease;
+                            &:before,&:after {
+                                content: " ";
+                                position: absolute;
+                                top: 0;
+                                right: -18px;
+                                width: 0;
+                                height: 0;
+                                border-top: 22px solid transparent;
+                                border-bottom: 22px solid transparent;
+                                border-left: 18px solid $color-quinary;	
+                                z-index: 2;
+                                transition: border-color 0.2s ease;
+                            }
+                            &:before {
+                                right: auto;
+                                left: 0;
+                                border-left: 17px solid #fff;	
+                                z-index: 0;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            + .clickToEditDiv {                
+                @media (min-width:1025px) {
+                    position: absolute;
+                    margin-top: -22px !important;
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+}
