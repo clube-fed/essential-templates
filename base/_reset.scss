@@ -22,6 +22,9 @@ body {
 .mpContent, .reference-guide {
     ol, ul {
         line-height: $base-line-height;
+        body.isMobile & {
+            padding-inline-start: 40px;
+        }
     }
 }
 
