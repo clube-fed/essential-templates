@@ -117,7 +117,7 @@ body[class*="NETDynEntryFormLanding"]
     .modHeaderLine img{
         display:none;
     }
-    a {
+    a:not(.abut):not(.abut-secondary) {
         color: $base-font-color;
         border:none!important;
         font-weight:inherit;
