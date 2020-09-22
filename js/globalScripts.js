@@ -1008,7 +1008,7 @@ ariasForModules();
 /*******************
 global button aria for module buttons
 ******************/
-$j('.module.container #calendarLinkBar a, .module.container table[id$="_tblProfilePage"] a, #updatePhotoiframe a, .module .adminBar input[type="button"], .module .adminbar input[type="button"], .module .adminBar input[type="submit"], .module .adminbar input[type="submit"], #printLink a').attr({tabindex:'0',role:'button'});
+$j('.module.container #calendarLinkBar a, .module.container table[id$="_tblProfilePage"] a, #updatePhotoiframe a, .module .adminBar input[type="button"], .module .adminbar input[type="button"], .module .adminBar input[type="submit"], .module .adminbar input[type="submit"], #printLink a, div.rmpView[id$="_rpvHTML"] a').attr({tabindex:'0',role:'button'});
 
 $j('.axisDialogBox').each( function(){
 	console.log('dialog open');
