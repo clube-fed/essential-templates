@@ -1248,7 +1248,7 @@ var cbpAnimatedHeader = (function() {
 
 	function scrollPage() {
 		var sy = scrollY();
-  		if ($j('body').find('.modulewrap').length !== 0) {
+  		if (($j('body').find('.modulewrap').length !== 0) || ($j('body').find('.content.has-no-banner').length !== 0)) {
     		changeHeaderOn = $j('header').outerHeight();
           } 
         else if ($j('body').find('.private.home').length !== 0) {
@@ -1260,6 +1260,7 @@ var cbpAnimatedHeader = (function() {
   		//console.log(changeHeaderOn);
 		if ( sy >= changeHeaderOn ) {
 			$j('header').addClass('shrink');
+			$j('body.page').addClass('header-has-shrink');
     		//$j('#scrollDown').attr('style', 'position: absolute; bottom: 50px; height: 10px !important');
     		if(firstScroll == true){
     		 $j('header').css('top', '-120px').animate({ top: 0 });
@@ -1268,7 +1269,9 @@ var cbpAnimatedHeader = (function() {
 		}
 		else {
 			$j('header').removeClass('shrink');
-  			$j('header').css('top', '0');
+			$j('body.page').removeClass('header-has-shrink');
+  			//$j('header').css('top', '0');
+			$j('header').css({'top':''});
             firstScroll = true;
   			//$j('#scrollDown').attr('style', 'position: absolute; bottom: 50px; height: 100px !important');
 		}
