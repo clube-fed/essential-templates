@@ -1004,9 +1004,17 @@ function ariasForModules() {
 		'#defaultnetform:not([action*="ynamic"][action*="odule"]) .modulewrap > .container input[type="button"]'
 	]
 	for (i = 0; i< moduleAnchors.length || i< moduleSelfClosers.length; ++i) {
-		$j(moduleAnchors[i]).each( function(){	
-			var ariaLinkLabel = "Click to view " + $j(this).text();
-			$j(this).attr({'aria-label':ariaLinkLabel,'title':ariaLinkLabel});
+		$j(moduleAnchors[i]).each(function () {
+			//JNOLFI: on dynamic module there is an onlick with a table blowing up the ariaLabel 
+			//JNOLFI: check for a table > return OR program what you want to do here [i.e. find a textnode in table] 
+			if ($j(this).children('table').length > 0) {
+				return;
+			}
+			var ariaLinkLabel = "Click to view " + $j.trim($j(this).text());
+			$j(this).attr({
+				'aria-label': ariaLinkLabel,
+				'title': ariaLinkLabel
+			});
 		});	
 		$j(moduleSelfClosers[i]).each( function(){	
 			var ariaLinkLabel = "Click to " + $j(this).attr('value');
