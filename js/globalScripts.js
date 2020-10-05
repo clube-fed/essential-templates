@@ -72,10 +72,12 @@ $j('.navbar-nav li').addClass('nav-item');
 $j('.navbar-nav li a').addClass('nav-link');
 $j('.navbar-nav .ulMenuItem.selectedItem').closest('.ulMenu').parent().addClass('selectedParent');
 $j('.navbar-nav .ulMenuItem.selectedParent').closest('.ulMenu').parent().addClass('selectedGrandParent');
-$j('.navbar-nav li.ulMenuItem.level1, .navbar li.ulMenuItem.level2, .navbar li.ulMenuItem.level3').each(function(){
-    $j(this).contents().filter(function(){
-        return this.nodeType === 3 // Node.TEXT_NODE
-    }).wrap('<a class="nav-link" href="#"></a>');
+//JNOLFI: using .navbar selector for all [not dynamically created] and just selecting all axis nav plugin LI el [removing multiple selectors] 
+$j('.navbar li.ulMenuItem').each(function() {
+    //JNOLFI: removing this as it was causing failure on subnav $j(this).html($j.trim($j(this).html())); //trim the HTML
+    $j(this).contents().filter(function() {
+      return this.nodeType === 3 && this.nodeValue != null; // Node.TEXT_NODE
+    }).wrap('<a href="#" class="nav-link"></a>');
 });
 $j('.navbar-nav.ulMenu.level0').find('.ulMenu').addClass('dropdown-menu').attr('role','menu');
 $j('.dropdown-menu').parent().addClass('dropdown');
