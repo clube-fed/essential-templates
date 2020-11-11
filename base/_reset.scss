@@ -55,6 +55,10 @@ body.dynamicpageedit {
     }    
 }
 
+.eventMgrPop #eventMgrWrapper {
+    height: 100% !important;
+}
+
 // BEGIN IE SPECIFIC
 html._Telerik_IE9, html._Telerik_IE9 body {
     width: 100% !important;
