@@ -55,8 +55,22 @@ body.dynamicpageedit {
     }    
 }
 
-.eventMgrPop #eventMgrWrapper {
-    height: 100% !important;
+.eventMgrPop {
+    #eventMgrWrapper {
+        height: 100% !important;
+    }
+    #floatingToolbar .floatRight li {
+        padding: 0;
+    }
+    p {
+        line-height: 1;
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 16px;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+    }
 }
 
 // BEGIN IE SPECIFIC
