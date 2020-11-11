@@ -58,6 +58,7 @@ $cal-event-cta-link-hover-font-weight: 400;
             line-height: 1;
             text-align: center;
             padding: 15px;
+            transition: all 0.3s ease-in-out;
             @media (max-width:$cal-events-stack-max-breakpoint) {
                 flex: 0 1 10rem;
             }
@@ -147,6 +148,9 @@ $cal-event-cta-link-hover-font-weight: 400;
             text-decoration: none;
             &:hover,&:focus {
                 text-decoration: none;
+                .event-date {
+                    background-color: $cal-date-hover-background-color;
+                }
                 .event-info .event-cta {
                     color: $cal-event-cta-link-hover-font-color;
                     font-weight: $cal-event-cta-link-hover-font-weight;
