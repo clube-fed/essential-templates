@@ -3,8 +3,8 @@ $article-img-width-value: 370; // omit unit from value
 $article-img-height-value: 225; // omit unit from value
 $article-stack-max-breakpoint: 991px;
 
-// ARTICLES v4 
-.articles.opt4 {
+// ARTICLES v3 
+.articles.opt3 {
     padding: 51px 15px;
     text-align: center;
     @media (max-width:$article-stack-max-breakpoint) {
