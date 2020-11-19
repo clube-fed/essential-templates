@@ -15,7 +15,7 @@ module.exports = function (grunt) {
                     //'./js/components/calOpt2.js',
                     './js/components/calOpt3.js',
                     //'./js/components/calOpt4.js',
-                    //'./js/components/articleOpt4.js',
+                    //'./js/components/articleOpt3.js',
                     './js/components/login.js',
                     './js/components/modules.js',
                     './js/components/ada.js',
