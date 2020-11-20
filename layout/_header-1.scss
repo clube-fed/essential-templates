@@ -129,6 +129,7 @@ header.opt1 {
                             line-height: $nav-sub-line-height;
                             padding: $nav-sub-font-padding;
                             text-align: $nav-sub-font-text-align;
+                            transition: none;
                             &:hover,&:focus {
                                 text-decoration: $nav-sub-font-hover-decoration;
                                 background: $nav-sub-font-hover-bgcolor;
