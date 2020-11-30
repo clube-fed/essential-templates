@@ -87,6 +87,7 @@ $cal-event-cta-icon-hover-color: #444444;
                 padding: 2.5rem;
                 top: auto !important;
                 height: auto !important;
+                bottom: 0px;
                 @media (max-width:$cal-events-stack-max-breakpoint) {
                     flex: 0 1 10rem;
                 }
