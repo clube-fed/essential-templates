@@ -43,6 +43,11 @@
                         margin: 0 0.5rem 0.5rem 0;
                     }
                 }
+		&.open, &.selectedItem, &.selectedParent, &.selectedGrandParent {
+                    > a.nav-link {
+                        color: $nav-top-mobile-selected-font-color;
+                    }                        
+                }
                 &.open {
                     .dropdown-toggle .caret:before,
                     > a.nav-link {
