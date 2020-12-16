@@ -273,6 +273,7 @@ header.opt1 {
                             &.open > .nav-link {
                                 text-decoration: $nav-sub-font-hover-decoration;
                                 background: $nav-sub-font-hover-bgcolor;
+                                color: $nav-sub-selected-font-color;
                             }
                         }
                     }                    
