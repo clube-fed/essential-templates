@@ -713,7 +713,8 @@ body[class*=alendar] [id^=axisCalendar] .calendarTitleBar b{font-weight:700}
 body[class*=alendar] [id^=axisCalendar] .RadPicker{margin:0!important}
 body[class*=alendar] [id^=axisCalendar] .RadPicker>.rcSingle>tbody>tr>td .rcCalPopup:hover{/* background-position:-13px -4215.5px!important */}
 body[class*=alendar] [id^=axisCalendar]>table{margin:0 0 40px}
-body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:first-child,body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:last-child,.emptyModuleTableCell{display:none}
+body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:first-child,body[class*=alendar] [id^=axisCalendar]>table>tbody>tr>td:last-child{display:none}
+/*.emptyModuleTableCell{display:none}*/
 
 body[class*="sitesConfig"] table#Table1 td.emptyModuleTableCell, body[class*=alendar] .modCalMonth>tbody>tr>td.emptyModuleTableCell, table[id$="_rosterControl_tblListing"]>tbody>tr>td.emptyModuleTableCell,
 table[id$="_tblRegs"]>tbody>tr>td.emptyModuleTableCell {display: table-cell;}
