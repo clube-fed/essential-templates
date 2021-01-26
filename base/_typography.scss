@@ -1,4 +1,4 @@
-h1, %h1 {
+h1, .h1, %h1 {
     font-family: $base-font-serif;
     color: $color-primary;
     font-size: $h1-size;
@@ -12,7 +12,7 @@ h1, %h1 {
     }
 }
 
-h2, %h2 {
+h2, .h2, %h2 {
     font-family: $base-font-sans-serif;
     color: $color-primary;
     font-size: $h2-size;
@@ -26,7 +26,7 @@ h2, %h2 {
     }
 }
 
-h3, %h3 {
+h3, .h3, %h3 {
     font-family: $base-font-sans-serif;
     color: #444444;
     font-size: $h3-size;
@@ -37,7 +37,7 @@ h3, %h3 {
     text-transform: none;
 }
 
-h4, %h4 {
+h4, .h4, %h4 {
     font-family: $base-font-sans-serif;
     color: $color-primary;
     font-size: $h4-size;
@@ -48,7 +48,7 @@ h4, %h4 {
     text-transform: none;
 }
 
-h5, %h5 {
+h5, .h5, %h5 {
     font-family: $base-font-sans-serif;
     color: #444444;
     font-size: $h5-size;
@@ -59,7 +59,7 @@ h5, %h5 {
     text-transform: none;
 }
 
-h6, %h6 {
+h6, .h6, %h6 {
     font-family: $base-font-sans-serif;
     color: #555555;
     font-size: $h6-size;
