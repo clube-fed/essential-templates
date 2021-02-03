@@ -2,7 +2,7 @@
 footer.opt1 {
     background: $color-primary;
     color: $white;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,12 +30,13 @@ footer.opt1 {
     }    
     ul {
         list-style: none;
-        margin: 0;
+        margin: -0.8rem 0;
         padding: 0;
         font-size: 0;
         li {
             display: inline-block;
             font-size: 1.4rem;
+            margin: 0.8rem 0 0;
             @media (max-width:767px) {
                 width: 100%;
             }
@@ -43,7 +44,7 @@ footer.opt1 {
                 margin-right: 5px;
             }
             &:nth-last-child(n+2) {
-                margin-bottom: 1.5rem;
+                margin-bottom: 0.8rem;
                 @media (min-width:768px) {
                     margin-bottom: 0;
                     margin-right: 3.5rem;
