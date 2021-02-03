@@ -26,7 +26,7 @@ $login-cookie-and-pw-font-weight: 400;
         background-size: cover;
         background-color: $color-darkest;
         height: 100%;
-        height: 100vh;
+        min-height: 100vh !important;
         display: flex;
         //width: 100%;
         position: relative;
