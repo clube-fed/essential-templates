@@ -32,7 +32,7 @@ $login-cookie-and-pw-font-weight: 400;
         position: relative;
         font-size: 1.4rem;
         overflow: hidden;
-        @media (max-width:767px) {
+        .injectContent & {
             min-height: -webkit-fill-available !important;
         }
         &:before {
