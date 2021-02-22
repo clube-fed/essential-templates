@@ -181,6 +181,9 @@ header.opt4 {
                     &:after {
                         content: none;
                     }
+                    ~ .dropdown-toggle {
+                        display: none;
+                    }
                 }
                 > li.open .dropdown-toggle .caret:before {
                     color: $nav-top-selected-font-color;
