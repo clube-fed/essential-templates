@@ -117,7 +117,7 @@ body[class*="NETDynEntryFormLanding"]
     .modHeaderLine img{
         display:none;
     }
-    a:not(.abut):not(.abut-secondary) {
+    a:not(.abut):not(.abut-secondary):not(.calendarEventDateLink){
         color: $base-font-color;
         border:none!important;
         font-weight:inherit;
