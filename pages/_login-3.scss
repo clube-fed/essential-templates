@@ -55,6 +55,18 @@ $login-cookie-and-pw-font-weight: 400;
             }
         }
     }
+    &.justify-content-lg-end#login-bg {        
+        @media (min-width:992px) {
+            &:before {
+                left: auto;
+                right: 0;
+                background: -moz-linear-gradient(left, rgba(41,51,55,0) 0%, rgba(41,51,55,0.85) 100%);
+                background: -webkit-linear-gradient(left, rgba(41,51,55,0) 0%,rgba(41,51,55,0.85) 100%);
+                background: linear-gradient(to right, rgba(41,51,55,0) 0%,rgba(41,51,55,0.85) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00293337', endColorstr='#d9293337',GradientType=1 );
+            }
+        }
+    }
     .login-bg-img {
         .mpContent img {
             visibility: hidden;
