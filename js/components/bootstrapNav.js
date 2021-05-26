@@ -15,15 +15,17 @@ $j('.navbar li.ulMenuItem').each(function() {
 $j('.navbar-nav.ulMenu.level0').find('.ulMenu').addClass('dropdown-menu').attr('role', 'menu');
 $j('.dropdown-menu').parent().addClass('dropdown');
 $j('.navbar-collapse .ulMenu').find('.selectedItem').addClass('active');
-$j('.dropdown-menu').parent().children('a').after('<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>');
-$j('.navbar-nav .ulMenuItem.level1:not(:last-child) > a:first-of-type').wrapInner('<span class="rootLevelSpan"></span>');
-
 // identify top level nav folders 
 $j('.navbar-nav .ulMenuItem.level1.dropdown').each(function () {
     if ($j(this).children('a').attr('href') == '#') {
         $j(this).addClass('isFolder');
     } else {};
 });
+$j('.dropdown-menu').parent().children('a').after('<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>');
+$j('.dropdown.isFolder').children('a.nav-link').addClass('dropdown-toggle').attr('data-toggle', 'dropdown');
+$j('.navbar-nav .ulMenuItem.level1:not(:last-child) > a:first-of-type').wrapInner('<span class="rootLevelSpan"></span>');
+
+
 
 $j('header .dropdown').on({
     "shown.bs.dropdown": function () {
@@ -69,7 +71,10 @@ $j('.navbar-toggler').click(function () {
 });
 
 // TABBING THROUGH NAV ON DESKTOP
-$j('.navbar-nav li > a.nav-link').focus(function () {
+$j('.desktopNav .navbar-nav li > a.nav-link').focus(function () {
+    //$j(this).parents('li.dropdown').addClass('open');
+});
+$j('.desktopNav .navbar-nav li > a.nav-link').focus(function () {
     $j(this).parents('li.dropdown').addClass('open');
     $j(this).parent().siblings('li').removeClass('open');
     $j(this).parents('li').siblings('li').removeClass('open');
@@ -87,6 +92,8 @@ $j('li.dropdown [data-toggle=dropdown]').on('click', function (event) {
     $j(this).parent().toggleClass('open');
     $j(this).parent().siblings().removeClass('open');
     $j(this).parents('li').siblings('li').find('.open').removeClass('open');
+    // console.log("uh");
+    $j(this).parent().parent().parent().siblings().find('.open').removeClass('open');
 });
 
 // END NEW STUFF
