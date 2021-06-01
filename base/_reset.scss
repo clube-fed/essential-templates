@@ -57,7 +57,8 @@ body.dynamicpageedit {
 
 .eventMgrPop {
     #eventMgrWrapper {
-        height: 100% !important;
+        //height: 100% !important;
+        min-height: 100% !important;
     }
     #floatingToolbar .floatRight li {
         padding: 0;
