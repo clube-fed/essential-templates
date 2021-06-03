@@ -575,7 +575,7 @@ body[class*=ArticleList] {
         }
         .articleTitle {
             width:75%;
-            font:2.4rem/1 $base-font-sans-serif;
+            font:#{$h2-size}/1 $base-font-sans-serif;
             display:block;
             border-bottom:1px solid #CCC;
             padding:0 0 2rem;
@@ -587,10 +587,10 @@ body[class*=ArticleList] {
         display:none;
     }
     .articleHtml {
-        font:400 1.4rem/3.1rem $base-font-sans-serif;
+        font:$base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
         width:75%;
         margin:0 auto;
-        color:#666;
+        color:$base-font-color;
         p img {
             margin:2rem;
             max-width:100%;
