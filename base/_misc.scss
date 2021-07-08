@@ -184,6 +184,12 @@ body:not([class*="-log"]) {
     }
 }
 
+#datepicker {
+    background: $white;
+    border: 1px solid $black;
+    padding: 10px;
+}
+
 .RadEditor.Default.reWrapper table {
     border-collapse: separate;
 }
