@@ -188,6 +188,9 @@ body:not([class*="-log"]) {
     background: $white;
     border: 1px solid $black;
     padding: 10px;
+    > table {
+        border-collapse: separate;
+    }
 }
 
 .RadEditor.Default.reWrapper table {
