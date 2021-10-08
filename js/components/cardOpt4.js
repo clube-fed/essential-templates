@@ -1,6 +1,6 @@
 //card option 4
 $j('.card-panels.opt4 .card').each(function () {
-    $j('.card-text .mpContent > a, .card-text .mpContent p a:last-child', this).append("<span class='nc-icon-outline arrows-1_circle-right-37'></span>");
+    $j('.card-text .mpContent > a', this).append("<span class='nc-icon-outline arrows-1_circle-right-37'></span>");
     if (!$j.trim($j('.mpContent', this).html()).length) {
         $j(this).addClass('has-empty-column');
     }
