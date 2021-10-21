@@ -201,3 +201,8 @@ body:not([class*="-log"]) {
 .formSection .rosterletteroff {
     @extend h4;
 }
+
+// Prevent Calendar Icons from being too small 10/21 //
+.sitewrap .calendarEventIcon { 
+    max-width: none; 
+}
