@@ -79,3 +79,20 @@ html._Telerik_IE9, html._Telerik_IE9 body {
     width: 100% !important;
     height: 100% !important;
 }
+
+.nl-container {
+    p, ol, ul {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+    }
+    *:not(strong):not([style*="font-weight"]) {
+        font-weight: inherit !important;
+    }
+    *:not([style*=" color:"]):not([style^="color:"]):not([style*=";color:"]) {
+        color: inherit !important;
+    }
+    *:not([style*="font-family"]) {
+        font-family: inherit !important;
+    }
+}
