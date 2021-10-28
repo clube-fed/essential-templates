@@ -48,7 +48,7 @@ $j('body.page').each(function () {
 
 //when on a module, bring in styles, form js, make module tabs tabbable
 $j('.modulewrap').each(function () {
-	$j('head').append('<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/NationalGolfLinksOfAmerica/css/modules.css">');
+	$j('head').append('<link rel="stylesheet" type="text/css" href="https://d2nfzhdjx5k7v7.cloudfront.net/CEFED/_Axis-Website/Sites/NationalGolfLinksOfAmerica/css/modules.css">');
 	//$j('body.page').append('<script type="text/javascript" src="js/formBlaster.js"></script>' );
 	$j('.moduleTabText > a, .injectContent .mobileTabs li a').each(function () {
 		var modTabClassName = $j(this).html().replace(' ', '');
