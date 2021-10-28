@@ -9,21 +9,21 @@ Append in `<head>` above scripts:
 ```
 <!--[FAVICON HTML HERE]-->
 <!--[FONT LINK HERE]-->
-<link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
-<link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
-<link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>
-<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/css/bootstrap.min.css"/>
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
 Append in `</head>` above scripts:
 ```
-<script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/js/bootstrap.min.js"></script>
 ```
 Append directly above `</body>`:
 ```
-<script src="//clubessential.s3.amazonaws.com/js/overridePhotoAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/js/responsiveAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ### Other tab
@@ -32,22 +32,22 @@ Append directly above `</body>`:
 Head Tag Top:
 ```
 <!--[FONT LINK HERE]-->
-<link href="//clubessential.s3.amazonaws.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
-<link href="//clubessential.s3.amazonaws.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
-<link href="//clubessential.s3.amazonaws.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
 ```
 Head Tag Bottom:
 ```
 <!--[FAVICON HTML HERE]-->
-<script src="//clubessential.s3.amazonaws.com/libs/bs4/js/bootstrap.min.js"></script>
-<script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="//clubessential.s3.amazonaws.com/libs/bs4/css/bootstrap.min.css"/>');</script>
-<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/js/bootstrap.min.js"></script>
+<script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/css/bootstrap.min.css"/>');</script>
+<link href="https://d2nfzhdjx5k7v7.cloudfront.net/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
 Body Tag Bottom:
 ```
-<script src="//clubessential.s3.amazonaws.com/js/overridePhotoAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/js/responsiveAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
+<script src="https://d2nfzhdjx5k7v7.cloudfront.net/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ## SASS Setup
