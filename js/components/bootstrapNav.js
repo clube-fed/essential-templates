@@ -74,7 +74,7 @@ $j('.navbar-toggler').click(function () {
 $j('.desktopNav .navbar-nav li > a.nav-link').focus(function () {
     //$j(this).parents('li.dropdown').addClass('open');
 });
-$j('.desktopNav .navbar-nav li > a.nav-link').focus(function () {
+$j('.navbar-nav li > a.nav-link').focus(function () {
     $j(this).parents('li.dropdown').addClass('open');
     $j(this).parent().siblings('li').removeClass('open');
     $j(this).parents('li').siblings('li').removeClass('open');
