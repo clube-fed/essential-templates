@@ -290,6 +290,14 @@ header.opt5 {
                                 text-decoration: $nav-sub-font-hover-decoration;
                                 background: $nav-sub-font-hover-bgcolor;
                             }
+                            &.selectedItem > .nav-link,
+                            &.selectedParent > .nav-link,
+                            &.selectedGrandParent > .nav-link {
+                                background-color: $nav-sub-font-selected-bgcolor;
+                                &:hover,&:focus,&:active {
+                                    background-color: $nav-sub-font-selected-bgcolor;
+                                }
+                            }
                         }
                     }                    
                 }
