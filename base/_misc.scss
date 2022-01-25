@@ -208,6 +208,7 @@ body:not([class*="-log"]) {
 }
 //Event Manager Search Box Text Color Fix //
 
+div[id$="_Panel1"] input[id$="_txtSearch"] {
     color: #fff;
   }
   
