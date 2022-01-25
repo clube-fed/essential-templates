@@ -8,13 +8,17 @@ Create a display theme and select it from the Display Theme dropdown in admin co
 Append in `<head>` above scripts:
 ```
 <!--[FAVICON HTML HERE]-->
-<!--[FONT LINK HERE]-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Prata&display=swap" rel="stylesheet">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/css/bootstrap.min.css"/>
-<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/VeroBeachCC2022/css/style.css" rel="stylesheet" type="text/css">
 ```
+
+
 Append in `</head>` above scripts:
 ```
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/js/bootstrap.min.js"></script>
@@ -23,7 +27,7 @@ Append directly above `</body>`:
 ```
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/VeroBeachCC2022/js/globalScripts.min.js"></script>
 ```
 
 ### Other tab
@@ -31,7 +35,9 @@ Append directly above `</body>`:
 
 Head Tag Top:
 ```
-<!--[FONT LINK HERE]-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Prata&display=swap" rel="stylesheet">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="https://d2nfzhdjx5k7v7.cloudfront.net/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
@@ -41,13 +47,13 @@ Head Tag Bottom:
 <!--[FAVICON HTML HERE]-->
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/js/bootstrap.min.js"></script>
 <script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="https://d2nfzhdjx5k7v7.cloudfront.net/libs/bs4/css/bootstrap.min.css"/>');</script>
-<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/VeroBeachCC2022/css/style.css" rel="stylesheet" type="text/css">
 ```
 Body Tag Bottom:
 ```
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
-<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/VeroBeachCC2022/js/globalScripts.min.js"></script>
 ```
 
 ## SASS Setup
