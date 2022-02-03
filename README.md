@@ -25,7 +25,7 @@ Append directly above `</body>`:
 ```
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
-<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.min.js"></script>
+<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ### Other tab
@@ -49,7 +49,7 @@ Body Tag Bottom:
 ```
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/overridePhotoAlbum.min.js"></script>
 <script src="https://d2nfzhdjx5k7v7.cloudfront.net/js/responsiveAlbum.min.js"></script>
-<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.min.js"></script>
+<script src="https://clubessential.s3.us-east-1.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ## SASS Setup
