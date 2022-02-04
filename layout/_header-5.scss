@@ -231,6 +231,19 @@ header.opt5 {
                             text-decoration: $nav-sub-font-hover-decoration;
                         }                        
                     }
+                    &[id$="#{$priv-home-menu-id}"].selectedItem {
+                        > a.nav-link {
+                            color: $nav-top-default-font-color;
+                            &:hover,&:focus {
+                                color: $nav-top-hover-font-color;
+                            }
+                        }
+                        &.open, &:hover {
+                            > a.nav-link {
+                                color: $nav-top-hover-font-color;
+                            }
+                        }
+                    }
                     // BEGIN DESKTOP SPECIFIC
                     @media (min-width:$desktop-nav-min-brkpt) {
                         border: none;
