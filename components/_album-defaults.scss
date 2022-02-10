@@ -60,6 +60,17 @@
 }
 
 .thumbs-album {
+    .plgHeaderBar b, .pluginTitleBar {
+        @extend %h3;
+        display: block;
+        text-align: center;
+        margin-bottom: 1.9rem;
+        border: none;
+        background: none;
+        @media (max-width:767px) {
+            margin-bottom: 1.5rem;
+        }
+    }
     [id*="photoPluginWrapper"] {
         width: 100% !important;
     }
