@@ -108,6 +108,9 @@ $cal-event-img-before-stack-min-brkpt: $cal-event-img-stack-max-brkpt + 1;
             @media (max-width:1366px) {
                 //flex-basis: 700px;
             }
+            img + img {
+                display: none;
+            }
         }
         .event-info {
             padding: 0 0 0 50px;
