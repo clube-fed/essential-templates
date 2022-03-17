@@ -1084,7 +1084,7 @@ bring in form script when forms are on page
 
 $j('body.page').each( function(){
     if($j(this).find('.formBaseFormWrapper').length){
-        $j(this).append('<script type="text/javascript" src="js/formBlaster.js"></script>' );
+        //$j(this).append('<script type="text/javascript" src="js/formBlaster.js"></script>' );
     }	
 });	
 
