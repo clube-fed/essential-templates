@@ -6,6 +6,11 @@
 [id^=masterPageUC] .modulewrap {
     > .container {
         position:relative;
+		
+		@media (min-width:$desktop-nav-min-brkpt) {
+			padding-top: calc(120px + 2rem);
+		}
+		
         .abut {
             display:inline-block;
             height:auto!important;
@@ -19,12 +24,21 @@
             text-transform:uppercase;
             -webkit-transition:.3s;
             transition:.3s;
+			border: $button-border !important;
+			color: $button-font-color !important;
+			&:hover,&:focus {
+				border-color: $button-border-hover-color !important;
+				color: $button-font-hover-color !important;
+			}
         }
         input.abut {
             background: $button-bg;
-            border: none;
+            border: $button-border !important;
+			color: $button-font-color !important;
             &:hover,&:focus {
                 background: $button-bg-hover;
+				border-color: $button-border-hover-color !important;
+				color: $button-font-hover-color !important;
             }
         }
     }
@@ -61,22 +75,25 @@ body[class*="NET_MemberInbox"] [id^=masterPageUC] .modulewrap > .container .abut
     line-height: 36px !important;
 	margin: -2px 2px 2px !important;
     max-height: 36px;
-    border: none !important;
+    border: $button-border !important;
     font-size: 12px !important;
 }
 
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"],
-body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover{
-	//padding: 0 15px !important;
-	//line-height: 30px !important;
-	margin: 3px 2px 2px !important;
-	//height: 30px !important;
-	border: none !important;
-	//font-size: 12px !important;
-	display: block;
-	min-width: 150px;
-	//max-width: 250px;
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover {
+    padding: 0 12px !important;
+    line-height: normal !important;
+    margin: 0px 2px 2px !important;
+    max-height: 30px;
+    border: 2px solid #979797 !important;
+    font-size: 12px !important;
+    display: inline-block;
+    min-width: 150px;
+    max-width: 250px;
+    min-height: 30px;
 }
+
+
 
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"],
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"]:hover,
@@ -84,15 +101,33 @@ body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"]:hover,
 body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"],
 body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover{
-    padding: 0 12px;
-    line-height: 1em !important;
+    padding: 0 12px !important;
+    line-height: normal !important;
     margin: 0px 2px 2px !important;
     max-height: 30px;
-    border: none !important;
+    border: 2px solid #979797 !important;
     font-size: 12px !important;
     display: inline-block;
     min-width: 150px;
     max-width: 250px;
+    min-height: 30px;
+}
+
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_statsph_"]:hover,
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="btnRefresh"]:hover,
+body[class*="iteStats"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnChangeDates"]:hover,
+body[class*="NETEmailUIMain"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_emailUI"]:hover,
+body[class*="NETBizDBReport"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnBizGo"]:hover,
+body[class*="NETRosterSyncUI"] [id^=masterPageUC] .modulewrap > .container .abut:hover,
+body[class*="ReleaseNotes"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"],
+body[class*="ReleaseNotes"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover,
+body[class*="v35MessageCenter"] [id^=masterPageUC] .modulewrap > .container .abut:hover,
+body[class*="NET_MemberInbox"] [id^=masterPageUC] .modulewrap > .container .abut:hover,
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover,
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"]:hover,
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"]:hover,
+body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover {
+	border-color: $button-border-hover-color !important;
 }
 
 #ctl00_rgRunLogs .RadGrid_Default{width: 100%;}
@@ -634,7 +669,7 @@ body[class*=alendar] {
                 width:auto!important;
                 padding: 1rem 2rem !important;
                 margin: 0 0 0 0!important;
-                border: $button-border;
+                border: $button-border !important;
                 border-radius:0;
                 background: $button-bg;
                 font-weight:$button-weight;
@@ -650,6 +685,8 @@ body[class*=alendar] {
                 line-height: normal;
                 &:active, &:hover {
                     background: $button-bg-hover;
+					color: $button-font-hover-color!important;
+					border-color:  $button-border-hover-color !important;
                 }
                 img {
                     margin:-4px 0 -2px 3px;
@@ -659,6 +696,8 @@ body[class*=alendar] {
                 &:focus {
                     background: $button-bg-hover !important;
                     //outline:2px solid #000;
+					border-color:  $button-border-hover-color !important;
+					
                 }
             }
         }
