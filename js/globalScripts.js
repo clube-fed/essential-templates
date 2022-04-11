@@ -967,6 +967,8 @@ $j('.private.home .two-column .col-lg-3 > .mpContent').each(function() {
     }
 });
 
+$j('.course-tour').parent('div[id$="_dpPlaceholder"]').addClass('course-tour-parent');
+
 /*******************
 Formbase edits 
 ******************/
