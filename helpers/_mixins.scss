@@ -38,6 +38,7 @@
                 > a.nav-link {
                     text-align: left;
                     color: $nav-top-mobile-default-font-color;
+			justify-content: flex-start;
                     span[class*="nc-icon"] {
                         font-size: 1.4rem;
                         margin: 0 0.5rem 0.5rem 0;
