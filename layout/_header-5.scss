@@ -209,6 +209,7 @@ header.opt5 {
                         @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
                             padding-left: $nav-top-li-LR-padding-smaller;
                             padding-right: $nav-top-li-LR-padding-smaller;
+                            justify-content: flex-start;
                         }
                         &:hover,&:focus {
                             color: $nav-top-hover-font-color;
