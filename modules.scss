@@ -836,6 +836,7 @@ body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a img{display:none}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth{padding:6px;background:#EEE!important}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td{display:none;font-size:1.6rem;padding:5px 0 0}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td a,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td font{font-size:1.2rem;color: #000;font-weight: inherit;}
+body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td span[style^="color"] > font {color: inherit;}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td,body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td+td{display:table-cell}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr>td:first-child+td+td img{margin:0 auto;display:block;width:90%;border-bottom:1px solid $base-font-color;height:1px}
 body[class*=alendar] .modCalMonth>tbody>tr .modCalMonthWeekDayOtherMonth>table>tbody>tr:first-child td{border-bottom:1px solid #CCC;padding:0 0 3px;display:table-cell}
