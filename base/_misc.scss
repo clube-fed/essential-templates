@@ -211,4 +211,32 @@ body:not([class*="-log"]) {
 div[id$="_Panel1"] input[id$="_txtSearch"] {
     color: #fff;
   }
+
+
+/* Article & Mobile Event Flyer Fixes for Bee Editor Updates 5/2022 */  
   
+.mobileFlyer  .nl-container .txtTinyMce-wrapper p { text-align: center!important; }
+
+.mobileFlyer table.row { margin: 0!important;  }
+
+.nl-container p, .nl-container ol, .nl-container ul {
+    color: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+}
+.nl-container *:not(strong):not([style*="font-weight"]) {
+    font-weight: inherit !important;
+}
+.nl-container *:not([style*=" color:"]):not([style^="color:"]):not([style*=";color:"]) {
+    color: inherit !important;
+}
+.nl-container *:not([style*="font-family"]) {
+    font-family: inherit !important;
+}
+.nl-container *:not([style*="font-size"]) {
+    font-size: inherit !important;
+}
+table.row {
+    display: revert !important;
+}
+
