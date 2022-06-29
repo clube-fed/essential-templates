@@ -69,6 +69,20 @@ $j.fn.responsifyPhotoAlbum = function () {
     });
 };
 
+function aScrollResizeGallery(tag){
+	var aScrollTarget = $j('[id^="photoPluginWrapper"]');
+	if(tag){ aScrollTarget = $j(tag).find('[id^="photoPluginWrapper"]');}
+	aScrollTarget.each(function(){
+		var pHeight = 0;
+		if($j(this).has('.photoGalleryThumbPageDiv[style*="z-index: 50"]').length){
+			pHeight = $j(this).find('.photoGalleryThumbPageDiv[style*="z-index: 50"]').height();
+		}else{
+			pHeight = $j(this).find('.photoGalleryThumbPageDiv:visible').height()
+		}
+		$j(this).css('min-height', pHeight +"px");
+	});
+};
+
 $j(window).bind("load", function () {
     resizeSitewrap();
     $j().responsifyPhotoAlbum();
