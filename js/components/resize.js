@@ -12,4 +12,5 @@ function resizeSitewrap() {
   };
   /******************* Resize Trigger for Photo Album's (Sets Min Height)******************/
   aScrollResize();
+  aScrollResizeGallery();
 }
