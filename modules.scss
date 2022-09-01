@@ -1057,6 +1057,7 @@ body[class*=alendar] form[action*="view=l4"] .emptyModuleTableCell{display: tabl
             vertical-align:top;
             line-height:1em;
             &:active,&:hover {
+	        color: $button-font-hover-color !important;
                 background: $button-bg-hover;
                 border-color: $button-bg-hover !important;
             }
