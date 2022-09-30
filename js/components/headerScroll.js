@@ -29,6 +29,7 @@ var cbpAnimatedHeader = (function () {
 		if (sy >= changeHeaderOn) {
 			$j('header').addClass('shrink');
 			$j('body.page').addClass('header-has-shrink');
+			$j('.skip-main').attr('tabindex', '-1');
 			//$j('#scrollDown').attr('style', 'position: absolute; bottom: 50px; height: 10px !important');
 			if (firstScroll == true) {
 				$j('header').css('top', '-120px').animate({
@@ -42,6 +43,7 @@ var cbpAnimatedHeader = (function () {
 			//$j('header').css('top', '0');
 			$j('header').css({'top':''});
 			firstScroll = true;
+			$j('.skip-main').attr('tabindex', '0');
 			//$j('#scrollDown').attr('style', 'position: absolute; bottom: 50px; height: 100px !important');
 		}
 		didScroll = false;
