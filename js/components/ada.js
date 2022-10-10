@@ -263,3 +263,7 @@ $j('.module.container #calendarLinkBar a, .module.container table[id$="_tblProfi
 $j('.axisDialogBox').each(function () {
 	console.log('dialog open');
 });
+
+$j('ul[role="menu"] .ulMenuItem').attr({
+	role: 'menuitem'
+});
