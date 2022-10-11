@@ -33,9 +33,9 @@ body {
 }
 
 a {
-    color: $base-font-color;
+    color: $link-color;
     &:hover,&:focus {
-        color: $base-font-color;
+        color: $link-hover-color;
     }
 }
 
