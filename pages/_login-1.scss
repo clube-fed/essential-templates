@@ -1,22 +1,23 @@
 // VARIABLES
-$login-logo-width: 196px;
-$login-logo-height: 102px;
-$login-instructions-line-height: 1.63;
+$login-logo-width: auto;
+$login-logo-height: auto;
+$login-instructions-line-height: $base-line-height;
 $login-instructions-font-color: $base-font-color;
 $login-inputs-font-family: $base-font-sans-serif;
-$login-inputs-font-color: #666666;
+$login-inputs-font-color: $base-font-color;
 $login-inputs-focus-font-color: $login-inputs-font-color;
 $login-inputs-font-size: 1.6rem;
 $login-inputs-font-weight: 400;
-$login-inputs-border: 1px solid #e7e7e7;
+$login-inputs-border: 2px solid $color-secondary;
 $login-inputs-bgcolor: $white;
 $login-checkbox-font-color: $white;
 $login-checkbox-bgcolor-default: $color-primary;
 $login-checkbox-bgcolor-checked: $login-checkbox-bgcolor-default;
-$login-cookie-and-pw-font-color: #666666;
 $login-cookie-and-pw-font-size: 1.4rem;
 $login-cookie-and-pw-font-family: $base-font-sans-serif;
 $login-cookie-and-pw-font-weight: 400;
+$login-cookie-font-color: $color-primary;
+$login-pw-font-color: $color-secondary;
 
 // LOGIN v1
 .login.opt1 {
@@ -80,7 +81,7 @@ $login-cookie-and-pw-font-weight: 400;
         font-weight: $base-font-weight;
         line-height: $login-instructions-line-height;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 17px;
         @media screen and (max-width:1199px) {
             //font-size: 1.5rem;
         }
@@ -95,7 +96,7 @@ $login-cookie-and-pw-font-weight: 400;
     }
     .login-wrap {
         background-color: rgba(255,255,255,1);
-        padding: 50px 100px 69px;
+        padding: 8.6rem 10rem 8.3rem;
         width: 100%;
         max-width: 570px;
         z-index: 99;
@@ -239,18 +240,18 @@ $login-cookie-and-pw-font-weight: 400;
             padding: 0;
             font-size: 0;
             * {
-                color: $login-cookie-and-pw-font-color;
+                color: $login-cookie-font-color;
                 font-family: $login-cookie-and-pw-font-family;
             }
             label, a {
                 margin: 0;
                 line-height: 1.2;
-                color: $login-cookie-and-pw-font-color;
+                color: $login-cookie-font-color;
                 font-weight: $login-cookie-and-pw-font-weight;
                 font-size: $login-cookie-and-pw-font-size;
             }
             a {
-                color: $login-cookie-and-pw-font-color;
+                color: $login-pw-font-color;
                 text-decoration: underline;
                 &:hover,&:focus {
                     text-decoration: none;
