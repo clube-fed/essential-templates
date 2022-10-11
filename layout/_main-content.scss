@@ -1,31 +1,33 @@
 // MAIN CONTENT
 .intro {
-    padding-top: 70px;
-    padding-bottom: 65px;
+    margin-top: 7rem;
+    margin-bottom: 7.5rem;    
     text-align: center;
     @media (max-width:1024px) {
-        padding: 50px 15px;
+        margin: 5rem auto;
+        padding: 0 15px;
     }
     @media (max-width:767px) {
-        padding: 30px 15px;
+        margin: 5rem auto;
     }
 }
 
 .one-column, .two-column {
-    padding: 70px 15px 105px;
+    margin: 6.1rem auto 10rem;
+    padding: 0 15px;
     @media (max-width:1024px) {
-        padding: 50px 15px;
+        margin: 5rem auto;
     }
 }
 
 .two-column {    
     .private.home & {
         max-width: 1200px;
-        padding-top: 50px;
-        padding-bottom: 60px;
+        margin-top: 4rem;
+        margin-bottom: 6rem;
         .col-lg-9 {
             @media (min-width:992px) {
-                padding-right: 45px;
+                padding-right: 5rem;
             }
         }
         .col-lg-3 {

@@ -1,24 +1,30 @@
 // VARIABLES
 $nav-top-alignment-in-header: flex-end; // justify-content value
-$nav-top-default-font-color: $color-secondary;
+$nav-top-default-font-color: $color-tertiary;
 $nav-top-hover-font-color: $color-primary;
 $nav-top-selected-font-color: $nav-top-hover-font-color;
+$nav-top-hover-text-decoration: underline;
+$nav-top-selected-text-decoration: underline;
 $nav-top-mobile-default-font-color: $nav-top-default-font-color;
 $nav-top-mobile-hover-font-color: $nav-top-hover-font-color;
 $nav-top-mobile-selected-font-color: $nav-top-selected-font-color;
 $nav-top-font-family: $base-font-sans-serif;
-$nav-top-font-size: 1.4rem;
-$nav-top-font-weight: 600;
+$nav-top-font-size: 1.5rem;
+$nav-top-font-weight: 700;
 $nav-top-font-text-transform: none;
 $nav-top-font-letter-spacing: 0;
 $nav-top-li-top-bott-padding: 1.7rem;
-$nav-top-li-left-right-padding: 3rem;
+$nav-top-li-left-right-padding: 2rem;
 $nav-top-li-LR-padding-smaller-brkpt: 1365px;
-$nav-top-li-LR-padding-smaller: 2.7rem;
+$nav-top-li-LR-padding-smaller: ($nav-top-li-left-right-padding - 0);
 $nav-top-li-padding: $nav-top-li-top-bott-padding $nav-top-li-left-right-padding;
-$nav-top-li-bullet-content-value: '\00B7'; // middle dot = '\00B7'
-$nav-top-li-bullet-size: 3.6rem;
-$nav-top-li-bullet-color: #e4e4e4;
+$nav-top-li-last-child-font-size: 1.4rem;
+$nav-top-li-last-child-font-weight: 800;
+$nav-top-li-last-child-default-color: $color-secondary;
+$nav-top-li-last-child-hover-color: $nav-top-li-last-child-default-color;
+$nav-top-li-last-child-text-transform: uppercase;
+$nav-top-li-last-child-letter-spacing: 0.1rem;
+
 
 // HEADER v1
 header.opt1 {
@@ -80,7 +86,7 @@ header.opt1 {
                         &:before {
                             @include mobile-nav-caret-font;
                             content: "\eaad";
-                            color: #b0b0b0;
+                            color: $base-font-color;
                             font-size: 1.2rem;
                         }                        
                     }
@@ -145,11 +151,18 @@ header.opt1 {
                     align-items: stretch;
                     display: flex;
                     text-align: center;
-                    border-bottom: 1px solid #e4e4e4;
+                    // border-bottom: 1px solid #e4e4e4;
                     &:last-child {
                         > a.nav-link {
-                            color: $nav-top-selected-font-color;
                             padding-right: 0;
+                            color: $nav-top-li-last-child-default-color;     
+                            font-size: $nav-top-li-last-child-font-size;
+                            text-transform: $nav-top-li-last-child-text-transform;
+                            letter-spacing: $nav-top-li-last-child-letter-spacing;
+                            font-weight: $nav-top-li-last-child-font-weight;
+                            &:hover,&:focus,&:active {
+                                color: $nav-top-li-last-child-hover-color;
+                            }
                         }
                     }
                     > a.nav-link {
@@ -163,21 +176,28 @@ header.opt1 {
                         text-transform: $nav-top-font-text-transform;
                         letter-spacing: $nav-top-font-letter-spacing;
                         padding: $nav-top-li-padding;
+                        text-underline-offset: 2px;
+                        text-decoration-thickness: 2px !important;
+                        &.has-abut {
+                            text-decoration: none !important;
+                        }
                         @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
                             padding-left: $nav-top-li-LR-padding-smaller;
                             padding-right: $nav-top-li-LR-padding-smaller;
                         }
                         &:hover,&:focus {
                             color: $nav-top-hover-font-color;
+                            text-decoration: $nav-top-hover-text-decoration;
                         }
                         span[class*="nc-icon"] {
-                            font-size: 2.1rem;
-                            margin: 0 1rem 1rem 0;
+                            font-size: $nav-top-li-last-child-font-size;
+                            margin: 0 1rem 0.5rem 0;
                         }
                     }
                     &.open, &.selectedItem, &.selectedParent, &.selectedGrandParent {
                         > a.nav-link {
                             color: $nav-top-selected-font-color;
+                            text-decoration: $nav-top-selected-text-decoration;
                         }                        
                     }
                     li {
@@ -191,13 +211,16 @@ header.opt1 {
                     &[id$="#{$priv-home-menu-id}"].selectedItem {
                         > a.nav-link {
                             color: $nav-top-default-font-color;
+                            text-decoration: none;
                             &:hover,&:focus {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration;
                             }
                         }
                         &.open, &:hover {
                             > a.nav-link {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration;
                             }
                         }
                     }
@@ -205,21 +228,10 @@ header.opt1 {
                     @media (min-width:$desktop-nav-min-brkpt) {
                         border: none;
                         flex-wrap: nowrap !important;
-                        &:before {
-                            content: $nav-top-li-bullet-content-value;
-                            font-size: $nav-top-li-bullet-size;
-                            color: $nav-top-li-bullet-color;
-                            align-items: center;
-                            display: flex;
-                        }
-                        &:first-child {
-                            &:before {
-                                content: none;
-                            }
-                        }
                         &:hover {
                             > a.nav-link {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration;
                             }
                         }
                         &.open > .dropdown-menu {

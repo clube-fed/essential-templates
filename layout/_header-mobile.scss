@@ -100,7 +100,9 @@
                     padding: 0;            
                     z-index: 9;            
                     .navbar-brand {
-                        flex: 1 1 calc(100% - 9.4rem);
+                        // flex: 1 1 calc(100% - 9.4rem);
+                        flex: 0 1 auto;
+                        max-width: calc(100% - 6.8rem);
                         padding-left: 5rem;
                         @media (max-width: 767px) {
                             padding-left: 1.5rem;

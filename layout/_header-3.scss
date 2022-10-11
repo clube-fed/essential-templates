@@ -1,25 +1,29 @@
 // VARIABLES
-$desktop-logo-path-for-bg-img: "../images/logo_white.svg";
-$nav-top-alignment-in-header: flex-end;
+$nav-top-alignment-in-header: flex-end; // justify-content value
 $nav-top-default-font-color: $white;
 $nav-top-hover-font-color: $white;
 $nav-top-selected-font-color: $nav-top-hover-font-color;
-$nav-top-mobile-default-font-color: $color-secondary;
+$nav-top-hover-text-decoration: underline;
+$nav-top-selected-text-decoration: underline;
+$nav-top-mobile-default-font-color: $color-primary;
 $nav-top-mobile-hover-font-color: $color-primary;
 $nav-top-mobile-selected-font-color: $nav-top-mobile-hover-font-color;
 $nav-top-font-family: $base-font-sans-serif;
-$nav-top-font-size: 1.4rem;
-$nav-top-font-weight: 600;
+$nav-top-font-size: 1.5rem;
+$nav-top-font-weight: 700;
 $nav-top-font-text-transform: none;
 $nav-top-font-letter-spacing: 0;
 $nav-top-li-top-bott-padding: 1.7rem;
-$nav-top-li-left-right-padding: 2.6rem;
-$nav-top-li-LR-padding-smaller-brkpt: 1425px;
-$nav-top-li-LR-padding-smaller: 2.3rem;
+$nav-top-li-left-right-padding: 2rem;
+$nav-top-li-LR-padding-smaller-brkpt: 1365px;
+$nav-top-li-LR-padding-smaller: ($nav-top-li-left-right-padding - 0);
 $nav-top-li-padding: $nav-top-li-top-bott-padding $nav-top-li-left-right-padding;
-$nav-top-li-bullet-size: 1.4rem;
-$nav-top-li-bullet-color: $white;
-$nav-top-logo-and-login-flex-basis: 246px;
+$nav-top-li-last-child-font-size: 1.4rem;
+$nav-top-li-last-child-font-weight: 800;
+$nav-top-li-last-child-default-color: $white;
+$nav-top-li-last-child-hover-color: $nav-top-li-last-child-default-color;
+$nav-top-li-last-child-text-transform: uppercase;
+$nav-top-li-last-child-letter-spacing: 0.1rem;
 
 // HEADER v3
 header.opt3 {
@@ -28,7 +32,7 @@ header.opt3 {
     position: absolute;
     left: 0;
     right: 0;
-    background-color: rgba($color-primary,0.65);
+    background-color: rgba(#2b442d,0.8);
     .navbar {
         padding: 0 5rem;
         align-items: stretch;
@@ -48,13 +52,6 @@ header.opt3 {
             background-size: contain;
             img {
                 max-width: 100%;
-            }
-            @media (min-width:$desktop-nav-min-brkpt) {
-                background: url(#{$desktop-logo-path-for-bg-img}) no-repeat left center;
-                background-size: contain;
-                img {
-                    visibility: hidden;
-                }
             }
         }
         .navbar-collapse {
@@ -155,11 +152,27 @@ header.opt3 {
                     align-items: stretch;
                     display: flex;
                     text-align: center;
-                    border-bottom: 1px solid #e4e4e4;
+                    // border-bottom: 1px solid #e4e4e4;
                     &:last-child {
                         > a.nav-link {
-                            color: $nav-top-selected-font-color;
                             padding-right: 0;
+                            color: $nav-top-li-last-child-default-color;     
+                            font-size: $nav-top-li-last-child-font-size;
+                            text-transform: $nav-top-li-last-child-text-transform;
+                            letter-spacing: $nav-top-li-last-child-letter-spacing;
+                            font-weight: $nav-top-li-last-child-font-weight;
+                            span[class*="abut"] {
+                                background-color: transparent;
+                                color: $white;
+                                border-color: $white;
+                            }
+                            &:hover,&:focus,&:active {
+                                color: $nav-top-li-last-child-hover-color;
+                                span[class*="abut"] {
+                                    background-color: $white;
+                                    color: $color-darkest;
+                                }
+                            }
                         }
                     }
                     > a.nav-link {
@@ -173,21 +186,28 @@ header.opt3 {
                         text-transform: $nav-top-font-text-transform;
                         letter-spacing: $nav-top-font-letter-spacing;
                         padding: $nav-top-li-padding;
+                        text-underline-offset: 2px;
+                        text-decoration-thickness: 2px !important;
+                        &.has-abut {
+                            text-decoration: none !important;
+                        }
                         @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
                             padding-left: $nav-top-li-LR-padding-smaller;
                             padding-right: $nav-top-li-LR-padding-smaller;
                         }
                         &:hover,&:focus {
                             color: $nav-top-hover-font-color;
+                            text-decoration: $nav-top-hover-text-decoration;
                         }
                         span[class*="nc-icon"] {
-                            font-size: 2.1rem;
-                            margin: 0 1rem 1rem 0;
+                            font-size: $nav-top-li-last-child-font-size;
+                            margin: 0 1rem 0.5rem 0;
                         }
                     }
                     &.open, &.selectedItem, &.selectedParent, &.selectedGrandParent {
                         > a.nav-link {
                             color: $nav-top-selected-font-color;
+                            text-decoration: $nav-top-selected-text-decoration;
                         }                        
                     }
                     li {
@@ -202,21 +222,20 @@ header.opt3 {
                     @media (min-width:$desktop-nav-min-brkpt) {
                         border: none;
                         flex-wrap: nowrap !important;
-                        &:before {
-                            content: '\2022';
-                            font-size: $nav-top-li-bullet-size;
-                            color: $nav-top-li-bullet-color;
-                            align-items: center;
-                            display: flex;
-                        }
                         &:first-child {
                             &:before {
                                 content: none;
                             }
                         }
+                        &:last-child {
+                            > a.nav-link {
+                                text-decoration: none;
+                            }
+                        }
                         &:hover {
                             > a.nav-link {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration;
                             }
                         }
                         &.open > .dropdown-menu {

@@ -1,22 +1,23 @@
 // VARIABLES
-$split-nav-center-logo-width: 38px;
-$desktop-navbar-height: 100px;
+$desktop-navbar-height: 140px;
 $nav-top-alignment-in-header: center;
 $nav-top-default-font-color: $white;
 $nav-top-hover-font-color: $white;
 $nav-top-selected-font-color: $nav-top-hover-font-color;
-$nav-top-mobile-default-font-color: $color-secondary;
+$nav-top-hover-text-decoration: underline;
+$nav-top-selected-text-decoration: underline;
+$nav-top-mobile-default-font-color: $color-primary;
 $nav-top-mobile-hover-font-color: $color-primary;
 $nav-top-mobile-selected-font-color: $nav-top-mobile-hover-font-color;
 $nav-top-font-family: $base-font-sans-serif;
 $nav-top-font-size: 1.4rem;
-$nav-top-font-weight: 600;
+$nav-top-font-weight: 700;
 $nav-top-font-text-transform: uppercase;
-$nav-top-font-letter-spacing: 1px;
+$nav-top-font-letter-spacing: 0.1rem;
 $nav-top-li-top-bott-padding: 1.7rem;
-$nav-top-li-left-right-padding: 2.9rem;
-$nav-top-li-LR-padding-smaller-brkpt: 1425px;
-$nav-top-li-LR-padding-smaller: $nav-top-li-left-right-padding;
+$nav-top-li-left-right-padding: 2.4rem;
+$nav-top-li-LR-padding-smaller-brkpt: 1365px;
+$nav-top-li-LR-padding-smaller: ($nav-top-li-left-right-padding - 0);
 $nav-top-li-padding: $nav-top-li-top-bott-padding $nav-top-li-left-right-padding;
 
 // HEADER v5 - SPLIT NAV
@@ -33,13 +34,14 @@ header.opt5 {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=0 );
     }
     .navbar {
-        padding: 0 5rem;
+        padding: 0 1.5rem;
         align-items: stretch;
         height: $navbar-height;
         @media (min-width:$desktop-nav-min-brkpt) {
             height: $desktop-navbar-height;
+            padding-bottom: 3.5rem;
             @media (max-width: 1299px) {
-                padding: 0 3rem;
+                // padding: 0 3rem;
             }
         }
         .navbar-brand {
@@ -89,6 +91,7 @@ header.opt5 {
                         flex: 0 0 auto !important;
                         align-items: center;
                         display: flex;
+                        padding: 0 $nav-top-li-left-right-padding;
                         > a {
                             padding: 5px;
                         }
@@ -206,6 +209,11 @@ header.opt5 {
                         text-transform: $nav-top-font-text-transform;
                         letter-spacing: $nav-top-font-letter-spacing;
                         padding: $nav-top-li-padding;
+                        text-underline-offset: 2px;
+                        text-decoration-thickness: 2px !important;
+                        &.has-abut {
+                            text-decoration: none !important;
+                        }
                         @media (max-width:$nav-top-li-LR-padding-smaller-brkpt) {
                             padding-left: $nav-top-li-LR-padding-smaller;
                             padding-right: $nav-top-li-LR-padding-smaller;
@@ -221,6 +229,7 @@ header.opt5 {
                     &.open, &.selectedItem, &.selectedParent, &.selectedGrandParent {
                         > a.nav-link {
                             color: $nav-top-selected-font-color;
+                            text-decoration: $nav-top-selected-text-decoration;
                         }                        
                     }
                     li {
@@ -234,13 +243,16 @@ header.opt5 {
                     &[id$="#{$priv-home-menu-id}"].selectedItem {
                         > a.nav-link {
                             color: $nav-top-default-font-color;
+                            text-decoration: none;
                             &:hover,&:focus {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration
                             }
                         }
                         &.open, &:hover {
                             > a.nav-link {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration
                             }
                         }
                     }
@@ -251,6 +263,7 @@ header.opt5 {
                         &:hover {
                             > a.nav-link {
                                 color: $nav-top-hover-font-color;
+                                text-decoration: $nav-top-hover-text-decoration;
                             }
                         }
                         &.open > .dropdown-menu {

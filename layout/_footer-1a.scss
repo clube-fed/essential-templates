@@ -1,10 +1,10 @@
 // FOOTER
-footer.opt1 {
+footer.opt1a {
     background: $color-primary;
     color: $white;
-    padding: 1.1rem 0;
+    padding: 1.8rem 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     min-height: 7.5rem;
     text-align: center;
@@ -12,20 +12,6 @@ footer.opt1 {
         padding: 3rem 0;
         flex-wrap: wrap;
         justify-content: center;
-    }
-    > div {
-        padding: 0.8rem 3rem;
-        @media (max-width:767px) {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-        &:first-child {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
     }    
     ul {
         list-style: none;
@@ -35,20 +21,14 @@ footer.opt1 {
         li {
             display: inline-block;
             font-size: 1.4rem;
-            margin: 0.8rem 0;
+            margin: 0.8rem 1.7rem;
             @media (max-width:767px) {
                 width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
             span[class*="icon"] {
                 margin-right: 5px;
-            }
-            &:nth-last-child(n+2) {
-                margin-bottom: 0.8rem;
-                @media (min-width:768px) {
-                    // margin-bottom: 0;
-                    margin-right: 3.5rem;
-                    
-                }                
             }
         }
     }
