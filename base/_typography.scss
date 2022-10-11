@@ -1,24 +1,24 @@
 h1, .h1, %h1 {
-    font-family: $base-font-serif;
+    font-family: $base-font-sans-serif2;
     color: $color-primary;
     font-size: $h1-size;
-    font-weight: 400;    
-    line-height: 1;
-    margin-bottom: 0.3em;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.225;
+    margin-bottom: 0.4em;
+    letter-spacing: 0;
+    text-transform: none;
     .content .mpContent & {
-        /*margin-bottom: 0.8em;*/
+        margin-bottom: 0.7em;
     }
 }
 
 h2, .h2, %h2 {
-    font-family: $base-font-sans-serif;
+    font-family: $base-font-sans-serif2;
     color: $color-primary;
     font-size: $h2-size;
-    font-weight: 300;    
+    font-weight: 500;
     line-height: 1.27;
-    margin-bottom: 1.3em;
+    margin-bottom: 1em;
     letter-spacing: 0;
     text-transform: none;
     .content .mpContent & {
@@ -27,33 +27,33 @@ h2, .h2, %h2 {
 }
 
 h3, .h3, %h3 {
-    font-family: $base-font-sans-serif;
-    color: #444444;
+    font-family: $base-font-sans-serif2;
+    color: $color-primary;
     font-size: $h3-size;
-    font-weight: 500;    
-    line-height: 1.4583333333;
-    margin-bottom: 3px;
+    font-weight: 700;
+    line-height: 1.42;
+    margin-bottom: 0.6em;
     letter-spacing: 0;
     text-transform: none;
 }
 
 h4, .h4, %h4 {
-    font-family: $base-font-sans-serif;
+    font-family: $base-font-sans-serif2;
     color: $color-primary;
     font-size: $h4-size;
-    font-weight: 600;    
-    line-height: 1.62;
+    font-weight: 600;
+    line-height: 1.19;
     margin-bottom: 0.6em;
     letter-spacing: 0;
     text-transform: none;
 }
 
 h5, .h5, %h5 {
-    font-family: $base-font-sans-serif;
-    color: #444444;
+    font-family: $base-font-sans-serif2;
+    color: $color-primary;
     font-size: $h5-size;
-    font-weight: 500;    
-    line-height: 1.375;
+    font-weight: 600;
+    line-height: 1.22;
     margin-bottom: 0.6em;
     letter-spacing: 0;
     text-transform: none;
@@ -61,12 +61,12 @@ h5, .h5, %h5 {
 
 h6, .h6, %h6 {
     font-family: $base-font-sans-serif;
-    color: #555555;
+    color: $color-secondary;
     font-size: $h6-size;
-    font-weight: 500;    
-    line-height: 1.1;
-    margin-bottom: 0.6em;
-    letter-spacing: 0.2rem;
+    font-weight: 600;
+    line-height: 1.31;
+    margin-bottom: 2em;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
 }
 
