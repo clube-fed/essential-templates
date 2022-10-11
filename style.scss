@@ -9,32 +9,19 @@
 // LAYOUT
 // - Header (5 versions) -- comment out all except the selected version
 @import 'layout/header-1';
-//@import 'layout/header-2';
+//@import 'layout/header-2'; // archived
 //@import 'layout/header-3';
-//@import 'layout/header-4';
+//@import 'layout/header-4'; // archived
 //@import 'layout/header-5';
-.public { // Un-comment PUBLIC-specific header import below
-    //@import 'layout/header-1';
-    //@import 'layout/header-2';
-    //@import 'layout/header-3';
-    //@import 'layout/header-4';
-    //@import 'layout/header-5';
-}
-.private { // Un-comment PRIVATE-specific header import below
-    //@import 'layout/header-1';
-    //@import 'layout/header-2';
-    //@import 'layout/header-3';
-    //@import 'layout/header-4';
-    //@import 'layout/header-5';
-}
 
-@import 'layout/header-utility-bar';
+//@import 'layout/header-utility-bar';
 @import 'layout/header-mobile'; // do not comment out
 @import 'layout/main-content';
 
 // - Footer (3 versions) -- comment out all except the selected version
-@import 'layout/footer-1';
-//@import 'layout/footer-2';
+@import 'layout/footer-1a';
+//@import 'layout/footer-1'; // archived
+//@import 'layout/footer-2'; // archived
 //@import 'layout/footer-3';
 
 // COMPONENTS
@@ -44,10 +31,10 @@
 
 // - Albums (5 versions) -- comment out all except the selected version
 @import 'components/album-1';
-//@import 'components/album-2';
+//@import 'components/album-2'; // archived
 //@import 'components/album-3';
-//@import 'components/album-4';
-//@import 'components/album-5';
+//@import 'components/album-4'; // archived
+//@import 'components/album-5'; // archived
 
 @import 'components/album-defaults'; // do not comment out
 @import 'components/static-banner';
@@ -55,13 +42,13 @@
 // - Articles (3 versions) -- comment out all except the selected version
 @import 'components/articles-1';
 //@import 'components/articles-2';
-//@import 'components/articles-3';
+//@import 'components/articles-3'; // archived
 
 // - Calendar (4 versions) -- comment out all except the selected version
 @import 'components/calendar-1';
 //@import 'components/calendar-2';
 //@import 'components/calendar-3';
-//@import 'components/calendar-4';
+//@import 'components/calendar-4'; // archived
 
 // - Cards (4 versions) -- comment out all except the selected version
 @import 'components/cards-1';
@@ -70,7 +57,7 @@
 //@import 'components/cards-4';
 
 // - Cross-marketing Panel
-@import 'components/cross';
+//@import 'components/cross';
 
 // - Subnav (2 versions) -- comment out all except the selected version
 @import 'components/subnav-1';
@@ -79,6 +66,9 @@
 // - Quick Links (2 versions) -- comment out all except the selected version
 @import 'components/quick-links-1';
 //@import 'components/quick-links-2';
+
+// - Course Tours (1 version)
+@import 'components/course-tour-3';
 
 // PAGES
 
