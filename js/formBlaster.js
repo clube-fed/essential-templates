@@ -36,8 +36,8 @@ $j('table.formQuestionWrapper').each(function () {
 });
 
 $j('#formQuestionWrapper_5_114, #formQuestionWrapper_5_113, #formQuestionWrapper_5_112, #formQuestionWrapper_5_111, #formQuestionWrapper_5_110, #formQuestionWrapper_5_109').each(function () {
-    //$j('label', this).addClass('col-xs-12 col-md-11');
-    //$j('input', this).addClass('col-xs-12 col-md-1');
+    //$j('label', this).addClass('col-12 col-md-11');
+    //$j('input', this).addClass('col-12 col-md-1');
 });
 
 $j('.formBaseFormWrapper table').replaceTagName('div');
@@ -115,7 +115,7 @@ $j('div.formBaseFormWrapper div[id*="_pnlCaptcha"] a[id*="_lbNewCode"]').text(' 
 $j('.formBaseFormWrapper div').removeAttr('width align border cellpadding cellspacing');
 
 $j('.formBaseFormWrapper div.formSection > div').addClass('row');
-$j('.formBaseFormWrapper div.formSection > div > div.formQuestionWrapper').addClass('col-xs-12');
+$j('.formBaseFormWrapper div.formSection > div > div.formQuestionWrapper').addClass('col-12');
 
 //$j('.formBaseFormWrapper div.formSection > div > div.formQuestionWrapper').addClass('col-md-12');
 
@@ -193,3 +193,5 @@ $j('.pre-footer:not(.type2) input[type="text"]').each(function(){
 });
 
 $j('span[id$="_litUpdateImage"]').parents('table').attr('role','presentation');
+
+$j('.formBaseFormWrapper').addClass('form-blasted');
