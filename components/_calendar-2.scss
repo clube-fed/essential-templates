@@ -2,19 +2,19 @@
 $cal-events-stack-max-breakpoint: 767px;
 $cal-event-image-width: 270px;
 
-$cal-event-date-font-family: $base-font-serif;
+$cal-event-date-font-family: $base-font-sans-serif;
 $cal-event-date-font-size: 1.6rem;
-$cal-event-date-font-weight: 500;
-$cal-event-date-font-color: $color-primary;
+$cal-event-date-font-weight: 400;
+$cal-event-date-font-color: $color-tertiary;
 $cal-event-date-line-height: 1;
 $cal-event-date-text-transform: none;
 
-$cal-event-title-font-family: $base-font-sans-serif;
+$cal-event-title-font-family: $base-font-sans-serif2;
 $cal-event-title-font-size: 2.4rem;
-$cal-event-title-font-weight: 300;
+$cal-event-title-font-weight: 700;
 $cal-event-title-font-color: $color-primary;
 $cal-event-title-font-hover-color: $color-primary;
-$cal-event-title-line-height: 1.5;
+$cal-event-title-line-height: 1.42;
 $cal-event-title-text-transform: none;
 
 
@@ -25,7 +25,7 @@ $cal-event-title-text-transform: none;
     }
     .view-all-link {
         @include view-all-link;
-        font-size: 1.4rem;
+        // font-size: 1.4rem;
         @media (max-width:$cal-events-stack-max-breakpoint) {
             width: 100%;
             margin-top: 0;

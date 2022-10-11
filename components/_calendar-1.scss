@@ -1,26 +1,31 @@
 // VARIABLES
 $cal-events-stack-max-breakpoint: 991px;
 $cal-event-image-width: 399px;
-$cal-date-background-color: $color-darkest;
-$cal-date-hover-background-color: $color-darkest;
-$cal-date-font-family: $base-font-sans-serif;
+$cal-date-background-color: $color-secondary;
+$cal-date-hover-background-color: $color-secondary;
+$cal-date-font-family: $base-font-sans-serif2;
 $cal-date-font-color: $white;
 $cal-date-font-letter-spacing: 0;
-$cal-date-font-weight: 300;
+$cal-date-font-weight: 700;
+$cal-date-text-transform: none;
 $cal-date-month-font-size: 2.4rem;
 $cal-date-number-font-size: 5rem;
-$cal-date-number-font-family: $base-font-sans-serif;
-$cal-event-info-background-color: $color-lightest;
-$cal-event-title-font-family: $base-font-serif;
-$cal-event-title-font-color: $color-secondary;
-$cal-event-title-font-size: 3.2rem;
-$cal-event-title-font-weight: 400;
-$cal-event-title-line-height: 1.28;
+$cal-date-number-font-family: $cal-date-font-family;
+$cal-event-info-background-color: $white;
+$cal-event-info-hover-background-color: $color-lightest;
+$cal-event-info-border-width: 2px;
+$cal-event-info-border-color: $color-lightest;
+$cal-event-info-hover-border-color: $color-lightest;
+$cal-event-title-font-family: $base-font-sans-serif2;
+$cal-event-title-font-color: $color-primary;
+$cal-event-title-font-size: 3rem;
+$cal-event-title-font-weight: 700;
+$cal-event-title-line-height: 1.27;
 $cal-event-cta-link-font-family: $base-font-sans-serif;
 $cal-event-cta-link-default-font-color: $color-secondary;
-$cal-event-cta-link-hover-font-color: $color-tertiary;
+$cal-event-cta-link-hover-font-color: $color-secondary;
 $cal-event-cta-link-font-size: 1.6rem;
-$cal-event-cta-link-default-font-weight: 300;
+$cal-event-cta-link-default-font-weight: 400;
 $cal-event-cta-link-hover-font-weight: 400;
 
 
@@ -29,12 +34,13 @@ $cal-event-cta-link-hover-font-weight: 400;
     font-family: $base-font-sans-serif;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem 15px 7.75% 15px;
+    padding: 4.1rem 15px 7rem 15px;
     @media (max-width:$cal-events-stack-max-breakpoint) {
         text-align: center;
     }
     .view-all-link {
         @include view-all-link;
+        // margin: 2rem 0;
         @media (max-width:$cal-events-stack-max-breakpoint) {
             width: 100%;
             margin-top: 0;
@@ -54,7 +60,7 @@ $cal-event-cta-link-hover-font-weight: 400;
             align-items: center;
             flex-direction: column;
             background-color: $cal-date-background-color;
-            text-transform: uppercase;
+            text-transform: $cal-date-text-transform;
             line-height: 1;
             text-align: center;
             padding: 15px;
@@ -115,9 +121,14 @@ $cal-event-cta-link-hover-font-weight: 400;
             background-color: $cal-event-info-background-color;            
             font-size: 0;            
             padding: 5rem 7rem 3rem 5.7rem;
+            border: $cal-event-info-border-width solid $cal-event-info-border-color;
+            border-left-width: 0;
+            transition: background-color 0.3s ease-in-out;
             @media (max-width:$cal-events-stack-max-breakpoint) {
                 padding: 1.5rem;
                 flex: 1 1 auto;
+                border-left-width: $cal-event-info-border-width;
+                border-top: 0;
             }
             .event-title {
                 @extend %h2;
@@ -151,16 +162,20 @@ $cal-event-cta-link-hover-font-weight: 400;
                 .event-date {
                     background-color: $cal-date-hover-background-color;
                 }
-                .event-info .event-cta {
-                    color: $cal-event-cta-link-hover-font-color;
-                    font-weight: $cal-event-cta-link-hover-font-weight;
+                .event-info {
+                    background-color: $cal-event-info-hover-background-color;
+                    .event-cta {
+                        color: $cal-event-cta-link-hover-font-color;
+                        font-weight: $cal-event-cta-link-hover-font-weight;
+                    }
                 }
                 .event-image:after {
-                    background: rgba($black,0.5);
+                    // background: rgba($black,0.5);
                 }
             }
             @media (max-width:$cal-events-stack-max-breakpoint) {
                 flex-wrap: wrap;
+                margin-bottom: 3rem;
             }
         }
     }

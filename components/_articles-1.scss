@@ -7,24 +7,25 @@ $articles-section-heading-style: h3;
 $article-title-default-color: $color-primary;
 $article-title-hover-color: $article-title-default-color;
 $article-title-hover-text-decoration: underline;
-$article-title-font-family: $base-font-sans-serif;
+$article-title-font-family: $base-font-sans-serif2;
 $article-title-text-transform: none;
 $article-title-letter-spacing: 0;
-$article-title-font-size: 1.6rem;
-$article-title-line-height: 1.5;
-$article-title-font-weight: 500;
+$article-title-font-size: 1.8rem;
+$article-title-line-height: 1.2;
+$article-title-font-weight: 700;
 
 $article-postdate-font-family: $base-font-sans-serif;
-$article-postdate-color: #666666;
+$article-postdate-color: $color-tertiary;
 $article-postdate-text-transform: none;
 $article-postdate-letter-spacing: 0;
-$article-postdate-font-size: 1.4rem;
-$article-postdate-font-weight: 300;
+$article-postdate-font-size: 1.5rem;
+$article-postdate-font-weight: 400;
 
 // ARTICLES v1 
 .articles.opt1 {
 	padding: 30px 15px 15px 15px;
     background-color: $articles-section-bg-color;
+    margin-top: 1.6rem;
     @media screen and (min-width: 1200px) {
         padding-right: 30px;
         padding-left: 30px;
@@ -38,15 +39,16 @@ $article-postdate-font-weight: 300;
     }
     .view-all-link {
         @include view-all-link;
-        font-weight: 300;
-        font-size: 1.4rem;
+        // font-weight: 300;
+        margin-top: 0;
+        font-size: 1.5rem;
     }
     .priv-hm-title {        
         @extend #{$articles-section-heading-style};
-        margin-bottom: 20px;
+        margin-bottom: 28px;
     }
     .newsItem {
-        margin-bottom: 25px;
+        margin-bottom: 27px;
         font-size: 0;
         a {
             display: block;
@@ -58,7 +60,7 @@ $article-postdate-font-weight: 300;
             color: $article-title-default-color;
             text-transform: $article-title-text-transform;
             text-decoration: none;
-            margin-bottom: 4px;            
+            margin-bottom: 16px;            
             transition: all .3s ease-in-out;
             &:hover, &:focus {                
                 color: $article-title-hover-color;

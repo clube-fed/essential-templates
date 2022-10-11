@@ -1,11 +1,12 @@
 // VARIABLES
 $quick-links-stack-max-breakpoint: 767px;
 $quick-link-font-default-color: $white;
-$quick-link-font-hover-color: $color-primary;
+$quick-link-font-hover-color: $color-secondary;
 $quick-link-font-text-transform: uppercase;
-$quick-link-font-letter-spacing: 1.78px;
-$quick-link-font-weight: 500;
-$quick-link-font-size: 1.6rem;
+$quick-link-font-letter-spacing: 0.2rem;
+$quick-link-font-weight: 700;
+$quick-link-font-size: 1.5rem;
+$quick-link-font-family: $base-font-sans-serif;
 
 // QUICK LINKS v2
 .quick-links.opt2 {
@@ -40,7 +41,7 @@ $quick-link-font-size: 1.6rem;
             width: 100%;
             height: 100%;
             content: "";
-            background: rgba($color-primary, 0.7);
+            background: rgba($black, 0.5);
         }
     }
     > .clickToEditDiv {
@@ -100,7 +101,7 @@ $quick-link-font-size: 1.6rem;
                 background-color: rgba($white,0);
                 width: 100%;
                 font-size: $quick-link-font-size;
-                font-family: $base-font-sans-serif;
+                font-family: $quick-link-font-family;
                 font-weight: $quick-link-font-weight;
                 text-transform: $quick-link-font-text-transform;
                 text-align: left;

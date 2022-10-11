@@ -1,5 +1,12 @@
 // VARIABLES
 $quick-links-stack-max-breakpoint: 768px;
+$quick-link-font-default-color: $white;
+$quick-link-font-hover-color: $white;
+$quick-link-font-text-transform: none;
+$quick-link-font-letter-spacing: 0;
+$quick-link-font-weight: 700;
+$quick-link-font-size: 2.1rem;
+$quick-link-font-family: $base-font-sans-serif2;
 
 // QUICK LINKS v1
 .quick-links.opt1 {
@@ -9,7 +16,7 @@ $quick-links-stack-max-breakpoint: 768px;
     background-color: $color-darkest;
     text-align: center;
     color: $white;
-    font-size: 0;    
+    font-size: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +44,7 @@ $quick-links-stack-max-breakpoint: 768px;
             width: 100%;
             height: 100%;
             content: "";
-            background: rgba($color-primary, 0.7);
+            background: rgba($black, 0.5);
         }
     }
     > .clickToEditDiv {
@@ -113,19 +120,20 @@ $quick-links-stack-max-breakpoint: 768px;
             a {
                 display: inline-block;
                 width: 100%;
-                font-size: 2.1rem;
-                font-family: $base-font-sans-serif;
-                font-weight: 400;
-                text-transform: none;
+                font-size: $quick-link-font-size;
+                font-family: $quick-link-font-family;
+                font-weight: $quick-link-font-weight;
+                text-transform: $quick-link-font-text-transform;
                 text-align: center;
-                color: $white;
+                color: $quick-link-font-default-color;
                 line-height: 1.2;
-                letter-spacing: 0;
+                letter-spacing: $quick-link-font-letter-spacing;
                 text-decoration: none;
                 position: relative;
                 transition: opacity 0.3s ease-in-out;
                 &:hover,&:focus {
                     opacity: 0.75;
+                    color: $quick-link-font-hover-color;
                 }
                 body.user-is-tabbing & {
                     &:focus {

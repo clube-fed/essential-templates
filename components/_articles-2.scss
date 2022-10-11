@@ -7,28 +7,31 @@ $article-postdate-text-transform: uppercase;
 $article-postdate-letter-spacing: 1.44px;
 $article-postdate-font-size: 1.2rem;
 $article-postdate-font-weight: 600;
-$article-title-font-family: $base-font-serif;
+$article-title-font-family: $base-font-sans-serif2;
 $article-title-default-color: $color-primary;
 $article-title-hover-color: $article-title-default-color;
 $article-title-text-transform: none;
 $article-title-letter-spacing: 0;
 $article-title-font-size: 2.4rem;
 $article-title-line-height: 1.42;
-$article-title-font-weight: 400;
-$article-cta-icon-default-color: $color-tertiary;
-$article-cta-icon-hover-color: $color-primary;
+$article-title-font-weight: 700;
+$article-cta-icon-default-color: $color-secondary;
+$article-cta-icon-hover-color: $article-cta-icon-default-color;
 
 // ARTICLES v2 
 .articles.opt2 {
     background: $articles-section-bg-color;
-    padding: 71px 15px 80px;
+    padding: 7.1rem 1.5rem 10.5rem;
     text-align: center;
     @media (max-width:$article-stack-max-breakpoint) {
-        padding: 50px 15px;
+        padding: 5rem 1.5rem;
+    }
+    .priv-hm-title {
+        display: block;
     }
     .view-all-link {
         @include view-all-link;
-        display: block;
+        // display: block;
         float: none;
         margin-top: 0;
         margin-bottom: 2.9rem;
@@ -54,7 +57,7 @@ $article-cta-icon-hover-color: $color-primary;
             }
         }
         .article-info {
-            padding: 46px 35px;
+            padding: 6rem 3.5rem 5.6rem;
             @media (max-width:$article-stack-max-breakpoint) {
                 padding: 30px;
             }
@@ -75,12 +78,12 @@ $article-cta-icon-hover-color: $color-primary;
             font-weight: $article-title-font-weight;
             font-size: $article-title-font-size;
             line-height: $article-title-line-height;
-            margin-bottom: 2.3rem;
+            margin-bottom: 1.63rem;
             text-transform: $article-title-text-transform;
             letter-spacing: $article-title-letter-spacing;
             font-family: $article-title-font-family;
             @media (max-width:$article-stack-max-breakpoint) {
-                margin-bottom: 1.8rem;
+                // margin-bottom: 1.8rem;
             }
         }
         .article-cta {
@@ -97,7 +100,7 @@ $article-cta-icon-hover-color: $color-primary;
             justify-content: center;
             flex-direction: column;
             width: 100%;
-            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease-in-out;
             &:hover,&:focus {
                 text-decoration: none;

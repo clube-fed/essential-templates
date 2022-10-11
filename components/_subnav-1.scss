@@ -1,6 +1,6 @@
 // VARIABLES
-$sub-nav-default-font-color: #666666;
-$sub-nav-selected-font-color: #000000;
+$sub-nav-default-font-color: $color-primary;
+$sub-nav-selected-font-color: $color-secondary;
 $sub-nav-font-family: $base-font-sans-serif;
 $sub-nav-font-size: 1.6rem;
 $sub-nav-font-letter-spacing: 0;
@@ -8,7 +8,7 @@ $sub-nav-font-text-transform: none;
 
 // SUB-NAV v1 (VERTICAL)
 .sub-nav.opt1 {
-    padding-top: 10px;
+    padding-top: 2rem;
     ul {
         list-style: none;
         margin: 0;

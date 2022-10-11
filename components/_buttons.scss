@@ -3,7 +3,7 @@
     font-family: $button-font;
     font-size: $button-font-size;
     font-weight: $button-weight;
-    text-transform: uppercase;
+    text-transform: $button-text-transform;
     letter-spacing: $button-letter-spacing;
     line-height: 1em;
     text-align: center;
@@ -12,7 +12,7 @@
     background-color: $button-bg;
     background-image: none;
     border: $button-border;
-    border-radius: 0;
+    border-radius: $button-border-radius;
     padding: $button-padding;
     margin: 0;
     display: inline-block;
@@ -29,7 +29,7 @@
         font-family: $second-button-font;
         font-size: $second-button-font-size;
         font-weight: $second-button-weight;
-        text-transform: uppercase;
+        text-transform: $second-button-text-transform;
         letter-spacing: $second-button-letter-spacing;
         line-height: 1em;
         text-align: center;
@@ -37,7 +37,7 @@
         color: $second-button-font-color;
         background-color: $second-button-bg;
         border: $second-button-border;
-        border-radius: 0;
+        border-radius: $second-button-border-radius;
         padding: $second-button-padding;
         margin: 0;
         display: inline-block;
@@ -132,3 +132,4 @@
     text-transform: none;
     border-radius: 0;
 }
+

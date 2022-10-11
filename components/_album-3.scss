@@ -1,6 +1,6 @@
 // VARIABLES
 $pub-home-banner-width-value: 1600; // omit unit from value
-$pub-home-banner-height-value: 825; // omit unit from value
+$pub-home-banner-height-value: 850; // omit unit from value
 
 // BANNER v3
 .banner.opt3 {
@@ -18,11 +18,29 @@ $pub-home-banner-height-value: 825; // omit unit from value
     > table {
         position: absolute;
         right: 1.5rem;
-        top: auto;
+        top: 1.5rem;
         z-index: 98;
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
         @media (min-width:$desktop-nav-min-brkpt) {
             top: $navbar-height;
         }
+        a {
+            background: $white;
+            box-shadow: 0 0 5px 2px rgb(0 0 0 / 10%);
+            border-radius: 5px;
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            font-size: 0;
+            font-family: Arial, sans-serif;
+            width: auto;
+            &:before {
+                // content: "Banner";
+            }
+        }        
         .sitewrap.emptyBannerAlbum & {
             position: relative;
             top: auto;
@@ -73,7 +91,7 @@ $pub-home-banner-height-value: 825; // omit unit from value
         display: flex;
         justify-content: space-between;
         @media (min-width:$desktop-nav-min-brkpt) {
-            top: calc(50% + (#{$navbar-height}/2))
+            // top: calc(50% + (#{$navbar-height}/2))
         }
         @media (max-width:767px) {
             padding: 0 1.5rem;
@@ -101,11 +119,11 @@ $pub-home-banner-height-value: 825; // omit unit from value
         line-height: 1.8;
         cursor: pointer;
         opacity: 1;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-weight: 600;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: $base-font-sans-serif;
+        letter-spacing: 0.2rem;
+        font-family: $base-font-sans-serif2;
         .nc-icon-outline {
             font-size: 2.4rem;
             display: block;

@@ -1,18 +1,19 @@
 // VARIABLES
 $card-img-width-value: 800; // omit unit from value
 $card-img-height-value: 450; // omit unit from value
-$card-text-box-max-width-with-LR-padding: 470px;
+$card-text-box-max-width-with-LR-padding: 500px;
 $cards-stack-max-breakpoint: 991px;
 
 // CARD PANELS v4 
 .card-panels.opt4 {
-    padding: 100px 15px 0;
+    margin: 7.5rem auto 0;
+    padding: 0 15px;
     @media (max-width:767px) {
-        padding-top: 30px;
+        margin-top: 3rem;
     }
     .card {
         margin: 0 auto 70px;
-        max-width: 1270px;
+        max-width: 1300px;
         border: none;
         @media (max-width:$cards-stack-max-breakpoint) {
             max-width: #{$card-img-width-value}px;
@@ -54,7 +55,7 @@ $cards-stack-max-breakpoint: 991px;
         .card-text {
             flex-basis: $card-text-box-max-width-with-LR-padding;
             align-self: center;
-            padding: 3rem 5rem;
+            padding: 3rem 6.5rem;
             @media (max-width:1024px) {
                 padding: 3rem;
             }
@@ -64,10 +65,11 @@ $cards-stack-max-breakpoint: 991px;
             }
             .mpContent {
                 h2 {
+                    font-weight: 700;
                     margin-bottom: 10px;
                 }
                 > a, p > a:last-child {
-                    color: $color-primary;
+                    color: $color-secondary;
                 }
                 [class*="icon"] {
                     margin-left: 10px;

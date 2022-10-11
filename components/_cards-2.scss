@@ -4,6 +4,7 @@ $card-height-value: 500; // omit unit from value
 $full-width-card-width-value: 1540; // omit unit from value
 $full-width-card-height-value: 500; // omit unit from value
 $cards-stack-max-breakpoint: 991px;
+$card-title-background-color: rgba($color-secondary, 0.9);
 
 // CARDS v1 
 .card-deck.opt2 {
@@ -73,11 +74,11 @@ $cards-stack-max-breakpoint: 991px;
             top: auto !important;
             height: auto !important;
             padding: 2.4rem 3rem;
-            background-color: rgba($color-primary, 0.8);
+            background-color: $card-title-background-color;
             @media (max-width:$cards-stack-max-breakpoint) {
                 padding: 1.5rem !important;
                 position: relative;
-                background-color: $color-primary;
+                // background-color: $color-primary;
             }
             .mpContent {
                 @extend %h3;

@@ -2,29 +2,36 @@
 $cal-events-stack-max-breakpoint: 991px;
 $cal-event-img-width-value: 415; // omit unit from value
 $cal-event-img-height-value: 421; // omit unit from value
-$cal-event-title-font-family: $base-font-sans-serif;
-$cal-event-title-font-size: 2.6rem;
-$cal-event-title-font-weight: 300;
+$cal-event-date-font-family: $base-font-sans-serif2;
+$cal-event-date-font-size: 2.1rem;
+$cal-event-date-font-weight: 700;
+$cal-event-date-letter-spacing: 0;
+$cal-event-title-font-family: $base-font-sans-serif2;
+$cal-event-title-font-size: 2.4rem;
+$cal-event-title-font-weight: 700;
 $cal-event-title-letter-spacing: 0;
-$cal-event-title-default-color: #444444;
-$cal-event-title-hover-color: #444444;
-$cal-event-title-line-height: 1.4615384615;
-$cal-event-cta-icon-default-color: $color-quaternary;
-$cal-event-cta-icon-hover-color: #444444;
+$cal-event-title-default-color: $color-primary;
+$cal-event-title-hover-color: $color-secondary;
+$cal-event-title-line-height: 1.42;
+$cal-event-cta-icon-default-color: $color-secondary;
+$cal-event-cta-icon-hover-color: $cal-event-cta-icon-default-color;
 
 // CALENDAR PLUGIN v3
 .calendar.opt3 {
     font-family: $base-font-sans-serif;
     max-width: 1365px;
     margin: 0 auto;
-    padding: 5rem 15px 2rem 15px;
+    padding: 4.3rem 15px 4rem 15px;
     text-align: center;
     @media (max-width:$cal-events-stack-max-breakpoint) {
         text-align: center;
     }
+    .priv-hm-title {
+        display: block;
+    }
     .view-all-link {
         @include view-all-link;
-        display: block;
+        // display: block;
         float: none;
         margin-top: 0;
     }
@@ -73,18 +80,21 @@ $cal-event-cta-icon-hover-color: #444444;
                 }
             }
             .event-date {
-                @extend %h4;
-                margin-bottom: 0;
-                z-index: 1;
                 color: $white;
+                font-family: $cal-event-date-font-family;
+                font-size: $cal-event-date-font-size;
+                font-weight: $cal-event-date-font-weight;
+                letter-spacing: $cal-event-date-letter-spacing;
+                line-height: 1;
+                margin-bottom: 0;
+                z-index: 1;                
                 display: flex;
                 flex: 0 0 17rem;
                 justify-content: center;
                 align-items: center;
-                flex-direction: column;
-                line-height: 1;
+                flex-direction: column;                
                 text-align: center;
-                padding: 2.5rem;
+                padding: 2rem;
                 top: auto !important;
                 height: auto !important;
                 bottom: 0px;
@@ -114,7 +124,7 @@ $cal-event-cta-icon-hover-color: #444444;
             text-align: center;
             //background-color: $color-lightest;            
             font-size: 0;            
-            padding: 2rem 1.5rem;
+            padding: 1.8rem 1.5rem;
             @media (max-width:$cal-events-stack-max-breakpoint) {
                 padding: 1.5rem;
                 flex: 1 1 auto;
@@ -126,9 +136,10 @@ $cal-event-cta-icon-hover-color: #444444;
                 letter-spacing: $cal-event-title-letter-spacing;
                 color: $cal-event-title-default-color;
                 line-height: $cal-event-title-line-height;
+                transition: color 0.3s ease-in-out;
             }
             .event-cta {
-                margin-top: 12px;
+                margin-top: 1.5rem;
                 span {
                     font-size: 2.6rem;
                     color: $cal-event-cta-icon-default-color;
@@ -144,7 +155,7 @@ $cal-event-cta-icon-hover-color: #444444;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
             height: 100%;            
             ._Telerik_IE9 & {
                 flex-basis: #{$cal-event-img-width-value}px !important;
