@@ -8,7 +8,7 @@
         position:relative;
 		
 		@media (min-width:$desktop-nav-min-brkpt) {
-			padding-top: calc(120px + 2rem);
+			// padding-top: calc(120px + 2rem);
 		}
 		
         .abut {
@@ -80,32 +80,17 @@ body[class*="NET_MemberInbox"] [id^=masterPageUC] .modulewrap > .container .abut
 }
 
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"],
-body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover {
-    padding: 0 12px !important;
-    line-height: normal !important;
-    margin: 0px 2px 2px !important;
-    max-height: 30px;
-    border: 2px solid #979797 !important;
-    font-size: 12px !important;
-    display: inline-block;
-    min-width: 150px;
-    max-width: 250px;
-    min-height: 30px;
-}
-
-
-
-body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"],
+body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl"]:hover, body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"],
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnQSAdmin"]:hover,
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"],
 body[class*="MemberRoster"] [id^=masterPageUC] .modulewrap > .container .abut[id*="_rosterControl_btnRefresh"]:hover,
 body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"],
-body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover{
+body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover {
     padding: 0 12px !important;
     line-height: normal !important;
     margin: 0px 2px 2px !important;
     max-height: 30px;
-    border: 2px solid #979797 !important;
+    // border: 2px solid #979797 !important;
     font-size: 12px !important;
     display: inline-block;
     min-width: 150px;
@@ -134,7 +119,9 @@ body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btn
 
 body[class*="NETDynEntryFormLanding"]
 
-[id^=masterPageUC] .modulewrap .module .abut:active,[id^=masterPageUC] .modulewrap > .container .abut:hover{background: $color-darkest;}
+[id^=masterPageUC] .modulewrap .module .abut:active,[id^=masterPageUC] .modulewrap > .container .abut:hover{
+    // background: $color-darkest;
+}
 
 .modulewrap > .container {
     padding:2rem 1.5rem 4rem;
@@ -153,12 +140,12 @@ body[class*="NETDynEntryFormLanding"]
         display:none;
     }
     a:not(.abut):not(.abut-secondary):not(.calendarEventDateLink){
-        color: $base-font-color;
+        color: $link-color;
         border:none!important;
         font-weight:inherit;
         text-decoration: none;
         &:hover,&:focus{
-            color: inherit;
+            color: $link-hover-color;
             text-decoration: underline;
         }
     }
@@ -272,7 +259,7 @@ body.MemberRoster, body.MemProfile {
     }
     [class*=avTab].hasText {
         background: $tabstrip-selected-bg;
-        color: $tabstrip-selected-font-color;
+        color: $tabstrip-selected-font-color !important;
         padding: 0 !important;
         margin: 0;
         transition:.3s;
@@ -280,6 +267,7 @@ body.MemberRoster, body.MemProfile {
         border-top: $tabstrip-unselected-top-border;
         border-color: transparent;
         font-weight: $tabstrip-tabs-font-weight;
+        font-size: $tabstrip-tabs-font-size;
         a {
             display:block;
             //-webkit-transition:color .2s ease-in-out;
@@ -287,7 +275,7 @@ body.MemberRoster, body.MemProfile {
             text-decoration:none;
             //margin:-10px -15px;
             padding: 1.5rem 2rem;
-            color: $tabstrip-selected-font-color;
+            color: $tabstrip-selected-font-color !important;
         }
         &:hover {
             //border: none;
@@ -295,10 +283,10 @@ body.MemberRoster, body.MemProfile {
             //background:#FFF;
             //border-top: $tabstrip-selected-top-border;
             a {
-                color: $tabstrip-selected-font-color;
+                color: $tabstrip-selected-font-color !important;
                 border:none!important;
                 &:hover{
-                    color: $tabstrip-selected-font-color;
+                    color: $tabstrip-selected-font-color !important;
                 }
             }
         }
@@ -308,7 +296,7 @@ body.MemberRoster, body.MemProfile {
         /* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */
         //border: none;
         //border-bottom: 2px solid transparent;
-        color: $tabstrip-unselected-font-color;
+        color: $tabstrip-unselected-font-color !important;
         
         span {
             /* border-bottom:1px solid #CCC; */
@@ -1323,6 +1311,13 @@ table#profilePhoto{margin:0 auto 1.42857rem}
 .modStatsUserBar,.modStatsVisitorBar{text-align:left}
 .RadGrid .rgHeader{background: $color-darkest;color:#FFF}
 .RadGrid .rgHeader input{display:none}
+
+.RadTabStrip .rtsLevel1 .rtsTxt, .RadTabStripVertical .rtsLevel1 .rtsTxt {
+    color: $black;
+}
+.RadTabStrip_Silk .rtsLevel1 .rtsSelected .rtsTxt, .RadTabStrip_Silk .rtsLevel1 .rtsSelected:hover .rtsTxt {
+    color: $white;
+}
 
 
 /*mobile*/
