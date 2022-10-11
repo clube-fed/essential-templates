@@ -5,7 +5,7 @@ $navbar-height: 120px;
 $mobile-nav-max-brkpt: 1199px;
 $desktop-nav-min-brkpt: ($mobile-nav-max-brkpt + 1);
 
-$priv-home-menu-id: 999999; // for default nav styling when selectedItem
+$priv-home-menu-id: 100404; // for default nav styling when selectedItem
 
 // banner dimensions
 $content-banner-max-height: 550px;
@@ -14,84 +14,88 @@ $white: #fff;
 $black: #000;
 
 // color palette
-$color-primary: #111111;
-$color-secondary: #222222;
-$color-tertiary: #333333;
-$color-quaternary: #444444;
-$color-quinary: #555555;
+$color-primary: #547256;
+$color-secondary: #b5a474;
+$color-tertiary: #555555;
+$color-quaternary: #f3f3f3;
+$color-quinary: $color-quaternary;
 //$color-senary: $black;
 
 $color-darkest: $color-primary; // darkest color in palette
-$color-lightest: $color-quinary; // lightest color in palette
+$color-lightest: $color-quaternary; // lightest color in palette
 
 // font styles
-$base-font-sans-serif: 'Poppins', sans-serif;
-$base-font-sans-serif2: $base-font-sans-serif;
-$base-font-serif: 'Spectral SC', serif;
+$base-font-sans-serif: 'Overpass', sans-serif;
+$base-font-sans-serif2: 'Montserrat', sans-serif;
+$base-font-serif: $base-font-sans-serif;
 $base-font-serif2: $base-font-serif;
 
 // heading sizes
-$h1-size: 3.6rem;
+$h1-size: 4rem;
 $h2-size: 3rem;
 $h3-size: 2.4rem;
 $h4-size: 2.1rem;
 $h5-size: 1.8rem;
-$h6-size: 1.4rem;
+$h6-size: 1.6rem;
 
 // base font styles
 $base-font-size: 1.6rem;
-$base-font-color: $color-primary;
+$base-font-color: $color-tertiary;
 $base-font-family: $base-font-sans-serif;
 $base-font-weight: 400;
 $base-font-letter-spacing: 0;
 $base-line-height: 1.88;
 
 // link stlying
-$link-color: $base-font-color;
-$link-hover-color: $base-font-color;
+$link-color: $color-primary;
+$link-hover-color: $link-color;
 $link-hover-decoration: underline;
 $link-bottom-border: 1px solid;
 
 // primary button
-$button-bg: $color-primary;
-$button-bg-hover: $color-quaternary;
+$button-bg: $color-secondary;
+$button-bg-hover: darken($button-bg,10%);
 $button-font-color: $white;
 $button-font-hover-color: $white;
 $button-font: $base-font-sans-serif;
-$button-weight: 600;
+$button-weight: 700;
 $button-font-size: 1.4rem;
-$button-letter-spacing: 2px;
+$button-letter-spacing: 0.2rem;
+$button-text-transform: uppercase;
 $button-padding: 21px 30px;
 $button-border: 2px solid $button-bg;
 $button-border-hover-color: $button-bg-hover;
+$button-border-radius: 0;
 
 // secondary button
-$second-button-bg: transparent;
-$second-button-bg-hover: $color-quaternary;
-$second-button-font-color: $color-primary;
-$second-button-font-hover-color: $color-primary;
+$second-button-bg: $white;
+$second-button-bg-hover: $color-secondary;
+$second-button-font-color: $color-secondary;
+$second-button-font-hover-color: $white;
 $second-button-font: $button-font;
 $second-button-weight: $button-weight;
 $second-button-font-size: $button-font-size;
 $second-button-letter-spacing: $button-letter-spacing;
+$second-button-text-transform: uppercase;
 $second-button-padding: $button-padding;
 $second-button-border: 2px solid $second-button-bg-hover;
 $second-button-border-hover-color: $second-button-bg-hover;
+$second-button-border-radius: 0;
 
 // accordion
-$accordion-bar-closed-bg: $color-lightest;
-$accordion-bar-open-bg: $color-darkest;
+$accordion-bar-closed-bg: $white;
+$accordion-bar-open-bg: $color-secondary;
 $accordion-bar-closed-font-color: $accordion-bar-open-bg;
 $accordion-bar-open-font-color: $white;
 $accordion-bar-font-size: 2.1rem;
 $accordion-bar-line-height: 1.2;
 $accordion-bar-font-weight: 600;
 $accordion-bar-letter-spacing: 0;
-$accordion-bar-text-transform: none;
+$accordion-bar-text-transform: uppercase;
 $accordion-bar-font-family: $base-font-sans-serif;
 $accordion-bar-padding: 1.7rem 3.5rem;
-$accordion-bar-closed-border: 1px solid $accordion-bar-closed-bg;
-$accordion-bar-open-border: 1px solid $accordion-bar-open-bg;
+$accordion-bar-closed-border: 2px solid $accordion-bar-open-bg;
+$accordion-bar-open-border: 2px solid $accordion-bar-open-bg;
 $accordion-icon-closed: "\eb00"; // arrow down="\eb00", plus="\ed7c"
 $accordion-icon-open: "\eb03"; // arrow up="\eb03", minus="\ed7d"
 $accordion-icon-size: 1.4rem;
@@ -104,14 +108,14 @@ $accordion-content-border: 1px solid $color-lightest;
 $tabstrip-unselected-bg: $color-primary;
 $tabstrip-selected-bg: $color-lightest;
 $tabstrip-unselected-font-color: $white;
-$tabstrip-selected-font-color: $color-primary;
+$tabstrip-selected-font-color: $color-secondary;
 $tabstrip-unselected-top-border: 3px solid $tabstrip-unselected-bg;
-$tabstrip-selected-top-border-color: $tabstrip-unselected-bg;
+$tabstrip-selected-top-border-color: $color-secondary;
 $tabstrip-tabs-font-family: $base-font-sans-serif;
 $tabstrip-tabs-font-size: 1.6rem;
-$tabstrip-tabs-font-weight: 500;
+$tabstrip-tabs-font-weight: 400;
 $tabstrip-tabs-font-selected-weight: $tabstrip-tabs-font-weight;
-$tabstrip-tabs-letter-spacing: 0;
+$tabstrip-tabs-letter-spacing: 0.1rem;
 $tabstrip-tabs-text-transform: none;
 $tabstrip-tabs-padding: 2.1rem 3.5rem 2rem;
 $tabstrip-content-bg-color: $color-lightest;
@@ -119,7 +123,7 @@ $tabstrip-content-border: 1px solid $color-lightest;
 
 // top nav
 $mobile-header-bg-color: $white;
-$nav-top-li-left-right-padding: 3rem !default;
+$nav-top-li-left-right-padding: 2rem !default;
 
 // subnav -- see mixin for subnav font styling
 $subnav-min-width: 260px;
@@ -134,7 +138,7 @@ $nav-sub-font-left-right-padding: 3rem;
 $nav-sub-font-padding: $nav-sub-font-top-bott-padding $nav-sub-font-left-right-padding;
 $subnav-top-position: 100%;
 $subnav-left-position: calc((#{$nav-sub-font-left-right-padding} - #{$nav-top-li-left-right-padding}) * -1);
-$subnav-translateX: 4px;
+$subnav-translateX: 0;
 $nav-sub-line-height: 1.3;
 $nav-sub-font-size: 1.6rem;
 $nav-sub-font-weight: 300;
@@ -146,5 +150,5 @@ $nav-sub-font-text-transform: none;
 $nav-sub-font-family: $base-font-sans-serif;
 $nav-sub-font-hover-bgcolor: transparent;
 $nav-sub-font-selected-bgcolor: $nav-sub-font-hover-bgcolor;
-$nav-sub-default-bg-color: $color-primary;
+$nav-sub-default-bg-color: rgba($color-primary,0.95);
 $nav-sub-mobile-3rd-lev-font-color: $base-font-color;
