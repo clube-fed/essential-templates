@@ -23,9 +23,7 @@ $j('.navbar-nav .ulMenuItem.level1.dropdown').each(function () {
 });
 $j('.dropdown-menu').parent().children('a').after('<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>');
 $j('.dropdown.isFolder').children('a.nav-link').addClass('dropdown-toggle').attr('data-toggle', 'dropdown');
-$j('.navbar-nav .ulMenuItem.level1:not(:last-child) > a:first-of-type').wrapInner('<span class="rootLevelSpan"></span>');
-
-
+$j('.navbar-nav .ulMenuItem.level1 > a:first-of-type').wrapInner('<span class="rootLevelSpan"></span>');
 
 $j('header .dropdown').on({
     "shown.bs.dropdown": function () {
@@ -145,3 +143,5 @@ $j('header li.level2.active').parent('ul.level1').parent('li.level1').addClass('
 $j('div:not(.left-menu) > .navbar-nav > li.dropdown:nth-last-child(-n+3) > ul.dropdown-menu li.dropdown').each(function () {
     $j(this).addClass('dropleft');
 });
+
+$j('.navbar-nav .ulMenuItem.level1 > a > .abut, .navbar-nav .ulMenuItem.level1 > a > .abut-secondary').parent('a.nav-link').addClass('has-abut');
