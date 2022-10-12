@@ -143,6 +143,7 @@ $login-pw-font-color: $color-secondary;
         img {
             position: relative;
             padding: 0;
+            max-width: 100%;
         }
         a {
             width: $login-logo-width;
