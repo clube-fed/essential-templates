@@ -1056,7 +1056,9 @@ body[class*=alendar] form[action*="view=l4"] .emptyModuleTableCell{display: tabl
         +table>tbody>tr>.tnavBorder {
             display:none;
         }
-        +table>tbody>tr:first-child+tr>td:first-child+td+td,
+	+table>tbody>tr:first-child+tr>td:first-child+td+td {
+	    /*width:100%;*/
+	}
         +table>tbody>tr:first-child>td:first-child+td {
             width:100%;
         }
