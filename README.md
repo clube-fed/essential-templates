@@ -13,7 +13,7 @@ Append in `<head>` above scripts:
 <link href="https://static.clubessential.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="https://static.clubessential.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="https://static.clubessential.com/libs/bs4/css/bootstrap.min.css"/>
-<link href="https://static.clubessential.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
 
 
@@ -25,7 +25,7 @@ Append directly above `</body>`:
 ```
 <script src="https://static.clubessential.com/js/overridePhotoAlbum.min.js"></script>
 <script src="https://static.clubessential.com/js/responsiveAlbum.min.js"></script>
-<script src="https://static.clubessential.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ### Other tab
@@ -43,13 +43,13 @@ Head Tag Bottom:
 <!--[FAVICON HTML HERE]-->
 <script src="https://static.clubessential.com/libs/bs4/js/bootstrap.min.js"></script>
 <script>$j('link[href*="_axisGlobal/global.css"]').before('<link rel="stylesheet" type="text/css" href="https://static.clubessential.com/libs/bs4/css/bootstrap.min.css"/>');</script>
-<link href="https://static.clubessential.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
+<link href="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/style.css" rel="stylesheet" type="text/css">
 ```
 Body Tag Bottom:
 ```
 <script src="https://static.clubessential.com/js/overridePhotoAlbum.min.js"></script>
 <script src="https://static.clubessential.com/js/responsiveAlbum.min.js"></script>
-<script src="https://static.clubessential.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
+<script src="//clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/js/globalScripts.js"></script>
 ```
 
 ## SASS Setup
