@@ -64,3 +64,11 @@ $j('.private.home .two-column .col-lg-3 > .mpContent').each(function() {
 });
 
 $j('.course-tour').parent('div[id$="_dpPlaceholder"]').addClass('course-tour-parent');
+
+//Update bootstrap classes for Support Contacts page
+$j('body.SupportContacts .modulewrap .container').each(function () {
+    $j('#content', this).addClass('row justify-content-center');
+    $j('.page-region-content', this).addClass('row justify-content-center');
+    $j('.col-lg-10', this).removeClass('col-lg-offset-1').addClass('col-12');
+    $j('.col-lg-4', this).addClass('col-12');
+});

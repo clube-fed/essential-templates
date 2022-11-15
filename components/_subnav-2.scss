@@ -1,11 +1,13 @@
 // VARIABLES
 $sub-nav-bg-color: $color-lightest;
+$sub-nav-selected-bg-color: $sub-nav-bg-color;
 $sub-nav-default-font-color: $color-tertiary;
 $sub-nav-selected-font-color: $color-secondary;
 $sub-nav-selected-border-top-color: $color-secondary;
 $sub-nav-font-family: $base-font-sans-serif;
 $sub-nav-font-size: 1.6rem;
 $sub-nav-font-weight: 400;
+$sub-nav-selected-font-weight: $sub-nav-font-weight;
 $sub-nav-font-letter-spacing: 0;
 $sub-nav-font-text-transform: none;
 
@@ -45,7 +47,8 @@ $sub-nav-font-text-transform: none;
                 border-color: $sub-nav-selected-border-top-color;
                 a {
                     color: $sub-nav-selected-font-color;
-                    background-color: $white;
+                    font-weight: $sub-nav-selected-font-weight;
+                    background-color: $sub-nav-selected-bg-color;
                 }
             }
         }
