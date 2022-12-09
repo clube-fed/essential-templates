@@ -93,7 +93,7 @@ body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btn
     // border: 2px solid #979797 !important;
     font-size: 12px !important;
     display: inline-block;
-    min-width: 150px;
+    /*min-width: 150px;*/
     max-width: 250px;
     min-height: 30px;
 }
@@ -1291,7 +1291,7 @@ table#profilePhoto{margin:0 auto 1.42857rem}
 .NETFullFormReport .module .col-xs-12 script:first-child+table+div>a:active,.NETFullFormReport .module .col-xs-12 script:first-child+table+div>a:hover{background: $color-darkest}
 .NETFullFormReport .module .col-xs-12 script:first-child+table+div+div{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */display:block!important;margin:40px 0 0}
 .NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div{max-width:100%;overflow:auto}
-.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div>table>tbody>tr:first-child>td{vertical-align:bottom;min-width:150px;padding:5px 5px 10px;background:#333;color:#FFF}
+.NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div>table>tbody>tr:first-child>td{vertical-align:bottom;/*min-width:150px;*/padding:5px 5px 10px;background:#333;color:#FFF}
 .NETFullFormReport .module .col-xs-12 script:first-child+table+div+div>div>table>tbody>tr:first-child>td img{vertical-align:bottom;float:right;width:17px}
 .NETDynamicForm .module .col-xs-12 .formBaseFormWrapper,.NETDynamicFormView .module .col-xs-12 #Table2>tbody>tr:first-child+tr>td>table,.NETFormReport .module .col-xs-12 table:first-child+div{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05) */}
 .SupportContacts .module .col-xs-12>table+table{padding:3rem!important;background:#FFF;border-top: 2px solid #e0e0dc;width:100%;text-align:left;/* box-shadow:0 3px 30px 3px rgba(0,0,0,.05); */display:block}
