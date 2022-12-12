@@ -790,7 +790,7 @@ body[class*=alendar] [id$="_weekTable"]>tbody td,body[class*=alendar] [id$="_lis
 body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child{border-bottom:1px solid #CCC;border-top:1px solid #CCC;width:100%;position:absolute}
 
 
-body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td:nth-child(2),body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child td:nth-child(2){display:table-cell;width:auto;padding: 0 70px 0 10px!important;}
+body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td:nth-child(2),body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child td:nth-child(2){display:table-cell;width:205px;padding: 0 70px 0 10px!important;}
 body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child td:nth-child(5),body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child td:nth-child(5){display:table-cell;width:auto;padding:5px 0}
 body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child+tr>td,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child+tr>td{display:table-cell;padding:15px 0}
 body[class*=alendar] [id$="_weekTable"]>tbody>tr:first-child font,body[class*=alendar] [id$="_listTable"]>tbody>tr:first-child font{margin:0 15px 0 0;font-size: 1.55rem;letter-spacing:.1rem;}
@@ -816,8 +816,8 @@ body[class*=alendar] [id$="_jan"] td.modCalYearCurrentDayHighlight,body[class*=a
 body[class*=alendar] .modCalMonth{margin:10px 0 20px;width:100%!important;border:none!important}
 body[class*=alendar] .modCalMonth .modCalMonthDayOfWeekHeader{border:1px solid #CCC!important;padding:5px;color: #313335;font: 400 1.8rem/1.6 $base-font-sans-serif;text-align:center;}
 body[class*=alendar] .modCalMonth>tbody>tr>td{border:1px solid #CCC!important;letter-spacing:1px;font-weight:400}
-body[class*=alendar] .modCalMonth>tbody>tr>td:first-child{padding:0 10px 0 0;border:none!important}
-body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a{display:block;width:19px;height:19px;color: #313335 !important;}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child{padding:0 10px 0 0;border:none!important;width:0% !important;padding: 0;font-size:0;letter-spacing: 0;}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a{display:block;width:19px;height:19px;color: #313335 !important;width:0;}
 body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a:hover {color: $base-font-color!important}
 body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a:hover{background-position:-19px 0}
 body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a img{display:none}
