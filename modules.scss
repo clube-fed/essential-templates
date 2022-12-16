@@ -1588,3 +1588,7 @@ body[class*=alendar] .modCalMonth > tbody > tr .modCalMonthWeekDayOtherMonth > t
 body[class*=alendar] .modCalMonth > tbody > tr .modCalMonthWeekDayOtherMonth > table > tbody > tr > td font {color: unset;}
 body[class*=alendar] .modCalMonth > tbody > tr > td > table > tbody > tr > td:first-child + td {width: 13px;}
 body[class*=alendar] .modCalMonth > tbody > tr > td > table > tbody > tr > td:first-child + td:not(:has(img)) {font-size:0;letter-spacing:0;width:0px;}
+body[class*="alendar"] [id$="_weekTable"] > tbody > tr:first-child td:nth-child(2), body[class*="alendar"] [id$="_listTable"] > tbody > tr:first-child td:nth-child(2) {width:205px;}
+body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"], body[class*=alendar] [id^=masterPageUC] .modulewrap > .container .abut[id*="_btnSearch"]:hover {min-width: auto;}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child{width:0% !important;padding: 0;font-size:0;letter-spacing: 0;}
+body[class*=alendar] .modCalMonth>tbody>tr>td:first-child a{width:0;}
