@@ -57,6 +57,7 @@ $j('#toggle-edits').change(function () {
         $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().show();
         $j("img[title='Click to edit accordion properties']").parentsUntil("div").show();
         $j("img[title='Click to edit navigation properties']").parentsUntil("div").show();
+	$j(".photoAlbumPropTable:has(.plgHeaderBar>b:empty) tr:has(.plgHeaderBar + .plgHeaderBar)").show();
 
     } else {
         $j('.clickToEditDiv').hide();
@@ -64,6 +65,7 @@ $j('#toggle-edits').change(function () {
         $j(".plgHeaderBar a[onclick*='PhotoGallery'] img[title='Click to edit Plugin Properties']").parent().hide();
         $j("img[title='Click to edit accordion properties']").parentsUntil("div").hide();
         $j("img[title='Click to edit navigation properties']").parentsUntil("div").hide();
+	$j(".photoAlbumPropTable:has(.plgHeaderBar>b:empty) tr:has(.plgHeaderBar + .plgHeaderBar)").hide();
     }
 });
 
