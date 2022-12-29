@@ -145,3 +145,11 @@
     padding-top: 30vh;
     position: absolute;
 }
+
+.photoAlbumPropTable {
+    &:has(.plgHeaderBar>b:empty) {
+        tr:not(:has(a)) {
+            display: none;
+        }
+    }
+}
