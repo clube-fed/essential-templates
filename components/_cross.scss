@@ -131,7 +131,7 @@ $cross-cta-link-max-width: 265px;
                         border-color: $cross-cta-link-border-hover-color;
                     }
                 }
-                @media (max-width:$cards-stack-max-breakpoint) {
+                @media (max-width:$cross-stack-max-breakpoint) {
                     margin-top: 3rem;
                     background-color: $cross-cta-link-bg-hover;
                     color: $cross-cta-link-font-hover-color;
