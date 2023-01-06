@@ -30,7 +30,7 @@ $cross-cta-link-max-width: 265px;
         margin: $cross-panel-margin auto;
         max-width: #{$full-width-cross-img-width-value}px;
     }
-    @media (max-width:$cards-stack-max-breakpoint) {
+    @media (max-width:$cross-stack-max-breakpoint) {
         flex-wrap: wrap;
         align-items: center;
         background-color: $cross-stack-text-bg-color;
