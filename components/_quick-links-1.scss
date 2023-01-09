@@ -67,7 +67,7 @@ $quick-link-font-family: $base-font-sans-serif2;
             }
         }
     }
-    .nc-icon-outline {
+    span[class*="icon"] {
         position: relative;
         color: $white;
         font-size: 3.6rem;
