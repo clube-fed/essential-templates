@@ -6,10 +6,12 @@
 [id^=masterPageUC] .modulewrap {
     > .container {
         position:relative;
-		
-		@media (min-width:$desktop-nav-min-brkpt) {
-			// padding-top: calc(120px + 2rem);
-		}
+	.NETEventView & {
+		position: unset;
+	}
+	    @media (min-width:$desktop-nav-min-brkpt) {
+		    // padding-top: calc(120px + 2rem);
+	    }
 		
         .abut {
             display:inline-block;
@@ -1449,6 +1451,7 @@ padding: 0.5%;
 
 #divSyncEvent {
 	//top: 28px !important;left: 50px !important;
+	margin-top: 4rem !important;
 }
 
 td.label {
