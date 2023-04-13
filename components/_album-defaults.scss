@@ -92,6 +92,7 @@
             flex: 0 0 50%;
             max-width: 50%;
             text-align: center;
+            aspect-ratio: 9/5;
             @media (min-width:768px) {
                 padding: 1.5rem !important;
                 flex: 0 0 33.333333%;
@@ -102,7 +103,9 @@
                 max-width: 25%;
             }
             > img {
-                height: auto;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
                 max-width: 100%;
                 vertical-align: middle;
             }
