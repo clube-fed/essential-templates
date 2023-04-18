@@ -85,7 +85,7 @@
         @media (min-width:992px) {
             text-align: left !important;
         }
-        > div {
+        > div, &:not(:has(.carouselRowDIV)) {
             display: block !important;
             height: 100% !important;
             padding: 0.8rem !important;
@@ -102,13 +102,13 @@
                 flex: 0 0 25%;
                 max-width: 25%;
             }
-            > img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                max-width: 100%;
-                vertical-align: middle;
-            }
+        }
+        img.carouselImage {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            vertical-align: middle;
         }
     }
     .thumbs-arrows-wrap {
