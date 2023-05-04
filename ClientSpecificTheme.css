@@ -1,0 +1,75 @@
+html { font-size: calc((10 / 16) * 1em); height: 100%; margin: 0; padding: 0; }
+
+body { font-size: 1.6rem; color: #555555; font-weight: 400; font-family: "Overpass", sans-serif; -moz-osx-font-smoothing: grayscale; }
+body.page { background-color: #fff; background-repeat: repeat; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.mpContent ol, .mpContent ul, .reference-guide ol, .reference-guide ul { line-height: 1.88; }
+body.isMobile .mpContent ol, body.isMobile .mpContent ul, body.isMobile .reference-guide ol, body.isMobile .reference-guide ul { padding-inline-start: 40px; }
+
+.clickToEditDiv { font-size: 0; }
+
+a { color: #547256; }
+a:hover, a:focus { color: #547256; }
+
+a:focus, button:focus, input:focus { outline-width: 2px; outline-style: solid; outline-color: Highlight; }
+@media (-webkit-min-device-pixel-ratio: 0) { a:focus, button:focus, input:focus { outline-color: -webkit-focus-ring-color; outline-style: auto; } }
+
+body.dynamicpageedit table { border-collapse: separate; }
+
+.eventMgrPop #eventMgrWrapper { min-height: 100% !important; }
+.eventMgrPop #floatingToolbar .floatRight li { padding: 0; }
+.eventMgrPop p { line-height: 1; font-size: 12px; }
+.eventMgrPop h3 { font-size: 16px; letter-spacing: 0; margin-bottom: 10px; }
+
+html._Telerik_IE9, html._Telerik_IE9 body { width: 100% !important; height: 100% !important; }
+
+.nl-container p, .nl-container ol, .nl-container ul { color: inherit !important; font-family: inherit !important; font-weight: inherit !important; }
+.nl-container *:not(strong):not([style*="font-weight"]) { font-weight: inherit !important; }
+.nl-container *:not([style*=" color:"]):not([style^="color:"]):not([style*=";color:"]) { color: inherit !important; }
+.nl-container *:not([style*="font-family"]) { font-family: inherit !important; }
+
+h1, .h1 { font-family: "Montserrat", sans-serif; color: #547256; font-size: 4rem; font-weight: 700; line-height: 1.225; margin-bottom: 0.4em; letter-spacing: 0; text-transform: none; }
+.content .mpContent h1, .content .mpContent .h1 { margin-bottom: 0.7em; }
+
+h2, .h2 { font-family: "Montserrat", sans-serif; color: #547256; font-size: 3rem; font-weight: 500; line-height: 1.27; margin-bottom: 1em; letter-spacing: 0; text-transform: none; }
+.content .mpContent h2, .content .mpContent .h2 { /*margin-bottom: 1em;*/ }
+
+h3, .h3 { font-family: "Montserrat", sans-serif; color: #547256; font-size: 2.4rem; font-weight: 700; line-height: 1.42; margin-bottom: 0.6em; letter-spacing: 0; text-transform: none; }
+
+h4, .h4 { font-family: "Montserrat", sans-serif; color: #547256; font-size: 2.1rem; font-weight: 600; line-height: 1.19; margin-bottom: 0.6em; letter-spacing: 0; text-transform: none; }
+
+h5, .h5 { font-family: "Montserrat", sans-serif; color: #547256; font-size: 1.8rem; font-weight: 600; line-height: 1.22; margin-bottom: 0.6em; letter-spacing: 0; text-transform: none; }
+
+h6, .h6 { font-family: "Overpass", sans-serif; color: #b5a474; font-size: 1.6rem; font-weight: 600; line-height: 1.31; margin-bottom: 2em; letter-spacing: 0.3rem; text-transform: uppercase; }
+
+p { margin: 0; font-family: "Overpass", sans-serif; font-size: 1.6rem; color: #555555; letter-spacing: 0; line-height: 1.88; font-weight: 400; }
+.mpContent p, .reference_guide p { margin: 0 0 1.88em; }
+.mpContent h1 + p { margin-top: 2rem; }
+
+.mpContent h1:last-child, .mpContent h2:last-child, .mpContent h3:last-child, .mpContent h4:last-child, .mpContent h5:last-child, .mpContent h6:last-child, .mpContent p:last-child { margin-bottom: 0; }
+
+.abut, .table-button td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #fff; background-color: #b5a474; background-image: none; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; transition: all .3s ease-in-out; }
+.abut:hover, .table-button td a:hover, .abut:focus, .table-button td a:focus, .abut:active, .table-button td a:active { text-decoration: none; background-color: #a18d55; border-color: #a18d55; color: #fff; }
+.abut-secondary, .table-button-secondary td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #b5a474; background-color: #fff; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; transition: all .3s ease-in-out; }
+.abut-secondary:hover, .table-button-secondary td a:hover, .abut-secondary:focus, .table-button-secondary td a:focus, .abut-secondary:active, .table-button-secondary td a:active { text-decoration: none; background-color: #b5a474; border-color: #b5a474; color: #fff; }
+form[action*="ArticleEdit"] .abut, form[action*="ArticleEdit"] .table-button td a, .table-button td form[action*="ArticleEdit"] a { padding: .75rem 1.25rem; border: inherit; }
+
+.sitewrap header .log-link.abut, .sitewrap header .table-button td a.log-link, .table-button td .sitewrap header a.log-link, .sitewrap header .log-link.abut-secondary, .sitewrap header .table-button-secondary td a.log-link, .table-button-secondary td .sitewrap header a.log-link, .modulewrap header .log-link.abut, .modulewrap header .table-button td a.log-link, .table-button td .modulewrap header a.log-link, .modulewrap header .log-link.abut-secondary, .modulewrap header .table-button-secondary td a.log-link, .table-button-secondary td .modulewrap header a.log-link { min-width: 130px !important; }
+@media screen and (max-width: 476px) { .sitewrap header .log-link.abut, .sitewrap header .table-button td a.log-link, .table-button td .sitewrap header a.log-link, .sitewrap header .log-link.abut-secondary, .sitewrap header .table-button-secondary td a.log-link, .table-button-secondary td .sitewrap header a.log-link, .modulewrap header .log-link.abut, .modulewrap header .table-button td a.log-link, .table-button td .modulewrap header a.log-link, .modulewrap header .log-link.abut-secondary, .modulewrap header .table-button-secondary td a.log-link, .table-button-secondary td .modulewrap header a.log-link { width: 100% !important; min-width: 0 !important; } }
+
+.modulesWrap .abut, .modulesWrap .table-button td a, .table-button td .modulesWrap a { margin: 2px; padding: 18px 39px 17px 39px; width: auto !important; letter-spacing: .1em; }
+.modulesWrap .qFilterButton input.abut { padding: 11px 25px 10px !important; margin: 0; }
+
+@media screen and (max-width: 425px) { .abut, .table-button td a { width: 100%; }
+  .modulesWrap .abut, .modulesWrap .table-button td a, .table-button td .modulesWrap a { margin: 2px; padding: 5px 10px; width: auto !important; } }
+.mobileButton { background-color: #b5a474; color: #fff; border-color: #a18d55; }
+@media screen and (max-width: 367px) { .mobileButton { padding: 5px; }
+  .mobileButton.searchButton { padding: 0 5px; } }
+
+.table-button td a { margin: 15px; }
+
+.table-button-secondary td a { margin: 15px; }
+
+.bodytxt #form1 input#btnKeepAlive.abut, .bodytxt #form1 input#btnKeepAlive.abut + .abut, .bodytxt #form1 .table-button td input#btnKeepAlive.abut + a, .table-button td .bodytxt #form1 input#btnKeepAlive.abut + a { font-weight: 400; letter-spacing: 0; padding: 5px; width: auto !important; text-transform: none; border-radius: 0; }
+
+/* Mobile Buttons Update If not using Mobile Stylesheet */
