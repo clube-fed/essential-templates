@@ -4,7 +4,7 @@ body { font-size: 1.6rem; color: #555555; font-weight: 400; font-family: "Overpa
 body.page { background-color: #fff; background-repeat: repeat; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 .mpContent ol, .mpContent ul, .reference-guide ol, .reference-guide ul { line-height: 1.88; }
-body.isMobile .mpContent ol, body.isMobile .mpContent ul, body.isMobile .reference-guide ol, body.isMobile .reference-guide ul { padding-inline-start: 40px; }
+body.isMobile .mpContent ol, body.isMobile .mpContent ul, body.isMobile .reference-guide ol, body.isMobile .reference-guide ul { -webkit-padding-start: 40px; -moz-padding-start: 40px; padding-inline-start: 40px; }
 
 .clickToEditDiv { font-size: 0; }
 
@@ -48,9 +48,9 @@ p { margin: 0; font-family: "Overpass", sans-serif; font-size: 1.6rem; color: #5
 
 .mpContent h1:last-child, .mpContent h2:last-child, .mpContent h3:last-child, .mpContent h4:last-child, .mpContent h5:last-child, .mpContent h6:last-child, .mpContent p:last-child { margin-bottom: 0; }
 
-.abut, .table-button td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #fff; background-color: #b5a474; background-image: none; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; transition: all .3s ease-in-out; }
+.abut, .table-button td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #fff; background-color: #b5a474; background-image: none; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 .abut:hover, .table-button td a:hover, .abut:focus, .table-button td a:focus, .abut:active, .table-button td a:active { text-decoration: none; background-color: #a18d55; border-color: #a18d55; color: #fff; }
-.abut-secondary, .table-button-secondary td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #b5a474; background-color: #fff; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; transition: all .3s ease-in-out; }
+.abut-secondary, .table-button-secondary td a { font-family: "Overpass", sans-serif; font-size: 1.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2rem; line-height: 1em; text-align: center; text-decoration: none; color: #b5a474; background-color: #fff; border: 2px solid #b5a474; border-radius: 0; padding: 21px 30px; margin: 0; display: inline-block; width: auto; cursor: pointer; -webkit-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
 .abut-secondary:hover, .table-button-secondary td a:hover, .abut-secondary:focus, .table-button-secondary td a:focus, .abut-secondary:active, .table-button-secondary td a:active { text-decoration: none; background-color: #b5a474; border-color: #b5a474; color: #fff; }
 form[action*="ArticleEdit"] .abut, form[action*="ArticleEdit"] .table-button td a, .table-button td form[action*="ArticleEdit"] a { padding: .75rem 1.25rem; border: inherit; }
 
