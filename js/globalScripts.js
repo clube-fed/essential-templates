@@ -1231,3 +1231,5 @@ $j('body.SupportContacts .modulewrap .container').each(function () {
     $j('.col-lg-10', this).removeClass('col-lg-offset-1').addClass('col-12');
     $j('.col-lg-4', this).addClass('col-12');
 });
+
+$j('.formBaseForm .formSection tr.rosterletteroff > td[colspan]').removeAttr('colspan');
