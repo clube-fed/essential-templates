@@ -22,9 +22,9 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
 .articles.opt2 {
     background: $articles-section-bg-color;
     padding: 2.5rem 3rem 50px;
-    text-align: center;
     @media (max-width:$article-stack-max-breakpoint) {
         padding: 5rem 1.5rem;
+        text-align: center;
     }
     .priv-hm-title {
         display: block;
@@ -33,6 +33,10 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
         line-height: 34px;
         color: #2d4a99;
         text-align: left;
+        @media (max-width:$article-stack-max-breakpoint) {
+            text-align: center;
+            margin-bottom: 25px;
+        }
     }
     .view-all-link {
         @include view-all-link;
@@ -40,7 +44,10 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
         // display: block;
         float: none;
         margin-top: 2.5rem;
-        
+        @media (max-width:$article-stack-max-breakpoint) {
+            margin: 25px auto 0 auto;
+            
+        }
     }
     [id$="ArticlesWrapper"] {
        
@@ -52,7 +59,8 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
             padding: 15px 0;
             text-align: left;
             @media (max-width:$article-stack-max-breakpoint) {
-                padding: 0 0 30px;
+                padding: 0 0 15px 0;
+                text-align: center;
                 &:last-child {
                     padding-bottom: 0;
                 }
