@@ -40,7 +40,6 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
     }
     .view-all-link {
         @include view-all-link;
-        letter-spacing: 2px;
         // display: block;
         float: none;
         margin-top: 2.5rem;
@@ -84,11 +83,12 @@ $article-cta-icon-hover-color: $article-cta-icon-default-color;
             }
         }
         .article-subject {
+            display: inline-block;
             color: $article-title-default-color;
             font-weight: $article-title-font-weight;
             font-size: $article-title-font-size;
             line-height: $article-title-line-height;
-            margin-bottom: 1.63rem;
+            margin-bottom: 1rem;
             text-transform: $article-title-text-transform;
             letter-spacing: $article-title-letter-spacing;
             font-family: $article-title-font-family;
