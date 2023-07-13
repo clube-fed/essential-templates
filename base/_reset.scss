@@ -96,3 +96,7 @@ html._Telerik_IE9, html._Telerik_IE9 body {
         font-family: inherit !important;
     }
 }
+
+table[id*="_dpEditor"] {
+    border-collapse: separate;
+}

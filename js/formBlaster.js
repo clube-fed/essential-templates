@@ -49,8 +49,6 @@ $j('font').replaceTagName('span');
 $j('b').replaceTagName('strong');
 $j('i').replaceTagName('em');
 
-
-
 $j('.formBaseForm .formQuestionWrapper > div').each(function () {
 	var fieldsets = $j('.formQuestionWrapper > div > input[type="radio"], .formQuestionWrapper > div > input[type="radio"] + label, .formQuestionWrapper > div > input[type="checkbox"], .formQuestionWrapper > div > input[type="checkbox"] + label');
 	for(var i = 0; i < fieldsets.length; i+=2) {
