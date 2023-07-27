@@ -85,7 +85,7 @@
         @media (min-width:992px) {
             text-align: left !important;
         }
-        > div, &:not(:has(.carouselRowDIV)) {
+        > div {
             display: block !important;
             height: 100% !important;
             padding: 0.8rem !important;
