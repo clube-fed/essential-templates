@@ -50,6 +50,7 @@ header.opt3 {
             display: flex;
             align-items: center;
             background-size: contain;
+            flex: 0 0 auto;
             img {
                 max-width: 100%;
             }
