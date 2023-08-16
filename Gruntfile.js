@@ -31,6 +31,7 @@ module.exports = function (grunt) {
                     //'./js/components/cardOpt2.js',
                     //'./js/components/cardOpt3.js',
                     './js/components/cardOpt4.js',
+                    './js/components/forms.js',
                     './js/components/lightbox.js'
                 ],
                 dest: './js/globalScripts.js'
