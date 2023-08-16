@@ -1,0 +1,226 @@
+// VARIABLES
+$form-inputs-box-shadow: 0 0 20px 0 rgba($black,0.1);
+$form-inputs-background-color: $white;
+$form-inputs-border: 1px solid $color-darkest;
+$form-inputs-font-size: 1.6rem;
+$form-inputs-text-color: $base-font-color;
+$form-question-label-color: $base-font-color;
+$form-question-label-font-weight: $base-font-weight;
+$form-question-label-font-size: $base-font-size;
+$form-question-label-letter-spacing: $base-font-letter-spacing;
+$form-question-label-line-height: 1.9;
+$form-question-label-text-transform: none;
+$form-question-label-margin-bottom: 6px;
+$form-submit-btn-width: 368px;
+$form-submit-btn-background-color: $button-bg;
+$form-submit-btn-border: $button-border;
+$form-submit-btn-text-color: $button-font-color;
+$form-submit-btn-hover-background-color: $button-bg-hover;
+$form-submit-btn-hover-border-color: $button-border-hover-color;
+$form-submit-btn-hover-text-color: $button-font-hover-color;
+
+.formBaseFormWrapper {
+    table {
+        table-layout: fixed;
+    }    
+    .formBaseFormFooter + div[align="center"] {
+        white-space: nowrap;
+        text-align: left;
+    }
+    .formBaseFormHeader br {        
+        @media (min-width:768px) {
+            display: none;
+        }
+    }
+    span[id$="HeaderHTML"] {
+        padding: 0 15px;
+        display: block;
+        margin-bottom: 3rem;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 0.8em;
+        }
+        h2 {
+            margin-bottom: 0.8em;
+        }
+        h3 {
+            margin-bottom: 0.3em;
+        }
+        h4 {
+            margin-bottom: 0.8em;
+        }
+    }
+    input[type=submit] {
+        margin-left: 7px;
+        width: $form-submit-btn-width;
+        max-width: 100%;
+        background-color: $form-submit-btn-background-color;
+        border: $form-submit-btn-border;
+        color: $form-submit-btn-text-color;
+        @media (max-width:767px) {
+            max-width: calc(100% - 40px);
+        }
+        &:hover,&:focus,&:active {
+            background-color: $form-submit-btn-hover-background-color;
+            color: $form-submit-btn-hover-text-color;
+            border-color: $form-submit-btn-hover-border-color;
+        }
+    }
+    td {
+        padding: 0;
+        font.smallerfont {
+            margin-left: 15px;
+        }
+        @media (max-width:767px) {
+            display: block;
+            width: 100%;
+        }
+    }
+    .formQuestionWrapper {
+        margin-bottom: 15px;
+        padding: 0 15px;
+        border-collapse: separate;
+        border-spacing: 0;
+        *::placeholder {
+            font-style: italic;
+            letter-spacing: 0.55px;
+            font-size: 11px;
+            font-weight: 300;
+            color: #7b7772;
+            
+        }
+        td {
+            display: block;
+                width: 100%;
+            @media (max-width:991px) {
+                display: block;
+                width: 100%;
+            }
+            @media (max-width:767px) {
+                > .formQuestionWrapper {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+            &.formQuestionCell {
+                color: $form-question-label-color;
+                line-height: $form-question-label-line-height;
+                font-weight: $form-question-label-font-weight;
+                letter-spacing: $form-question-label-letter-spacing;
+                font-size: $form-question-label-font-size;
+                text-transform: $form-question-label-text-transform;
+                margin-bottom: $form-question-label-margin-bottom;
+            }
+
+            input,textarea,select {
+                background-color: $form-inputs-background-color !important;
+                border: $form-inputs-border !important;
+                color: $form-inputs-text-color !important;
+                font-size: $form-inputs-font-size !important;
+                font-family: $base-font-sans-serif !important;
+                line-height: 1.5;
+                padding: 17px 23px !important;
+                box-shadow: $form-inputs-box-shadow;
+                @media (max-width:767px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                &:focus {                    
+                    &::placeholder {
+                        font-size: 0;
+                    }
+                }
+                .injectContent & {
+                    width: 100%;
+                }
+            }
+            input.riTextBox {
+                min-height: 60px;
+            }
+            span.riSingle {
+                width: 100% !important;
+                min-height: 60px;
+            }
+            select {
+                appearance: none;
+                background-color: $white;
+                background-position: calc(100% - 10px) center;
+                background-repeat: no-repeat;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3e%3ctitle%3esmall down%3c/title%3e%3cg class='nc-icon-wrapper' stroke-linecap='square' stroke-linejoin='miter' stroke-width='1' fill='%23#{$form-inputs-text-color}' stroke='%23#{$form-inputs-text-color}'%3e%3cpolyline fill='none' stroke='%23#{$form-inputs-text-color}' stroke-miterlimit='10' points='32%2c20 24%2c28 16%2c20 '/%3e%3c/g%3e%3c/svg%3e");
+                background-size: 4.4rem;
+            }
+        }
+    }
+    .formBaseForm > tbody > tr.requiredFields:last-child {
+        padding: 0 15px;
+        display: block;
+        color: $color-tertiary;
+        line-height: 1.75;
+        letter-spacing: 0;
+        font-size: 12px;
+        // text-transform: uppercase;
+    }
+}
+
+.contact-form {
+    padding: 7vw 0 7.5vw;
+    margin: 0;
+    // background-color: $color-lightest;
+    @media (max-width:767px) {
+        padding: 60px 0;
+    }
+}
+
+.form-blasted {
+    input:not([type=submit]),textarea,select {
+        background-color: $form-inputs-background-color !important;
+        border: $form-inputs-border !important;
+        color: $form-inputs-text-color !important;
+        font-size: $form-inputs-font-size !important;
+        font-family: $base-font-sans-serif !important;
+        line-height: 1.5;
+        padding: 17px 23px !important;
+        @media (max-width:767px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &:focus {                    
+            &::placeholder {
+                font-size: 0;
+            }
+        }
+        .injectContent & {
+            width: 100%;
+        }
+    }
+    input.riTextBox {
+        min-height: 60px;
+    }
+    span.riSingle {
+        width: 100% !important;
+        min-height: 60px;
+    }
+    select {
+        appearance: none;
+        background-color: $white;
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3e%3ctitle%3esmall down%3c/title%3e%3cg class='nc-icon-wrapper' stroke-linecap='square' stroke-linejoin='miter' stroke-width='1' fill='%23777777' stroke='%23777777'%3e%3cpolyline fill='none' stroke='%23777777' stroke-miterlimit='10' points='32%2c20 24%2c28 16%2c20 '/%3e%3c/g%3e%3c/svg%3e");
+        background-size: 4.4rem;
+    }
+    input[type=submit] {
+        margin-left: 7px;
+        width: 100%;
+        max-width: $form-submit-btn-width;
+        background-color: $form-submit-btn-background-color;
+        border: $form-submit-btn-border;
+        color: $form-submit-btn-text-color;
+        &:hover,&:focus,&:active {
+            background-color: $form-submit-btn-hover-background-color;
+            color: $form-submit-btn-hover-text-color;
+            border-color: $form-submit-btn-hover-border-color;
+        }
+    }
+}
