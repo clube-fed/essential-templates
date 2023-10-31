@@ -283,13 +283,18 @@ header.opt1 {
                             }
                             &.selectedItem > .nav-link,
                             &.selectedParent > .nav-link,
-                            &.selectedGrandParent > .nav-link,
+                            &.selectedGrandParent > .nav-link {
+                                text-decoration: $nav-sub-font-selected-decoration;
+                                background: $nav-sub-font-selected-bgcolor;
+                                color: $nav-sub-selected-font-color;
+                                font-weight: $nav-sub-selected-font-weight;
+                            }
                             &:hover > .nav-link,
                             &.open > .nav-link {
                                 text-decoration: $nav-sub-font-hover-decoration;
                                 background: $nav-sub-font-hover-bgcolor;
-                                color: $nav-sub-selected-font-color;
-                                font-weight: $nav-sub-selected-font-weight;
+                                color: $nav-sub-hover-font-color;
+                                // font-weight: $nav-sub-selected-font-weight;
                             }
                         }
                     }                    
