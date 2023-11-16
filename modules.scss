@@ -32,6 +32,10 @@
 				border-color: $button-border-hover-color !important;
 				color: $button-font-hover-color !important;
 			}
+		+ .abut {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
         }
         input.abut {
             background: $button-bg;
