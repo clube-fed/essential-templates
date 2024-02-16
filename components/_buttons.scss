@@ -137,3 +137,6 @@
 
 //.injectContent .searchButton { width: 40px; }
 //.injectContent .mobileButton { color: #000; }
+
+.mobileButton { background-color: $color-primary;background: $color-primary;color:#fff; }
+.mobileButton.searchButton { width: 50px;} 
