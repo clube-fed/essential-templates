@@ -236,4 +236,9 @@ table.row {
     display: revert !important;
 }
 
+/* Signature Field Trash Can Repeating Background Fix */
+
+
+.form-wrap .formQuestionWrapper span.clearSignature { background-repeat: no-repeat!important; }
+
 
