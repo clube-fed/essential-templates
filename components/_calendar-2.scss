@@ -20,7 +20,7 @@ $cal-event-title-text-transform: none;
 
 // CALENDAR PLUGIN v2
 .calendar.opt2 {
-    @media (max-width:991px) {
+    @media (max-width:$cal-events-stack-max-breakpoint) {
         text-align: center;
     }
     .view-all-link {
