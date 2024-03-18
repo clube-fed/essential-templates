@@ -630,6 +630,8 @@ $j('td[class^="qFilter"] input[type="text"]').each(function () {
 
 $j('a[target=""]').removeAttr('target');
 
+$j('div.skip-main').insertBefore('body > form');
+
 //lang needed for ADA
 $j('html').attr('lang', 'en');
 
