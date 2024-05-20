@@ -176,10 +176,27 @@ $j('.navbar-toggler').click(function () {
 });
 
 // TABBING THROUGH NAV ON DESKTOP
+
+/*
 $j('.desktopNav .navbar-nav li > a.nav-link').focus(function () {
     //$j(this).parents('li.dropdown').addClass('open');
 });
 $j('.navbar-nav li > a.nav-link').focus(function () {
+    $j(this).parents('li.dropdown').addClass('open');
+    $j(this).parent().siblings('li').removeClass('open');
+    $j(this).parents('li').siblings('li').removeClass('open');
+    $j(this).parents('li').siblings('li').find('.open').removeClass('open');
+});
+
+*/
+
+/*New Script To Test Viewport Dropdown Link Issue */
+
+$j('.navbar-nav li > a.nav-link[target="_blank"]').on( "blur", function() {
+	$j(document.activeElement).blur();
+	$j('li.dropdown').removeClass('open');
+});
+$j('.navbar-nav li:not(.isFolder) > a.nav-link').focus(function () {
     $j(this).parents('li.dropdown').addClass('open');
     $j(this).parent().siblings('li').removeClass('open');
     $j(this).parents('li').siblings('li').removeClass('open');
