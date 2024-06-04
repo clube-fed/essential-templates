@@ -267,6 +267,9 @@ header.opt3 {
                             display: block;
                             transform: scaleY(1) translateX($subnav-translateX) !important;
                         }
+                        &:hover .dropdown-menu, &:focus-within .dropdown-menu {
+                            opacity: 1 !important;
+                        }
                         li {
                             &.dropdown {
                                 > .dropdown-menu {
@@ -275,6 +278,7 @@ header.opt3 {
                                     top: calc(-#{$subnav-top-bott-padding} - 1px);
                                     transform-origin: left;
                                     left: 100%;
+                                    opacity: 0;
                                 }
                                 &.open > .dropdown-menu,
                                 &:hover > .dropdown-menu,
