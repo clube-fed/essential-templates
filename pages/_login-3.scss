@@ -100,8 +100,10 @@ $login-cookie-and-pw-font-weight: 400;
             padding-bottom: 15px;
         }
         .mpContent {
+            color: inherit;
             p {
                 line-height: $login-instructions-line-height;
+                color: inherit;
             }
         }
     }    
