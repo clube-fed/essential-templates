@@ -351,3 +351,10 @@ header.opt5 {
         }
     }
 }
+.content.has-no-banner, .content.has-empty-banner {
+    &:has(header.opt5) > div[id^="masterPageUC_MPCA"] {
+        @media (min-width:$desktop-nav-min-brkpt) {
+            padding-top: $desktop-navbar-height;
+        }
+    }
+}
