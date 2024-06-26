@@ -34,8 +34,22 @@ body {
 
 a {
     color: $link-color;
+    &[onclick*="LaunchMemPickerWin"] {
+        text-decoration: $link-hover-decoration !important;
+        &:hover,&:focus {
+            text-decoration: none !important;
+        }
+    }
     &:hover,&:focus {
         color: $link-hover-color;
+    }
+    &:not(.abut):not(.abut-secondary) {
+        .mpContent & {
+            text-decoration: $link-hover-decoration;
+            &:hover,&:focus {
+                text-decoration: none;
+            }
+        }
     }
 }
 
