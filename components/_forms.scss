@@ -153,6 +153,19 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                 background-size: 4.4rem;
             }
         }
+        tr:has(input[type=checkbox]) {
+            display: flex;
+            .formQuestionCell {
+                order: 1;
+            }
+            .formControlCell {
+                flex: 1;
+                input[type=checkbox] {
+                    margin-right: 10px;
+                    margin-top: 7px;
+                }
+            }
+        }
     }
     .formBaseForm > tbody > tr.requiredFields:last-child {
         padding: 0 15px;
