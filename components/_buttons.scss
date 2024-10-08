@@ -123,6 +123,43 @@
     margin: 15px;
 }
 
+.table-button, .table-button-secondary {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &.w-100 {
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            align-items: center;
+        }
+    }
+    &.aligned-left {
+        margin-right: auto;
+        margin-left: 0;
+    }
+    &.aligned-right {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    &.uniform-widths {
+        td {
+            flex: 1;
+            a {
+                display: block;
+            }
+        }
+    }
+}
+
 // SESSION EXPIRING MODAL BUTTONS
 .bodytxt #form1 input#btnKeepAlive.abut, .bodytxt #form1 input#btnKeepAlive.abut + .abut {
     font-weight: 400;
