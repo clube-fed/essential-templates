@@ -154,7 +154,7 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                 background-color: $white;
                 background-position: calc(100% - 10px) center;
                 background-repeat: no-repeat;
-                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3e%3ctitle%3esmall down%3c/title%3e%3cg class='nc-icon-wrapper' stroke-linecap='square' stroke-linejoin='miter' stroke-width='1' fill='#{$nohex}' stroke='#{$nohex}'%3e%3cpolyline fill='none' stroke='#{$nohex}' stroke-miterlimit='10' points='32%2c20 24%2c28 16%2c20 '/%3e%3c/g%3e%3c/svg%3e");
+                @include form-select-arrow-svg($form-inputs-text-color);
                 background-size: 4.4rem;
             }
         }
@@ -228,7 +228,7 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
         background-color: $white;
         background-position: calc(100% - 10px) center;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3e%3ctitle%3esmall down%3c/title%3e%3cg class='nc-icon-wrapper' stroke-linecap='square' stroke-linejoin='miter' stroke-width='1' fill='%23777777' stroke='%23777777'%3e%3cpolyline fill='none' stroke='%23777777' stroke-miterlimit='10' points='32%2c20 24%2c28 16%2c20 '/%3e%3c/g%3e%3c/svg%3e");
+        @include form-select-arrow-svg($form-inputs-text-color);
         background-size: 4.4rem;
     }
     input[type=submit] {
