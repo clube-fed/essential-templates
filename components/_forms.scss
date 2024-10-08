@@ -194,7 +194,9 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
 .form-blasted {
     input:not([type=submit]),textarea,select {
         background-color: $form-inputs-background-color;
-        border: $form-inputs-border;
+        border-width: $form-inputs-border-width;
+        border-style: $form-inputs-border-style;
+        border-color: $form-inputs-border-color !important;
         color: $form-inputs-text-color !important;
         font-size: $form-inputs-font-size !important;
         font-family: $base-font-sans-serif !important;
