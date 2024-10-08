@@ -128,6 +128,7 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                 line-height: 1.5;
                 padding: 17px 23px !important;
                 box-shadow: $form-inputs-box-shadow;
+                width: 100%;
                 @media (max-width:767px) {
                     padding-left: 15px;
                     padding-right: 15px;
