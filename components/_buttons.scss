@@ -116,11 +116,13 @@
 .table-button td a {
     @extend .abut;
     margin: 15px;
+    text-decoration: none !important;
 }
 
 .table-button-secondary td a {
     @extend .abut-secondary;
     margin: 15px;
+    text-decoration: none !important;
 }
 
 .table-button, .table-button-secondary {
