@@ -17,7 +17,7 @@ BASE: essential templates
 =====/ BUILD URLs /=====
 Checklist: 
 
-Invision: 
+Approved Design PDF: 
 
 Public Home: 
 
