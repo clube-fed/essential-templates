@@ -51,6 +51,7 @@ $quick-link-font-family: $base-font-sans-serif2;
         position: absolute;
         left: 0;
         top: 0;
+        z-index: 100;
     }
     .welcome {
         position: relative;
