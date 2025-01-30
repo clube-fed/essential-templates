@@ -37,6 +37,7 @@ Head Tag Top:
 <link href="https://static.clubessential.com/fonts/glyph/css/nucleo-glyph.css" rel="stylesheet" type="text/css">
 <link href="https://static.clubessential.com/fonts/outline/css/nucleo-outline.css" rel="stylesheet" type="text/css">
 <link href="https://static.clubessential.com/fonts/mini/css/nucleo-mini.css" rel="stylesheet" type="text/css">
+<link href="https://clubessential.s3.amazonaws.com/CEFED/_Axis-Website/Sites/SITEFOLDERNAME/css/generic-app.css" rel="stylesheet" type="text/css">
 ```
 Head Tag Bottom:
 ```
