@@ -159,12 +159,12 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
             }
         }
         tr:has(input[type=checkbox]) {
-            display: flex;
+            //display: flex;
             .formQuestionCell {
-                order: 1;
+                //order: 1;
             }
             .formControlCell {
-                flex: 1;
+                //flex: 1;
                 input[type=checkbox] {
                     margin-right: 10px;
                     margin-top: 7px;
