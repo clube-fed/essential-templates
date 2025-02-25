@@ -41,6 +41,13 @@ $yardage-line-height: $base-line-height;
         padding-right: 0;
         // padding-top: 6.5vw;
     }
+
+    @media (min-width: 0px) {
+        .container {
+            max-width: 1170px;
+            padding-bottom: 50px;
+        }
+    }
     .card-panels + div > & {
         // padding-top: 40px;
     }
@@ -101,6 +108,9 @@ $yardage-line-height: $base-line-height;
     }
     [id$="_radTabsTop"] .levelwrap {
         //background: $color-tertiary !important;
+        &.level1 > ul > li > a {
+            padding: 2.1rem 1.5rem 2rem 1.5rem!important;
+        }
         &.level1 > ul > li > a .innerWrap {
             letter-spacing: 0.438rem;
         }
@@ -314,6 +324,10 @@ $yardage-line-height: $base-line-height;
                             padding: 15px 0;
                             align-items: center;
                         }
+                        @media(max-width: 400px) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
                         > span, > font {
                             padding-top: 13px !important;
                             padding-bottom: 13px !important;
@@ -353,3 +367,4 @@ $yardage-line-height: $base-line-height;
 .hole-info-wrap .silver:before {background-color:#C0C0C0;}
 .hole-info-wrap .turquoise:before {background-color:#01707e;}
 .hole-info-wrap .copper:before {background-color:#ee7f1f;}
+.hole-info-wrap .black-white:before {background: linear-gradient(90deg, rgba(0,0,0,0.9668242296918768) 0%, rgba(0,0,0,1) 49%, rgba(255,255,255,1) 49%);border:none!important;}
