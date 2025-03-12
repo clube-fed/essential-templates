@@ -117,12 +117,9 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                 margin-bottom: $form-question-label-margin-bottom;
             }
 
-            input,textarea,select {
-                background-color: $form-inputs-background-color;
+            input,textarea,select {                
                 border-width: $form-inputs-border-width;
                 border-style: $form-inputs-border-style;
-                border-color: $form-inputs-border-color !important;
-                color: $form-inputs-text-color !important;
                 font-size: $form-inputs-font-size !important;
                 font-family: $base-font-sans-serif !important;
                 line-height: 1.5;
@@ -132,6 +129,11 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                 @media (max-width:767px) {
                     padding-left: 15px;
                     padding-right: 15px;
+                }
+                &:not([style*="red"]) {
+                    background-color: $form-inputs-background-color;
+                    border-color: $form-inputs-border-color !important;
+                    color: $form-inputs-text-color !important;
                 }
                 &:focus {                    
                     &::placeholder {
