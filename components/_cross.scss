@@ -111,35 +111,39 @@ $cross-cta-link-max-width: 265px;
             p {
                 margin-bottom: 0;
             }
-            > a, > a.abut, > a.abut-secondary {                
-                padding: $cross-cta-link-padding;
-                border: $cross-cta-link-border;
-                background-color: $cross-cta-link-bg;
+            > a {
                 width: 100%;
                 max-width: $cross-cta-link-max-width;
                 margin-top: 4.2rem;
-                font-family: $cross-cta-link-font;
-                font-size: $cross-cta-link-font-size;
-                font-weight: $cross-cta-link-weight;
-                letter-spacing: $cross-cta-link-letter-spacing;
-                box-shadow: none;
-                color: $cross-cta-link-font-color;
-                @media (min-width:$cross-stack-min-brkpt) {
-                    &:hover,&:focus {
+                @media (max-width:$cross-stack-max-breakpoint) {
+                    margin-top: 3rem;
+                }
+                &:not(.abut):not(.abut-secondary) {                
+                    padding: $cross-cta-link-padding;
+                    border: $cross-cta-link-border;
+                    background-color: $cross-cta-link-bg;                    
+                    font-family: $cross-cta-link-font;
+                    font-size: $cross-cta-link-font-size;
+                    font-weight: $cross-cta-link-weight;
+                    letter-spacing: $cross-cta-link-letter-spacing;
+                    box-shadow: none;
+                    color: $cross-cta-link-font-color;
+                    @media (min-width:$cross-stack-min-brkpt) {
+                        &:hover,&:focus {
+                            background-color: $cross-cta-link-bg-hover;
+                            color: $cross-cta-link-font-hover-color;
+                            border-color: $cross-cta-link-border-hover-color;
+                        }
+                    }
+                    @media (max-width:$cross-stack-max-breakpoint) {                        
                         background-color: $cross-cta-link-bg-hover;
                         color: $cross-cta-link-font-hover-color;
                         border-color: $cross-cta-link-border-hover-color;
                     }
+                    &:after {
+                        content: none;
+                    }                
                 }
-                @media (max-width:$cross-stack-max-breakpoint) {
-                    margin-top: 3rem;
-                    background-color: $cross-cta-link-bg-hover;
-                    color: $cross-cta-link-font-hover-color;
-                    border-color: $cross-cta-link-border-hover-color;
-                }
-                &:after {
-                    content: none;
-                }                
             }
         }
     }
