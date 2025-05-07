@@ -90,7 +90,7 @@ $cross-cta-link-max-width: 265px;
             }
         }
         .mpContent {
-            * {                
+            *:not([class*="abut"]) {                
                 @media (min-width:992px) {
                     color: $white;
                 }
@@ -117,6 +117,12 @@ $cross-cta-link-max-width: 265px;
                 margin-top: 4.2rem;
                 @media (max-width:$cross-stack-max-breakpoint) {
                     margin-top: 3rem;
+                }
+                &[class*="abut"] {
+                    text-decoration: none;
+                    &:hover,&:focus {
+                        text-decoration: none;
+                    }
                 }
                 &:not(.abut):not(.abut-secondary) {                
                     padding: $cross-cta-link-padding;
