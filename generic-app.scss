@@ -132,7 +132,7 @@ ul,ol{
 		}
 	}
 }
-.content.injectContent{
+&.content{
 	.abut {    
 		font-family: $button-font;
 		font-size: $button-font-size;
@@ -570,6 +570,18 @@ ul,ol{
     border-top: 1px solid #dee2e6;
 }
 .table-button a{ margin: 5px 10px; }
+
+.table-scroll {
+	width: 100% !important;
+	margin-bottom: 15px !important;
+	overflow-x: auto !important;
+	overflow-y: hidden !important;
+	-webkit-overflow-scrolling: touch !important;
+	-ms-overflow-style: -ms-autohiding-scrollbar !important;
+	>.table {
+		margin-bottom: 0 !important;
+	}
+}
 
 /* Generic Bootstrap Styles */
 @media (min-width: 1200px) {
