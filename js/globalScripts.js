@@ -416,6 +416,85 @@ $j('.calendar.opt4 > .mpContent:first-child').each(function () {
     $j(this).css('background-image', "url(" + $j('img', this).attr("src") + ")");
 });
 
+// GK Components Additions 2025 //
+
+//calendar opt 1
+$j('.club-calendar.opt1-prem [id$="EventsWrapper"] .event-wrap').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+
+
+$j('.club-calendar.opt1-prem [id$="EventsWrapper"] .event-wrap > a').each(function(){
+    $j('.event-image', this).css('background-image', "url("+ $j('.event-image > img:nth-child(1)', this).attr("src") +")");
+    //var eventTitle = $j('.event-title',this).text();
+    //$j( '.event-image img:first-child', this ).attr('alt',eventTitle);
+    $j( '.event-image img', this ).attr('alt','');
+    $j( '.event-image img + img', this ).attr('aria-hidden','true').attr('alt','');
+});
+
+//calendar option 2
+$j('.club-calendar.opt2-prem [id$="EventsWrapper"] > div').each(function(){
+    $j(this).contents().unwrap();
+});  
+$j('.club-calendar.opt2-prem [id$="EventsWrapper"] > a').each(function(){
+    $j('.event-image', this).css('background-image', "url("+ $j('.event-image img', this).attr("src") +")");
+    //var eventTitle = $j('.event-title',this).text();
+    //$j( '.event-image img:first-child', this ).attr('alt',eventTitle);
+    $j( '.event-image img', this ).attr('alt','');
+    $j( '.event-image img + img', this ).attr('aria-hidden','true').attr('alt','');
+});
+
+//calendar option 3
+
+$j('.club-calendar.opt3-prem [id$="EventsWrapper"] .event-wrap').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+$j('.club-calendar.opt3-prem .event-wrap .image-wrap').each(function(){
+    $j(this).css('background-image', "url("+ $j(this).find('img:nth-child(1)').attr("src") +")"); 
+});
+
+$j('.club-calendar.opt3-prem [id$="EventsWrapper"] .event-wrap').each(function(){
+    $j( '.event-image img', this ).attr('alt','Calendar Event Image');
+    $j( '.event-image img + img', this ).attr('aria-hidden','true').attr('alt','');
+});
+
+
+//calendar option 4
+
+$j('.club-calendar.opt4-prem [id$="EventsWrapper"]').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+$j('.club-calendar.opt4-prem [id$="EventsWrapper"] .event-info').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+/*
+$j('club-calendar.opt4-prem .event-image .mpContent:first-child').each(function () {
+    $j(this).css('background-image', "url(" + $j('img', this).attr("src") + ")");
+});
+
+*/
+
+
+//calendar option 5
+
+$j('.club-calendar.opt5-prem [id$="EventsWrapper"] .event-link').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+$j('.club-calendar.opt5-prem .event-link .event-image').each(function () {
+    $j(this).css('background-image', "url(" + $j('img:nth-child(1)', this).attr("src") + ")");
+});
+
+
 //articles option 3
 $j('.articles.opt3 .newsItem').each(function () {
     var articleImageLinkURL = $j('.article-image-link-url', this).text();
@@ -430,6 +509,25 @@ $j('.articles.opt3 .newsItem').each(function () {
         $j('.article-wrap[href*=".pdf"]', this).attr( "target", '_blank');
     }
 });
+
+
+//articles opt 5 - GK Components Addition 2025
+
+$j('.articles.opt5-prem div[id$="ArticlesWrapper"]').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+$j('.articles.opt5-prem div[id$="ArticlesWrapper"] .newsItem').each(function(){
+    $j(this).unwrap();
+ 
+});
+
+$j('.articles.opt5-prem .article-image').each(function(){
+    $j(this).unwrap();
+ 
+});
+
 
 $j('.sitewrap.login #login-bg, .sitewrap.login .login-right').each(function () {
     if ($j.trim($j('.login-bg-img .mpContent', this).html()).length) {
