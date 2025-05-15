@@ -1,0 +1,225 @@
+// VARIABLES
+
+$article-stack-max-breakpoint: 991px;
+$articles-max-width: 400px;
+
+$news-title-background-color: $color-secondary;
+$news-title-font-family: $base-font-sans-serif;
+$news-title-font-size: 1.4rem;
+$news-title-text-transform: uppercase;
+$news-title-font-weight: 800;
+$news-title-letter-spacing: 2px;
+
+$news-subject-font-family: $base-font-sans-serif;
+$news-subject-font-color: $color-secondary;
+$news-subject-font-size: 2.4rem;
+$news-subject-font-weight: 400;
+$news-subject-letter-spacing: 0;
+$news-subject-line-height: 30px;
+$news-subject-text-transform: none;
+
+$article-arrows-color: #018922;
+$article-image-width: 400px;
+$article-image-height: 400px;
+
+$slick-dots-color: #018922;
+$slick-dots-size: 10px;
+
+// ARTICLES v3 GK Components
+.articles.opt4-prem {
+    max-width: $articles-max-width;
+    margin: 0 auto;
+    .article-wrap {
+        background: #fff;
+        max-width: $articles-max-width;
+        width: 100%;
+        margin-bottom: 50px;
+        @media(max-width: 1024px) {
+            max-width: none;
+            
+        }
+        .news-title {
+            background: $news-title-background-color;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h4 {
+                color: #fff;
+                margin: 0;
+                font-family: $news-title-font-family;
+                font-size: $news-title-font-size;
+                text-transform: $news-title-text-transform;
+                font-weight: $news-title-font-weight;
+                letter-spacing: $news-title-letter-spacing;
+            }
+        }
+        .image-wrap {
+            width: 100%;
+            max-width: 100%;
+            img {
+             max-height: $article-image-height;
+
+            }           
+            img + img {
+                display: none;
+            }
+        }
+        .article-info {
+            padding: 30px 55px;
+             @media(max-width: 667px) {
+                padding: 50px 15px 25px 15px;
+        }
+        .news-title {
+            display: flex;
+            align-items: center;
+            h4 {
+                font-family: $base-font-sans-serif;
+                color: $color-secondary;
+                font-weight: 800;
+                letter-spacing: .2rem;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+            }
+            h5 {
+                font-family: $base-font-sans-serif;
+                font-size: 1.4rem;
+                color: #018922;
+                font-weight: 400;
+                text-transform: none;
+                letter-spacing: 0;
+                &:before {
+                    content: '.';
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #afafaf;
+                    position: relative;
+                    bottom: 4px;
+                    margin: 0 15px;
+
+                }
+            }
+        }
+        .subject {
+            font-family: $news-subject-font-family;
+            font-size: $news-subject-font-size;
+            font-weight: $news-subject-font-weight;
+            letter-spacing: $news-subject-letter-spacing;
+            color: $news-subject-font-color;
+            text-transform: $news-subject-text-transform;
+            line-height: $news-subject-line-height;
+            text-align: center;
+            margin-bottom: 20px;
+            @media(max-width: 568px) {
+                font-size: 2.0rem;
+                line-height: 32px;
+
+            }
+        }
+        .outer-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            position: relative;
+            .slick-prev {
+                font-size: 0;
+                background: 0;
+                border: 0;
+                text-decoration: none;
+                &:focus {
+                    outline: none;
+                }
+                &:hover:before {
+                    cursor: pointer;
+                    color: $color-primary;
+                    text-decoration: none;
+                }
+                &:before {
+                    display: block;
+                    content: '\eaae';
+                    font-family: 'Nucleo Outline';
+                    font-size: 26px;
+                    color: $article-arrows-color;
+                    transition: 0.3s all ease-in-out;
+
+                }
+            }
+            .slick-next {
+                font-size: 0;
+                background: 0;
+                border: 0;
+                text-decoration: none;
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: $color-primary;
+                    text-decoration: none;
+                }
+                &:hover:before {
+                    cursor: pointer;
+                    color: $color-primary;
+                }
+                &:before {
+                    display: block;
+                    content: '\eaaf';
+                    font-family: 'Nucleo Outline';
+                    font-size: 26px;
+                    color: $article-arrows-color;
+                    transition: 0.3s all ease-in-out;
+
+                }
+            }
+            .arrows-wrap {
+                display: flex;
+                justify-content: space-between;
+                .slider-count {
+                    color: $article-arrows-color;
+                    font-size: 1.4rem;
+                }
+              .slick-dots {
+                display: flex !important;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                padding: 0 15px;
+                @media(max-width: 568px) {
+                    position: static;
+                    text-align: center;
+                    width: 100%;
+                }
+                li {
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin: 0 5px;
+                    border: 2px solid $slick-dots-color;
+                    background: none;
+                    width: $slick-dots-size;
+                    height: $slick-dots-size;
+                    font-size: 0;
+                    &.slick-active {
+                        background: $slick-dots-color;
+                    }
+                    button {
+                        background: 0;
+                        border: none;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+             }
+          }
+        }
+      }
+    }
+    .newsPluginArchiveLink {
+        display: none;
+    }
+}

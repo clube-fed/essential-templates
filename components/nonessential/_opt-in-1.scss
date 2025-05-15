@@ -1,0 +1,103 @@
+// VARIABLES
+
+$opt-in-checkbox-label-font-family: $base-font-family;
+$opt-in-checkbox-label-font-color: $base-font-color;
+$opt-in-checkbox-label-font-size: $base-font-size;
+$opt-in-checkbox-label-font-weight: $base-font-weight;
+$opt-in-checkbox-label-line-height: $base-line-height;
+$opt-in-checkbox-label-leter-spacing: $base-font-letter-spacing;
+
+
+$opt-in-button-max-width: 190px;
+$opt-in-button-font-size: 1.6rem;
+$opt-in-button-text-transform: none;
+$opt-in-button-color: #018922;
+$opt-in-button-background: none;
+$opt-in-button-border: 1px solid #018922;
+$opt-in-button-font-weight: 400;
+$opt-in-button-letter-spacing: 0;
+$opt-in-button-border-radius: 5px;
+
+$opt-in-button-hover-bkgrnd: #018922;
+$opt-in-button-hover-font-color: $white;
+
+$opt-in-checkbox-checked-background: #018922;
+
+// OPT-IN GROUPS PLUGIN v1
+.opt-in.opt1 {
+    padding: 94px 0;
+    table[id$="_tblOptInChecks"] {
+        display: flex;
+        margin-top: 25px;
+        > tbody {
+            column-count: 3;
+            column-width: 270px;
+            column-gap: 30px;
+            display: block;
+            > tr {
+                max-width: 300px;
+                > td {
+                    padding: 7px 0;
+                    display: inline-flex;
+                    align-items: center;
+                }
+            }            
+        }
+    }
+    td[id$="_td3"] {
+        text-align: left;
+        input[type=submit] {
+            margin-top: 35px;
+            width: 100%;
+            max-width: $opt-in-button-max-width;
+            color: $opt-in-button-color;
+            font-size: $opt-in-button-font-size;
+            text-transform: $opt-in-button-text-transform;
+            background: $opt-in-button-background;
+            border: $opt-in-button-border;
+            font-weight: $opt-in-button-font-weight;
+            letter-spacing: $opt-in-button-letter-spacing;
+            border-radius: $opt-in-button-border-radius;
+            &:hover {
+              background: $opt-in-button-hover-bkgrnd;
+              color: $opt-in-button-hover-font-color;
+
+            }
+        }
+    }
+    input[type=checkbox] {
+        margin-right: 10px;
+        border-radius: 0;
+        width: 1.2rem;
+        height: 1.2rem;
+        border: none;
+        grid-template-areas: "checkbox";
+        display: inline-grid;
+        &:before {
+            content: '\00A0';
+            width: 1.2rem;
+            height: 1.2rem;
+            border: 1px solid #979797;
+            grid-area: checkbox;
+            display: inline-grid;
+            background: #fff;
+            text-align: center;
+            line-height: 1;
+            font-size: 10px;
+            color: #fff;
+        }
+        &:checked:before {
+            background: $opt-in-checkbox-checked-background;
+            border-color: $opt-in-checkbox-checked-background;
+            content: '\2714';
+        }
+    }
+    label {
+        font-family: $opt-in-checkbox-label-font-family;
+        color: $opt-in-checkbox-label-font-color;
+        font-size: $opt-in-checkbox-label-font-size;
+        font-weight: $opt-in-checkbox-label-font-weight;
+        line-height: $opt-in-checkbox-label-line-height;
+        letter-spacing: $opt-in-checkbox-label-leter-spacing;
+    }
+}

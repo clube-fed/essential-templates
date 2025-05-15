@@ -1,0 +1,188 @@
+// VARIABLES
+$card-width-value: 270; // omit unit from value
+$card-height-value: 270; // omit unit from value
+$cards-stack-max-breakpoint: 991px;
+$card-caption-bottom-border: none;
+
+$name-font-family: $base-font-sans-serif;
+$name-font-size: 2.1rem;
+$name-font-color: #434a59;
+$name-font-weight: 700;
+
+$job-title-font-size: 1.4rem;
+$job-title-font-color: #555;
+
+$phone-mail-link-color: #018922;
+$phone-mail-link-size: 1.6rem;
+
+// CARDS STAFF BIOS v3 
+.card-deck.meet-the-team-3 {
+    max-width: 1180px;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 73px 0 96px;
+    @media (max-width:991px) {
+        justify-content: space-evenly;
+        padding: 5rem 0;
+    }
+    @media (max-width:767px) {
+        text-align: center;
+    }
+    @media (max-width:575px) {
+        justify-content: center;
+        align-items: center;
+    }
+    > .col-12 {
+        text-align: center;
+        margin-bottom: 7.4rem;
+    }
+    .card {
+        flex-direction: row;        
+        margin-bottom: 30px;
+        flex: 0 0 #{$card-width-value}px;
+        align-items: center;
+        background: none;
+        border: none;
+        @media (max-width:991px) {
+            flex-direction: column;
+            align-items: center;
+            max-width: #{$card-width-value}px;            
+        }
+        @media (max-width:767px) {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: none;
+        }
+        @media (min-width:992px) {
+            margin-left: 15px;
+            margin-right: 15px;
+            flex: 0 0 calc(50% - 30px);
+        }
+        @media (min-width:1200px) {
+            margin-left: 5px;
+            margin-right: 5px;
+            flex: 0 0 calc(50% - 10px);
+        }
+        &-img {
+            max-width: #{$card-width-value}px;
+        }
+        &-body {
+            padding: 1.25rem 3.2rem;
+            flex: 1 0 31rem;
+            @media (max-width:991px) {
+                padding-left: 0;
+                padding-right: 0;
+                flex: 1;
+            }
+            .mpContent {
+                strong {
+                   font-family: $name-font-family;
+                   font-size: $name-font-size;
+                   color: $name-font-color;
+                   font-weight: $name-font-weight;
+                   line-height: 1.2;
+                }
+                em {
+                    font-weight: 400;
+                    color: $job-title-font-color;
+                    font-size: $job-title-font-size;
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font-size: 1.6rem;
+                    line-height: 1.57;
+                    font-weight: 400;
+                    color: #555;
+                    + hr {
+                        margin-bottom: 1.6rem;
+                    }
+                }                
+                > a {
+                    color: $phone-mail-link-color;
+                    font-size: $phone-mail-link-size;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    margin-bottom: 0.5rem;
+                    transition: color 0.3s ease-in-out;
+                    @media (max-width:767px) {
+                        justify-content: center;
+                    }
+                    ~ br {
+                        display: none;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &:hover, &:focus {
+                        color: $color-quaternary;
+                        text-decoration: none;
+                        span[class*="icon"] {
+                            color: $color-quaternary;
+                        }
+                    }
+                }
+                span[class*="icon"] {
+                    font-size: 1.7rem;
+                    margin-right: 1rem;
+                    transition: color 0.3s ease-in-out;
+                }
+            }
+        }
+        &.full-width {
+            @media(max-width: 991px) {
+                max-width: 100%;
+                flex-direction: row;
+                flex: 1 1 100%;
+                gap: 3rem;
+                margin: 3rem;
+            }
+            @media(max-width: 767px) {
+                flex-direction: column;
+                margin: 0 0 3rem 0;
+            }
+            .card-body {
+                .mpContent {
+                    p {
+                        margin-top: 3rem;
+                    }
+                }
+            }
+            @media (min-width:992px) {
+                flex-basis: calc(100% - 30px);
+                .card-img {
+                    max-width: 500px;
+                    .mpContent img {
+                        width: 100%;
+                    }
+                }
+                .card-body {
+                    padding-left: 5.25vw;
+                    .mpContent {
+                        em {
+                            color: $job-title-color;
+                            font-size: $job-title-font-size;
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+            @media (min-width:1200px) {
+                flex-basis: calc(100% - 10px);
+            }
+            @media (max-width:991px) {
+                .card-img {
+                    .mpContent {
+                        aspect-ratio: #{$card-width-value}/#{$card-height-value};
+                        img {
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

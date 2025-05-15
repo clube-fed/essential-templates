@@ -1,0 +1,141 @@
+// VARIABLES
+$cal-event-img-stack-max-brkpt: 991px;
+$cal-event-img-before-stack-min-brkpt: $cal-event-img-stack-max-brkpt + 1;
+
+$cal-event-img-width-value: 500; // omit unit from value
+$cal-event-img-height-value: 600; // omit unit from value
+
+$cal-event-date-font-family: $base-font-sans-serif;
+$cal-event-date-font-size: 1.4rem;
+$cal-event-date-font-weight: 700;
+$cal-event-date-letter-spacing: 2px;
+$cal-event-date-font-color: $color-secondary;
+$cal-event-date-line-height: 1;
+$cal-event-date-text-transform: uppercase;
+
+$cal-event-title-font-family: $base-font-sans-serif;
+$cal-event-title-font-size: 2.4rem;
+$cal-event-title-font-weight: 400;
+$cal-event-title-font-color: $color-secondary;
+$cal-event-title-font-hover-color: $color-primary;
+$cal-event-title-line-height: 1.42;
+$cal-event-title-text-transform: none;
+
+// CALENDAR v4
+.club-calendar.opt4-prem {
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1230px;
+    margin: 0 auto;
+    @media (max-width:1199px) {
+        padding: 50px 15px;
+    }
+    .events {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 7rem;
+        @media(max-width: 991px) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 3.5rem;
+        }
+        .event-image {
+            position: relative;
+            display: flex;
+            flex: 1 3 $cal-event-img-width-value + px;
+            max-width: $cal-event-img-width-value + px;
+            max-height: $cal-event-img-height-value + px;
+            @media(max-width: 991px) {
+                flex: 1 1 auto;
+                max-width: 100%;
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+            
+            }
+            img {
+              max-width: 100%;
+                     
+            }
+            .clickToEditDiv {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        [id$="EventsWrapper"] {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            flex: 1 1 500px;
+            max-width: 500px;
+            @media(max-width: 991px) {
+                flex: 1 1 100%;
+                max-width: 100%;
+                justify-content: center;
+            }
+            .event-info {
+                border-bottom: 1px solid #d3d7db;
+                &:last-child {
+                    border-bottom: none;
+                }
+                > a {
+                    display: flex;
+                    align-items: center;
+                    gap: 5rem;
+                    margin: 25px 0;
+                    @media(max-width: 991px) {
+                        gap: 3rem;
+                        margin: 0;
+
+                    }
+                    @media(max-width: 567px) {
+                        display: block;
+                        text-align: center;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                        .event-title {
+                            color: $cal-event-title-font-hover-color;
+                        }
+                    }
+                @media (max-width: 991px) {
+                    flex-basis: 100%;
+                    padding: 20px 15px;
+                }
+                .event-date {
+                    font-family: $cal-event-date-font-family;
+                    font-size: $cal-event-date-font-size;
+                    font-weight: $cal-event-date-font-weight;
+                    color: $cal-event-date-font-color;
+                    letter-spacing: $cal-event-date-letter-spacing;
+                    line-height: $cal-event-date-line-height;
+                    text-transform: $cal-event-date-text-transform;
+                    @media(max-width: 567px) {
+                        margin-bottom: 10px;
+                    }
+                }
+                .event-title {
+                    font-family: $cal-event-title-font-family;
+                    font-size: $cal-event-title-font-size;
+                    font-weight: $cal-event-title-font-weight;
+                    color: $cal-event-title-font-color;
+                    $cal-event-title-line-height: 1.42;
+                    $cal-event-title-text-transform: none;
+                    transition: 0.3s all ease-in-out;
+                    @media(max-width: 500px) {
+                        font-size: 1.8rem;
+
+                    }
+                }
+ 
+            }
+          }
+        }
+}   }
+
+
+
+

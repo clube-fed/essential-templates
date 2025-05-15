@@ -1,0 +1,374 @@
+/* Tabs Styles If Different From Default */
+$tabs-font-size: 1.2rem;
+$tsContent-bg-color: $white;
+$tab-selected-font-color: $tabstrip-selected-font-color;
+$tab-selected-bg-color: $tabstrip-selected-bg;
+
+$hole-media-width: 850px;
+
+/* Hole Number Title Font */
+$hole-font-color: $color-secondary;
+$hole-number-font-size: 3.0rem;
+$hole-number-font-family: $base-font-sans-serif;
+$hole-number-text-transform: none;
+$hole-number-letter-spacing: 0;
+
+/* Par Handicap Font Styles */
+
+$par-handicap-font-family: $base-font-sans-serif;
+$par-handicap-color: #555;
+$par-handicap-font-size: 1.6rem;
+
+
+/* Hole Description Text */
+$hole-description-font-size: 1.6rem;
+$hole-description-font-weight: 700;
+$hole-description-font-color: #293337;
+
+/* Tee Colors */
+$tee-color-black: #000;
+$tee-color-white: #fff;
+$tee-color-red: #c73e3e;
+$tee-color-red-white: linear-gradient(90deg,rgba(255, 255, 255, 1) 50%, rgba(199, 62, 62, 1) 50%);
+$tee-color-orange: var(--orange);
+$tee-color-green: #018922;
+$tee-color-green-white: linear-gradient(90deg,rgba(255, 255, 255, 1) 50%, rgba(1, 137, 34, 1) 50%);
+$tee-color-blue: #1c4c99;
+$tee-color-yellow: var(--yellow);
+$tee-color-purple: var(--purple);
+$tee-color-teal: var(--teal);
+$tee-color-gray: var(--gray);
+$tee-color-gold: #d49341;
+
+// COURSE TOUR v2
+.course-tour.opt2-prem.vertical-tabs {
+    // BEGIN VERTICAL TABS
+    @media (min-width:1025px) {
+        [id$="_tblTop"] {
+            box-shadow: none;
+            .tsContent {
+                height: 100%;
+                padding: 0;
+                border: none !important;
+                .mpContent {
+                    display: flex;
+                    
+                }
+            }
+            > tbody {
+                display: flex;
+                > tr {
+                    &:first-child {
+                        flex: 1 0 50px;
+                        > td:nth-child(2) {
+                            height: 100%;
+                            display: block;
+                            > table, > table > tbody, > table > tbody > tr, > table > tbody > tr > td:first-child, .tabstrip, .levelwrap.level1 {
+                                height: 100%;
+                                display: block;
+                            }
+                            .levelwrap.level1 > ul {
+                                height: 100%;
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        flex: 1;
+                        flex-basis: 100%;
+                        > td:nth-child(2) {
+                            display: block;
+                            height: 100%;
+                            > div {
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        [id$="_radTabsTop"] .levelwrap.level1 > ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            @media(min-width: 1025px) {
+                width: 70px;
+            }
+            > li {
+                display: flex;
+                flex: 1 1 32px;
+                justify-content: center;
+                align-items: center;
+                > a {
+                    font-size: $tabs-font-size!important;
+                    border-left: $tabstrip-unselected-top-border!important;
+                    border-top: none !important;
+                    padding: 5px !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    @media(min-width: 1025px) {
+                      padding: 15px!important;
+                    }
+                    &.selected {
+                        border-color: $tabstrip-selected-top-border-color!important;
+                        background: $tab-selected-bg-color !important;
+                        .wrap {
+                            color: $tab-selected-font-color;
+                        }
+                    }
+                    .wrap {
+                        .innerWrap {
+                            // font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+    padding: 0 46px 70px 106px;
+    max-width: 1600px;
+    margin: 0 auto;
+    @media (max-width:1199px) {
+        padding: 0 50px 15px 50px;
+    }
+    @media (max-width:991px) {
+        padding: 0 15px 50px;
+    }
+    [id$="_radTabsTop"] .levelwrap.level1 {        
+        > ul {
+            @media (width:1024px) {
+                padding: 0 1px !important;
+            }
+            &:after {
+                @media (min-width:1024px) {
+                    content: none;
+                }
+            }
+            > li > a {
+                @media (max-width:1024px) {
+                    padding: 1.7rem 1.8rem 1.6rem !important;
+                }
+            }
+        }
+    }
+    .scorecard {
+        font-size: 1.55rem;
+        font-weight: 600;
+        color: #186f5a;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        line-height: 1;
+        @media (min-width:1025px) {
+            position: absolute;
+            right: 5rem;
+            bottom: 0;
+        }
+        @media (max-width:1024px) {
+            padding: 0 5rem 5rem;
+        }
+        @media (max-width:767px) {
+            padding: 0 1.5rem 3rem;
+        }
+        span[class*="icon"] {
+            margin-left: 10px;
+            font-size: 1.8rem;
+            vertical-align: middle;
+            line-height: 1.2;
+        }
+    }
+    .tsContent {
+        padding: 0;
+        background-color: $tsContent-bg-color !important;
+        .mpContent {
+            height: 100%;
+            display: flex;
+            @media (max-width:1024px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                > div {
+                    flex: 1 1 100% !important;
+                }
+            }    
+            > .hole-media {
+                flex: 1 1 $hole-media-width;
+                max-width: $hole-media-width;
+                font-size: 0;
+                @media (max-width:1024px) {
+                    order: 1;
+                    padding-right: 0;
+                    margin: 0 auto;
+                }
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .hole-info-wrap {            
+                flex: 0 0 400px;
+                align-self: center;
+                margin: 0 auto;
+                @media (min-width:1025px) {
+                    position: relative;
+                    max-width: 400px;
+                    
+                }
+                @media (max-width:1024px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .hole-info {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 1 auto;
+                    background: $white;
+                    padding: 3rem;                
+                    @media (min-width:1025px) {
+                        min-height: 500px;
+                        
+                    }
+                }
+                .hole-num {
+                    font-family: $hole-number-font-family;
+                    font-size: $hole-number-font-size;
+                    line-height: normal;
+                    color: $hole-font-color;
+                    letter-spacing: $hole-number-letter-spacing;
+                    text-transform: $hole-number-text-transform;
+                    margin-bottom: 12px;
+                }
+                .par-handicap {
+                    padding: 0;
+                    margin: 0 0 2rem 0;
+                    li {
+                        display: inline-block;
+                        margin: 0 10px 0 0;
+                        font-family: $par-handicap-font-family;
+                        color: $par-handicap-color;
+                        font-size: $par-handicap-font-size;
+                        font-family: $par-handicap-font-family;
+                    }
+                }
+                .hole-yardage {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    color: $base-font-color;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    margin-bottom: 1.5rem;
+                    border-left: none;
+                    border-right: none;
+                    padding: 5px 0;
+                    @media(min-width: 1025px) {
+                        max-width: 300px;
+                    }
+                    @media (max-width:767px) {
+                        margin-bottom: 3rem;
+                    }
+                    > span, > font {
+                        padding-top: 5px !important;
+                        padding-bottom: 5px !important;
+                        text-align: center;
+                        display: inline-flex;
+                        align-items: center;
+                        padding-right: 2rem;
+                        @media (max-width:767px) {
+                            padding: 5px 0 !important;
+                        }
+                       
+                        &:before {
+                            content: '';
+                            height: 15px;
+                            width: 15px;
+                            display: inline-block;
+                            margin: 0 7px 0 0;
+                            vertical-align: middle;
+                            border-radius: 50%;
+                            border: 2px solid transparent;
+                        }
+                        &.blue:before {background-color:$tee-color-blue;}
+                        &.white:before {background-color:#ffffff;border-color:#979797 !important;}
+                        &.green-white:before {background: $tee-color-green-white;border-color: $tee-color-green;}
+                        &.red:before {background-color:$tee-color-red;}
+                        &.red-white:before {background: $tee-color-red-white;border-color: $tee-color-red;}
+                        &.black:before {background-color:$tee-color-black;}
+                        &.yellow:before {background-color:$tee-color-yellow;}
+                        &.green:before {background-color:$tee-color-green;}
+                        &.gold:before {background-color:$tee-color-gold;}
+                        &.purple:before {background-color:$tee-color-purple;}
+                        &.orange:before {background-color:$tee-color-orange;}
+                        &.teal:before {background-color:$tee-color-teal;}
+                        &.gray:before {background-color:$tee-color-gray;}
+                    }
+                }
+                .hole-desc {
+                    strong {
+                        font-size: $hole-description-font-size;
+                        font-weight: $hole-description-font-weight;
+                        color: $hole-description-font-color;
+                    }
+                }
+                > div > div {
+                    &.hole-num {
+                        flex: 0;
+                       
+                        > div {
+                            font-size: 1.65rem;
+                            font-weight: 700;
+                            letter-spacing: 0.59px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: $white;
+                            cursor: default;
+                            margin: 0;
+                            padding: 0;
+                            min-width: 155px;
+                            line-height: 44px;
+                            float: left;
+                            position: relative;
+                            background-color: $color-quinary;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none; 
+                            transition: background-color 0.2s ease;
+                            &:before,&:after {
+                                content: " ";
+                                position: absolute;
+                                top: 0;
+                                right: -18px;
+                                width: 0;
+                                height: 0;
+                                border-top: 22px solid transparent;
+                                border-bottom: 22px solid transparent;
+                                border-left: 18px solid $color-quinary;	
+                                z-index: 2;
+                                transition: border-color 0.2s ease;
+                            }
+                            &:before {
+                                right: auto;
+                                left: 0;
+                                border-left: 17px solid #fff;	
+                                z-index: 0;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            + .clickToEditDiv {                
+                @media (min-width:1025px) {
+                    position: absolute;
+                    margin-top: -22px !important;
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+}

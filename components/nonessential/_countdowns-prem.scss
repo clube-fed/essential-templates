@@ -1,0 +1,291 @@
+
+$countdown-number-font-color: $color-secondary;
+
+$opt2-font-link-color: #018922;
+
+$countdown-opt1-date-color: $white;
+$countdown-opt2-date-color: $color-secondary;
+$countdown-date-size: 1.4rem;
+$countdown-letter-spacing: 2px;
+$countdown-text-transform: uppercase;
+$countdown-font-weight: 700;
+
+$h3-opt1-font-color: $white;
+$h3-opt2-font-color: $color-secondary;
+$h3-font-family: $base-font-sans-serif;
+$h3-font-weight: 400;
+$h3-font-size: 3.0rem;
+
+// BEGIN COUNTDOWN
+.countdown {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 285px 0;
+    //margin: 5.1875% 0;
+    @media screen and (max-width:991px) {
+        padding: 40px 0;
+    }
+    &.opt1 {
+        padding: 285px 0;
+        @media(max-width: 767px) {
+            padding: 100px 0;
+        }
+        > .container .row > div:last-child > .countdown-wrap {
+            padding: 0;
+        }
+         > .container .row > div:last-child > .countdown-wrap > div.countdown-div {
+            padding: 41.2px;
+            @media(max-width: 767px) {
+                padding: 17px 0 25px;
+            }
+        }
+    }
+    &:after {
+        .sitewrap & {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+    // Background Image
+    > .mpContent {
+        font-size: 0;
+        img {
+            height: 0px;
+            visibility: hidden;
+            margin: 0;
+        }
+        .clickToEditDiv {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    > .container {
+        position: relative;
+        z-index: 1;
+        .row {
+            > div {
+                // LEFT SIDE                    
+                &:first-child {
+                    @media screen and (min-width:1200px) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    @media screen and (max-width:991px) {
+                        padding-bottom: 30px;
+                        // text-align: center;
+                    }
+                    * {
+                        color: $white;
+                    }
+                    > .mpContent {            
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        * {
+                            font-style: normal;
+                        }
+                        h5,h6 {
+                            $countdown-opt1-date-color: $white;
+                            $countdown-date-size: 1.4rem;
+                            $countdown-letter-spacing: 2px;
+                            $countdown-text-transform: uppercase;
+                            $countdown-font-weight: 700;
+                            margin-bottom: 1.5rem;
+                        }
+                        h3 {
+                            color: $h3-opt1-font-color;
+                            line-height: 1.38;
+                            font-family: $h3-font-family;
+                            font-weight: $h3-font-weight;
+                            font-size: $h3-font-size;
+                        }
+                        > a {
+                            
+                            border-bottom: 2px solid $white;
+                            text-decoration: none;
+                            font-family: $base-font-sans-serif;
+                            font-style: normal;
+                            font-weight: 500;
+                            padding-bottom: 2px;
+                            transition: all 0.3s ease-in-out;
+                            &:first-of-type {
+                                margin-right: 8px;
+                            }
+                            &:last-of-type {
+                                margin-left: 8px;
+                            }
+                            &:hover,&:focus {
+                                text-decoration: none;
+                                //color: $color-tertiary;
+                                border-color: $color-tertiary;
+                            }
+                        }
+                    }
+                }
+                // RIGHT SIDE
+                &:last-child {
+                    position: relative;
+                    z-index: 1;
+                    @media screen and (min-width:1200px) {
+                        // padding-left: 80px;
+                        padding-right: 0;
+                    }
+                    > .countdown-wrap {
+                        border-radius: 5px;
+                        background-color: $white;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        padding: 0;
+                        font-family: $base-font-sans-serif2;
+                        @media screen and (max-width:767px) {
+                            // padding: 30px 0;
+                            flex-wrap: wrap;
+                        }
+                        > div {
+                            text-align: center;
+                            flex: 1 1 0px;
+                            &.countdown-div {                    
+                                color: $countdown-number-font-color;
+                                font-size: 4rem;
+                                font-weight: 400;
+                                line-height: 1.05;
+                                padding: 28px 0 18px;
+                               
+                                background-position: left;
+                                background-size: 1px 16px;
+                                background-repeat: repeat-y;
+                                @media (max-width:767px) {
+                                    // flex: 0 1 25%;
+                                    font-size: 2.6rem;
+                                    padding: 0;
+                                }
+                                + .countdown-div {
+                                    //border-color: rgba(#dedee0, 0.8);
+                                    //background-image: linear-gradient(to top, rgba(#dedee0, 0.8) 60%, rgba(#dedee0, 0) 0%);
+                                     border-left: 1px solid #e4e4e4;
+                                     //border-right: 1px solid #e4e4e4;
+                                }
+                                .countdown-label {
+                                    text-transform: uppercase;
+                                    color: #888888;
+                                    font-weight: 400;
+                                    letter-spacing: 0;
+                                    font-size: 1.4rem;
+                                    margin-top: 5px;
+                                    @media (max-width:767px) {
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // BEGIN COUNTDOWN OPTION 2 STUFF
+    &.opt2 {
+        padding: 115px 0;
+        background: #f0f4f7;
+        &:after {
+            display: none;
+        }
+        > .container .row {
+            > div {
+                &:first-child {
+                    * {
+                        color: $opt2-font-link-color;
+                    }
+                    > .mpContent {
+                        h6 {
+                            color: $countdown-opt2-date-color;
+                            font-size: $countdown-date-size;
+                            letter-spacing: $countdown-letter-spacing;
+                            text-transform: $countdown-text-transform;
+                            font-weight: $countdown-font-weight;
+                        }
+                        h3 {
+                            color: $h3-opt2-font-color;
+                            font-size: $h3-font-family;
+                            font-weight: $h3-font-weight;
+                            font-size: $h3-font-size;
+                        }
+                        > a {
+                            color: $opt2-font-link-color;
+                            border-color: inherit;
+                            &:hover, &:focus {
+                                border-color: $color-tertiary;
+                            }
+                    }
+                }
+                }
+                &:last-child {
+                    > .countdown-wrap {
+                        border: solid 1px $color-lightest;
+                        padding: 0;
+                        > div.countdown-div {
+                            padding: 43px 0;
+                            @media (max-width:767px) {
+                                padding: 17px 0 25px;
+                            }                            
+                            + .countdown-div {
+                                background-color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+.countdown-admin {
+    border: 1px solid $color-lightest;
+    padding: 10px;
+    text-align: center;
+    margin: 10px auto;
+    // width: 95%;
+    max-width: 1030px;
+    color: $color-primary;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.4rem;
+    background: $white;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    flex-wrap: nowrap;
+    > div {
+        border: 0;
+        //margin: 0;
+        padding: 0 15px;
+        max-width: none;
+        &.col-xs-3 {
+            width: 25%; 
+        }
+        &.col-xs-4 {
+            width: 33.33333333%;
+        }
+        &.col-xs-6 {
+            width: 50%;
+        }
+        label {
+            white-space: nowrap;
+        }
+    }
+    .clickToEditDiv img {
+        max-width: none;
+    }
+    &.cte-0, &.cte-1, &.cte--1 {
+        display: none;
+    }
+    @media screen and (max-width:991px) {
+        display: none;
+    }
+}

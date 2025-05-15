@@ -45,17 +45,60 @@
 //@import 'components/articles-2a'; // older vertical style
 //@import 'components/articles-3'; // archived
 
+// - GK Components Articles 
+
+//@import 'components/nonessential/articles-1-prem'; // Stacked with image to left and subject date to right
+//@import 'components/nonessential/articles-2-prem'; // same as 1 but with white background and side-by-side
+//@import 'components/nonessential/articles-3-prem'; // Single Slider All-White
+//@import 'components/nonessential/articles-4-prem'; // Same as 3 but Colored Header and Dots
+//@import 'components/nonessential/articles-5-prem'; // Cross Marketing Callout Style
+//@import 'components/nonessential/articles-6-prem'; // Overlapped Panel Callout Style
+
+
 // - Calendar (4 versions) -- comment out all except the selected version
 @import 'components/calendar-1';
 //@import 'components/calendar-2';
 //@import 'components/calendar-3';
 //@import 'components/calendar-4'; // archived
 
+//- GK Components Calendar Versions
+
+//@import 'components/nonessential/calendar-1-prem'; // Slick Slider 3-across
+//@import 'components/nonessential/calendar-2-prem'; // left-aligned picture
+//@import 'components/nonessential/calendar-3-prem'; // Photo Album Slider
+//@import 'components/nonessential/calendar-4-prem'; // 2-column with event links to left, one image to right
+//@import 'components/nonessential/calendar-5-prem'; // Isotope/Bootstrap Tabs Calendar
+//@import 'components/nonessential/calendar-6-prem';  // Week at a glance style
+
 // - Cards (4 versions) -- comment out all except the selected version
 @import 'components/cards-1';
 //@import 'components/cards-2';
 //@import 'components/cards-3';
 //@import 'components/cards-4';
+
+// - GK Components Cards Callout-Panel Versions
+//@import 'components/nonessential/cards-1-prem'; // Three-Across
+//@import 'components/nonessential/cards-2-prem'; // Tight Collage
+//@import 'components/nonessential/cards-3-prem'; // Cut-off Slider
+//@import 'components/nonessential/cards-4-prem'; // Cross Marketing Style
+//@import 'components/nonessential/cards-5-prem'; // Side-by-side Panel
+//@import 'components/nonessential/cards-6-prem'; // Overlapped Panel
+
+// - Meet the Team (from GK components)
+//@import 'components/nonessential/meet-the-team-1';
+//@import 'components/nonessential/meet-the-team-2';
+//@import 'components/nonessential/meet-the-team-3';
+
+
+// - Optin Groups 
+//@import 'components/nonessential/opt-in-1';
+//@import 'components/nonessential/opt-in-2';
+
+
+// - History Timelines 
+//@import 'components/nonessential/timeline-1';
+//@import 'components/nonessential/timeline-4';
+
 
 // - Cross-marketing Panel
 //@import 'components/cross';
@@ -72,7 +115,20 @@
 //@import 'components/quick-links-2';
 
 // - Course Tours (1 version)
-@import 'components/course-tour-3';
+//@import 'components/course-tour-3';
+
+
+// - GK Components Course Tours 
+
+//@import 'components/nonessential/course-tour-1-prem'; // Standard Premiere
+//@import 'components/nonessential/course-tour-2-vertical'; // Vertical Tabs
+//@import 'components/nonessential/course-tour-3-slider'; // Slider with dots and cut-off images
+//@import 'components/nonessential/course-tour-4'; // Grid Card Callouts Info Underneath
+//@import 'components/nonessential/course-tour-5'; // Banner Image Slider Par Info Overlay
+
+// - GK Components Countdown Timers
+
+//@import 'components/nonessential/countdowns-prem';
 
 // PAGES
 

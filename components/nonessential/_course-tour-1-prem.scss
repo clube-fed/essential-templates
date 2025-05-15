@@ -1,0 +1,187 @@
+$tabstrip-number-padding: 2.75rem 2.552rem 2.75rem;
+$tabstrip-number-font-size: 1.2rem;
+$tabstrip-number-letter-spacing: .2rem;
+
+$tee-color-black: #000;
+$tee-color-red: #c73e3e;
+$tee-color-orange: var(--orange);
+$tee-color-green: #018922;
+$tee-color-blue: #1c4c99;
+$tee-color-yellow: var(--yellow);
+$tee-color-purple: var(--purple);
+$tee-color-teal: var(--teal);
+$tee-color-gray: var(--gray);
+$tee-color-gold: #d49341;
+
+/* Colored List Items */
+
+$hole-number-font-size: 3.0rem;
+$hole-number-font-color: $color-secondary;
+$hole-number-text-transform: none;
+$hole-number-letter-spacing: 0;
+$hole-number-line-height: 1.24;
+$par-distance-font-size: 1.6rem;
+
+$course-tour-img-width: 650px;
+
+/* Hole Description Strong Text Color */
+
+$hole-description-text-color: #293337;
+
+$course-tour-stack-max-breakpoint: 991px;
+
+
+.course-tour.opt1-prem {
+  max-width: 1430px;
+  padding: 50px 0;
+  margin: 0 auto;
+    .container {
+        max-width: 1170px;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        @media(max-width: 1199px) {
+          padding: 0 1.5rem;
+        }
+      [id$="_radTabsTop"] .levelwrap > ul > li > a {
+        padding: $tabstrip-number-padding!important;
+        font-size: $tabstrip-number-font-size!important;
+        letter-spacing: $tabstrip-number-letter-spacing!important;
+        @media(max-width: $course-tour-stack-max-breakpoint) {
+          padding-left: 2rem !important;
+          padding-right: 2rem !important;
+
+        }
+      }
+    }
+    .hole-wrap {
+      div:nth-child(1) {
+      h2, h3 {
+        font-size: $hole-number-font-size;
+        color: $hole-number-font-color;
+        $hole-number-text-transform: none;
+        letter-spacing: $hole-number-letter-spacing;
+        line-height: normal;
+        text-align: left;
+        margin-bottom: 0;
+        @media(max-width: $course-tour-stack-max-breakpoint) {
+          text-align: center;
+           
+        }
+      }
+        .par {
+            padding-left: 0;
+            margin-bottom: 15px;
+            margin-top: 5px;
+            text-align: left;
+            @media(max-width: $course-tour-stack-max-breakpoint) {
+              text-align: center;
+
+            }
+            li {
+              display: inline-block;
+              margin: 0 20px 0 0;
+              color: #54595f;
+              font-family: $base-font-sans-serif;
+              font-size: $par-distance-font-size;
+              @media(max-width: 667px) {
+                display: block;
+                text-align: center;
+                margin: 5px auto;
+              }
+            }
+        }
+      }
+        div:nth-child(2) {
+          display: flex;
+          text-align: left;
+          gap: 2.5rem;
+          @media(max-width: $course-tour-stack-max-breakpoint) {
+            flex-direction: column;
+            text-align: center;
+
+          }
+          p > strong {
+            color: $hole-description-text-color;
+          }
+          ul.handicap {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media(max-width: $course-tour-stack-max-breakpoint) {
+              flex-direction: row;
+             
+            }
+            @media(max-width: 500px) {
+              flex-direction: column;
+              gap: 1.5rem;
+
+            }
+             li {
+              font-size: 1.6rem;
+              list-style: none;
+              font-family: $base-font-sans-serif;
+              border-radius: 25px;
+              height: 45px;
+              width: 70px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 7px 10px 7px 0;
+              color: #fff;
+              @media(max-width: 500px) {
+                margin: 0 auto;
+              }
+              &:first-child {
+                @media(min-width: $course-tour-stack-max-breakpoint) {
+                  margin-left: 0;
+                }
+              }
+                &.black {
+                  background: $tee-color-black;
+                }
+                &.blue {
+                  background: $tee-color-blue;
+                }
+                &.green {
+                  background: $tee-color-green;
+                }  
+                &.white {
+                  background: $white;
+                  border: 1px solid #979797;
+                  color: #555;
+                } 
+                &.red {
+                  background: $tee-color-red;
+                } 
+  
+              } 
+            }
+         }
+      }
+      .tsContent {
+          background: #fff;
+          padding: 3.0rem;
+          p {
+            @media(min-width: $course-tour-stack-max-breakpoint) {
+              max-width: 235px;
+            }
+          }
+          .image-wrap {
+            @media(max-width:$course-tour-stack-max-breakpoint) {
+              text-align: center;
+    
+            }
+            img {
+              width: 100%;
+              max-width: $course-tour-img-width;
+              @media(max-width: $course-tour-stack-max-breakpoint) {
+                margin-bottom: 25px;
+          
+              }
+            }
+          }
+      }
+ 
+  }

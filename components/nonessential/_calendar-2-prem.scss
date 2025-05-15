@@ -1,0 +1,136 @@
+// VARIABLES
+$cal-events-stack-max-breakpoint: 767px;
+$cal-event-image-width: 370px;
+
+$cal-event-date-font-family: $base-font-sans-serif;
+$cal-event-date-font-size: 1.6rem;
+$cal-event-date-font-weight: 400;
+$cal-event-date-font-color: #555;
+$cal-event-date-line-height: 1;
+$cal-event-date-text-transform: none;
+
+$cal-event-title-font-family: $base-font-sans-serif2;
+$cal-event-title-font-size: 3.0rem;
+$cal-event-title-font-weight: 400;
+$cal-event-title-font-color: $color-secondary;
+$cal-event-title-font-hover-color: $color-primary;
+$cal-event-title-line-height: 1.42;
+$cal-event-title-text-transform: none;
+
+
+// CALENDAR PLUGIN v2
+.club-calendar.opt2-prem {
+    padding: 5.0rem 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    @media (max-width:$cal-events-stack-max-breakpoint) {
+        text-align: center;
+    }
+    .view-all-link {
+        @include view-all-link;
+        // font-size: 1.4rem;
+        @media (max-width:$cal-events-stack-max-breakpoint) {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    @media (min-width: $cal-events-stack-max-breakpoint) {
+        .float-lg-right {
+            float: right !important;
+        }
+    }
+    div[id$="EventsWrapper"] {
+        clear: both;
+        @media (max-width:$cal-events-stack-max-breakpoint) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: $cal-event-image-width;
+        }        
+        .event-image {
+            flex: 0 0 $cal-event-image-width;
+            align-self: stretch;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba($black,0);
+                transition: background 0.3s ease-in-out; 
+            }
+            img {
+                visibility: hidden;
+                width: 100%;
+                max-height: 100%;
+                + img {
+                    display: none;
+                }
+            }
+        }
+        .event-info {
+            font-size: 0;            
+            padding: 2rem 2rem 2rem 7.5rem;
+            flex-basis: 100%;
+            text-align: left;
+            @media(max-width: 1199px) {
+                padding: 2rem; 
+            }
+            @media (max-width:$cal-events-stack-max-breakpoint) {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                flex: 1 1 auto;
+                text-align: center;
+            }
+            .event-date {
+                font-family: $cal-event-date-font-family;
+                font-size: $cal-event-date-font-size;
+                font-weight: $cal-event-date-font-weight;
+                color: $cal-event-date-font-color;
+                text-transform: $cal-event-date-text-transform;
+                line-height: $cal-event-date-line-height;
+                margin-bottom: 8px;
+                > span {
+                    margin-right: 10px;
+                }
+            }
+            .event-title {
+                font-family: $cal-event-title-font-family;
+                font-size: $cal-event-title-font-size;
+                font-weight: $cal-event-title-font-weight;
+                color: $cal-event-title-font-color;
+                text-transform: $cal-event-title-text-transform;
+                line-height: $cal-event-title-line-height;
+                margin-bottom: 0;
+                transition: all 0.3s ease-in-out;
+                @media(max-width: 991px) {
+                    font-size: 2.4rem;
+
+                }
+            }
+        }
+        > a.event-link {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            text-decoration: none;
+            background-color: #fff;
+            &:hover,&:focus {
+                text-decoration: none;
+                .event-image:after {
+                    background: rgba($black,0.5);
+                }
+                .event-title {
+                    color: $cal-event-title-font-hover-color;
+                }
+            }
+            @media (max-width:$cal-events-stack-max-breakpoint) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

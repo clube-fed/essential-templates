@@ -1,0 +1,123 @@
+// COURSE TOUR v5
+
+$course-image-height: 900px;
+
+$hole-title-font-family: $base-font-sans-serif;
+$hole-title-color: #182232;
+$hole-title-size: 2.4rem;
+$hole-title-font-weight: 400;
+$hole-title-font-family: $base-font-sans-serif;
+
+.course-tour.opt5-prem {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  max-height: $course-image-height;
+  margin: 50px auto 0 auto;
+  overflow: hidden;
+  .photoAlbumPropTable {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    z-index: 10;
+  }
+  td.plgHeaderBar b {
+      @extend %h3;
+      font-weight: 400;
+      display: block;
+      text-align: center;
+  }
+  div[id^="photoPluginWrapper"] {
+     padding-bottom: 0px!important; // Can remove if you prefer to use bottom-padding and reponsify function
+  }
+  .hole-yardage-wrap {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    @media(max-width: 767px) {
+        position: static;
+        transform: none;
+        background: #fff;
+    }
+    .nc-icon-outline {
+        font-size: 3.0rem;
+        color: #fff;
+        @media(max-width: 767px) {
+            color: $color-secondary;
+        }
+    }
+    a[class^="prevImg"] {
+      margin-right: 30px;
+      @media(max-width: 300px) {
+        margin-right: 0;
+      }
+    }
+    a[class^="nextImg"] {
+        margin-left: 30px;
+        @media(max-width: 300px) {
+            margin-left: 0;
+        }
+    }
+  }
+  .hole-yardage {
+    display: flex;
+    gap: 30px;
+    flex: 1 1 670px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 670px;
+    background: #fff;
+    padding: 20px 50px;
+    @media(max-width: 767px) {
+        flex-wrap: wrap;
+        flex: 1 1 auto;
+        gap: 15px;
+        max-width: calc(100% - 60px);
+    }
+    h3 {
+        font-family: $hole-title-font-family;
+        font-weight: $hole-title-font-weight;
+        color: $hole-title-color;
+        font-size: $hole-title-size;
+        margin-bottom: 0;
+        white-space: nowrap;
+        @media(max-width: 767px) {
+            width: 100%;
+            text-align: center;
+            
+        }
+    }
+    > span, > font {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        font-size: 1.6rem;
+        display: inline-flex;
+        align-items: center;
+        color: #555555;
+        @media (max-width:767px) {
+            // padding: 5px 0 !important;
+        }
+        &:nth-last-child(n+2) {
+            //padding-right: 3rem;
+        }
+        &:before {
+            content: '';
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 50%;
+            border: 2px solid $white;
+        }
+        &.blue:before {background-color:#2357c7;border-color:#2357c7;}
+        &.white:before {background-color:#ffffff;border-color: #b0b0b0 !important;}
+        &.red:before {background-color:#d21313;border-color:#d21313;}
+        &.green:before {background-color:#297a1d;border-color:#297a1d;}
+        &.black:before {background-color:$black;border-color:$black;}
+    }
+  }  
+}

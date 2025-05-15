@@ -1,0 +1,147 @@
+// COURSE TOUR v4
+.course-tour.opt4-prem.callouts {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px 15px;
+  td.plgHeaderBar b {
+      @extend %h3;
+      font-weight: 400;
+      display: block;
+      text-align: center;
+  }
+  [id*="photoPluginWrapper"] {
+      width: 100% !important;
+      height: auto !important;
+      padding-bottom: 0!important;
+  }
+  .photoGalleryThumbPageDiv {
+      position: relative !important;
+  }
+  > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  .carousel {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: -15px;
+      margin-left: -15px;
+      text-align: center !important;
+      // max-width: 1436px;
+      margin: 0 auto;
+      @media (min-width:992px) {
+          text-align: left !important;
+      }
+      > div {
+          display: block !important;
+          height: 100% !important;
+          padding: 1.5rem 0 !important;
+          flex: 0 1 493px;
+          max-width: 493px;
+          @media (min-width:768px) {
+              padding: 0.8rem !important;
+              flex: 0 0 50%;
+              max-width: 50%;
+          }
+          @media (min-width:992px) {
+              padding: 1.5rem !important;
+              flex: 0 0 33.333333%;
+              max-width: 33.333333%;
+          }
+          > img {
+              height: auto;
+              max-width: 100%;
+              width: 100%;
+              vertical-align: middle;
+          }
+          .hole-info {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              padding: 30px;
+              @media (max-width:1024px) {
+                  padding: 15px;
+              }
+              @media (max-width:767px) {
+                  order: -1;
+                  flex: 0 0 100%;
+              }
+              h2, h3 {
+                  display: block;
+                  color: $color-secondary;
+                  width: 100%;
+                  line-height: 1;
+                  margin-bottom: 12px;
+              }
+              .hole-yardage {
+                  display: flex;
+                  flex-wrap: wrap;
+                  @media(max-width: 767px) {
+                    justify-content: flex-start;
+                    margin: 0 auto;
+                  }
+                  > span, > font {
+                      padding-top: 5px !important;
+                      padding-bottom: 5px !important;
+                      font-size: 1.6rem;
+                      display: inline-flex;
+                      align-items: center;
+                      color: #555555;
+                      @media (max-width:767px) {
+                        padding: 1.5rem;
+                      }
+                      &:nth-last-child(n+2) {
+                          padding-right: 3rem;
+                          @media(max-width: 767px) {
+                            padding: 1.5rem;
+                          }
+                      }
+                      &:before {
+                          content: '';
+                          height: 20px;
+                          width: 20px;
+                          display: inline-block;
+                          margin-right: 10px;
+                          vertical-align: middle;
+                          border-radius: 50%;
+                          border: 2px solid $white;
+                      }
+                      &.blue:before {background-color:#2357c7;border-color:#2357c7;}
+                      &.white:before {background-color:#ffffff;border-color: #b0b0b0 !important;}
+                      &.red:before {background-color:#d21313;border-color:#d21313;}
+                      &.green:before {background-color:#297a1d;border-color:#297a1d;}
+                      &.black:before {background-color:$black;border-color:$black;}
+                  }
+              }
+          }
+      }
+  }
+  .thumbs-arrows-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: $base-font-weight;
+      color: $base-font-color;
+      font-size: $base-font-size;
+      line-height: 1;
+      padding-top: 15px;
+      > a {
+          font-size: 0;
+          line-height: 1;
+          padding: 0 15px;
+          > em {
+              font-size: 3rem;
+              color: #b0b0b0;
+          }
+      }
+      > span {
+          margin: 0 5px;
+      }
+  }
+}

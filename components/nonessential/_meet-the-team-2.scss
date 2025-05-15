@@ -1,0 +1,245 @@
+// VARIABLES
+$card-width-value: 383; // omit unit from value
+$card-height-value: 350; // omit unit from value
+$cards-stack-max-breakpoint: 991px;
+
+$card-caption-bottom-border: none;
+
+
+$name-font-family: $base-font-sans-serif;
+$name-font-size: 2.1rem;
+$name-font-color: #434a59;
+$name-font-weight: 700;
+
+$job-title-font-size: 1.4rem;
+$job-title-font-color: #555;
+$job-title-font-weight: 400;
+
+
+$card-caption-default-font-color: #018922;
+$phone-mail-link-color: #018922;
+$phone-mail-link-size: 1.6rem;
+
+
+// CARDS STAFF BIOS v2 
+.card-deck.meet-the-team-2 {
+    //margin-left: 15px;
+    //margin-right: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 113px 0 35px;
+    max-width: 1315px;
+    @media (max-width:$cards-stack-max-breakpoint) {
+        flex-wrap: wrap;
+        align-items: stretch;
+        padding-top: 60px;
+    }
+    @media (max-width:576px) {
+        flex-direction: row;
+    }
+    > .col-12 {
+        margin-bottom: 5.4rem;
+    }
+    > h3 {        
+        flex: 0 0 100%;
+        margin-bottom: 12px;
+        text-align: center;
+        @media (min-width:1200px) {
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+    .card {
+        //text-align: center;
+        margin-bottom: 50px;
+        border: none;
+        flex: 0 1 #{$card-width-value}px;
+        max-width: #{$card-width-value}px;
+        background: transparent;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 15px;
+        @media (max-width:$cards-stack-max-breakpoint) {
+            //flex: 1 1 auto;
+        }
+        &-link-wrap {
+            position: relative;
+            text-decoration: none;
+            display: flex;
+            // flex-direction: column;
+            // flex-basis: 100%;
+            flex-wrap: wrap;
+            &:hover,&:focus {
+                .card-bg-img:after {
+                    //background-color: rgba(0,0,0,0.5);
+                }
+                .card-text .mpContent {
+                    //color: $card-caption-hover-font-color;
+                }
+            }
+        }
+        &-bg-img {            
+            // background-color: $color-darkest;
+            margin-right: 12px;
+            min-height: 10.4rem;                        
+            @media (max-width:$cards-stack-max-breakpoint) {
+                position: relative;
+                &:before {
+                    //content: none;
+                }
+            }
+            &:after {
+                // content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                background-color: rgba(0,0,0,0);
+                transition: background 0.3s ease-in-out;
+                @media (max-width:1024px) {
+                    content: none;
+                }
+            }            
+            > .mpContent {
+                border-radius: 50%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+                img {
+                    visibility: hidden;
+                    width: 100%;
+                    @supports not (aspect-ratio: 1/1) {
+                        height: 10.4rem;
+                        @include data-aspect-ratio ($card-width-value, $card-height-value);
+                    }            
+                    aspect-ratio: 1 / 1;
+                    width: 10.4rem;
+                    height: auto;
+                }
+            }
+        }
+        &-name {
+            
+            padding: 13px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            strong {
+                font-family: $name-font-family;
+                font-size: $name-font-size;
+                color: $name-font-color;
+                line-height: 1.14;
+                font-weight: $name-font-weight;
+            }
+            em {
+                font-weight: $job-title-font-weight;
+                line-height: 1.333;
+                font-size: $job-title-font-size;
+                color: $job-title-font-color;
+
+            }
+        }
+        &-text {
+            top: auto;
+            height: auto;
+            padding: 2.4rem 0 2.9rem;
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            flex: 0 0 100%;
+            .mpContent {
+                font-size: 2.1rem;
+                font-weight: 400;
+                line-height: 1.2;
+                color: $color-primary;
+                z-index: 1;
+                position: relative;
+                transition: color 0.3s ease-in-out;
+                h4 {
+                    font-family: $name-font-family;
+                    font-size: $name-font-size;
+                    color: $name-font-color;
+                    font-weight: $name-font-weight;
+                }
+                div:nth-child(1) {
+                    $job-title-font-size: 1.4rem;
+                    $job-title-font-color: #555;
+                }
+                br {
+                    display: none;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 1.6rem;
+                    color: $card-caption-default-font-color;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1.2rem;
+                    &:hover, &:focus {
+                        color: $color-secondary;
+                        span[class*="icon"] {
+                            color: $color-secondary;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                span[class*="icon"] {
+                   color: $phone-mail-link-color;
+                   font-size: $phone-mail-link-size;
+                    margin-right: 15px;
+                    transition: color 0.3s ease-in-out;
+                }
+            }
+        }
+        &-admin {
+            display: flex;
+            justify-content: stretch;
+            text-align: center;
+            > div {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                .clickToEditDiv {
+                    border-color: $color-darkest;
+                    border-style: solid;
+                    border-width: 1px 0;
+                    padding: 0.5rem 1rem !important;
+                    margin: 5px 0 !important;
+                    height: 100%;
+                    &:before {
+                        content: '';
+                        display: block;
+                        font-size: 1.2rem;
+                    }
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                &.card-cte-img .clickToEditDiv:before {
+                    content: 'Image:';
+                }
+                &.card-cte-name .clickToEditDiv:before {
+                    content: 'Name & Title:';
+                }
+                &.card-cte-txt .clickToEditDiv:before {
+                    content: 'Contact Info:';
+                }
+                &:first-child .clickToEditDiv {
+                    border-width: 1px 0 1px 1px;
+                    padding-left: 0.5rem !important;
+                }
+                &:last-child .clickToEditDiv {
+                    border-width: 1px 1px 1px 0;
+                    padding-right: 0.5rem !important;
+                }
+            }            
+        }
+    }
+}
