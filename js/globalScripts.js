@@ -1225,6 +1225,89 @@ $j('.quick-links.opt2 > .mpContent').each(function () {
 $j('.quick-links.opt2').each(function () {
   $j('li>a', this).append('<span class="quick-link-arrow nc-icon-mini arrows-1_minimal-right"></span>');
 });
+
+// GK Premier Cards
+
+$j('.card-deck.opt1-prem .card').each(function () {
+    if (!$j.trim($j('.card-img-overlay .mpContent a', this).html()).length) {
+        $j(this).addClass('card-no-link');
+    };
+    var callout_href = $j('.card-img-overlay .mpContent a', this).attr("href");
+    var callout_target = $j('.card-img-overlay .mpContent a', this).attr("target");
+    var outerCalloutAnchor = $j("<a class='card-link-wrap'></a>").attr("href", callout_href).attr("target", callout_target);
+    $j(this).wrapInner(outerCalloutAnchor);
+    $j(this).append("<div class='card-admin'><div class='card-cte-img'></div><div class='card-cte-txt'></div></div>");
+    $j(this).find('.card-bg-img').css('background-image', "url(" + $j(this).find('.card-bg-img .mpContent img').attr("src") + ")");
+    var calloutTitle = $j.trim($j('.card-img-overlay .mpContent', this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img', this).attr('alt');
+    if (typeof altAttr !== typeof undefined && altAttr !== false) {
+        // Element has alt attribute
+    } else {
+        $j('.card-bg-img .mpContent img', this).attr('alt', ImageAltText);
+    }
+    if (!$j.trim($j('.card-bg-img .mpContent', this).html()).length) {
+        $j(this).addClass('emptyCard');
+    };
+    var imgCte = $j('.card-bg-img', this).children('.clickToEditDiv').detach();
+    var txtCte = $j('.card-img-overlay', this).children('.clickToEditDiv').detach();
+    $j(this).find('.card-admin .card-cte-img').append(imgCte);
+    $j(this).find('.card-admin .card-cte-txt').append(txtCte);
+    $j(this).find('.figure-bg-img .mpContent').contents().unwrap();
+    $j(this).find('.card-img-overlay .mpContent a').contents().unwrap();
+});
+//card opt 2
+$j('.card-deck.opt2-prem .card, .card-deck.opt6-prem .card').each(function () {
+    if (!$j.trim($j('.card-img-overlay .mpContent a', this).html()).length) {
+        $j(this).addClass('card-no-link');
+    };
+    var callout_href = $j('.card-img-overlay .mpContent a', this).attr("href");
+    var callout_target = $j('.card-img-overlay .mpContent a', this).attr("target");
+    var outerCalloutAnchor = $j("<a class='card-link-wrap'></a>").attr("href", callout_href).attr("target", callout_target);
+    $j(this).wrapInner(outerCalloutAnchor);
+    $j(this).append("<div class='card-admin'><div class='card-cte-img'></div><div class='card-cte-txt'></div></div>");
+    $j(this).find('.card-bg-img').css('background-image', "url(" + $j(this).find('.card-bg-img .mpContent img').attr("src") + ")");
+    var calloutTitle = $j.trim($j('.card-img-overlay .mpContent', this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img', this).attr('alt');
+    if (typeof altAttr !== typeof undefined && altAttr !== false) {
+        // Element has alt attribute
+    } else {
+        $j('.card-bg-img .mpContent img', this).attr('alt', ImageAltText);
+    }
+    if (!$j.trim($j('.card-bg-img .mpContent', this).html()).length) {
+        $j(this).addClass('emptyCard');
+    };
+    var imgCte = $j('.card-bg-img', this).children('.clickToEditDiv').detach();
+    var txtCte = $j('.card-img-overlay', this).children('.clickToEditDiv').detach();
+    $j(this).find('.card-admin .card-cte-img').append(imgCte);
+    $j(this).find('.card-admin .card-cte-txt').append(txtCte);
+    $j(this).find('.figure-bg-img .mpContent').contents().unwrap();
+    $j(this).find('.card-img-overlay .mpContent a').contents().unwrap();
+    //$j(this).find('.card-img-overlay .mpContent').append("<span class='nc-icon-outline arrows-1_circle-right-37'></span>");
+});
+
+//card option 4 & 5
+$j('.card-panels.opt4-prem .card, .card-panels.opt5-prem .card, .articles.opt6-prem .card').each(function () {
+    //$j('.card-text .mpContent > a', this).append("<span class='nc-icon-outline arrows-1_circle-right-37'></span>");
+    if (!$j.trim($j('.mpContent', this).html()).length) {
+        $j(this).addClass('has-empty-column');
+    }
+    $j(this).find('.card-bg-img .mpContent').css('background-image', "url(" + $j(this).find('.card-bg-img .mpContent img').attr("src") + ")");
+    $j(this).find('.card-bg-img .mpContent img').wrap("<span style='opacity:0;'></span>");
+    var calloutTitle = $j.trim($j('.card-text .mpContent > *:first-child', this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img', this).attr('alt');
+    if (typeof altAttr !== typeof undefined && altAttr !== false) {
+        // Element has alt attribute
+    } else {
+        $j('.card-bg-img .mpContent img', this).attr('alt', ImageAltText);
+    }
+});
+
+// End New Premier Cards
+
+
 //card opt1
 $j('.card-deck.opt1 .card').each(function () {
     if (!$j.trim($j('.card-img-overlay .mpContent a', this).html()).length) {
@@ -1331,6 +1414,124 @@ $j('.card-panels.opt4 .card').each(function () {
     }
 });
 
+/******************* 
+Begin Meet The Team v1 
+******************/
+$j( '.card-deck.meet-the-team-1 .card' ).each( function(){    
+    if (!$j.trim($j('.card-text .mpContent a',this).html()).length){ 
+	   $j(this).addClass('card-no-link');
+    };
+    var callout_href = $j('.card-text .mpContent a',this).attr("href");
+    var callout_target = $j('.card-text .mpContent a',this).attr("target");
+    var outerCalloutAnchor = $j( "<div class='card-link-wrap'></div>" );
+    $j(this).wrapInner( outerCalloutAnchor );
+    $j(this).append("<div class='card-admin'><div class='card-cte-img'></div><div class='card-cte-txt'></div></div>");    
+    $j(this).find('.card-bg-img').css('background-image', "url("+ $j(this).find('.card-bg-img .mpContent img').attr("src") +")");    
+    var calloutTitle = $j.trim($j('.card-text .mpContent h4',this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img',this).attr('alt');
+    $j('.card-bg-img .mpContent img',this).attr('alt',ImageAltText);
+    console.log(ImageAltText);
+    if(!$j.trim($j('.card-bg-img .mpContent',this).html()).length) { 
+	$j(this).addClass('emptyCard');
+    };
+    var imgCte = $j('.card-bg-img', this).children('.clickToEditDiv').detach();
+    var txtCte = $j('.card-text', this).children('.clickToEditDiv').detach();
+    $j(this).find('.card-admin .card-cte-img').append(imgCte);
+    $j(this).find('.card-admin .card-cte-txt').append(txtCte);
+    $j(this).find('.figure-bg-img .mpContent').contents().unwrap();
+    //$j(this).find('.card-text .mpContent a').contents().unwrap();
+});
+/******************* 
+End Meet The Team v1 
+******************/
+
+/******************* 
+Begin Meet The Team v2 
+******************/
+$j( '.card-deck.meet-the-team-2 .card' ).each( function(){    
+    if (!$j.trim($j('.card-text .mpContent a',this).html()).length){ 
+	   $j(this).addClass('card-no-link');
+    };
+    var callout_href = $j('.card-text .mpContent a',this).attr("href");
+    var callout_target = $j('.card-text .mpContent a',this).attr("target");
+    var outerCalloutAnchor = $j( "<div class='card-link-wrap'></div>" );
+    $j(this).wrapInner( outerCalloutAnchor );
+    $j(this).append("<div class='card-admin'><div class='card-cte-img'></div><div class='card-cte-name'></div><div class='card-cte-txt'></div></div>");    
+    $j(this).find('.card-bg-img .mpContent').css('background-image', "url("+ $j(this).find('.card-bg-img .mpContent img').attr("src") +")");    
+    var calloutTitle = $j.trim($j('.card-text .mpContent h4',this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img',this).attr('alt');
+    $j('.card-bg-img .mpContent img',this).attr('alt',ImageAltText);
+    console.log(ImageAltText);
+    if(!$j.trim($j('.card-bg-img .mpContent',this).html()).length) { 
+	$j(this).addClass('emptyCard');
+    };
+    var imgCte = $j('.card-bg-img', this).children('.clickToEditDiv').detach();
+    var nameCte = $j('.card-name', this).children('.clickToEditDiv').detach();
+    var txtCte = $j('.card-text', this).children('.clickToEditDiv').detach();
+    $j(this).find('.card-admin .card-cte-img').append(imgCte);
+    $j(this).find('.card-admin .card-cte-name').append(nameCte);
+    $j(this).find('.card-admin .card-cte-txt').append(txtCte);
+    $j(this).find('.figure-bg-img .mpContent').contents().unwrap();
+    //$j(this).find('.card-text .mpContent a').contents().unwrap();
+    $j(this).find('.card-text .mpContent a[href*="mail"]').prepend("<span class='nc-icon-outline ui-1_email-83'></span>");
+    $j(this).find('.card-text .mpContent a[href*="tel"]').prepend("<span class='nc-icon-outline ui-3_phone'></span>");
+});
+/******************* 
+End Meet The Team v3 
+******************/
+$j( '.card-deck.meet-the-team-3 .card' ).each( function(){
+    $j(this).find('.card-body .mpContent a[href*="mail"]').prepend("<span class='nc-icon-outline ui-1_email-83'></span>");
+    $j(this).find('.card-body .mpContent a[href*="tel"]').prepend("<span class='nc-icon-outline ui-3_phone'></span>");
+});
+/******************* 
+Begin Meet The Team v3 
+******************/
+
+/******************* 
+Crossmarketing panel
+******************/
+$j( '.crossmarketing-panel' ).each( function(){
+    $j(this).append("<div class='cross-admin'><div class='cross-cte-txt'></div></div>"); 
+    
+    if ($j(this).find('> .mpContent').length) {
+      $j(this).addClass('has-bg-img');
+      $j('.cross-admin',this).append("<div class='cross-cte-img'></div>");
+      var mainImgSrc = $j(this).find('> .mpContent').children('img').attr("src");
+    $j('> .mpContent',this).css('background-image', "url("+ mainImgSrc +")");
+    var calloutTitle = $j.trim($j('.cross-img-overlay .mpContent',this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('> .mpContent img',this).attr('alt');
+    if (typeof altAttr !== typeof undefined && altAttr !== false) {
+      // Element has alt attribute
+    }else {
+        $j('> .mpContent img',this).attr('alt',ImageAltText);
+    }
+    var imgCte = $j(this).children('.clickToEditDiv').detach();
+    $j(this).find('.cross-admin .cross-cte-img').append(imgCte);
+    }
+    if ($j(this).find('.section-title').length) {
+      $j(this).addClass('has-section-title');
+      $j('.cross-admin',this).append("<div class='cross-cte-title'></div>");
+      var titleCte = $j('.container .col-12 .section-title', this).children('.clickToEditDiv').detach(); 
+      $j(this).find('.cross-admin .cross-cte-title').append(titleCte);
+  }
+  if ($j(this).find('.section-title').length && !$j.trim($j('.section-title .mpContent', this).html()).length) {
+    $j(this).addClass('empty-section-title');
+};
+    
+    var txtCte = $j('.container .col-12', this).children('.clickToEditDiv').detach();
+    
+    
+    $j(this).find('.cross-admin .cross-cte-txt').append(txtCte);
+    
+    //$j(this).find('.container .mpContent > a').append("<span class='nc-icon-mini arrows-1_small-triangle-right'></span>");
+});
+/******************* 
+End Crossmarketing panel 
+******************/
+
 //Light Box
 $j('.lightBoxDiv .lightBoxNextDiv').focus(function () {
     $j(this).on('keydown', function (e) {
@@ -1339,6 +1540,54 @@ $j('.lightBoxDiv .lightBoxNextDiv').focus(function () {
             $j(this).trigger('click');
         }
     });
+});
+
+/******************* 
+Begin Amenities Cards v3 
+******************/
+$j( '.opt3-amenities .card-deck .card' ).each( function(){     
+    if (!$j.trim($j('.card-text .mpContent a',this).html()).length){ 
+	   $j(this).addClass('card-no-link');
+    };
+    var callout_href = $j('.card-text .mpContent a',this).attr("href");
+    var callout_target = $j('.card-text .mpContent a',this).attr("target");
+    var outerCalloutAnchor = $j( "<a class='card-link-wrap'></a>" ).attr( "href", callout_href).attr( "target", callout_target);
+    $j(this).wrapInner( outerCalloutAnchor );
+    if (callout_href.indexOf("#") >= 0) {
+        $j('.card-link-wrap',this).addClass('anchorLink');
+    }
+    $j(this).append("<div class='card-admin'><div class='card-cte-img'></div><div class='card-cte-txt'></div></div>");    
+    $j(this).find('.card-bg-img > .mpContent').css('background-image', "url("+ $j(this).find('.card-bg-img .mpContent img').attr("src") +")");    
+    var calloutTitle = $j.trim($j('.card-text .mpContent',this).text());
+    var ImageAltText = "" + calloutTitle;
+    var altAttr = $j('.card-bg-img .mpContent img',this).attr('alt');
+    if (typeof altAttr !== typeof undefined && altAttr !== false) {
+      // Element has alt attribute
+    }else {
+        $j('.card-bg-img .mpContent img',this).attr('alt',ImageAltText);
+    }
+    if(!$j.trim($j('.card-bg-img .mpContent',this).html()).length) { 
+	$j(this).addClass('emptyCard');
+    };
+    var imgCte = $j('.card-bg-img', this).children('.clickToEditDiv').detach();
+    var txtCte = $j('.card-text', this).children('.clickToEditDiv').detach();
+    $j(this).find('.card-admin .card-cte-img').append(imgCte);
+    $j(this).find('.card-admin .card-cte-txt').append(txtCte);
+    $j(this).find('.figure-bg-img .mpContent').contents().unwrap();
+    $j(this).find('.card-text .mpContent a').contents().unwrap();
+});
+
+$j('.opt3-amenities').each(function(){
+    var mainImgSrc = $j(this).find('> .mpContent').children('img').attr("src");
+    $j(this).css('background-image', "url("+ mainImgSrc +")");
+    //var eventTitle = $j('.event-title',this).text();
+    //$j( '.event-image img:first-child', this ).attr('alt',eventTitle);
+    $j( '> .mpContent img', this ).attr('alt','');
+    $j( '> .mpContent img + img', this ).attr('aria-hidden','true').attr('alt','');
+    if ($j('body.page').hasClass('body-platinum')) {
+        $j(this).attr('data-bgurl',mainImgSrc);
+        $j(this).addClass('parallax-bg');  
+    }
 });
 
 //Update bootstrap classes for Support Contacts page
