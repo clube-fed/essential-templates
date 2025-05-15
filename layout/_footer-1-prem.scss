@@ -1,0 +1,226 @@
+$footer-background-color: $color-secondary;
+$footer-font-family: $base-font-sans-serif;
+$footer-logo-width: 45px;  //Footer Logo Width
+//H5 header styles
+$footer-h5-font-size: 1.2rem;
+$footer-h5-font-color: $white;
+$footer-h5-font-weight: 900;
+$footer-h5-letter-spacing: .2rem;
+$footer-h5-text-transform: uppercase;
+
+$footer-list-item-font-size: 1.6rem;
+$footer-icon-font-size: 1.6rem;
+$footer-icon-color: $white;
+
+
+// FOOTER
+footer.opt1 {
+    background: $footer-background-color;
+    font-family: $footer-font-family;
+    color: $white;
+    min-height: 7.5rem;
+    padding: 10rem 10.2rem;
+    @media (max-width:1199px) {
+        padding: 5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media(max-width: 991px) {
+        padding: 5rem 3rem; 
+    }
+    h5 {
+        font-size: $footer-h5-font-size;
+        color: $footer-h5-font-color;
+        text-transform: $footer-h5-text-transform;
+        font-weight: $footer-h5-font-weight;
+        letter-spacing: $footer-h5-letter-spacing;
+        text-align: left;
+        margin-bottom: .5rem;
+        @media(max-width: 991px) {
+            margin-bottom: 15px;
+            text-align: center;   
+        }
+    }
+    > .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @media(max-width: 1199px) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-left {
+            display: flex;
+            flex: 1 1 calc(100% - 200px);
+             max-width: calc(100% - 200px);
+            padding-bottom: 7rem;
+            @media(max-width: 1199px) {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            @media(max-width: 991px) {
+              flex-direction: column;
+              text-align: center;
+              padding-bottom: 0;
+            }
+            div:first-child {
+                flex: 1 0 $footer-logo-width;
+                max-width: $footer-logo-width;
+                max-width: $footer-logo-width;
+                @media(min-width: 992px) {
+                    margin-right: 70px;
+                    
+                }
+                @media(max-width: 991px) {
+                    flex: 1 1 auto;
+                    margin: 0 auto 30px auto;
+                }
+            }
+            > div:nth-child(2) {
+                flex: 1 1 400px;
+                max-width: 400px;
+                @media(max-width: 991px) {
+                    max-width: 100%;
+                    flex: 1 1 auto;
+                }
+                ul li:nth-child(1) > a span[class*="icon"] {
+                    @media(max-width: 414px) {
+                        align-self: flex-start;
+                    }
+                }
+            }
+            > div {
+                flex: 1 1 150px;
+                max-width: 150px;
+                @media(min-width: 1200px) {
+                    margin-right: 70px;
+
+                }
+                @media(min-width: 992px) and (max-width: 1200px) {
+                    margin-right: 40px;
+
+                }
+                @media(max-width: 991px) {
+                    flex: 1 1 auto;
+                    max-width: 100%;
+                    margin-bottom: 30px;
+                }
+            } 
+        }
+        .footer-right {
+            display: flex;
+            flex: 1 1 200px;
+            max-width: 200px;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1 0 200px;
+            flex-wrap: nowrap;
+            @media(max-width: 1199px) {
+                flex-direction: column;
+                width: auto;
+                flex: 11 auto;
+            }
+            h5 {
+                @media(max-width: 1199px) {
+                   margin-bottom: 15px;
+                   text-align: center;   
+                }
+            }
+            .nc-icon-mini {
+                font-size: 1.8rem;
+                border: 1px solid rgba(255,255,255,0.2);
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            li {
+                display: block;
+                font-size: $footer-list-item-font-size;
+                margin: 0.8rem 0;
+                @media (max-width:991px) {
+                    width: 100%;
+                }
+                &:nth-last-child(n+2) {
+                    margin-bottom: 0.8rem;
+                    @media (min-width:992px) {
+                        margin-right: 3.5rem;
+                        
+                    }                
+                }
+                > a {
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    transition: 0.3s all ease-in-out;
+                    @media(max-width: 991px) {
+                        justify-content: center;
+                    }
+                    span[class*="icon"] {
+                        font-size: $footer-icon-font-size;
+                        color: $footer-icon-color;
+                        font-size: 1.6rem;
+                        margin-right: 10px;
+                        transition: 0.3s all ease-in-out;
+                    }
+                   
+                }
+            }
+        }
+    }
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 1 100%;
+        max-width: 100%;
+        @media(max-width: 1199px) {
+            margin-top: 50px;
+        }
+        @media(max-width: 991px) {
+            text-align: center;
+            display: block;
+        }
+        div:nth-child(1) {
+            margin-right: 15px;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            flex-grow: 1;
+            align-self: center;
+            @media(max-width: 991px) {
+                display: none;
+                
+            }
+            
+        }
+    }    
+    a {
+        color: $white;
+        text-decoration: none;
+        transition: 0.3s all ease-in-out;
+        &:hover,&:focus {
+            color: $white;
+            opacity: 0.7;
+        }
+        &:hover,&:focus {
+          .nc-icon-mini {
+            opacity: 0.7;
+            
+          }
+        }
+    }
+}

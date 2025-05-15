@@ -7,22 +7,40 @@
 @import 'base/typography';
 
 // LAYOUT
-// - Header (5 versions) -- comment out all except the selected version
+// - Essential Headers (5 versions) -- comment out all except the selected version
 @import 'layout/header-1';
 //@import 'layout/header-2'; // archived
 //@import 'layout/header-3';
 //@import 'layout/header-4'; // archived
 //@import 'layout/header-5';
 
+//Premier Headers GK 2025 Component Styles
+
+// - Header (3 versions) -- comment out all except the selected version
+
+//@import 'layout/header-1-prem'; // Logo Left Nav Right White Background
+//@import 'layout/header-2-prem'; // White Background Split
+//@import 'layout/header-3-prem'; // Transparent Background Split
+
+
+//@import 'layout/header-mobile-prem'; // do not comment out
+
 //@import 'layout/header-utility-bar';
 @import 'layout/header-mobile'; // do not comment out
 @import 'layout/main-content';
 
-// - Footer (3 versions) -- comment out all except the selected version
+// - Essential Footers (3 versions) -- comment out all except the selected version
 @import 'layout/footer-1a';
 //@import 'layout/footer-1'; // archived
 //@import 'layout/footer-2'; // archived
 //@import 'layout/footer-3';
+
+// Premier Footers GK Components 2025
+
+//@import 'layout/footer-1-prem';  // Logo and Links on Left
+//@import 'layout/footer-2-prem'; // Centered Logo
+//@import 'layout/footer-3-prem';  // Links Centered Social on Right
+
 
 // COMPONENTS
 @import 'components/buttons';
