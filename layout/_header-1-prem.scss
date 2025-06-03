@@ -215,6 +215,8 @@ header.opt1 {
                         padding: $nav-top-li-padding;
                         text-underline-offset: 2px;
                         text-decoration-thickness: 2px !important;
+                        text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+                        transition: text-decoration-color 300ms;
                         &.has-abut {
                             text-decoration: none !important;
                         }
