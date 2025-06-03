@@ -7,12 +7,15 @@ function MiniPageMouseover() {
     return false;
 }
 
+$j("html").on("click",".eapps-instagram-feed button",function(e){
+  e.preventDefault();
+});
+
 //iPad sniffer for lastest MacOS update
 var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
 if (IS_IPAD) {
     $j('body.page').addClass('iPad');
 }
-
 
 //add class to nav properties divs 
 $j('ul.ulMenu').each(function () {
