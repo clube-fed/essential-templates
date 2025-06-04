@@ -65,7 +65,7 @@ $cal-event-title-line-height: 1.42;
         // max-width: 480px;
         flex-grow: 1;
     }
-    @media (max-width:$cal-event-img-stack-max-brkpt) {
+    @media (max-width:$cal-events-stack-max-breakpoint) {
         margin: 0 auto;
         flex-basis: 100%;
         max-width: none;
