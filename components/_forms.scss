@@ -135,6 +135,10 @@ $nohex: str-replace(#{$form-inputs-text-color}, '#', '%23');
                     border-color: $form-inputs-border-color !important;
                     color: $form-inputs-text-color !important;
                 }
+                &[type=radio],&[type=checkbox] {
+                    width: auto;
+                    margin-right: 5px;
+                }
                 &:focus {                    
                     &::placeholder {
                         font-size: 0;
