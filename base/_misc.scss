@@ -148,6 +148,7 @@ a.skip-main {
 // PLUGIN PROPERTIES MODAL SPECIFIC
 body:not([class*="-log"]) {
     font-size: 12px;
+    background-color: $white;
     table {
         border-collapse: separate;
     }
