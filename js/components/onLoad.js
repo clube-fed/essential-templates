@@ -69,6 +69,19 @@ $j.fn.responsifyPhotoAlbum = function () {
     });
 };
 
+$j.fn.responsifyTabstrip = function () {
+    $j('.tabstrip .levelwrap.level1').each(function (index, element) {
+        const scrollWidth = element.scrollWidth;
+        const clientWidth = element.clientWidth;
+        if(element.scrollWidth > element.clientWidth) {
+            $j(this).addClass('h-scrolling');
+        }
+        else {
+            $j(this).removeClass('h-scrolling');
+        }
+    });
+};
+
 function aScrollResizeGallery(tag){
 	var aScrollTarget = $j('[id^="photoPluginWrapper"]');
 	if(tag){ aScrollTarget = $j(tag).find('[id^="photoPluginWrapper"]');}
