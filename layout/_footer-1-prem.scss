@@ -111,7 +111,6 @@ footer.opt1 {
         }
         .footer-right {
             display: flex;
-            flex: 1 1 200px;
             max-width: 200px;
             align-items: center;
             justify-content: space-between;
@@ -120,7 +119,7 @@ footer.opt1 {
             @media(max-width: 1199px) {
                 flex-direction: column;
                 width: auto;
-                flex: 11 auto;
+                flex: 1 1 auto;
             }
             h5 {
                 @media(max-width: 1199px) {
