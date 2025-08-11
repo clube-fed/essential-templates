@@ -99,6 +99,7 @@ function aScrollResizeGallery(tag){
 $j(window).bind("load", function () {
     resizeSitewrap();
     $j().responsifyPhotoAlbum();
+	$j().responsifyTabstrip();
     var resizeTimer = null;
     $j(window).resize(function () {
         if (resizeTimer) {
@@ -111,6 +112,7 @@ $j(window).bind("load", function () {
 $j(window).on('resize', function () {
     $j().trumpTheBurger();
     $j().responsifyPhotoAlbum();
+	$j().responsifyTabstrip();
     if ($j(window).width() > 760) {
         //$j('.offcanvas').removeClass('active');
     }
