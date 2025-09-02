@@ -27,4 +27,9 @@
     .c9 {
         background: $white;
     }
+    .guide-icons {
+        span[class*="icon"] {
+            font-size: 1.4rem;
+        }
+    }
 }
