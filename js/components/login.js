@@ -1,4 +1,4 @@
-$j('.sitewrap.login #login-bg, .sitewrap.login .login-right').each(function () {
+$j('#login-bg, .login-right').each(function () {
     if ($j.trim($j('.login-bg-img .mpContent', this).html()).length) {
         $j(this).css('background-image', "url(" + $j(this).find('.login-bg-img .mpContent').children('img').attr("src") + ")");
         $j(this).find('.login-bg-img .mpContent').children('img').attr('alt', '');
