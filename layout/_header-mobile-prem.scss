@@ -176,8 +176,8 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    flex: 1 1 80px;
-                    max-width: 80px;
+                    flex: 1 1 110px;
+                    max-width: 110px;
                     @media(max-width: 590px) {
                         flex: 1 1 40px;
                         max-width: 40px;
@@ -198,6 +198,8 @@
                         text-transform: uppercase;
                         font-weight: 900;
                         letter-spacing: .1rem;
+                        position: relative;
+                        left: 40px;
                         @media (max-width: 590px) {
                             display: none;
                         }
