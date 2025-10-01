@@ -53,8 +53,7 @@ footer.opt1 {
         }
         .footer-left {
             display: flex;
-            flex: 1 1 calc(100% - 200px);
-             max-width: calc(100% - 200px);
+            flex: 1;
             padding-bottom: 7rem;
             @media(max-width: 1199px) {
                 flex: 1 1 100%;
