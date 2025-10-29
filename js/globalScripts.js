@@ -34,6 +34,12 @@ if (IS_IPAD) {
     $j('body.page').addClass('iPad');
 }
 
+/* Wow Plugin Initialization - Activate if using */
+
+/*
+wow=new WOW({boxClass:'wow',animateClass:'animated',offset:0,mobile:true,live:true });wow.init();
+new WOW().init();
+*/
 
 //add class to nav properties divs 
 $j('ul.ulMenu').each(function () {
