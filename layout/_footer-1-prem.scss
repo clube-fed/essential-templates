@@ -69,7 +69,7 @@ footer.opt1 {
                 max-width: $footer-logo-width;
                 max-width: $footer-logo-width;
                 @media(min-width: 992px) {
-                    margin-right: 70px;
+                    margin-right: 7rem;
                     
                 }
                 @media(max-width: 991px) {
@@ -94,11 +94,11 @@ footer.opt1 {
                 flex: 1 1 150px;
                 max-width: 150px;
                 @media(min-width: 1200px) {
-                    margin-right: 70px;
+                    margin-right: 7rem;
 
                 }
                 @media(min-width: 992px) and (max-width: 1200px) {
-                    margin-right: 40px;
+                    margin-right: 4rem;
 
                 }
                 @media(max-width: 991px) {
