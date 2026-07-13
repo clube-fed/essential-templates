@@ -9,7 +9,11 @@ body.isMobile .mpContent ol, body.isMobile .mpContent ul, body.isMobile .referen
 .clickToEditDiv { font-size: 0; }
 
 a { color: #547256; }
+a[onclick*="LaunchMemPickerWin"] { text-decoration: underline !important; }
+a[onclick*="LaunchMemPickerWin"]:hover, a[onclick*="LaunchMemPickerWin"]:focus { text-decoration: none !important; }
 a:hover, a:focus { color: #547256; }
+.mpContent a:not(.abut):not(.abut-secondary) { text-decoration: underline; }
+.mpContent a:not(.abut):not(.abut-secondary):hover, .mpContent a:not(.abut):not(.abut-secondary):focus { text-decoration: none; }
 
 a:focus, button:focus, input:focus { outline-width: 2px; outline-style: solid; outline-color: Highlight; }
 @media (-webkit-min-device-pixel-ratio: 0) { a:focus, button:focus, input:focus { outline-color: -webkit-focus-ring-color; outline-style: auto; } }
@@ -68,10 +72,25 @@ form[action*="ArticleEdit"] .abut, form[action*="ArticleEdit"] .table-button td 
 @media screen and (max-width: 367px) { .mobileButton { padding: 5px; }
   .mobileButton.searchButton { padding: 0 5px; } }
 
-.table-button td a { margin: 15px; }
+.table-button td a { margin: 15px; text-decoration: none !important; }
 
-.table-button-secondary td a { margin: 15px; }
+.table-button-secondary td a { margin: 15px; text-decoration: none !important; }
+
+.table-button, .table-button-secondary { text-align: center; margin-left: auto; margin-right: auto; }
+.table-button tr, .table-button-secondary tr { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.table-button.w-100 tr, .table-button-secondary.w-100 tr { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.table-button.aligned-left, .table-button-secondary.aligned-left { margin-right: auto; margin-left: 0; }
+.table-button.aligned-right, .table-button-secondary.aligned-right { margin-left: auto; margin-right: 0; }
+.table-button.uniform-widths td, .table-button-secondary.uniform-widths td { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
+.table-button.uniform-widths td a, .table-button-secondary.uniform-widths td a { display: block; }
+
+/* Overriding Default Abut Styles From Site Defaults/Theme For Role Security Pop-up So Buttons Appear Clearly */
+#ctl01_btnReturnResults, #ctl01_btnSearch { font-size: 12px; font-weight: 400; padding: 5px; background: 0; color: inherit; letter-spacing: 0; text-transform: none; border: 1px solid; }
+#ctl01_btnReturnResults:hover, #ctl01_btnSearch:hover { background: #547256; color: #fff; }
 
 .bodytxt #form1 input#btnKeepAlive.abut, .bodytxt #form1 input#btnKeepAlive.abut + .abut, .bodytxt #form1 .table-button td input#btnKeepAlive.abut + a, .table-button td .bodytxt #form1 input#btnKeepAlive.abut + a { font-weight: 400; letter-spacing: 0; padding: 5px; width: auto !important; text-transform: none; border-radius: 0; }
 
 /* Mobile Buttons Update If not using Mobile Stylesheet */
+.mobileButton { background-color: #547256; background: #547256; color: #fff; }
+
+.mobileButton.searchButton { width: 50px; background: transparent !important; }
